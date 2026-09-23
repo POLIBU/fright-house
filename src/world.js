@@ -7,8 +7,8 @@ export function label(text,w=2,h=.4,color='#d8c89b',bg='#142724'){
 }
 export async function buildWorld(scene,{assetBase='./assets/'}={}){
  const proto={};for(const name of ['phone','recorder','backpack','shoe','cassette','breaker','creature'])proto[name]=await ASSET(`${assetBase}${name}.js?v=${document.documentElement.dataset.build||"dev"}`,{surfaces:true});
- const art={};const names=['face_duck','face_cat','face_clown','face_sun','face_moon','face_rabbit','face_owl','face_pig','face_fish','face_jester','face_tragedy','face_ringmaster','door_grin','door_wink','door_frown','door_exit'];
- for(const name of names)art[name]=await ASSET(`${assetBase}art/${name}.js?v=${document.documentElement.dataset.build||'dev'}`,{surfaces:true});
+ const art={};const names=['face_usher','face_watcher','face_grinner','face_widow','face_penitent','face_sleeper','face_contortionist','face_drowned','face_hollow','face_harlequin','face_mourner','face_ringmaster','door_grin','door_wink','door_frown','door_exit'];
+ for(const name of names)art[name]=await ASSET(`${assetBase}${name.startsWith('face_')?'humanoid':'art'}/${name}.js?v=${document.documentElement.dataset.build||'dev'}`,{surfaces:true});
  const collision=[],wallMeshes=[],gateMeshes=[],fixtures=[],lights=[],interactables=[],evidenceMeshes={};
  const spiral=spiralMaterial();
  const staticRoot=new THREE.Group();scene.add(staticRoot);
@@ -32,8 +32,8 @@ export async function buildWorld(scene,{assetBase='./assets/'}={}){
  const c=document.createElement('canvas');c.width=c.height=512;const ctx=c.getContext('2d');let seed=493;const rand=()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296;};ctx.fillStyle='#4c4a37';ctx.fillRect(0,0,512,512);for(let y=0;y<512;y+=64){ctx.fillStyle=y%128?'#524c35':'#474732';ctx.fillRect(0,y,512,62);for(let j=0;j<250;j++){const a=rand();ctx.fillStyle=`rgba(${a>.5?'183,157,106':'20,23,18'},${rand()*.17})`;ctx.fillRect(rand()*512,y+rand()*62,rand()*100,.5+rand()*1.5);}ctx.fillStyle='#17211d';ctx.fillRect((y*7)%512,y,2,64);}for(let j=0;j<1400;j++){ctx.fillStyle=`rgba(5,16,14,${rand()*.13})`;ctx.fillRect(rand()*512,rand()*512,rand()*10,rand()*10);}const tex=new THREE.CanvasTexture(c);tex.colorSpace=THREE.SRGBColorSpace;tex.wrapS=tex.wrapT=THREE.RepeatWrapping;tex.repeat.set(10,10);
  const floor=new THREE.Mesh(new THREE.PlaneGeometry(SIZE*N,SIZE*N),new THREE.MeshStandardMaterial({map:tex,roughness:.67}));floor.rotation.x=-Math.PI/2;floor.position.set(SIZE*2,-.015,SIZE*2);floor.receiveShadow=true;scene.add(floor);
  addCircusCanopy(scene);
- mountFace('duck',4.2,2.1,0,1.62);mountFace('sun',18.9,0,-Math.PI/2,1.66);mountFace('rabbit',4.2,18.9,Math.PI,1.71);
- mountFace('pig',10.5,4.2,-Math.PI/2,1.43);mountFace('fish',16.8,10.5,0,1.45);mountFace('ringmaster',-2.1,0,Math.PI/2,1.57);
+ mountFace('usher',4.2,2.1,0,1.62);mountFace('widow',18.9,0,-Math.PI/2,1.66);mountFace('sleeper',4.2,18.9,Math.PI,1.71);
+ mountFace('drowned',10.5,4.2,-Math.PI/2,1.43);mountFace('hollow',16.8,10.5,0,1.45);mountFace('ringmaster',-2.1,0,Math.PI/2,1.57);
  const profiles=[{color:0xffc28a,intensity:18},{color:0xeaaa66,intensity:4},{color:0xc6d3b0,intensity:11},{color:0xffae63,intensity:2.4},{color:0xf1bd70,intensity:17}];
  for(let z=0;z<N;z++)for(let x=0;x<N;x++){
   const seed=x+z*5,dark=[6,8,13,16,18].includes(seed),profile=profiles[(x*3+z*2)%profiles.length];
@@ -49,7 +49,7 @@ export async function buildWorld(scene,{assetBase='./assets/'}={}){
  setLighting();
 
  GATES.forEach((g,i)=>{const pivot=new THREE.Group();pivot.position.set((g.x+.5)*SIZE,0,(g.z+.5)*SIZE);scene.add(pivot);const panel=art[['door_grin','door_wink','door_frown'][i]].clone();panel.position.x=-SIZE/2;pivot.add(panel);
-  const cast=[['clown','jester'],['cat','owl'],['moon','tragedy']][i];for(const [n,side] of [-1,1].entries()){const f=art['face_'+cast[n]].clone();const scale=1.36/f.userData.nativeSize.y;f.scale.setScalar(scale);f.position.set(-SIZE/2,.98,side*(.25+f.userData.nativeSize.z*scale/2));f.rotation.y=side<0?Math.PI:0;pivot.add(f);}gateMeshes.push(pivot);
+  const cast=[['grinner','harlequin'],['watcher','contortionist'],['penitent','mourner']][i];for(const [n,side] of [-1,1].entries()){const f=art['face_'+cast[n]].clone();const scale=1.36/f.userData.nativeSize.y;f.scale.setScalar(scale);f.position.set(-SIZE/2,.98,side*(.25+f.userData.nativeSize.z*scale/2));f.rotation.y=side<0?Math.PI:0;pivot.add(f);}gateMeshes.push(pivot);
   const p=point(g.a);const stand=new THREE.Group();stand.position.set(p.x-1.25,0,p.z-1.25);scene.add(stand);box(.14,1.16,.14,0x3e5145,0,.58,0,stand);const wheel=new THREE.Mesh(new THREE.TorusGeometry(.18,.025,8,20),new THREE.MeshStandardMaterial({color:0xa88958,metalness:.6,roughness:.45}));wheel.position.y=1.22;stand.add(wheel);const tag=label(g.name,1.10,.22);tag.position.set(0,1.61,0);stand.add(tag);const stat=label('TURN 90°',.92,.20);stat.position.set(0,.94,.04);stand.add(stat);const compass=label('N ↑   S ↓',1.2,.3,'#b29c65','#222b24');compass.rotation.x=-Math.PI/2;compass.position.set(p.x,.012,p.z-1.3);scene.add(compass);
   interactables.push({id:'gate'+i,type:'gate',index:i,position:new THREE.Vector3(p.x-1.25,1.22,p.z-1.25),mesh:stand,name:'Turn '+g.name});
   const ring=new THREE.Mesh(new THREE.RingGeometry(2.00,2.06,40),new THREE.MeshStandardMaterial({color:0x968350,metalness:.5,side:THREE.DoubleSide,roughness:.6}));ring.rotation.x=-Math.PI/2;ring.position.set(pivot.position.x,.012,pivot.position.z);scene.add(ring);

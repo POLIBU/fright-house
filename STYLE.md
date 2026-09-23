@@ -21,3 +21,10 @@ Mirrors: west passage (vertical stretch), north passage (horizontal spread), sou
 Lighting: warm bulbs of varied strengths, five dark/broken-fixture cells, cooler maintenance lights, shadow-casting flashlight and dim red/teal chase lighting. Canvas canopy has modeled sag and pleats with suspension ropes. Text uses locally hosted Special Elite. Paper uses procedural stains, folds, worn edges and a cup ring.
 
 Review pages: `/art-preview/index.html` (individual masks/doors), `/art-preview/tour.html` (mirrors and room lighting). This revision is being reviewed locally before replacing the published jam build.
+
+
+## Humanoid revision — visual review 03
+
+The user replaced the cartoon/animal direction with more realistic humanoid faces built from complex shapes. All twelve mounted faces now use continuous sculpted cranial surfaces: anatomical brow ridges, concave eye sockets, cheekbones and hollows, nasal bridge/tip/alar forms, philtrum, lip contours, chin and jaw planes. Eyes and mouths have real apertures, and separate eyelids, ears, teeth and fine creases provide relief. These are uncanny painted human casts, not photographic scans.
+
+Current cast: Grinner, Watcher, Hollow Man, Widow, Usher, Sleeper, Penitent, Drowned, Mourner, Harlequin, Contortionist and Ringmaster. Heads differ in skull width, facial mass, nose, orbital shape, age, gaze, expression and asymmetry. The earlier cartoon modules are retained under `references/cartoon-pass/` for comparison and are no longer loaded or shipped as gameplay assets.

@@ -42,3 +42,10 @@ Three.js r169 and BufferGeometryUtils: MIT, `vendor/THREE-LICENSE.txt`.
 `vendor/addons/objects/Reflector.js` is the official Three.js r169 planar reflector (MIT, existing Three.js license). Our mirror shader adds three distinct distortions and limits offscreen renders. `vendor/fonts/SpecialElite-Regular.ttf` is Special Elite by Brian J. Bonislawsky / Astigmatic, from the official Google Fonts repository; its Apache 2.0 license is included beside the font.
 
 `audio/laughter.mp3`: 10-second distant clown laughter, Atlas ElevenLabs SFX v2, FID `21f08bfb-8e72-4b3a-8fed-21661c463614`, same Fright House project. This workflow cost 31 credits total (9 for the generation node); cumulative reported Atlas usage is 192 credits. The very quiet source is normalized on decode and mixed softly, with long gaps and suppression during spoken clues.
+
+
+## Humanoid sculpt revision
+
+`assets/humanoid/` contains twelve standalone original procedural heads made in response to the user’s request for more realistic humanoid faces. Each deforms a Three.js sphere into a continuous anatomical surface, removes computed triangles for actual eye/mouth apertures, and constructs the remaining features with geometry operations. Vertex colors intentionally add subtle casting variation; no literal imported vertex arrays, scans, mesh downloads or photographic textures are used. The five-view verifier report is in `assets/humanoid/_verify/`.
+
+No RunPod deployment or model generation was used for this revision. The previous cartoon faces moved to `references/cartoon-pass/` and are excluded from the shipped build.

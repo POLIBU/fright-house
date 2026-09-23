@@ -45,3 +45,6 @@ The setting draws on seaside funhouses and the atmosphere of abandoned amusement
 The `codex/visual-direction` branch contains the user-directed art update: twelve unique detailed masks, distinct doors, spiral walls, modeled fabric canopy, three distorted scene reflections, varied lighting, typewriter UI, aged paper and quiet clown laughter. Collected props disappear and an evidence counter is shown at the top. This preview is not yet the published jam build.
 
 Run `node serve.mjs`, then open `/art-preview/index.html` for the interactive asset gallery or `/art-preview/tour.html` for the lighting/mirror views. `node tests/collection.mjs` checks prop disappearance, prompt removal, count updates and a fresh start restoring the props. Full touch playthrough and local mobile gate reports are in `validation/art/` and `validation/playthrough-touch.json`.
+
+
+Visual review 03 replaces the cartoon masks with twelve sculpted humanoid faces. Inspect the current set in the same asset gallery; the earlier set is archived under `references/cartoon-pass/`. Mobile gate evidence is in `validation/humanoid/mobile/`.

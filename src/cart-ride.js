@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import {bakeStatic} from '../assetlib.js';
 import {label} from './world.js';
-import {OBSTACLES,LANE_WIDTH,RIDE_LENGTH,trackPoint} from './ride-model.js';
+import {OBSTACLES,LANE_WIDTH,RIDE_LENGTH,trackPoint,hazardState} from './ride-model.js';
 
 export function buildCartRide(scene){
  const root=new THREE.Group();root.visible=false;scene.add(root);const chunks=new Map(),rust=new THREE.MeshStandardMaterial({color:0x634637,roughness:.9,metalness:.28}),wood=new THREE.MeshStandardMaterial({color:0x393a30,roughness:1}),metal=new THREE.MeshStandardMaterial({color:0x414845,roughness:.55,metalness:.65}),red=new THREE.MeshStandardMaterial({color:0x673b36,roughness:.78}),cream=new THREE.MeshStandardMaterial({color:0xb49f72,roughness:.8});
@@ -16,12 +16,17 @@ export function buildCartRide(scene){
  for(let s=-8;s<RIDE_LENGTH+10;s+=1.2){const g=groupAt(s);box(g,4.1,.13,.19,wood,0,-.02,0);for(const lane of [-1,0,1])for(const side of [-1,1])box(g,.055,.11,1.26,metal,lane*LANE_WIDTH+side*.42,.07,0);}
  for(let s=0;s<RIDE_LENGTH;s+=7){const g=groupAt(s);for(const side of [-1,1]){box(g,.10,1.6,.10,wood,side*3.45,.8,0);box(g,.065,.09,7.2,wood,side*3.45,.50,3.5);box(g,.065,.09,7.2,wood,side*3.45,1.22,3.5);}}
  const warning=new THREE.MeshBasicMaterial({color:0xc77637}),black=new THREE.MeshStandardMaterial({color:0x252a25,roughness:.88});
- for(const o of OBSTACLES)for(const lane of o.lanes){const g=groupAt(o.distance,lane*LANE_WIDTH);
-  if(o.kind==='timber'){for(let i=0;i<4;i++){const b=box(g,.95,.18,.24,wood,0,.20+i*.15,(i%2)*.12);b.rotation.z=(i%2?.12:-.17);b.rotation.y=i*.42;}}
-  else if(o.kind==='cart'){box(g,1.0,.70,1.45,rust,0,.64,0);for(const side of [-1,1])for(const z of [-.5,.5]){const w=mesh(g,new THREE.CylinderGeometry(.22,.22,.13,14),metal,side*.47,.22,z);w.rotation.z=Math.PI/2;}box(g,.82,.18,.64,red,0,1.07,.25);}
-  else {for(const side of [-1,1])box(g,.08,1.05,.10,rust,side*.43,.52,0);box(g,1.05,.32,.16,cream,0,.78,0);for(let x=-.4;x<.5;x+=.22){const stripe=box(g,.10,.36,.025,black,x,.78,-.10);stripe.rotation.z=-.4;}}
-  // Hazard reflectors remain visible through the short fog range.
-  for(const x of [-.38,.38])mesh(g,new THREE.SphereGeometry(.055,8,6),warning,x,1.12,-.08);
+ const hazardRoots=[];
+ for(const o of OBSTACLES)for(const [index,lane] of o.lanes.entries()){const g=groupAt(o.distance,lane*LANE_WIDTH),moving=['sign','barrel','machinery'].includes(o.kind);if(moving)root.add(g);const body=new THREE.Group();g.add(body);
+  if(o.kind==='beams'){for(let i=0;i<5;i++){const beam=box(body,.90,.11,.19,i%2?rust:wood,0,.15+i*.15,(i%2)*.12);beam.rotation.z=(i%2?.21:-.18);beam.rotation.y=i*.65;for(const x of [-.3,.3])box(beam,.027,.027,.02,metal,x,0,-.108);}const wire=new THREE.TorusGeometry(.31,.013,5,22);mesh(body,wire,metal,0,.48,-.22).rotation.x=.8;}
+  else if(o.kind==='wreck'){box(body,.94,.55,1.30,rust,0,.58,0);for(const side of [-1,1]){box(body,.065,.40,1.30,metal,side*.46,.9,0);for(const z of [-.45,.45]){const w=mesh(body,new THREE.CylinderGeometry(.21,.21,.10,18),metal,side*.47,.21,z);w.rotation.z=Math.PI/2;mesh(body,new THREE.SphereGeometry(.055,8,6),rust,side*.53,.21,z);}}const seat=box(body,.82,.16,.48,red,0,.93,.30);seat.rotation.x=.25;box(body,.60,.33,.06,wood,.07,1.17,.54).rotation.z=.18;for(let i=0;i<3;i++)box(body,.78,.035,.025,cream,0,.55+i*.12,-.663);}
+  else if(o.kind==='stall'){box(body,.91,.18,.85,wood,0,.22,0);for(const x of [-.4,.4]){const post=box(body,.085,1.05,.08,wood,x,.66,.22);post.rotation.z=x*.23;}const awning=box(body,.96,.10,.93,red,0,1.05,0);awning.rotation.z=-.18;for(let i=0;i<5;i++)box(awning,.075,.01,.92,cream,-.40+i*.2,.058,0);for(let i=0;i<4;i++){const plank=box(body,.70,.095,.09,wood,0,.39+i*.16,-.3);plank.rotation.z=.2+i*.03;}}
+  else if(o.kind==='sign'){const frame=groupAt(o.distance,lane*LANE_WIDTH);for(const x of [-.66,.66])rod(frame,[x,0,0],[x,3.5,0],.035,metal);rod(frame,[-.66,3.5,0],[.66,3.5,0],.04,rust);box(body,.96,.47,.14,red,0,.12,0);const text=label('CLOSED',.82,.25,'#d2b87f','#4c3329');text.position.set(0,.13,-.085);text.rotation.y=Math.PI;body.add(text);for(const x of [-.37,.37])rod(body,[x,.36,0],[x,1.0,0],.01,metal);}
+  else if(o.kind==='barrel'){const drum=new THREE.Group();body.add(drum);mesh(drum,new THREE.CylinderGeometry(.35,.35,.81,20),rust).rotation.z=Math.PI/2;for(const x of [-.31,.31])mesh(drum,new THREE.TorusGeometry(.351,.026,6,24),metal,x,0,0).rotation.y=Math.PI/2;box(drum,.42,.03,.15,cream,0,-.36,0);body.position.y=.36;}
+  else {box(body,.88,.31,.83,metal,0,.18,0);mesh(body,new THREE.CylinderGeometry(.27,.32,.65,12),rust,0,.65,0);for(const x of [-.35,.35]){const cog=mesh(body,new THREE.TorusGeometry(.26,.065,6,12),cream,x,.78,0);cog.rotation.y=Math.PI/2;for(let k=0;k<6;k++){const tooth=box(body,.09,.1,.10,rust,x,.78+Math.sin(k*Math.PI/3)*.29,Math.cos(k*Math.PI/3)*.29);tooth.rotation.x=k*Math.PI/3;}}rod(body,[-.3,1.0,0],[.3,1.25,0],.06,metal);}
+  for(const x of [-.35,.35])mesh(body,new THREE.SphereGeometry(.055,8,6),warning,x,o.kind==='barrel'?.25:1.10,-.12);
+  // Warning posts mark the entire swept lane twelve metres ahead; a clear track is always left.
+  const marker=groupAt(o.distance-12,lane*LANE_WIDTH);for(const x of [-.38,.38]){box(marker,.055,.43,.07,rust,x,.20,0);mesh(marker,new THREE.OctahedronGeometry(.10),warning,x,.46,0);}hazardRoots.push({o,index,g,body,moving});
  }
  // Closed ticket booths, collapsed signs, wheel silhouettes and a derelict carousel.
  for(let i=0;i<12;i++){const s=18+i*32,side=i%2?1:-1,g=groupAt(s,side*(7+i%3));box(g,3,2.8,2.4,i%2?red:wood,0,1.4,0);box(g,3.45,.18,2.8,rust,0,2.85,0);box(g,1.8,.9,.10,black,0,1.8,-1.23);for(let j=0;j<4;j++){const plank=box(g,1.85,.12,.10,wood,0,1.45+j*.22,-1.30);plank.rotation.z=(j%2?.07:-.08);}const sign=label(['TICKETS','CLOSED 1984','NO RIDERS','ARCADE'][i%4],2.7,.37,'#bca378','#48302b');sign.position.set(0,2.48,-1.34);sign.rotation.y=Math.PI;g.add(sign);}
@@ -38,7 +43,7 @@ export function buildCartRide(scene){
  const cart=new THREE.Group();root.add(cart);box(cart,1.08,.16,1.52,rust,0,.35,0);for(const side of [-1,1])box(cart,.08,.50,1.50,red,side*.54,.66,0);box(cart,1.08,.56,.09,red,0,.69,.72);box(cart,.89,.16,.53,wood,0,.54,-.24);rod(cart,[-.46,1.0,.34],[.46,1.0,.34],.035,metal);for(const x of [-.45,.45])rod(cart,[x,.42,.34],[x,1.0,.34],.026,metal);
  const wheels=[];for(const side of [-1,1])for(const z of [-.52,.52]){const wheel=mesh(cart,new THREE.CylinderGeometry(.23,.23,.12,16),metal,side*.47,.20,z);wheel.rotation.z=Math.PI/2;wheels.push(wheel);}
  const headlamp=new THREE.SpotLight(0xf2c68b,90,38,.40,.75,1.35),target=new THREE.Object3D();headlamp.position.set(0,.8,.70);target.position.set(0,.5,18);cart.add(headlamp,target);headlamp.target=target;
- return {root,path,forward,cart,update(state,t,camera,creature,lookBack=false){const s=state.progress;cart.position.copy(path(s,state.lateral));const f=forward(s);cart.rotation.set(0,Math.atan2(f.x,f.z),Math.sin(t*16)*.006+state.hitFlash*Math.sin(t*55)*.025);wheels.forEach(w=>w.rotation.x=s*4);
+ return {root,path,forward,cart,update(state,t,camera,creature,lookBack=false){const s=state.progress;for(const h of hazardRoots)if(h.moving){const q=hazardState(h.o,state.age||0)[h.index];h.g.position.copy(path(q.distance,q.lateral));const f=forward(q.distance);h.g.rotation.y=Math.atan2(f.x,f.z);if(q.kind==='sign'){h.body.position.y=q.height;h.body.rotation.z=Math.sin((state.age||0)*1.1+h.o.phase)*.07;}else if(q.kind==='barrel')h.body.rotation.x=q.angle;else h.body.rotation.z=q.angle;}cart.position.copy(path(s,state.lateral));const f=forward(s);cart.rotation.set(0,Math.atan2(f.x,f.z),Math.sin(t*16)*.006+state.hitFlash*Math.sin(t*55)*.025);wheels.forEach(w=>w.rotation.x=s*4);
   const cameraPos=path(s-.20,state.lateral,1.35+Math.sin(t*12)*.018);camera.position.copy(cameraPos);camera.lookAt(path(s+(lookBack?-12:18),lookBack?state.lateral:state.lateral*.35,lookBack?1.35:1.4));camera.rotation.z+=state.hitFlash*Math.sin(t*43)*.035;moon.position.copy(camera.position).add(new THREE.Vector3(-40,42,210));halo.position.copy(moon.position);
   creature.position.copy(path(s-state.gap,state.lateral*.70,.06+Math.sin(t*17)*.08));const cf=forward(s-state.gap);creature.rotation.set(Math.sin(t*5)*.055,Math.atan2(cf.x,cf.z),Math.sin(t*8)*.06);
  }};

@@ -20,7 +20,7 @@ export default function(THREE){
  function brow(x,y,w,c,sign=1){tube([[x-w,y-.03*sign,.29],[x,y+.08*sign,.33],[x+w,y,.29]],.030,c);}
  function finish(){
   // Backing ribs, shell fastening holes and a hanging bracket belong to each physical prop.
-  
+
   const bounds=new THREE.Box3(),v=new THREE.Vector3();g.updateMatrixWorld(true);g.traverse(o=>{if(o.isMesh){const p=o.geometry.attributes.position;for(let i=0;i<p.count;i++)bounds.expandByPoint(v.fromBufferAttribute(p,i).applyMatrix4(o.matrixWorld));}});const c=bounds.getCenter(new THREE.Vector3());g.children.forEach(o=>{o.position.x-=c.x;o.position.y-=bounds.min.y;o.position.z-=c.z;});return g;
  }
 

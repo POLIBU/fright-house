@@ -2,20 +2,37 @@
   "success": true,
   "state": {
     "pos": [
-      -0.027581204364216252,
-      16.799817864564286
+      0.34120773955547673,
+      0.9374275384199973
     ],
-    "yaw": 1.5641944297128416,
-    "pitch": -0.216351318359375,
-    "fps": 60.0193610842207,
-    "speed": 0,
+    "yaw": 1.564072740870068,
+    "pitch": -0.21634716796874998,
+    "fps": 53.999999999999986,
+    "speed": 5.301847535443348,
     "score": 3,
-    "over": true,
-    "draws": 25,
-    "tris": 57810,
-    "phase": "escaped",
+    "over": false,
+    "draws": 124,
+    "tris": 49978,
+    "phase": "ride",
     "paused": false,
     "dialog": null,
+    "ride": {
+      "progress": 1.1374275384199972,
+      "length": 420,
+      "lateral": 0,
+      "speed": 5.3018475354433425,
+      "gap": 22.904317538419885,
+      "energy": 1,
+      "hits": 0,
+      "status": "riding",
+      "next": {
+        "distance": 26.86257246158,
+        "lanes": [
+          0
+        ],
+        "kind": "timber"
+      }
+    },
     "gates": [
       1,
       1,
@@ -34,12 +51,43 @@
     "power": true,
     "recording": true,
     "jamSolved": true,
-    "timeLeft": 160.75069999999604,
-    "grace": -0.016299999999995207,
+    "timeLeft": 109.64999999999993,
+    "grace": -0.016300000000031362,
     "monster": [
-      4.266021948158613,
-      14.477091227186177
+      -7.726395030712604,
+      -21.76688999999989
     ],
+    "atmosphere": {
+      "faces": 3,
+      "teddyEyes": [
+        {
+          "yaw": -0.7226910581444839,
+          "pitch": -0.05783081638726567
+        },
+        {
+          "yaw": -0.7153998564472147,
+          "pitch": -0.02667924198473799
+        },
+        {
+          "yaw": -0.7254296483465709,
+          "pitch": -0.026445490393163015
+        }
+      ],
+      "fishBags": 6,
+      "webs": 2,
+      "skeletons": 1,
+      "faceY": 0.5100333822710263,
+      "balloons": 10,
+      "balloonY": 2.7459439114017954,
+      "melt": 0.9999977833643844,
+      "meltAge": 10.849599999999938,
+      "lightScale": 0.21000075365610932,
+      "arms": 8,
+      "reach": 0,
+      "smoke": 38
+    },
+    "monsterLaugh": true,
+    "audioState": "running",
     "near": "exit",
     "evidenceVisible": {
       "bag": false,
@@ -50,17 +98,17 @@
       {
         "id": "stretch",
         "mode": 0,
-        "updates": 846
+        "updates": 842
       },
       {
         "id": "wide",
         "mode": 1,
-        "updates": 325
+        "updates": 317
       },
       {
         "id": "ripple",
         "mode": 2,
-        "updates": 229
+        "updates": 228
       }
     ],
     "ready": true

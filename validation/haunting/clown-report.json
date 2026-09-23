@@ -1,0 +1,40 @@
+[
+ {
+  "ok": true,
+  "mounts": "back",
+  "meshes": 95,
+  "tris": 59566,
+  "materials": 12,
+  "size": [
+   1.127,
+   1.384,
+   0.884
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2025,
+    "edgeDensity": 0.1792
+   },
+   "right": {
+    "coverage": 0.1495,
+    "edgeDensity": 0.1039
+   },
+   "back": {
+    "coverage": 0.2353,
+    "edgeDensity": 0.0297
+   },
+   "left": {
+    "coverage": 0.1509,
+    "edgeDensity": 0.0941
+   }
+  },
+  "error": null,
+  "name": "face_clown",
+  "problems": []
+ }
+]

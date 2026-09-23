@@ -1,0 +1,103 @@
+{
+  "success": true,
+  "state": {
+    "pos": [
+      0.3741809572851891,
+      1.0280272160358732
+    ],
+    "yaw": 1.5555515289306636,
+    "pitch": -0.22099365234375,
+    "fps": 54.19005225469317,
+    "speed": 5.424501859620461,
+    "score": 3,
+    "over": false,
+    "draws": 124,
+    "tris": 49978,
+    "phase": "ride",
+    "paused": false,
+    "dialog": null,
+    "ride": {
+      "progress": 1.2280272160358732,
+      "length": 420,
+      "lateral": 0,
+      "speed": 5.42450185962046,
+      "gap": 22.883027216035845,
+      "energy": 1,
+      "hits": 0,
+      "status": "riding",
+      "next": {
+        "distance": 26.771972783964127,
+        "lanes": [
+          0
+        ],
+        "kind": "timber"
+      }
+    },
+    "gates": [
+      1,
+      1,
+      0
+    ],
+    "rotating": [
+      0,
+      0,
+      0
+    ],
+    "found": [
+      "bag",
+      "shoe",
+      "tape"
+    ],
+    "power": true,
+    "recording": true,
+    "jamSolved": true,
+    "timeLeft": 109.63340000000002,
+    "grace": -0.016500000000014753,
+    "monster": [
+      -7.688664451020237,
+      -21.654999999999973
+    ],
+    "atmosphere": {
+      "faces": 3,
+      "fishBags": 6,
+      "webs": 2,
+      "skeletons": 1,
+      "faceY": 0.43061755564264076,
+      "balloons": 10,
+      "balloonY": 2.8091729938412757,
+      "melt": 0.9999994953294513,
+      "meltAge": 12.082799999999981,
+      "lightScale": 0.21000017158798656,
+      "arms": 8,
+      "reach": 0,
+      "smoke": 38
+    },
+    "monsterLaugh": true,
+    "audioState": "running",
+    "near": "exit",
+    "evidenceVisible": {
+      "bag": false,
+      "shoe": false,
+      "tape": false
+    },
+    "mirrors": [
+      {
+        "id": "stretch",
+        "mode": 0,
+        "updates": 10
+      },
+      {
+        "id": "wide",
+        "mode": 1,
+        "updates": 0
+      },
+      {
+        "id": "ripple",
+        "mode": 2,
+        "updates": 0
+      }
+    ],
+    "ready": true
+  },
+  "errors": []
+}

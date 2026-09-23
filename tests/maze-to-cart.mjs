@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const {chromium}=await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
+import {pathfind,cellAt,point,GATES,POWER_GATES} from '../src/model.js';
+const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH,args:['--enable-unsafe-swiftshader']});
+const page=await browser.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true,deviceScaleFactor:1,userAgent:'Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36'});const cdp=await page.context().newCDPSession(page);const errors=[];page.on('pageerror',e=>errors.push(e.message));
+const state=()=>page.evaluate(()=>window.__GAME__);const wait=ms=>page.waitForTimeout(ms);const norm=a=>Math.atan2(Math.sin(a),Math.cos(a));
+async function touchStart(x,y){await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x,y}]});}
+async function touchMove(x,y){await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x,y}]});}
+async function touchEnd(){await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});}
+async function hold(k,ms){if(k!=='KeyW')throw Error('unexpected keyboard input');const box=await page.locator('#stick').boundingBox();const x=box.x+box.width/2,y=box.y+box.height/2;await touchStart(x,y);await touchMove(x,y-42);await wait(ms);await touchEnd();await wait(40);}
+async function face(x,z,y=1.65){for(let i=0;i<18;i++){const s=await state(),desired=Math.atan2(-(x-s.pos[0]),-(z-s.pos[1])),d=norm(desired-s.yaw);if(Math.abs(d)<.025)break;const px=Math.max(-85,Math.min(85,-d/.005));await touchStart(280,370);await touchMove(280+px,370);await touchEnd();await wait(45);}for(let i=0;i<5;i++){const s=await state(),pitch=Math.atan2(y-1.65,Math.hypot(x-s.pos[0],z-s.pos[1])),d=pitch-s.pitch;if(Math.abs(d)<.03)break;const py=Math.max(-100,Math.min(100,-d/.004));await touchStart(280,370);await touchMove(280,370+py);await touchEnd();await wait(45);}}
+async function move(x,z,tol=.13){for(let i=0;i<65;i++){const s=await state(),dist=Math.hypot(s.pos[0]-x,s.pos[1]-z);if(s.over)throw Error('Caught before reaching '+x+','+z);if(dist<tol)return;await face(x,z);await hold('KeyW',Math.min(450,Math.max(30,(dist-.06)/2.15*1000)));}throw Error('Movement stalled '+JSON.stringify(await state())+' target '+x+','+z);}
+async function route(node){let s=await state();const start=cellAt(...s.pos),p=pathfind(start,node,s.gates);assert.ok(p.length,'route exists');for(const n of p){const t=point(n);await move(t.x,t.z,.18);}}
+async function use(id,x,z,y=1.3){await face(x,z,y);await wait(100);let s=await state();assert.equal(s.near,id,`looking at ${id}, instead ${s.near}; ${JSON.stringify(s.pos)}`);await page.tap('#use');await wait(100);}
+async function close(){await page.tap('#close-dialog');await wait(100);}
+try{
+await page.goto(process.env.GAME_URL||'http://localhost:8089');await page.waitForFunction(()=>window.__READY__);await page.tap('#menu summary');await page.tap('#menu [data-test-checkpoint="chase"]');await page.waitForFunction(()=>window.__GAME__.phase==='chase');const m=point('4,4');
+await use('release',m.x,m.z-1.6,1.6);await page.tap('[data-wheel="0"]');await page.tap('[data-wheel="1"]');await page.tap('[data-wheel="1"]');await page.locator('#dialog-actions button').tap();await page.waitForFunction(()=>window.__GAME__.jamSolved);console.log('Jammed passage released');await page.screenshot({path:'validation/haunting/maze-release.png'});
+await route('0,4');const e=point('0,4');await use('exit',e.x-1.62,e.z,1.3);for(const n of [0,2,1])await page.tap(`[data-handle="${n}"]`);await wait(200);assert.equal((await state()).phase,'ride');await page.screenshot({path:'validation/haunting/maze-to-cart.png'});assert.deepEqual(errors,[]);fs.writeFileSync('validation/haunting/maze-to-cart.json',JSON.stringify({success:true,state:await state(),errors},null,2));console.log('PASS: real-touch maze playthrough enters the cart stage');
+}catch(e){await page.screenshot({path:'validation/haunting/transition-failure.png'});console.error(e);console.error(await state());process.exitCode=1;}finally{await browser.close();}

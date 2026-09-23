@@ -1,0 +1,105 @@
+{
+  "success": true,
+  "state": {
+    "pos": [
+      15.253944180935141,
+      299.80786141042637
+    ],
+    "yaw": 3.141592653589793,
+    "pitch": 0,
+    "fps": 59.99999999999997,
+    "speed": 0.4679410968069372,
+    "score": 3,
+    "over": false,
+    "draws": 63,
+    "tris": 27311,
+    "phase": "ride",
+    "paused": false,
+    "dialog": null,
+    "ride": {
+      "progress": 300.00786141042636,
+      "length": 420,
+      "lateral": 0,
+      "speed": 0.46794109680608037,
+      "gap": 23.87682141042632,
+      "energy": 1,
+      "hits": 0,
+      "status": "riding",
+      "next": {
+        "distance": 0.9921385895736421,
+        "lanes": [
+          0
+        ],
+        "kind": "timber"
+      }
+    },
+    "gates": [
+      1,
+      1,
+      0
+    ],
+    "rotating": [
+      0,
+      0,
+      0
+    ],
+    "found": [
+      "bag",
+      "shoe",
+      "tape"
+    ],
+    "power": true,
+    "recording": true,
+    "jamSolved": false,
+    "timeLeft": 109.9832,
+    "grace": 8,
+    "monster": [
+      12.388498589528012,
+      276.13104000000004
+    ],
+    "atmosphere": {
+      "faces": 3,
+      "fishBags": 6,
+      "webs": 2,
+      "skeletons": 1,
+      "faceY": 0.5027279586008981,
+      "balloons": 10,
+      "balloonY": 2.732432150312277,
+      "melt": 0,
+      "meltAge": 0,
+      "lightScale": 1,
+      "arms": 8,
+      "reach": 0,
+      "smoke": 38
+    },
+    "monsterLaugh": true,
+    "audioState": "running",
+    "near": null,
+    "evidenceVisible": {
+      "bag": false,
+      "shoe": false,
+      "tape": false
+    },
+    "mirrors": [
+      {
+        "id": "stretch",
+        "mode": 0,
+        "updates": 6
+      },
+      {
+        "id": "wide",
+        "mode": 1,
+        "updates": 0
+      },
+      {
+        "id": "ripple",
+        "mode": 2,
+        "updates": 0
+      }
+    ],
+    "ready": true
+  },
+  "peakDraws": 139,
+  "peakTris": 57706,
+  "errors": []
+}

@@ -1,0 +1,3 @@
+Cart pause freezes movement and audio
+PASS: full cart escape without collisions desktop { peakDraws: 139, peakTris: 57706 }
+PASS: braking capture and final-stretch checkpoint retry

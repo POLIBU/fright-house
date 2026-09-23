@@ -1,0 +1,87 @@
+{
+  "success": true,
+  "state": {
+    "pos": [
+      16.8,
+      16.8
+    ],
+    "yaw": 0,
+    "pitch": 0,
+    "fps": 59.99999999999997,
+    "speed": 0,
+    "score": 3,
+    "over": false,
+    "draws": 321,
+    "tris": 189984,
+    "phase": "chase",
+    "paused": false,
+    "dialog": null,
+    "ride": null,
+    "gates": [
+      1,
+      1,
+      0
+    ],
+    "rotating": [
+      0,
+      0,
+      0
+    ],
+    "found": [
+      "bag",
+      "shoe",
+      "tape"
+    ],
+    "power": true,
+    "recording": true,
+    "jamSolved": false,
+    "timeLeft": 170.63369999999566,
+    "grace": -0.01630000000003835,
+    "monster": [
+      3.239999999999998,
+      0
+    ],
+    "atmosphere": {
+      "faces": 3,
+      "fishBags": 6,
+      "webs": 2,
+      "skeletons": 1,
+      "faceY": 0.5737221630926544,
+      "balloons": 10,
+      "balloonY": 2.7285793096644957,
+      "melt": 0.8021013009163851,
+      "meltAge": 1.3499999999999999,
+      "lightScale": 0.2772855576884291,
+      "arms": 8,
+      "reach": 0,
+      "smoke": 38
+    },
+    "monsterLaugh": true,
+    "audioState": "running",
+    "near": "release",
+    "evidenceVisible": {
+      "bag": false,
+      "shoe": false,
+      "tape": false
+    },
+    "mirrors": [
+      {
+        "id": "stretch",
+        "mode": 0,
+        "updates": 11
+      },
+      {
+        "id": "wide",
+        "mode": 1,
+        "updates": 0
+      },
+      {
+        "id": "ripple",
+        "mode": 2,
+        "updates": 0
+      }
+    ],
+    "ready": true
+  },
+  "errors": []
+}

@@ -37,7 +37,7 @@ Three.js r169 and BufferGeometryUtils: MIT, `vendor/THREE-LICENSE.txt`.
 
 ## User-directed visual revision
 
-`assets/art/` adds twelve unique original masks and four detailed door constructions, generated as standalone Three.js modules and verified from five views. This pass follows the user’s supplied references directly; it is not described as three independent candidates per new mask. Each mask is used once in the maze. New paint, canopy weave and clue-paper marks are procedural. The user’s reference screenshots are not redistributed in the runtime or source.
+The earlier cartoon pass added twelve unique original masks (now in `references/cartoon-pass/`) and four detailed doors in `assets/art/`, generated as standalone Three.js modules and verified from five views. This pass follows the user’s supplied references directly; it is not described as three independent candidates per new mask. Each mask was used once in that earlier maze revision. New paint, canopy weave and clue-paper marks are procedural. The user’s reference screenshots are not redistributed in the runtime or source.
 
 `vendor/addons/objects/Reflector.js` is the official Three.js r169 planar reflector (MIT, existing Three.js license). Our mirror shader adds three distinct distortions and limits offscreen renders. `vendor/fonts/SpecialElite-Regular.ttf` is Special Elite by Brian J. Bonislawsky / Astigmatic, from the official Google Fonts repository; its Apache 2.0 license is included beside the font.
 
@@ -46,6 +46,24 @@ Three.js r169 and BufferGeometryUtils: MIT, `vendor/THREE-LICENSE.txt`.
 
 ## Humanoid sculpt revision
 
-`assets/humanoid/` contains twelve standalone original procedural heads made in response to the user’s request for more realistic humanoid faces. Each deforms a Three.js sphere into a continuous anatomical surface, removes computed triangles for actual eye/mouth apertures, and constructs the remaining features with geometry operations. Vertex colors intentionally add subtle casting variation; no literal imported vertex arrays, scans, mesh downloads or photographic textures are used. The five-view verifier report is in `assets/humanoid/_verify/`.
+The earlier humanoid pass created twelve standalone original procedural heads made in response to the user’s request for more realistic humanoid faces. Each deforms a Three.js sphere into a continuous anatomical surface, removes computed triangles for actual eye/mouth apertures, and constructs the remaining features with geometry operations. Vertex colors intentionally add subtle casting variation; no literal imported vertex arrays, scans, mesh downloads or photographic textures are used. The five-view verifier report is in `assets/humanoid/_verify/`.
 
 No RunPod deployment or model generation was used for this revision. The previous cartoon faces moved to `references/cartoon-pass/` and are excluded from the shipped build.
+
+
+## Current direction — visual review 04
+
+The latest user direction supersedes the twelve-face cast: exactly three floating decorations remain in the maze, with a 2.55 m crooked-smile clown, a small hollow cast and a sleeping face. Gate doors no longer carry repeated heads. Unused humanoid designs are archived outside the shipped assets.
+
+Original procedural scene additions: ten drifting balloons in six faded colours; a six-bag fish-prize stall with translucent crinkled plastic, murky water, modeled fish and instanced circling flies; two triangular corner cobwebs; and a jointed fake skeleton lying beside the route. The creature has eight independently animated two-segment limbs and curling claws, plus 38 depth-tested soft smoke billows. Its reaching is visual; maze collision still determines capture.
+
+Chase fixture intensity falls from 55% during the phone warning to 21% after the creature appears. The existing spiral texture is animated with uneven downward runs, preserving collision and layout. Echoed, pitch-shifted creature laughter reuses the existing Atlas SFX, with distance, stereo direction and wall muffling. No new paid generation, model downloads or external services were used. The local scene tour provides creature/props/lighting/audio controls for review.
+
+
+## Last Ride and teddy revision
+
+The user added a second playable escape stage beyond the service door: a winding 420 m cart route through closed booths, broken railway carts, barricades, timber, a derelict carousel and Ferris-wheel silhouettes. Dense outdoor fog, a procedural cratered red moon and warm cart headlights limit visibility while hazard reflectors identify obstacles. Three-track steering, boost energy, brake-induced pursuit, thirteen obstacle rows and a final coast-road gate form the new stage. Test checkpoints are available from the title and pause menus.
+
+The monster no longer has a readable human coat/body: its central form is an irregular dark organic mass, torn strands and 38 depth-tested smoke billows, with the existing eight jointed arms and grasping claws. This is an original creature informed by the user's broad survival-horror references, not a copied franchise character.
+
+An original corner teddy follows the user-supplied reference in construction: worn textured plush, teeth, dark fabric sockets and a doll-like human face in an abdomen insert. Two bear eyes and the open doll eye rotate toward the player. The reference screenshot is not shipped. Plush fibre marks and lunar surface texture are generated with canvas drawing; all meshes are built with Three.js geometry operations. The existing Atlas laugh has been mixed louder; no additional external audio, AI service or paid generation was used.

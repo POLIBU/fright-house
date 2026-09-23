@@ -6,7 +6,24 @@ export function spiralMaterial(){
  const canvas=document.createElement('canvas');canvas.width=canvas.height=768;const ctx=canvas.getContext('2d'),im=ctx.createImageData(768,768);let seed=8791;
  for(let y=0;y<768;y++)for(let x=0;x<768;x++){const dx=(x-384)/384,dy=(y-384)/384,r=Math.hypot(dx,dy),a=Math.atan2(dy,dx)+r*.74;const red=Math.sin(a*16)>0;seed=(seed*1664525+1013904223)>>>0;const noise=seed/4294967296;const aged=.89+noise*.11-(y/768)*.075;const c=red?[160,35,31]:[219,201,148];const i=(y*768+x)*4;for(let k=0;k<3;k++)im.data[i+k]=c[k]*aged;im.data[i+3]=255;}
  ctx.putImageData(im,0,0);ctx.globalAlpha=.13;ctx.fillStyle='#3f392b';for(let i=0;i<500;i++){seed=(seed*1664525+1013904223)>>>0;const x=seed%768;seed=(seed*1664525+1013904223)>>>0;const y=seed%768;ctx.fillRect(x,y,1+seed%5,3+seed%19);}ctx.globalAlpha=1;const tex=new THREE.CanvasTexture(canvas);tex.colorSpace=THREE.SRGBColorSpace;tex.anisotropy=4;
- return new THREE.MeshStandardMaterial({map:tex,roughness:.87});
+ const material=new THREE.MeshStandardMaterial({map:tex,roughness:.87});
+ const time={value:0},amount={value:0};
+ material.userData.melt={time,amount};
+ material.onBeforeCompile=shader=>{
+  shader.uniforms.meltTime=time;shader.uniforms.meltAmount=amount;
+  shader.fragmentShader='uniform float meltTime; uniform float meltAmount;\n'+shader.fragmentShader;
+  shader.fragmentShader=shader.fragmentShader.replace('#include <map_fragment>',`#ifdef USE_MAP
+   vec2 meltedUv=vMapUv;
+   float rivulet=pow(.5+.5*sin(vMapUv.x*43.0+sin(vMapUv.x*17.0)*2.0),5.0);
+   float run=meltTime*.045;
+   meltedUv.y += meltAmount*(run*(.20+rivulet*.65)+.035*sin(vMapUv.x*25.0+meltTime*.45));
+   meltedUv.x += meltAmount*.014*sin(vMapUv.y*11.0+meltTime*.55);
+   vec4 sampledDiffuseColor=texture2D(map,vec2(clamp(meltedUv.x,0.001,.999),fract(meltedUv.y)));
+   diffuseColor *= sampledDiffuseColor;
+   #endif`);
+ };
+ material.customProgramCacheKey=()=> 'fright-melting-paint-v1';
+ return material;
 }
 export function addCircusCanopy(scene){
  const c=document.createElement('canvas');c.width=c.height=512;const ctx=c.getContext('2d');ctx.fillStyle='#b8a477';ctx.fillRect(0,0,512,512);for(let x=0;x<512;x+=128){ctx.fillStyle='#823b32';ctx.fillRect(x,0,64,512);}ctx.strokeStyle='#ead6a133';ctx.lineWidth=1;for(let i=0;i<512;i+=4){ctx.beginPath();ctx.moveTo(i,0);ctx.lineTo(i,512);ctx.stroke();ctx.beginPath();ctx.moveTo(0,i);ctx.lineTo(512,i);ctx.stroke();}const tex=new THREE.CanvasTexture(c);tex.colorSpace=THREE.SRGBColorSpace;tex.wrapS=tex.wrapT=THREE.RepeatWrapping;tex.repeat.set(8,3);

@@ -13,7 +13,7 @@ export async function buildWorld(scene,{assetBase='./assets/',audit=false}={}){
  const proto={};for(const name of ['phone','recorder','backpack','shoe','cassette','breaker'])proto[name]=await ASSET(`${assetBase}${name}.js?v=${document.documentElement.dataset.build||"dev"}`,{surfaces:true});
  const art={};const names=['face_clown','face_hollow','face_sleeper','door_grin','door_wink','door_frown','door_exit'];
  for(const name of names)art[name]=await ASSET(`${assetBase}${name.startsWith('face_')?'humanoid':'art'}/${name}.js?v=${document.documentElement.dataset.build||'dev'}`,{surfaces:true});
- const collision=[],wallMeshes=[],gateMeshes=[],fixtures=[],lights=[],interactables=[],evidenceMeshes={},lampDesigns=[],auditObjects=[];
+ const collision=[],wallMeshes=[],gateMeshes=[],fixtures=[],lights=[],interactables=[],evidenceMeshes={},lampDesigns=[],auditObjects=[],swinging=[];
  const spiral=spiralMaterial(),floatingFaces=[];let haunting=false,meltAge=0,hauntLevel=0;
  const staticRoot=new THREE.Group();scene.add(staticRoot);
  function box(w,h,d,color,x,y,z,parent=staticRoot){const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),new THREE.MeshStandardMaterial({color,roughness:.9}));m.position.set(x,y,z);m.castShadow=true;m.receiveShadow=true;parent.add(m);return m;}
@@ -38,14 +38,14 @@ export async function buildWorld(scene,{assetBase='./assets/',audit=false}={}){
  }
  const c=document.createElement('canvas');c.width=c.height=512;const ctx=c.getContext('2d');let seed=493;const rand=()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296;};ctx.fillStyle='#4c4a37';ctx.fillRect(0,0,512,512);for(let y=0;y<512;y+=64){ctx.fillStyle=y%128?'#524c35':'#474732';ctx.fillRect(0,y,512,62);for(let j=0;j<250;j++){const a=rand();ctx.fillStyle=`rgba(${a>.5?'183,157,106':'20,23,18'},${rand()*.17})`;ctx.fillRect(rand()*512,y+rand()*62,rand()*100,.5+rand()*1.5);}ctx.fillStyle='#17211d';ctx.fillRect((y*7)%512,y,2,64);}for(let j=0;j<1400;j++){ctx.fillStyle=`rgba(5,16,14,${rand()*.13})`;ctx.fillRect(rand()*512,rand()*512,rand()*10,rand()*10);}const tex=new THREE.CanvasTexture(c);tex.colorSpace=THREE.SRGBColorSpace;tex.wrapS=tex.wrapT=THREE.RepeatWrapping;tex.repeat.set(10,10);
  const floor=new THREE.Mesh(new THREE.PlaneGeometry(SIZE*N,SIZE*N),new THREE.MeshStandardMaterial({map:tex,roughness:.67}));floor.rotation.x=-Math.PI/2;floor.position.set(SIZE*2,-.015,SIZE*2);floor.receiveShadow=true;scene.add(floor);
- addCircusCanopy(scene);
+ const canopy=addCircusCanopy(scene);
  mountFace('clown',4.2,2.1,0,2.55,.49);
  mountFace('hollow',18.9,0,-Math.PI/2,1.05,1.56);mountFace('sleeper',4.2,18.9,Math.PI,1.28,1.44);
  const profiles=[{color:0xffc28a,intensity:18},{color:0xeaaa66,intensity:4},{color:0xc6d3b0,intensity:11},{color:0xffae63,intensity:2.4},{color:0xf1bd70,intensity:17}];
  for(let z=0;z<N;z++)for(let x=0;x<N;x++){
   const seed=x+z*5,dark=[6,8,13,16,18].includes(seed),profile=profiles[(x*3+z*2)%profiles.length];
   const base=(x===4&&z>2)?{color:0x8bc6c0,intensity:13}:dark?{color:0xc98758,intensity:.7}:profile;
-  const lamp=lampFixture(seed,base.color,dark);lamp.root.position.set(x*SIZE,3.25,z*SIZE);staticRoot.add(lamp.root);lampDesigns.push(lamp.signature);fixtures.push(lamp.bulb);if(audit){const copy=lamp.root.clone();copy.position.set(0,0,0);auditObjects.push({name:'Lamp '+seed,spec:{kind:lamp.kind,drop:lamp.drop,signature:lamp.signature},mesh:copy});}
+  const lamp=lampFixture(seed,base.color,dark);lamp.root.position.set(x*SIZE,3.25,z*SIZE);if(seed%5===0){scene.add(lamp.root);swinging.push({pivot:lamp.hanger,base:lamp.hanger.rotation.z,seed});}else staticRoot.add(lamp.root);lampDesigns.push(lamp.signature);fixtures.push(lamp.bulb);if(audit){const copy=lamp.root.clone();copy.position.set(0,0,0);auditObjects.push({name:'Lamp '+seed,spec:{kind:lamp.kind,drop:lamp.drop,signature:lamp.signature},mesh:copy});}
   const l=new THREE.PointLight(base.color,base.intensity*(.94+seed*.005),dark?3.4:5.6,2);l.position.set(x*SIZE,3.25-lamp.drop-.09,z*SIZE);l.userData.baseColor=base.color;l.userData.baseIntensity=l.intensity;l.userData.flicker=seed===8||seed===16;scene.add(l);lights.push(l);
  }
  const mirrors=addMirrors(scene);
@@ -73,17 +73,20 @@ export async function buildWorld(scene,{assetBase='./assets/',audit=false}={}){
  const e=point('0,4');const exitDoor=art.door_exit.clone();exitDoor.position.set(e.x-1.91,0,e.z);exitDoor.rotation.y=Math.PI/2;staticRoot.add(exitDoor);interactables.push({id:'exit',type:'exit',position:new THREE.Vector3(e.x-1.62,1.3,e.z),name:'Open the service exit'});const exitSign=label('SERVICE EXIT',1.28,.25,'#a3cebb');exitSign.position.set(e.x-1.75,2.90,e.z);exitSign.rotation.y=Math.PI/2;scene.add(exitSign);
  const rig=createCreature(),creature=rig.root;creature.visible=false;scene.add(creature);
  const balloons=addBalloons(scene),attractions=addAttractions(scene,label),teddy=addTeddy(scene);
+ let suspenseLevel=0;const glimpse=new THREE.Group();scene.add(glimpse);glimpse.visible=false;const shade=new THREE.MeshStandardMaterial({color:0x050807,roughness:1});for(let i=0;i<7;i++){const scrap=new THREE.Mesh(new THREE.ConeGeometry(.09+(i%3)*.02,1.2+(i%4)*.15,5),shade);scrap.position.set((i-3)*.055,1.25+Math.sin(i)*.10,Math.cos(i)*.06);scrap.rotation.z=(i-3)*.05;glimpse.add(scrap);}
+ function setSuspense(event,position){const age=event?.age||0;suspenseLevel=event?Math.sin(Math.PI*Math.min(1,age/event.duration)):0;glimpse.visible=!!event&&event.kind!=='ceiling-creak'&&age>2.8&&age<4.6;if(position){glimpse.position.set(position.x,0,position.z);glimpse.rotation.y=position.yaw||0;}glimpse.position.x+=(glimpse.visible?Math.sin(age*2)*.012:0);}
  function updateAtmosphere(t,dt){
+  canopy.userData.time.value=t;for(const s of swinging)s.pivot.rotation.z=s.base+Math.sin(t*(.64+s.seed*.011)+s.seed)*(.018+suspenseLevel*.065);
   for(const f of floatingFaces){f.mesh.position.copy(f.base);f.mesh.position.y+=Math.sin(t*.82+f.phase)*.085;f.mesh.position.x+=Math.cos(t*.49+f.phase)*.035;f.mesh.rotation.y=f.yaw+Math.sin(t*.41+f.phase)*.055;f.mesh.rotation.z=Math.sin(t*.61+f.phase)*.035;}
   balloons.update(t);attractions.update(t);
   // Darkness and liquid paint intensify only once the creature is in the maze.
   hauntLevel=THREE.MathUtils.damp(hauntLevel,haunting&&creature.visible?1:0,1.2,dt);
   if(haunting&&creature.visible)meltAge+=dt;
   spiral.userData.melt.time.value=meltAge;spiral.userData.melt.amount.value=hauntLevel;
-  lights.forEach(l=>{l.userData.level=l.userData.baseIntensity*(haunting?.55-.34*hauntLevel:1);l.intensity=l.userData.level;});updateLighting(t);
+  lights.forEach(l=>{l.userData.level=l.userData.baseIntensity*(haunting?.55-.34*hauntLevel:1)*(1-suspenseLevel*.24);l.intensity=l.userData.level;});updateLighting(t);
  }
- const atmosphereState=()=>({dressing:{walls:wallMeshes.length,wallDesigns:wallMeshes.map(w=>w.userData.design),lamps:lampDesigns,lampFamilies:5,tables:['reception-desk','steel-trolley','carnival-cabinet','maintenance-bench']},faces:floatingFaces.length,teddyEyes:teddy.state(),fishBags:attractions.bags,webs:2,skeletons:0,faceY:floatingFaces[0].mesh.position.y,balloons:balloons.items.length,balloonY:balloons.items[0].position.y,melt:hauntLevel,meltAge,lightScale:haunting?.55-.34*hauntLevel:1,arms:rig.arms.length,reach:creature.userData.reach,smoke:creature.visible?rig.smoke.children.length:0});
+ const atmosphereState=()=>({dressing:{walls:wallMeshes.length,wallDesigns:wallMeshes.map(w=>w.userData.design),lamps:lampDesigns,lampFamilies:5,tables:['reception-desk','steel-trolley','carnival-cabinet','maintenance-bench']},suspenseLevel,glimpse:glimpse.visible,clothTime:canopy.userData.time.value,swing:swinging.map(s=>s.pivot.rotation.z),faces:floatingFaces.length,teddyEyes:teddy.state(),fishBags:attractions.bags,webs:2,skeletons:0,faceY:floatingFaces[0].mesh.position.y,balloons:balloons.items.length,balloonY:balloons.items[0].position.y,melt:hauntLevel,meltAge,lightScale:haunting?.55-.34*hauntLevel:1,arms:rig.arms.length,reach:creature.userData.reach,smoke:creature.visible?rig.smoke.children.length:0});
  // Static geometry is merged into spatial chunks, keeping draw calls low without losing all culling.
  staticRoot.updateMatrixWorld(true);const chunks=new Map();for(const obj of [...staticRoot.children]){const k=key(Math.floor((obj.position.x+2.1)/8.4),Math.floor((obj.position.z+2.1)/8.4));if(!chunks.has(k))chunks.set(k,new THREE.Group());chunks.get(k).add(obj);}scene.remove(staticRoot);for(const group of chunks.values())scene.add(bakeStatic(group));
- return {auditObjects,collision,gateMeshes,interactables,creature,fixtures,lights,jam,shutter,proto,mirrors,evidenceMeshes,setLighting,updateLighting,updateAtmosphere,atmosphereState,updateGaze:camera=>teddy.update(camera),updateCreature:rig.update,resetCreature:rig.reset};
+ return {setSuspense,auditObjects,collision,gateMeshes,interactables,creature,fixtures,lights,jam,shutter,proto,mirrors,evidenceMeshes,setLighting,updateLighting,updateAtmosphere,atmosphereState,updateGaze:camera=>teddy.update(camera),updateCreature:rig.update,resetCreature:rig.reset};
 }

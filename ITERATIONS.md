@@ -48,3 +48,11 @@ Changed: replaced the three identical evidence tables with a reception desk (tur
 Improved against V00/V01: furniture silhouettes communicate different former uses; wall repairs provide landmarks. Retained: footprint, evidence height, all user-selected hero props and interactions. Regression: more materials increase the emulated startup route from V00's 220 calls to 264; still comfortably below 900. Some fixtures remain subtle in darkness, deliberately preserving lighting contrast. No new bitmap downloads.
 
 Checks: all eight matched camera views render with zero errors (largest review view 452 calls / 404,053 triangles). Visually inspected the four furniture views and full 29-wall/25-lamp contact sheet. Distinct design audit passes. Real-touch jam release and maze-to-cart transition pass. Throttled mobile gate: 7.5 s, 2.7 MB, 264 calls, 287,190 triangles, 0 missing assets/errors; emulation on Apple M5 Max, not a physical phone. Next: milestone suspense and animation.
+
+### V03 comparison — accepted
+
+Changed: each new clue schedules one of three suspense motifs. A creak precedes distant movement or a slow dip to 76% of the local lighting; quiet interval is 14 seconds. Reading and narration hold events. Five fixtures sway with the event; canopy cloth undulates subtly. Distant shapes are scenery only, without an extra face or unfair collision. Read-only telemetry exposes queue, active event and age.
+
+Improved against V02/V00: exploration has an escalating response to progress, while the quiet layout-learning stage remains. Retained the darker corners and normal clue UI. Regression/tradeoff: five moving fixtures cannot be statically batched, adding eight calls in the widest matched view (460 vs 452). Glimpses can be hidden by geometry; no through-wall overlay forces a scare. No new audio download: original procedural creaks use the existing sound engine.
+
+Checks: pure event schedule test passes (deduplication, pause, narration, quiet gap, reset). Real browser clue pickup proves reading holds event, pause freezes all effects, resume continues, and new investigation resets queue/seen state. Six captured motion frames and telemetry: `validation/iterations/v03/`. Eight matched cameras: zero browser errors; maximum 460 calls / 403,936 triangles. Next: sound investigation and fair search.

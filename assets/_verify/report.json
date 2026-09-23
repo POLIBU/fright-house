@@ -1,0 +1,384 @@
+[
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 8,
+  "tris": 1604,
+  "materials": 6,
+  "size": [
+   0.38,
+   0.521,
+   0.227
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2756,
+    "edgeDensity": 0.066
+   },
+   "right": {
+    "coverage": 0.1752,
+    "edgeDensity": 0.0647
+   },
+   "back": {
+    "coverage": 0.278,
+    "edgeDensity": 0.0523
+   },
+   "left": {
+    "coverage": 0.1791,
+    "edgeDensity": 0.0617
+   }
+  },
+  "error": null,
+  "name": "backpack",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": "back",
+  "meshes": 13,
+  "tris": 1516,
+  "materials": 8,
+  "size": [
+   0.62,
+   0.76,
+   0.252
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.3783,
+    "edgeDensity": 0.0983
+   },
+   "right": {
+    "coverage": 0.1781,
+    "edgeDensity": 0.0801
+   },
+   "back": {
+    "coverage": 0.4193,
+    "edgeDensity": 0.0198
+   },
+   "left": {
+    "coverage": 0.1764,
+    "edgeDensity": 0.0587
+   }
+  },
+  "error": null,
+  "name": "breaker",
+  "problems": []
+ },
+ {
+  "ok": false,
+  "mounts": null,
+  "meshes": 9,
+  "tris": 2020,
+  "materials": 5,
+  "size": [
+   0.105,
+   0.067,
+   0.021
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2474,
+    "edgeDensity": 0.1344
+   },
+   "right": {
+    "coverage": 0.0923,
+    "edgeDensity": 0.1102
+   },
+   "back": {
+    "coverage": 0.3861,
+    "edgeDensity": 0.0091
+   },
+   "left": {
+    "coverage": 0.1189,
+    "edgeDensity": 0.0829
+   }
+  },
+  "error": null,
+  "name": "cassette",
+  "problems": [
+   "back face is nearly featureless next to the others, it was probably never modelled"
+  ]
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 31,
+  "tris": 4812,
+  "materials": 12,
+  "size": [
+   1.221,
+   2.61,
+   0.76
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.1211,
+    "edgeDensity": 0.1286
+   },
+   "right": {
+    "coverage": 0.077,
+    "edgeDensity": 0.112
+   },
+   "back": {
+    "coverage": 0.1425,
+    "edgeDensity": 0.0779
+   },
+   "left": {
+    "coverage": 0.0943,
+    "edgeDensity": 0.0924
+   }
+  },
+  "error": null,
+  "name": "creature",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": "back",
+  "meshes": 21,
+  "tris": 252,
+  "materials": 7,
+  "size": [
+   1.36,
+   2.665,
+   0.303
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2991,
+    "edgeDensity": 0.1306
+   },
+   "right": {
+    "coverage": 0.0677,
+    "edgeDensity": 0.1697
+   },
+   "back": {
+    "coverage": 0.3287,
+    "edgeDensity": 0.0846
+   },
+   "left": {
+    "coverage": 0.0676,
+    "edgeDensity": 0.1602
+   }
+  },
+  "error": null,
+  "name": "door",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": "back",
+  "meshes": 19,
+  "tris": 4180,
+  "materials": 6,
+  "size": [
+   1.04,
+   1.58,
+   0.212
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2595,
+    "edgeDensity": 0.2106
+   },
+   "right": {
+    "coverage": 0.0462,
+    "edgeDensity": 0.4885
+   },
+   "back": {
+    "coverage": 0.2789,
+    "edgeDensity": 0.0469
+   },
+   "left": {
+    "coverage": 0.0468,
+    "edgeDensity": 0.4127
+   }
+  },
+  "error": null,
+  "name": "face",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 63,
+  "tris": 756,
+  "materials": 5,
+  "size": [
+   4.2,
+   3.2,
+   0.27
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.3809,
+    "edgeDensity": 0.3017
+   },
+   "right": {
+    "coverage": 0.0479,
+    "edgeDensity": 0.3729
+   },
+   "back": {
+    "coverage": 0.3801,
+    "edgeDensity": 0.2398
+   },
+   "left": {
+    "coverage": 0.0479,
+    "edgeDensity": 0.3972
+   }
+  },
+  "error": null,
+  "name": "panel",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": "back",
+  "meshes": 39,
+  "tris": 10736,
+  "materials": 6,
+  "size": [
+   0.388,
+   0.552,
+   0.211
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2591,
+    "edgeDensity": 0.0801
+   },
+   "right": {
+    "coverage": 0.1462,
+    "edgeDensity": 0.06
+   },
+   "back": {
+    "coverage": 0.2962,
+    "edgeDensity": 0.0261
+   },
+   "left": {
+    "coverage": 0.1308,
+    "edgeDensity": 0.0543
+   }
+  },
+  "error": null,
+  "name": "phone",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 19,
+  "tris": 348,
+  "materials": 8,
+  "size": [
+   0.43,
+   0.154,
+   0.27
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2569,
+    "edgeDensity": 0.0756
+   },
+   "right": {
+    "coverage": 0.2019,
+    "edgeDensity": 0.0728
+   },
+   "back": {
+    "coverage": 0.3318,
+    "edgeDensity": 0.1034
+   },
+   "left": {
+    "coverage": 0.249,
+    "edgeDensity": 0.1103
+   }
+  },
+  "error": null,
+  "name": "recorder",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 9,
+  "tris": 1404,
+  "materials": 2,
+  "size": [
+   0.19,
+   0.223,
+   0.377
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.1595,
+    "edgeDensity": 0.1479
+   },
+   "right": {
+    "coverage": 0.2429,
+    "edgeDensity": 0.1447
+   },
+   "back": {
+    "coverage": 0.1558,
+    "edgeDensity": 0.1458
+   },
+   "left": {
+    "coverage": 0.2431,
+    "edgeDensity": 0.1004
+   }
+  },
+  "error": null,
+  "name": "shoe",
+  "problems": []
+ }
+]

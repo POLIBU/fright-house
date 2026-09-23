@@ -1,3 +1,5 @@
+// Positive lateral displacement is camera-right when looking forward along the railway.
+export function trackPoint(s,lateral=0){const x=Math.sin(s*.022)*10+Math.sin(s*.008)*18,dx=.22*Math.cos(s*.022)+.144*Math.cos(s*.008),n=Math.hypot(1,dx);return {x:x-lateral/n,z:s+lateral*dx/n};}
 export const RIDE_LENGTH=420;
 export const LANE_WIDTH=1.35;
 // Every junction has a safe track and at least three seconds to switch before the next one.

@@ -1,6 +1,8 @@
 import test from 'node:test';import assert from 'node:assert/strict';
-import {newRide,stepRide,OBSTACLES,LANE_WIDTH,RIDE_LENGTH} from '../src/ride-model.js';
+import {newRide,stepRide,OBSTACLES,LANE_WIDTH,RIDE_LENGTH,trackPoint} from '../src/ride-model.js';
 test('every obstacle row has a safe track and sufficient switching distance',()=>{for(let i=0;i<OBSTACLES.length;i++){const o=OBSTACLES[i];assert.ok([-1,0,1].some(l=>!o.lanes.includes(l)));if(i)assert.ok(o.distance-OBSTACLES[i-1].distance>=25);}});
 test('a driver can steer past every obstacle and escape',()=>{const s=newRide();for(let i=0;i<60*100&&s.status==='riding';i++){const next=OBSTACLES.find(o=>o.distance>s.progress),lane=next?[-1,0,1].find(l=>!next.lanes.includes(l)):0,target=lane*LANE_WIDTH,steer=Math.abs(target-s.lateral)<.03?0:Math.sign(target-s.lateral);stepRide(s,1/60,{steer,boost:s.gap<16&&s.energy>.15});}assert.equal(s.status,'escaped');assert.equal(s.hits,0);assert.equal(s.progress,RIDE_LENGTH);});
 test('repeated hits and braking let the faster pursuer catch the cart',()=>{const s=newRide();for(let i=0;i<6000&&s.status==='riding';i++)stepRide(s,1/60,{brake:true});assert.equal(s.status,'caught');});
 test('boost consumes energy and a fresh ride checkpoint clears damage',()=>{const s=newRide(260);for(let i=0;i<60;i++)stepRide(s,1/60,{boost:true});assert.ok(s.energy<1);assert.ok(s.speed>7.2);const clean=newRide(260);assert.equal(clean.hits,0);assert.equal(clean.gap,24);assert.equal(clean.progress,260);});
+
+test('right steering moves camera-right on straight and curved track',()=>{for(const s of [0,50,160,270,400]){const a=trackPoint(s),b=trackPoint(s,1),before=trackPoint(s-.01),after=trackPoint(s+.01),dx=after.x-before.x,dz=after.z-before.z;assert.ok((b.x-a.x)*(-dz)+(b.z-a.z)*dx>0);}});

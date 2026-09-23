@@ -1,0 +1,438 @@
+{
+  "version": "v00",
+  "observations": [
+    {
+      "name": "canopy",
+      "state": {
+        "atmosphere": {
+          "faces": 3,
+          "teddyEyes": [
+            {
+              "yaw": -0.85,
+              "pitch": -0.04460207007983231
+            },
+            {
+              "yaw": -0.85,
+              "pitch": -0.02059337197117752
+            },
+            {
+              "yaw": -0.85,
+              "pitch": -0.020381952658595662
+            }
+          ],
+          "fishBags": 6,
+          "webs": 2,
+          "skeletons": 1,
+          "faceY": 0.5399875626100736,
+          "balloons": 10,
+          "balloonY": 2.7698056443475125,
+          "melt": 0,
+          "meltAge": 0,
+          "lightScale": 1,
+          "arms": 8,
+          "reach": 0.011274163897686953,
+          "smoke": 0
+        },
+        "laughing": false,
+        "draws": 396,
+        "tris": 418997,
+        "mirrors": [
+          {
+            "id": "stretch",
+            "mode": 0,
+            "updates": 35
+          },
+          {
+            "id": "wide",
+            "mode": 1,
+            "updates": 0
+          },
+          {
+            "id": "ripple",
+            "mode": 2,
+            "updates": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "clown",
+      "state": {
+        "atmosphere": {
+          "faces": 3,
+          "teddyEyes": [
+            {
+              "yaw": -0.85,
+              "pitch": -0.07441123244727428
+            },
+            {
+              "yaw": -0.85,
+              "pitch": -0.03953751032631071
+            },
+            {
+              "yaw": -0.85,
+              "pitch": -0.03894887171516165
+            }
+          ],
+          "fishBags": 6,
+          "webs": 2,
+          "skeletons": 1,
+          "faceY": 0.567982880474232,
+          "balloons": 10,
+          "balloonY": 2.8021072870504353,
+          "melt": 0,
+          "meltAge": 0,
+          "lightScale": 1,
+          "arms": 8,
+          "reach": 0.3827458203710301,
+          "smoke": 0
+        },
+        "laughing": false,
+        "draws": 113,
+        "tris": 151670,
+        "mirrors": [
+          {
+            "id": "stretch",
+            "mode": 0,
+            "updates": 74
+          },
+          {
+            "id": "wide",
+            "mode": 1,
+            "updates": 0
+          },
+          {
+            "id": "ripple",
+            "mode": 2,
+            "updates": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "fish",
+      "state": {
+        "atmosphere": {
+          "faces": 3,
+          "teddyEyes": [
+            {
+              "yaw": -0.85,
+              "pitch": -0.14691447566382193
+            },
+            {
+              "yaw": -0.85,
+              "pitch": -0.07619611669738076
+            },
+            {
+              "yaw": -0.85,
+              "pitch": -0.07408807270170112
+            }
+          ],
+          "fishBags": 6,
+          "webs": 2,
+          "skeletons": 1,
+          "faceY": 0.574604457180597,
+          "balloons": 10,
+          "balloonY": 2.8182351508208696,
+          "melt": 0,
+          "meltAge": 0,
+          "lightScale": 1,
+          "arms": 8,
+          "reach": 0.02085353386831722,
+          "smoke": 0
+        },
+        "laughing": false,
+        "draws": 110,
+        "tris": 54974,
+        "mirrors": [
+          {
+            "id": "stretch",
+            "mode": 0,
+            "updates": 76
+          },
+          {
+            "id": "wide",
+            "mode": 1,
+            "updates": 0
+          },
+          {
+            "id": "ripple",
+            "mode": 2,
+            "updates": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "teddy",
+      "state": {
+        "atmosphere": {
+          "faces": 3,
+          "teddyEyes": [
+            {
+              "yaw": 0.16565563688822654,
+              "pitch": -0.30494742038024314
+            },
+            {
+              "yaw": 0.18320103898127685,
+              "pitch": 0.014260311336390193
+            },
+            {
+              "yaw": 0.05135029802893324,
+              "pitch": 0.014483862940093552
+            }
+          ],
+          "fishBags": 6,
+          "webs": 2,
+          "skeletons": 1,
+          "faceY": 0.5580193463195067,
+          "balloons": 10,
+          "balloonY": 2.8165056957929253,
+          "melt": 0,
+          "meltAge": 0,
+          "lightScale": 1,
+          "arms": 8,
+          "reach": 0.0007441768460951847,
+          "smoke": 0
+        },
+        "laughing": false,
+        "draws": 174,
+        "tris": 193568,
+        "mirrors": [
+          {
+            "id": "stretch",
+            "mode": 0,
+            "updates": 76
+          },
+          {
+            "id": "wide",
+            "mode": 1,
+            "updates": 0
+          },
+          {
+            "id": "ripple",
+            "mode": 2,
+            "updates": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "bag-table",
+      "state": {
+        "atmosphere": {
+          "faces": 3,
+          "teddyEyes": [
+            {
+              "yaw": -0.85,
+              "pitch": -0.05284693613473236
+            },
+            {
+              "yaw": -0.85,
+              "pitch": -0.02295333425898651
+            },
+            {
+              "yaw": -0.85,
+              "pitch": -0.022661063588003863
+            }
+          ],
+          "fishBags": 6,
+          "webs": 2,
+          "skeletons": 1,
+          "faceY": 0.5226896034088778,
+          "balloons": 10,
+          "balloonY": 2.7960270002483614,
+          "melt": 0,
+          "meltAge": 0,
+          "lightScale": 1,
+          "arms": 8,
+          "reach": 0.00002886929873535679,
+          "smoke": 0
+        },
+        "laughing": false,
+        "draws": 246,
+        "tris": 279754,
+        "mirrors": [
+          {
+            "id": "stretch",
+            "mode": 0,
+            "updates": 76
+          },
+          {
+            "id": "wide",
+            "mode": 1,
+            "updates": 0
+          },
+          {
+            "id": "ripple",
+            "mode": 2,
+            "updates": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "shoe-table",
+      "state": {
+        "atmosphere": {
+          "faces": 3,
+          "teddyEyes": [
+            {
+              "yaw": -0.85,
+              "pitch": -0.056526575394993624
+            },
+            {
+              "yaw": -0.85,
+              "pitch": -0.022959040669190304
+            },
+            {
+              "yaw": -0.85,
+              "pitch": -0.022705613055273834
+            }
+          ],
+          "fishBags": 6,
+          "webs": 2,
+          "skeletons": 1,
+          "faceY": 0.47828670813114854,
+          "balloons": 10,
+          "balloonY": 2.7609338257504374,
+          "melt": 0,
+          "meltAge": 0,
+          "lightScale": 1,
+          "arms": 8,
+          "reach": 0.0000011193841891207907,
+          "smoke": 0
+        },
+        "laughing": false,
+        "draws": 30,
+        "tris": 85248,
+        "mirrors": [
+          {
+            "id": "stretch",
+            "mode": 0,
+            "updates": 76
+          },
+          {
+            "id": "wide",
+            "mode": 1,
+            "updates": 0
+          },
+          {
+            "id": "ripple",
+            "mode": 2,
+            "updates": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "tape-table",
+      "state": {
+        "atmosphere": {
+          "faces": 3,
+          "teddyEyes": [
+            {
+              "yaw": -0.7211786881388988,
+              "pitch": -0.06832804150227678
+            },
+            {
+              "yaw": -0.7121019290052899,
+              "pitch": -0.029494690036831486
+            },
+            {
+              "yaw": -0.72460651478189,
+              "pitch": -0.029174214510388322
+            }
+          ],
+          "fishBags": 6,
+          "webs": 2,
+          "skeletons": 1,
+          "faceY": 0.4371333941651134,
+          "balloons": 10,
+          "balloonY": 2.7179730041903505,
+          "melt": 0,
+          "meltAge": 0,
+          "lightScale": 1,
+          "arms": 8,
+          "reach": 4.340323519251315e-8,
+          "smoke": 0
+        },
+        "laughing": false,
+        "draws": 391,
+        "tris": 401826,
+        "mirrors": [
+          {
+            "id": "stretch",
+            "mode": 0,
+            "updates": 76
+          },
+          {
+            "id": "wide",
+            "mode": 1,
+            "updates": 0
+          },
+          {
+            "id": "ripple",
+            "mode": 2,
+            "updates": 37
+          }
+        ]
+      }
+    },
+    {
+      "name": "maintenance",
+      "state": {
+        "atmosphere": {
+          "faces": 3,
+          "teddyEyes": [
+            {
+              "yaw": -0.11201907780262958,
+              "pitch": -0.45
+            },
+            {
+              "yaw": -0.07242230309507215,
+              "pitch": -0.26280929952503806
+            },
+            {
+              "yaw": -0.20615485643632428,
+              "pitch": -0.2581366635224664
+            }
+          ],
+          "fishBags": 6,
+          "webs": 2,
+          "skeletons": 1,
+          "faceY": 0.4110712952402722,
+          "balloons": 10,
+          "balloonY": 2.6764210427201034,
+          "melt": 0,
+          "meltAge": 0,
+          "lightScale": 1,
+          "arms": 8,
+          "reach": 1.8294840403482352e-9,
+          "smoke": 0
+        },
+        "laughing": false,
+        "draws": 25,
+        "tris": 34082,
+        "mirrors": [
+          {
+            "id": "stretch",
+            "mode": 0,
+            "updates": 76
+          },
+          {
+            "id": "wide",
+            "mode": 1,
+            "updates": 0
+          },
+          {
+            "id": "ripple",
+            "mode": 2,
+            "updates": 39
+          }
+        ]
+      }
+    }
+  ],
+  "errors": []
+}

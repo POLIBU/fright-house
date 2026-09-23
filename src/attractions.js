@@ -1,5 +1,4 @@
 import * as THREE from 'three';
-import {bakeStatic} from '../assetlib.js';
 
 // Original fairground props. Kept beside the route so evidence and wall handles remain accessible.
 export function addAttractions(scene,label){
@@ -34,29 +33,6 @@ export function addAttractions(scene,label){
  // Instanced bodies and wings make a small, restless swarm without dozens of draw calls.
  const flies=new THREE.InstancedMesh(new THREE.SphereGeometry(1,7,5),dark,22),wings=new THREE.InstancedMesh(new THREE.SphereGeometry(1,5,4),new THREE.MeshBasicMaterial({color:0x9d9f8b,transparent:true,opacity:.43,depthWrite:false}),44);flies.instanceMatrix.setUsage(THREE.DynamicDrawUsage);wings.instanceMatrix.setUsage(THREE.DynamicDrawUsage);flies.frustumCulled=wings.frustumCulled=false;stall.add(flies,wings);const dummy=new THREE.Object3D();
 
- // A discarded jointed plastic skeleton, lying flat beside the western wall.
- const skeleton=new THREE.Group();skeleton.position.set(-1.22,.06,8.4);skeleton.rotation.y=.15;scene.add(skeleton);
- rod(skeleton,[0,.10,-.39],[0,.11,.35],.045,bone);
- for(let i=0;i<9;i++)ball(skeleton,[.068,.036,.025],bone,0,.11,-.37+i*.074);
- for(let i=0;i<6;i++)for(const side of [-1,1]){const z=-.35+i*.083,w=.23-Math.abs(i-2)*.024;curve(skeleton,[[0,.11,z],[side*w,.08,z+.015],[side*w,.18,z+.04],[side*.06,.235,z+.058]],.018,bone);}
- rod(skeleton,[0,.235,-.29],[0,.235,.06],.022,bone);
- for(const side of [-1,1]){
-  ball(skeleton,[.12,.065,.115],bone,side*.09,.09,.35);
-  const shoulder=[side*.23,.12,-.40],elbow=[side*.36,.075,-.10],hand=[side*.45,.07,.12];rod(skeleton,shoulder,elbow,.027,bone);rod(skeleton,elbow,hand,.022,bone);ball(skeleton,[.037,.027,.065],bone,...hand);
-  for(let f=0;f<4;f++)rod(skeleton,[hand[0]+(f-1.5)*.015,.07,.15],[hand[0]+(f-1.5)*.024,.06,.24-Math.abs(f-1)*.018],.007,bone);
-  const hip=[side*.11,.08,.42],knee=[side*.17,.07,.78],ankle=[side*.24,.06,1.11];rod(skeleton,hip,knee,.032,bone);rod(skeleton,knee,ankle,.024,bone);ball(skeleton,[.049,.032,.11],bone,side*.24,.045,1.17);
-  for(const q of [shoulder,elbow,knee])ball(skeleton,[.042,.037,.037],dark,...q);
- }
- const skull=new THREE.Group();skull.position.set(.025,.14,-.66);skull.rotation.y=.23;skull.rotation.z=-.1;skeleton.add(skull);
- ball(skull,[.14,.115,.17],bone,0,0,0);ball(skull,[.095,.045,.07],bone,0,-.025,.13);
- // Dark inset sockets face upward like a cheap moulded fairground prop.
- for(const side of [-1,1]){ball(skull,[.044,.009,.050],dark,side*.061,.105,.051);ball(skull,[.055,.018,.065],bone,side*.067,.093,-.007);}
- ball(skull,[.025,.01,.032],dark,0,.090,.12);
- curve(skull,[[-.10,.0,.12],[-.105,.015,.20],[0,.02,.24],[.105,.015,.20],[.10,0,.12]],.022,bone);
- for(let i=0;i<7;i++)box(skull,.016,.025,.024,bone,(i-3)*.022,.04,.211);
- const tag=label('PROPERTY OF FRIGHT HOUSE',.44,.085,'#574d35','#a39571');tag.rotation.x=-Math.PI/2;tag.position.set(.29,.02,.33);skeleton.add(tag);
-
- scene.add(bakeStatic(skeleton));scene.remove(skeleton);
  const silk=new THREE.LineBasicMaterial({color:0xb7b5a0,transparent:true,opacity:.36});
  function web(x,z,rotation){const root=new THREE.Group();root.position.set(x,3.12,z);root.rotation.y=rotation;scene.add(root);const corners=[new THREE.Vector3(0,0,1.55),new THREE.Vector3(1.55,0,0),new THREE.Vector3(0,-1.2,0)],center=new THREE.Vector3(.38,-.30,.38),rim=[],lines=[];
   for(let i=0;i<3;i++)for(let j=0;j<5;j++)rim.push(corners[i].clone().lerp(corners[(i+1)%3],j/5));

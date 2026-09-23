@@ -1,11 +1,11 @@
 import * as THREE from 'three';
 import {bakeStatic} from '../assetlib.js';
 import {label} from './world.js';
-import {OBSTACLES,LANE_WIDTH,RIDE_LENGTH} from './ride-model.js';
+import {OBSTACLES,LANE_WIDTH,RIDE_LENGTH,trackPoint} from './ride-model.js';
 
 export function buildCartRide(scene){
  const root=new THREE.Group();root.visible=false;scene.add(root);const chunks=new Map(),rust=new THREE.MeshStandardMaterial({color:0x634637,roughness:.9,metalness:.28}),wood=new THREE.MeshStandardMaterial({color:0x393a30,roughness:1}),metal=new THREE.MeshStandardMaterial({color:0x414845,roughness:.55,metalness:.65}),red=new THREE.MeshStandardMaterial({color:0x673b36,roughness:.78}),cream=new THREE.MeshStandardMaterial({color:0xb49f72,roughness:.8});
- const path=(s,lateral=0,y=0)=>{const x=Math.sin(s*.022)*10+Math.sin(s*.008)*18,dx=.22*Math.cos(s*.022)+.144*Math.cos(s*.008),n=Math.sqrt(1+dx*dx);return new THREE.Vector3(x+lateral/n,y,s-lateral*dx/n);};
+ const path=(s,lateral=0,y=0)=>{const p=trackPoint(s,lateral);return new THREE.Vector3(p.x,y,p.z);};
  const forward=(s)=>path(s+.5).sub(path(s-.5)).normalize();
  function groupAt(s,lateral=0){const g=new THREE.Group();g.position.copy(path(s,lateral));const f=forward(s);g.rotation.y=Math.atan2(f.x,f.z);const k=Math.floor(s/28);if(!chunks.has(k))chunks.set(k,new THREE.Group());chunks.get(k).add(g);return g;}
  function mesh(p,geo,mat,x=0,y=0,z=0){const m=new THREE.Mesh(geo,mat);m.position.set(x,y,z);m.castShadow=m.receiveShadow=true;p.add(m);return m;}

@@ -23,7 +23,7 @@ npm test
 npm run build
 ```
 
-`dist/` is the standalone static site. GitHub Actions tests and publishes it to GitHub Pages. Three.js is vendored; the deployed game does not call Atlas or use API keys.
+`dist/` is the standalone static site. GitHub Pages serves the built site from the `gh-pages` branch. `deployment/pages-workflow.example.yml` is an optional future Actions configuration; the current GitHub login cannot create workflows. Three.js is vendored; the deployed game does not call Atlas or use API keys.
 
 ## Validation
 

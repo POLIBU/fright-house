@@ -11,18 +11,26 @@ export function spiralMaterial(){
  material.userData.melt={time,amount};
  material.onBeforeCompile=shader=>{
   shader.uniforms.meltTime=time;shader.uniforms.meltAmount=amount;
-  shader.fragmentShader='uniform float meltTime; uniform float meltAmount;\n'+shader.fragmentShader;
+  shader.vertexShader='attribute float panelSeed; varying float vPanelSeed;\n'+shader.vertexShader;shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvPanelSeed=panelSeed;');
+  shader.fragmentShader='uniform float meltTime; uniform float meltAmount; varying float vPanelSeed;\n'+shader.fragmentShader;
   shader.fragmentShader=shader.fragmentShader.replace('#include <map_fragment>',`#ifdef USE_MAP
-   vec2 meltedUv=vMapUv;
+   float angle=sin(vPanelSeed*1.71)*.22;
+   vec2 shifted=vMapUv-vec2(.5+sin(vPanelSeed*2.3)*.12,.5+cos(vPanelSeed*1.3)*.11);
+   vec2 meltedUv=mat2(cos(angle),-sin(angle),sin(angle),cos(angle))*shifted*.88+.5;
+   vec2 wallUv=meltedUv;
    float rivulet=pow(.5+.5*sin(vMapUv.x*43.0+sin(vMapUv.x*17.0)*2.0),5.0);
    float run=meltTime*.045;
    meltedUv.y += meltAmount*(run*(.20+rivulet*.65)+.035*sin(vMapUv.x*25.0+meltTime*.45));
    meltedUv.x += meltAmount*.014*sin(vMapUv.y*11.0+meltTime*.55);
    vec4 sampledDiffuseColor=texture2D(map,vec2(clamp(meltedUv.x,0.001,.999),fract(meltedUv.y)));
+   float mottled=sin(wallUv.x*19.0+vPanelSeed*2.0)*sin(wallUv.y*27.0+vPanelSeed);
+   float edgeWear=smoothstep(.37,.52,abs(wallUv.x-.5))*.17;
+   float streak=pow(.5+.5*sin(wallUv.x*83.0+vPanelSeed*11.0),18.0)*(.06+.08*wallUv.y);
+   sampledDiffuseColor.rgb*=.92+.035*mottled-edgeWear-streak;
    diffuseColor *= sampledDiffuseColor;
    #endif`);
  };
- material.customProgramCacheKey=()=> 'fright-melting-paint-v1';
+ material.customProgramCacheKey=()=> 'fright-unique-melting-paint-v2';
  return material;
 }
 export function addCircusCanopy(scene){

@@ -1,0 +1,679 @@
+{
+  "lamps": [
+    {
+      "name": "Lamp 0",
+      "kind": 0,
+      "drop": 0.22,
+      "signature": "0:0.220:0.130:0"
+    },
+    {
+      "name": "Lamp 1",
+      "kind": 1,
+      "drop": 0.339,
+      "signature": "1:0.339:0.144:1"
+    },
+    {
+      "name": "Lamp 2",
+      "kind": 2,
+      "drop": 0.45799999999999996,
+      "signature": "2:0.458:0.158:2"
+    },
+    {
+      "name": "Lamp 3",
+      "kind": 3,
+      "drop": 0.247,
+      "signature": "3:0.247:0.172:3"
+    },
+    {
+      "name": "Lamp 4",
+      "kind": 4,
+      "drop": 0.366,
+      "signature": "4:0.366:0.186:4"
+    },
+    {
+      "name": "Lamp 5",
+      "kind": 0,
+      "drop": 0.485,
+      "signature": "0:0.485:0.200:5"
+    },
+    {
+      "name": "Lamp 6",
+      "kind": 1,
+      "drop": 0.274,
+      "signature": "1:0.274:0.214:6"
+    },
+    {
+      "name": "Lamp 7",
+      "kind": 2,
+      "drop": 0.393,
+      "signature": "2:0.393:0.130:7"
+    },
+    {
+      "name": "Lamp 8",
+      "kind": 3,
+      "drop": 0.512,
+      "signature": "3:0.512:0.144:8"
+    },
+    {
+      "name": "Lamp 9",
+      "kind": 4,
+      "drop": 0.301,
+      "signature": "4:0.301:0.158:9"
+    },
+    {
+      "name": "Lamp 10",
+      "kind": 0,
+      "drop": 0.42,
+      "signature": "0:0.420:0.172:10"
+    },
+    {
+      "name": "Lamp 11",
+      "kind": 1,
+      "drop": 0.539,
+      "signature": "1:0.539:0.186:11"
+    },
+    {
+      "name": "Lamp 12",
+      "kind": 2,
+      "drop": 0.32799999999999996,
+      "signature": "2:0.328:0.200:12"
+    },
+    {
+      "name": "Lamp 13",
+      "kind": 3,
+      "drop": 0.44699999999999995,
+      "signature": "3:0.447:0.214:13"
+    },
+    {
+      "name": "Lamp 14",
+      "kind": 4,
+      "drop": 0.566,
+      "signature": "4:0.566:0.130:14"
+    },
+    {
+      "name": "Lamp 15",
+      "kind": 0,
+      "drop": 0.355,
+      "signature": "0:0.355:0.144:15"
+    },
+    {
+      "name": "Lamp 16",
+      "kind": 1,
+      "drop": 0.474,
+      "signature": "1:0.474:0.158:16"
+    },
+    {
+      "name": "Lamp 17",
+      "kind": 2,
+      "drop": 0.593,
+      "signature": "2:0.593:0.172:17"
+    },
+    {
+      "name": "Lamp 18",
+      "kind": 3,
+      "drop": 0.382,
+      "signature": "3:0.382:0.186:18"
+    },
+    {
+      "name": "Lamp 19",
+      "kind": 4,
+      "drop": 0.501,
+      "signature": "4:0.501:0.200:19"
+    },
+    {
+      "name": "Lamp 20",
+      "kind": 0,
+      "drop": 0.62,
+      "signature": "0:0.620:0.214:20"
+    },
+    {
+      "name": "Lamp 21",
+      "kind": 1,
+      "drop": 0.409,
+      "signature": "1:0.409:0.130:21"
+    },
+    {
+      "name": "Lamp 22",
+      "kind": 2,
+      "drop": 0.528,
+      "signature": "2:0.528:0.144:22"
+    },
+    {
+      "name": "Lamp 23",
+      "kind": 3,
+      "drop": 0.647,
+      "signature": "3:0.647:0.158:23"
+    },
+    {
+      "name": "Lamp 24",
+      "kind": 4,
+      "drop": 0.43599999999999994,
+      "signature": "4:0.436:0.172:24"
+    }
+  ],
+  "walls": [
+    {
+      "name": "Wall 0",
+      "id": 0,
+      "position": [
+        0,
+        -2.1
+      ],
+      "rotation": 0,
+      "paintSeeds": [
+        0,
+        1
+      ],
+      "patches": 1,
+      "repairWidth": 0.1,
+      "repairHeight": 0.22,
+      "brace": true,
+      "lowerSlats": false
+    },
+    {
+      "name": "Wall 1",
+      "id": 1,
+      "position": [
+        -2.1,
+        0
+      ],
+      "rotation": 1.5707963267948966,
+      "paintSeeds": [
+        2,
+        3
+      ],
+      "patches": 2,
+      "repairWidth": 0.14300000000000002,
+      "repairHeight": 0.255,
+      "brace": false,
+      "lowerSlats": true
+    },
+    {
+      "name": "Wall 2",
+      "id": 2,
+      "position": [
+        4.2,
+        -2.1
+      ],
+      "rotation": 0,
+      "paintSeeds": [
+        4,
+        5
+      ],
+      "patches": 3,
+      "repairWidth": 0.186,
+      "repairHeight": 0.29000000000000004,
+      "brace": false,
+      "lowerSlats": false
+    },
+    {
+      "name": "Wall 3",
+      "id": 3,
+      "position": [
+        4.2,
+        2.1
+      ],
+      "rotation": 0,
+      "paintSeeds": [
+        6,
+        7
+      ],
+      "patches": 1,
+      "repairWidth": 0.229,
+      "repairHeight": 0.325,
+      "brace": false,
+      "lowerSlats": false
+    },
+    {
+      "name": "Wall 4",
+      "id": 4,
+      "position": [
+        8.4,
+        -2.1
+      ],
+      "rotation": 0,
+      "paintSeeds": [
+        8,
+        9
+      ],
+      "patches": 2,
+      "repairWidth": 0.272,
+      "repairHeight": 0.36,
+      "brace": true,
+      "lowerSlats": false
+    },
+    {
+      "name": "Wall 5",
+      "id": 5,
+      "position": [
+        12.600000000000001,
+        -2.1
+      ],
+      "rotation": 0,
+      "paintSeeds": [
+        10,
+        11
+      ],
+      "patches": 3,
+      "repairWidth": 0.1,
+      "repairHeight": 0.395,
+      "brace": false,
+      "lowerSlats": true
+    },
+    {
+      "name": "Wall 6",
+      "id": 6,
+      "position": [
+        12.600000000000001,
+        2.1
+      ],
+      "rotation": 0,
+      "paintSeeds": [
+        12,
+        13
+      ],
+      "patches": 1,
+      "repairWidth": 0.14300000000000002,
+      "repairHeight": 0.43000000000000005,
+      "brace": false,
+      "lowerSlats": false
+    },
+    {
+      "name": "Wall 7",
+      "id": 7,
+      "position": [
+        16.8,
+        -2.1
+      ],
+      "rotation": 0,
+      "paintSeeds": [
+        14,
+        15
+      ],
+      "patches": 2,
+      "repairWidth": 0.186,
+      "repairHeight": 0.22,
+      "brace": false,
+      "lowerSlats": false
+    },
+    {
+      "name": "Wall 8",
+      "id": 8,
+      "position": [
+        18.900000000000002,
+        0
+      ],
+      "rotation": 1.5707963267948966,
+      "paintSeeds": [
+        16,
+        17
+      ],
+      "patches": 3,
+      "repairWidth": 0.229,
+      "repairHeight": 0.255,
+      "brace": true,
+      "lowerSlats": false
+    },
+    {
+      "name": "Wall 9",
+      "id": 9,
+      "position": [
+        -2.1,
+        4.2
+      ],
+      "rotation": 1.5707963267948966,
+      "paintSeeds": [
+        18,
+        19
+      ],
+      "patches": 1,
+      "repairWidth": 0.272,
+      "repairHeight": 0.29000000000000004,
+      "brace": false,
+      "lowerSlats": true
+    },
+    {
+      "name": "Wall 10",
+      "id": 10,
+      "position": [
+        6.300000000000001,
+        4.2
+      ],
+      "rotation": 1.5707963267948966,
+      "paintSeeds": [
+        20,
+        21
+      ],
+      "patches": 2,
+      "repairWidth": 0.1,
+      "repairHeight": 0.325,
+      "brace": false,
+      "lowerSlats": false
+    },
+    {
+      "name": "Wall 11",
+      "id": 11,
+      "position": [
+        4.2,
+        6.300000000000001
+      ],
+      "rotation": 0,
+      "paintSeeds": [
+        22,
+        23
+      ],
+      "patches": 3,
+      "repairWidth": 0.14300000000000002,
+      "repairHeight": 0.36,
+      "brace": false,
+      "lowerSlats": false
+    },
+    {
+      "name": "Wall 12",
+      "id": 12,
+      "position": [
+        12.600000000000001,
+        6.300000000000001
+      ],
+      "rotation": 0,
+      "paintSeeds": [
+        24,
+        25
+      ],
+      "patches": 1,
+      "repairWidth": 0.186,
+      "repairHeight": 0.395,
+      "brace": true,
+      "lowerSlats": false
+    },
+    {
+      "name": "Wall 13",
+      "id": 13,
+      "position": [
+        18.900000000000002,
+        4.2
+      ],
+      "rotation": 1.5707963267948966,
+      "paintSeeds": [
+        26,
+        27
+      ],
+      "patches": 2,
+      "repairWidth": 0.229,
+      "repairHeight": 0.43000000000000005,
+      "brace": false,
+      "lowerSlats": true
+    },
+    {
+      "name": "Wall 14",
+      "id": 14,
+      "position": [
+        -2.1,
+        8.4
+      ],
+      "rotation": 1.5707963267948966,
+      "paintSeeds": [
+        28,
+        29
+      ],
+      "patches": 3,
+      "repairWidth": 0.272,
+      "repairHeight": 0.22,
+      "brace": false,
+      "lowerSlats": false
+    },
+    {
+      "name": "Wall 15",
+      "id": 15,
+      "position": [
+        4.2,
+        10.5
+      ],
+      "rotation": 0,
+      "paintSeeds": [
+        30,
+        31
+      ],
+      "patches": 1,
+      "repairWidth": 0.1,
+      "repairHeight": 0.255,
+      "brace": false,
+      "lowerSlats": false
+    },
+    {
+      "name": "Wall 16",
+      "id": 16,
+      "position": [
+        12.600000000000001,
+        10.5
+      ],
+      "rotation": 0,
+      "paintSeeds": [
+        32,
+        33
+      ],
+      "patches": 2,
+      "repairWidth": 0.14300000000000002,
+      "repairHeight": 0.29000000000000004,
+      "brace": true,
+      "lowerSlats": false
+    },
+    {
+      "name": "Wall 17",
+      "id": 17,
+      "position": [
+        18.900000000000002,
+        8.4
+      ],
+      "rotation": 1.5707963267948966,
+      "paintSeeds": [
+        34,
+        35
+      ],
+      "patches": 3,
+      "repairWidth": 0.186,
+      "repairHeight": 0.325,
+      "brace": false,
+      "lowerSlats": true
+    },
+    {
+      "name": "Wall 18",
+      "id": 18,
+      "position": [
+        -2.1,
+        12.600000000000001
+      ],
+      "rotation": 1.5707963267948966,
+      "paintSeeds": [
+        36,
+        37
+      ],
+      "patches": 1,
+      "repairWidth": 0.229,
+      "repairHeight": 0.36,
+      "brace": false,
+      "lowerSlats": false
+    },
+    {
+      "name": "Wall 19",
+      "id": 19,
+      "position": [
+        12.600000000000001,
+        14.700000000000001
+      ],
+      "rotation": 0,
+      "paintSeeds": [
+        38,
+        39
+      ],
+      "patches": 2,
+      "repairWidth": 0.272,
+      "repairHeight": 0.395,
+      "brace": false,
+      "lowerSlats": false
+    },
+    {
+      "name": "Wall 20",
+      "id": 20,
+      "position": [
+        18.900000000000002,
+        12.600000000000001
+      ],
+      "rotation": 1.5707963267948966,
+      "paintSeeds": [
+        40,
+        41
+      ],
+      "patches": 3,
+      "repairWidth": 0.1,
+      "repairHeight": 0.43000000000000005,
+      "brace": true,
+      "lowerSlats": false
+    },
+    {
+      "name": "Wall 21",
+      "id": 21,
+      "position": [
+        -2.1,
+        16.8
+      ],
+      "rotation": 1.5707963267948966,
+      "paintSeeds": [
+        42,
+        43
+      ],
+      "patches": 1,
+      "repairWidth": 0.14300000000000002,
+      "repairHeight": 0.22,
+      "brace": false,
+      "lowerSlats": true
+    },
+    {
+      "name": "Wall 22",
+      "id": 22,
+      "position": [
+        0,
+        18.900000000000002
+      ],
+      "rotation": 0,
+      "paintSeeds": [
+        44,
+        45
+      ],
+      "patches": 2,
+      "repairWidth": 0.186,
+      "repairHeight": 0.255,
+      "brace": false,
+      "lowerSlats": false
+    },
+    {
+      "name": "Wall 23",
+      "id": 23,
+      "position": [
+        4.2,
+        18.900000000000002
+      ],
+      "rotation": 0,
+      "paintSeeds": [
+        46,
+        47
+      ],
+      "patches": 3,
+      "repairWidth": 0.229,
+      "repairHeight": 0.29000000000000004,
+      "brace": false,
+      "lowerSlats": false
+    },
+    {
+      "name": "Wall 24",
+      "id": 24,
+      "position": [
+        8.4,
+        18.900000000000002
+      ],
+      "rotation": 0,
+      "paintSeeds": [
+        48,
+        49
+      ],
+      "patches": 1,
+      "repairWidth": 0.272,
+      "repairHeight": 0.325,
+      "brace": true,
+      "lowerSlats": false
+    },
+    {
+      "name": "Wall 25",
+      "id": 25,
+      "position": [
+        14.700000000000001,
+        16.8
+      ],
+      "rotation": 1.5707963267948966,
+      "paintSeeds": [
+        50,
+        51
+      ],
+      "patches": 2,
+      "repairWidth": 0.1,
+      "repairHeight": 0.36,
+      "brace": false,
+      "lowerSlats": true
+    },
+    {
+      "name": "Wall 26",
+      "id": 26,
+      "position": [
+        12.600000000000001,
+        18.900000000000002
+      ],
+      "rotation": 0,
+      "paintSeeds": [
+        52,
+        53
+      ],
+      "patches": 3,
+      "repairWidth": 0.14300000000000002,
+      "repairHeight": 0.395,
+      "brace": false,
+      "lowerSlats": false
+    },
+    {
+      "name": "Wall 27",
+      "id": 27,
+      "position": [
+        18.900000000000002,
+        16.8
+      ],
+      "rotation": 1.5707963267948966,
+      "paintSeeds": [
+        54,
+        55
+      ],
+      "patches": 1,
+      "repairWidth": 0.186,
+      "repairHeight": 0.43000000000000005,
+      "brace": false,
+      "lowerSlats": false
+    },
+    {
+      "name": "Wall 28",
+      "id": 28,
+      "position": [
+        16.8,
+        18.900000000000002
+      ],
+      "rotation": 0,
+      "paintSeeds": [
+        56,
+        57
+      ],
+      "patches": 2,
+      "repairWidth": 0.229,
+      "repairHeight": 0.22,
+      "brace": true,
+      "lowerSlats": false
+    }
+  ],
+  "errors": []
+}

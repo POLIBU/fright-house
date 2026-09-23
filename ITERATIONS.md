@@ -40,3 +40,11 @@ Use escalated CLI calls per user instructions; use gh for GitHub. No publishing/
 ### V01 comparison
 
 Retained: maze arrow keys turn the camera; real-input projection checks passed at four orientations, and A/D still strafe. The maze yaw sign was already correct and was not blindly inverted. Fixed: the cart lateral basis moved opposite to screen-right; shared `trackPoint` now defines camera-relative sides. Added deep irregular grunts with proximity gain and wall muffling. Removed the floor skeleton. Baseline captures and V01 views are in the comparison gallery, with no asset-detail increase yet. Nine model tests and the four-orientation/cart direction check passed. Next pass: distinct maze scenery.
+
+### V02 comparison — accepted
+
+Changed: replaced the three identical evidence tables with a reception desk (turned legs/drawers), castor trolley (wire shelf/handle), and carnival cabinet (scallops/doors/repair brace). Maintenance gets a bolted shelf, drawers and vise. Built five fixture families with 25 individual proportions, drops and wear tones. All 29 wall panels have unique spiral placement, seeded paint wear and repair construction. Individual specifications and actual rendered contact sheet: `validation/iterations/v02/`.
+
+Improved against V00/V01: furniture silhouettes communicate different former uses; wall repairs provide landmarks. Retained: footprint, evidence height, all user-selected hero props and interactions. Regression: more materials increase the emulated startup route from V00's 220 calls to 264; still comfortably below 900. Some fixtures remain subtle in darkness, deliberately preserving lighting contrast. No new bitmap downloads.
+
+Checks: all eight matched camera views render with zero errors (largest review view 452 calls / 404,053 triangles). Visually inspected the four furniture views and full 29-wall/25-lamp contact sheet. Distinct design audit passes. Real-touch jam release and maze-to-cart transition pass. Throttled mobile gate: 7.5 s, 2.7 MB, 264 calls, 287,190 triangles, 0 missing assets/errors; emulation on Apple M5 Max, not a physical phone. Next: milestone suspense and animation.

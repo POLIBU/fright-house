@@ -64,3 +64,11 @@ Changed: monster sight overrides hearing; losing sight preserves last-seen coord
 Improved: walls support quiet escape and misdirection rather than merely making an omniscient pursuer take a detour. Retained: controls, wall graph and physical collision; route checkpoints remain unchanged. Regression found in the first test: switching between sight/hearing at the 12 m visibility limit restarted the next waypoint, causing backtracking. Fixed by invalidating the route only when its goal cell changes, not its sensory label.
 
 Checks: three pure perception/hearing/search tests pass. Real-touch maze-to-cart passes. Browser investigation test traces every crossed cell and proves each is an open adjacent passage; creature reaches/captures a stationary visible player, audio stops, pause freezes investigation, and retry resets memory to the phone target. Six approach frames and navigation trace saved. Eight matched scenery views remain identical to V03 within animation timing (460 calls max), with zero errors. Next: creature motion and proximity audio.
+
+### V05 comparison — accepted
+
+Changed: staggered arm frequencies, irregular recoil, grasping fingers, slight breathing deformation, and a 1.3-second unfolding reveal from smoke. The core remains difficult to identify. Added filtered breath and continuously updated proximity/panning/wall muffling to grunts. Reset and ending stop all creature voices.
+
+Improved against V04/V00: hands no longer move with one synchronized rhythm; near audio provides a stronger warning. Retained eight arms, the black smoke, laughter and the same collision/capture range. Tradeoff: subtle reveal and breath are best judged in motion with sound; static maze views intentionally remain unchanged. No additional geometry cost or transferred audio assets.
+
+Checks: eight creature motion frames saved, all eight matched scenery views free of errors. Audio browser test measures a lower gain and low-pass frequency behind walls while a grunt is already playing; breath exists and reset removes both sources. Peak matched view remains 460 calls. Investigation/capture regression continues in consolidation. Next: six road hazard families.

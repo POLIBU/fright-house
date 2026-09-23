@@ -35,24 +35,25 @@ export function createCreature(){
  const map=new THREE.CanvasTexture(canvas),smoke=new THREE.Group();root.add(smoke);
  const motes=Array.from({length:38},(_,i)=>{const material=new THREE.SpriteMaterial({map,color:0x080a09,opacity:.6,depthWrite:false,depthTest:true});const p=new THREE.Sprite(material);p.userData.seed=i*2.399963;smoke.add(p);return p;});
  const wrist=new THREE.Vector3(),knuckle=new THREE.Vector3(),tip=new THREE.Vector3();
- let reach=0;
- function update(t,dt,{distance=8,clear=true,laughing=false}={}){
+ let reach=0,reveal=0;
+ function update(t,dt,{distance=8,clear=true,laughing=false,grunting=false}={}){
+  reveal=Math.min(1,reveal+dt*.75);root.scale.y=.35+.65*(1-(1-reveal)**3);
   reach=THREE.MathUtils.damp(reach,clear?THREE.MathUtils.clamp((5-distance)/3,0,1):0,5,dt);
-  body.rotation.z=Math.sin(t*2.3)*.035;body.rotation.x=-.025-reach*.07;body.position.y=.035*Math.sin(t*3.8)+(laughing?.018*Math.sin(t*24):0);
-  for(const arm of arms){const {side:s,row:r,a,b,c}=arm;const phase=t*(1.6+reach*.8)+Math.sin(t*7+r)*.07+r*1.7+(s>0?Math.PI:0),flex=.5+.5*Math.sin(phase);
+  body.rotation.z=Math.sin(t*2.3)*.035+Math.sin(t*.67)*.018;body.scale.x=1+Math.sin(t*1.9)*.025+(grunting?.028*Math.sin(t*19):0);body.rotation.x=-.025-reach*.07;body.position.y=.035*Math.sin(t*3.8)+(laughing?.018*Math.sin(t*24):0);
+  for(const arm of arms){const {side:s,row:r,a,b,c}=arm;const phase=t*(1.25+r*.17+reach*.65)+Math.sin(t*(4.3+r)+r)*.12+r*1.7+(s>0?Math.PI:0),flex=Math.max(0,Math.min(1,.45+.4*Math.sin(phase)+.15*Math.sin(t*6.3+r*2)));const recoil=Math.max(0,Math.sin(t*(.9+r*.11)+r*1.4))**10;
    a.set(s*.22,1.99-r*.24,-.08);
-   b.set(s*(.88+.13*Math.sin(phase)),2.62-r*.53+Math.cos(phase)*.15,.02-r*.08+reach*.20);
+   b.set(s*(.88+.13*Math.sin(phase)),2.62-r*.53+Math.cos(phase)*.15,.02-r*.08+reach*.20-recoil*.15);
    // Alternate folded elbows and grasping hands. Reach remains cosmetic; capture uses maze collision.
-   c.set(s*(.64-reach*.28+.09*Math.cos(phase)),2.30-r*.46+Math.sin(phase+.7)*.14,.47+reach*(.50+flex*.55));
+   c.set(s*(.64-reach*.28+.09*Math.cos(phase)),2.30-r*.46+Math.sin(phase+.7)*.14,.47+reach*(.50+flex*.55)-recoil*.22);
    link(arm.pieces[0],a,b);link(arm.pieces[1],b,c);arm.elbow.position.copy(b);arm.palm.position.copy(c);arm.palm.rotation.x=-.6-reach*.3;
    for(let f=0;f<3;f++){wrist.copy(c).add(new THREE.Vector3((f-1)*.045,-.02,0));knuckle.copy(wrist).add(new THREE.Vector3((f-1)*.07,-.10-.04*flex,.16));tip.copy(knuckle).add(new THREE.Vector3(-(f-1)*.035,-.15*flex-.035,.09-.06*flex));link(arm.fingers[f][0],wrist,knuckle);link(arm.fingers[f][1],knuckle,tip);}
   }
   for(let i=0;i<motes.length;i++){const p=motes[i],seed=p.userData.seed,life=(t*.18+i/38)%1,angle=seed+t*.25,radius=.20+life*.58;
-   p.position.set(Math.sin(angle)*radius,.13+life*2.85,Math.cos(angle)*radius+.02);const size=.95+Math.sin(life*Math.PI)*1.10;p.scale.set(size,size,1);p.material.rotation=seed+t*.12;p.material.opacity=Math.sin(life*Math.PI)*.87;
+   p.position.set(Math.sin(angle)*radius,.13+life*2.85,Math.cos(angle)*radius+.02);const size=.95+Math.sin(life*Math.PI)*1.10;p.scale.set(size,size,1);p.material.rotation=seed+t*.12;p.material.opacity=Math.sin(life*Math.PI)*(.88-.18*reach+.07*Math.sin(t*.73+i))*(.5+.5*reveal);
   }
-  root.userData.reach=reach;root.userData.laughing=laughing;
+  root.userData.reveal=reveal;root.userData.reach=reach;root.userData.laughing=laughing;
  }
- update(0,0);return {root,update,reset(){reach=0;update(0,0);},arms,smoke};
+ update(0,0);return {root,update,reset(){reach=0;reveal=0;update(0,0);},arms,smoke};
 }
 
 export function addBalloons(scene){

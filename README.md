@@ -35,6 +35,13 @@ Touch validation is browser emulation, not a physical-device test. The 10–15 m
 
 ## Art and sound
 
-All 3D geometry is JavaScript using Three.js constructors. Ten prop families have three candidate modules and five-view renders; eleven selected modules furnish the maze. Original procedural architecture, labels and surface marks complete the scene. Atlas generated the object references and five shipped audio files. See [PROVENANCE.md](PROVENANCE.md), [STYLE.md](STYLE.md) and [references/selections.json](references/selections.json).
+All 3D geometry is JavaScript using Three.js constructors. The original ten prop families have three candidate modules and five-view renders. The visual-review branch adds twelve unique masks and four distinct doors, also verified from five views. Original procedural architecture, labels and surface marks complete the scene. Atlas generated the object references and five shipped audio files. See [PROVENANCE.md](PROVENANCE.md), [STYLE.md](STYLE.md) and [references/selections.json](references/selections.json).
 
 The setting draws on seaside funhouses and the atmosphere of abandoned amusement attractions. Characters, map and story are original. No reference-game assets or gameplay code were copied. Documented 404 runtime helpers retain their Apache 2.0 license; Three.js retains its MIT license.
+
+
+## Visual review build
+
+The `codex/visual-direction` branch contains the user-directed art update: twelve unique detailed masks, distinct doors, spiral walls, modeled fabric canopy, three distorted scene reflections, varied lighting, typewriter UI, aged paper and quiet clown laughter. Collected props disappear and an evidence counter is shown at the top. This preview is not yet the published jam build.
+
+Run `node serve.mjs`, then open `/art-preview/index.html` for the interactive asset gallery or `/art-preview/tour.html` for the lighting/mirror views. `node tests/collection.mjs` checks prop disappearance, prompt removal, count updates and a fresh start restoring the props. Full touch playthrough and local mobile gate reports are in `validation/art/` and `validation/playthrough-touch.json`.

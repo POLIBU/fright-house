@@ -33,3 +33,12 @@ Additional hum, steps and ticks are original Web Audio synthesis. Dialogue was w
 Three.js r169 and BufferGeometryUtils: MIT, `vendor/THREE-LICENSE.txt`.
 
 `assetlib.js`, `surfaces.js` and the unused development `rig.js`: documented helpers copied from 404-game-recipe, Apache 2.0, `licenses/404-RECIPE-LICENSE.txt`. The rig is excluded from the build. No warehouse reference-game implementation was copied.
+
+
+## User-directed visual revision
+
+`assets/art/` adds twelve unique original masks and four detailed door constructions, generated as standalone Three.js modules and verified from five views. This pass follows the user’s supplied references directly; it is not described as three independent candidates per new mask. Each mask is used once in the maze. New paint, canopy weave and clue-paper marks are procedural. The user’s reference screenshots are not redistributed in the runtime or source.
+
+`vendor/addons/objects/Reflector.js` is the official Three.js r169 planar reflector (MIT, existing Three.js license). Our mirror shader adds three distinct distortions and limits offscreen renders. `vendor/fonts/SpecialElite-Regular.ttf` is Special Elite by Brian J. Bonislawsky / Astigmatic, from the official Google Fonts repository; its Apache 2.0 license is included beside the font.
+
+`audio/laughter.mp3`: 10-second distant clown laughter, Atlas ElevenLabs SFX v2, FID `21f08bfb-8e72-4b3a-8fed-21661c463614`, same Fright House project. This workflow cost 31 credits total (9 for the generation node); cumulative reported Atlas usage is 192 credits. The very quiet source is normalized on decode and mixed softly, with long gaps and suppression during spoken clues.

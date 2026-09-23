@@ -1,0 +1,19 @@
+=== 404 JAM VERDICT ===
+url             https://polibu.github.io/fright-house/
+utc             2026-09-23T19:50:48.463Z
+commit          9a877abed41eac3980259805a4a970207e325375
+viewport        390x844 @3x phone, real touch, Android Chrome UA
+network         4G: 4 Mbps down, 1 Mbps up, 60 ms latency, CPU 2x slower
+ready           5.8 s   budget 20 s   PASS
+weight          2.2 MB   budget 10 MB   PASS
+started         yes (tap on #begin)
+moved           11.8 m   needs 1 m   PASS
+peak draws      129   budget 900   PASS
+peak tris       163,678   budget 1,500,000   PASS
+median fps      59.999999999999986 (ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version))
+errors          0   PASS
+404s            0   PASS
+external deps   none
+outside folder  none, every file came from the game folder
+RESULT: PASS
+=== END ===

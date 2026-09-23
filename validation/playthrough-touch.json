@@ -2,17 +2,17 @@
   "success": true,
   "state": {
     "pos": [
-      -0.028026623444792682,
-      16.79982745091357
+      -0.027581204364216252,
+      16.799817864564286
     ],
-    "yaw": 1.5646454795175277,
-    "pitch": -0.21641003417968752,
-    "fps": 60.00774293457488,
+    "yaw": 1.5641944297128416,
+    "pitch": -0.216351318359375,
+    "fps": 60.0193610842207,
     "speed": 0,
     "score": 3,
     "over": true,
-    "draws": 30,
-    "tris": 26790,
+    "draws": 25,
+    "tris": 57810,
     "phase": "escaped",
     "paused": false,
     "dialog": null,
@@ -34,13 +34,35 @@
     "power": true,
     "recording": true,
     "jamSolved": true,
-    "timeLeft": 161.15069999999707,
-    "grace": -0.01630000000002771,
+    "timeLeft": 160.75069999999604,
+    "grace": -0.016299999999995207,
     "monster": [
-      4.2932994753376725,
-      13.51724564968436
+      4.266021948158613,
+      14.477091227186177
     ],
     "near": "exit",
+    "evidenceVisible": {
+      "bag": false,
+      "shoe": false,
+      "tape": false
+    },
+    "mirrors": [
+      {
+        "id": "stretch",
+        "mode": 0,
+        "updates": 846
+      },
+      {
+        "id": "wide",
+        "mode": 1,
+        "updates": 325
+      },
+      {
+        "id": "ripple",
+        "mode": 2,
+        "updates": 229
+      }
+    ],
     "ready": true
   },
   "errors": []

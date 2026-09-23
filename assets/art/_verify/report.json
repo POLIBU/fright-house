@@ -1,0 +1,610 @@
+[
+ {
+  "ok": true,
+  "mounts": "back",
+  "meshes": 53,
+  "tris": 11436,
+  "materials": 7,
+  "size": [
+   1.485,
+   2.735,
+   0.383
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.3134,
+    "edgeDensity": 0.0879
+   },
+   "right": {
+    "coverage": 0.0756,
+    "edgeDensity": 0.0565
+   },
+   "back": {
+    "coverage": 0.3405,
+    "edgeDensity": 0.0295
+   },
+   "left": {
+    "coverage": 0.0774,
+    "edgeDensity": 0.0675
+   }
+  },
+  "error": null,
+  "name": "door_exit",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 83,
+  "tris": 19660,
+  "materials": 8,
+  "size": [
+   4.2,
+   3.2,
+   0.655
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.3735,
+    "edgeDensity": 0.0898
+   },
+   "right": {
+    "coverage": 0.0592,
+    "edgeDensity": 0.3988
+   },
+   "back": {
+    "coverage": 0.1895,
+    "edgeDensity": 0.1468
+   },
+   "left": {
+    "coverage": 0.0422,
+    "edgeDensity": 0.4585
+   }
+  },
+  "error": null,
+  "name": "door_frown",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 65,
+  "tris": 34436,
+  "materials": 6,
+  "size": [
+   4.2,
+   3.2,
+   0.79
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.3685,
+    "edgeDensity": 0.1103
+   },
+   "right": {
+    "coverage": 0.0574,
+    "edgeDensity": 0.3525
+   },
+   "back": {
+    "coverage": 0.2564,
+    "edgeDensity": 0.1214
+   },
+   "left": {
+    "coverage": 0.0557,
+    "edgeDensity": 0.2939
+   }
+  },
+  "error": null,
+  "name": "door_grin",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 61,
+  "tris": 7812,
+  "materials": 7,
+  "size": [
+   4.2,
+   3.2,
+   0.65
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.339,
+    "edgeDensity": 0.142
+   },
+   "right": {
+    "coverage": 0.0502,
+    "edgeDensity": 0.3588
+   },
+   "back": {
+    "coverage": 0.3687,
+    "edgeDensity": 0.1576
+   },
+   "left": {
+    "coverage": 0.0519,
+    "edgeDensity": 0.3123
+   }
+  },
+  "error": null,
+  "name": "door_wink",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": "back",
+  "meshes": 43,
+  "tris": 19566,
+  "materials": 9,
+  "size": [
+   1.486,
+   1.726,
+   0.64
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.244,
+    "edgeDensity": 0.1728
+   },
+   "right": {
+    "coverage": 0.1175,
+    "edgeDensity": 0.1191
+   },
+   "back": {
+    "coverage": 0.2857,
+    "edgeDensity": 0.0967
+   },
+   "left": {
+    "coverage": 0.1198,
+    "edgeDensity": 0.1191
+   }
+  },
+  "error": null,
+  "name": "face_cat",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": "back",
+  "meshes": 50,
+  "tris": 23896,
+  "materials": 15,
+  "size": [
+   1.52,
+   1.559,
+   0.637
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.243,
+    "edgeDensity": 0.2182
+   },
+   "right": {
+    "coverage": 0.1033,
+    "edgeDensity": 0.1499
+   },
+   "back": {
+    "coverage": 0.3019,
+    "edgeDensity": 0.1123
+   },
+   "left": {
+    "coverage": 0.1058,
+    "edgeDensity": 0.1423
+   }
+  },
+  "error": null,
+  "name": "face_clown",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": "back",
+  "meshes": 28,
+  "tris": 18712,
+  "materials": 15,
+  "size": [
+   1.462,
+   1.626,
+   0.637
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.247,
+    "edgeDensity": 0.1983
+   },
+   "right": {
+    "coverage": 0.1168,
+    "edgeDensity": 0.1469
+   },
+   "back": {
+    "coverage": 0.2875,
+    "edgeDensity": 0.123
+   },
+   "left": {
+    "coverage": 0.1186,
+    "edgeDensity": 0.1314
+   }
+  },
+  "error": null,
+  "name": "face_duck",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": "back",
+  "meshes": 24,
+  "tris": 13766,
+  "materials": 12,
+  "size": [
+   1.407,
+   1.434,
+   0.429
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2243,
+    "edgeDensity": 0.1783
+   },
+   "right": {
+    "coverage": 0.1,
+    "edgeDensity": 0.1301
+   },
+   "back": {
+    "coverage": 0.2413,
+    "edgeDensity": 0.1113
+   },
+   "left": {
+    "coverage": 0.0919,
+    "edgeDensity": 0.1179
+   }
+  },
+  "error": null,
+  "name": "face_fish",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": "back",
+  "meshes": 33,
+  "tris": 17160,
+  "materials": 14,
+  "size": [
+   1.62,
+   1.77,
+   0.572
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2029,
+    "edgeDensity": 0.1824
+   },
+   "right": {
+    "coverage": 0.0897,
+    "edgeDensity": 0.152
+   },
+   "back": {
+    "coverage": 0.2301,
+    "edgeDensity": 0.1285
+   },
+   "left": {
+    "coverage": 0.0889,
+    "edgeDensity": 0.1284
+   }
+  },
+  "error": null,
+  "name": "face_jester",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": "back",
+  "meshes": 16,
+  "tris": 8965,
+  "materials": 7,
+  "size": [
+   1.214,
+   1.599,
+   0.438
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2272,
+    "edgeDensity": 0.1033
+   },
+   "right": {
+    "coverage": 0.0988,
+    "edgeDensity": 0.1389
+   },
+   "back": {
+    "coverage": 0.2419,
+    "edgeDensity": 0.0927
+   },
+   "left": {
+    "coverage": 0.1193,
+    "edgeDensity": 0.0865
+   }
+  },
+  "error": null,
+  "name": "face_moon",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": "back",
+  "meshes": 29,
+  "tris": 15492,
+  "materials": 11,
+  "size": [
+   1.239,
+   1.488,
+   0.601
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2606,
+    "edgeDensity": 0.224
+   },
+   "right": {
+    "coverage": 0.1396,
+    "edgeDensity": 0.1275
+   },
+   "back": {
+    "coverage": 0.3131,
+    "edgeDensity": 0.0803
+   },
+   "left": {
+    "coverage": 0.1424,
+    "edgeDensity": 0.1223
+   }
+  },
+  "error": null,
+  "name": "face_owl",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": "back",
+  "meshes": 36,
+  "tris": 21378,
+  "materials": 13,
+  "size": [
+   1.326,
+   1.29,
+   0.554
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2583,
+    "edgeDensity": 0.169
+   },
+   "right": {
+    "coverage": 0.1232,
+    "edgeDensity": 0.133
+   },
+   "back": {
+    "coverage": 0.3041,
+    "edgeDensity": 0.1048
+   },
+   "left": {
+    "coverage": 0.1232,
+    "edgeDensity": 0.1136
+   }
+  },
+  "error": null,
+  "name": "face_pig",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": "back",
+  "meshes": 31,
+  "tris": 17564,
+  "materials": 11,
+  "size": [
+   1.099,
+   1.684,
+   0.602
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2341,
+    "edgeDensity": 0.2007
+   },
+   "right": {
+    "coverage": 0.1107,
+    "edgeDensity": 0.1989
+   },
+   "back": {
+    "coverage": 0.2563,
+    "edgeDensity": 0.1181
+   },
+   "left": {
+    "coverage": 0.1133,
+    "edgeDensity": 0.1741
+   }
+  },
+  "error": null,
+  "name": "face_rabbit",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": "back",
+  "meshes": 34,
+  "tris": 19332,
+  "materials": 12,
+  "size": [
+   1.12,
+   1.67,
+   0.612
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.1481,
+    "edgeDensity": 0.2087
+   },
+   "right": {
+    "coverage": 0.0882,
+    "edgeDensity": 0.101
+   },
+   "back": {
+    "coverage": 0.2717,
+    "edgeDensity": 0.0741
+   },
+   "left": {
+    "coverage": 0.1207,
+    "edgeDensity": 0.0826
+   }
+  },
+  "error": null,
+  "name": "face_ringmaster",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": "back",
+  "meshes": 44,
+  "tris": 19222,
+  "materials": 13,
+  "size": [
+   1.804,
+   1.795,
+   0.518
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.1764,
+    "edgeDensity": 0.2353
+   },
+   "right": {
+    "coverage": 0.0716,
+    "edgeDensity": 0.1952
+   },
+   "back": {
+    "coverage": 0.1967,
+    "edgeDensity": 0.1613
+   },
+   "left": {
+    "coverage": 0.0721,
+    "edgeDensity": 0.1891
+   }
+  },
+  "error": null,
+  "name": "face_sun",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": "back",
+  "meshes": 24,
+  "tris": 14836,
+  "materials": 8,
+  "size": [
+   1.039,
+   1.615,
+   0.426
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2527,
+    "edgeDensity": 0.1236
+   },
+   "right": {
+    "coverage": 0.1191,
+    "edgeDensity": 0.1088
+   },
+   "back": {
+    "coverage": 0.2851,
+    "edgeDensity": 0.074
+   },
+   "left": {
+    "coverage": 0.1185,
+    "edgeDensity": 0.0942
+   }
+  },
+  "error": null,
+  "name": "face_tragedy",
+  "problems": []
+ }
+]

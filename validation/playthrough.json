@@ -1,0 +1,47 @@
+{
+  "success": true,
+  "state": {
+    "pos": [
+      0.04287397631493184,
+      16.798363765349468
+    ],
+    "yaw": -4.732357346410175,
+    "pitch": -0.21670000000004871,
+    "fps": 60.007742934571496,
+    "speed": 0,
+    "score": 3,
+    "over": true,
+    "draws": 28,
+    "tris": 22306,
+    "phase": "escaped",
+    "paused": false,
+    "dialog": null,
+    "gates": [
+      1,
+      1,
+      0
+    ],
+    "rotating": [
+      0,
+      0,
+      0
+    ],
+    "found": [
+      "bag",
+      "shoe",
+      "tape"
+    ],
+    "power": true,
+    "recording": true,
+    "jamSolved": true,
+    "timeLeft": 161.1008999999957,
+    "grace": -0.016299999999966664,
+    "monster": [
+      7.342501640582956,
+      8.399947752762948
+    ],
+    "near": "exit",
+    "ready": true
+  },
+  "errors": []
+}

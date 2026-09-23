@@ -1,0 +1,27 @@
+{
+  "title": "Fright House",
+  "slug": "fright-house",
+  "team": [
+    "POLIBU"
+  ],
+  "play_url": "https://polibu.github.io/fright-house/",
+  "source_url": "https://github.com/POLIBU/fright-house",
+  "commit": "PENDING_LIVE_VERDICT",
+  "genre": "other",
+  "agent": "Codex",
+  "models": [
+    "GPT-6",
+    "Gemini 3.1 Flash Lite Image (Atlas references)",
+    "ElevenLabs SFX v2 (Atlas)",
+    "ElevenLabs Flash v2.5 (Atlas)",
+    "OpenAI image generation (development concept only; exact model not exposed)"
+  ],
+  "own_art": true,
+  "own_art_list": [
+    "Original procedural canvas wood, paint and signage; Web Audio hum, steps and ticks.",
+    "Initial OpenAI-generated funhouse concept, development reference only, excluded from runtime."
+  ],
+  "what_i_found": "The walls you learn to operate while searching for missing children become your escape tools when the phone rings. Turning a wall can obstruct the creature while also changing your own route, so the same maze knowledge serves investigation and survival.",
+  "wallet": "later",
+  "contact": "pvvf418@gmail.com"
+}

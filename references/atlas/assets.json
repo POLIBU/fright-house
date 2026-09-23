@@ -1,0 +1,100 @@
+[
+  {
+    "name": "ambience",
+    "fid": "c2f2307e-075c-4aa9-ac8b-bd9f9ca2c8db",
+    "url": "https://api.prod-market.atlas.design/0.2/download_binary_result/c2f2307e-075c-4aa9-ac8b-bd9f9ca2c8db",
+    "path": "audio/ambience.mp3",
+    "bytes": 241206
+  },
+  {
+    "name": "wall",
+    "fid": "8885279e-b664-4283-9809-32ec73531812",
+    "url": "https://api.prod-market.atlas.design/0.2/download_binary_result/8885279e-b664-4283-9809-32ec73531812",
+    "path": "audio/wall.mp3",
+    "bytes": 33062
+  },
+  {
+    "name": "recording",
+    "fid": "8cf3b71a-041b-4a62-98c5-ba342f7494b5",
+    "url": "https://api.prod-market.atlas.design/0.2/download_binary_result/8cf3b71a-041b-4a62-98c5-ba342f7494b5",
+    "path": "audio/recording.mp3",
+    "bytes": 421765
+  },
+  {
+    "name": "phoneVoice",
+    "fid": "edf180c0-933b-4bc1-a820-434844d2e52d",
+    "url": "https://api.prod-market.atlas.design/0.2/download_binary_result/edf180c0-933b-4bc1-a820-434844d2e52d",
+    "path": "audio/phoneVoice.mp3",
+    "bytes": 53543
+  },
+  {
+    "name": "face",
+    "fid": "17ba13a6-7735-4180-b0a7-2bc351ae7608",
+    "url": "https://api.prod-market.atlas.design/0.2/download_binary_result/17ba13a6-7735-4180-b0a7-2bc351ae7608",
+    "path": "references/atlas/face.png",
+    "bytes": 1593337
+  },
+  {
+    "name": "phone",
+    "fid": "064218c1-2e41-4041-87a7-b974689febff",
+    "url": "https://api.prod-market.atlas.design/0.2/download_binary_result/064218c1-2e41-4041-87a7-b974689febff",
+    "path": "references/atlas/phone.png",
+    "bytes": 1502324
+  },
+  {
+    "name": "recorder",
+    "fid": "f7b23c44-8ce6-43a0-bd1d-412360229107",
+    "url": "https://api.prod-market.atlas.design/0.2/download_binary_result/f7b23c44-8ce6-43a0-bd1d-412360229107",
+    "path": "references/atlas/recorder.png",
+    "bytes": 1400154
+  },
+  {
+    "name": "backpack",
+    "fid": "88e2dfa1-afcd-411f-931c-18eeb148ce8f",
+    "url": "https://api.prod-market.atlas.design/0.2/download_binary_result/88e2dfa1-afcd-411f-931c-18eeb148ce8f",
+    "path": "references/atlas/backpack.png",
+    "bytes": 1533299
+  },
+  {
+    "name": "shoe",
+    "fid": "50fb0811-703d-40aa-9b2a-5307e320d0c0",
+    "url": "https://api.prod-market.atlas.design/0.2/download_binary_result/50fb0811-703d-40aa-9b2a-5307e320d0c0",
+    "path": "references/atlas/shoe.png",
+    "bytes": 1575384
+  },
+  {
+    "name": "cassette",
+    "fid": "ae1aaf6a-a25a-4b72-ba7d-7cc664eb633d",
+    "url": "https://api.prod-market.atlas.design/0.2/download_binary_result/ae1aaf6a-a25a-4b72-ba7d-7cc664eb633d",
+    "path": "references/atlas/cassette.png",
+    "bytes": 1493437
+  },
+  {
+    "name": "door",
+    "fid": "d3f34daa-6a56-4f90-bda0-61aac1b6ca2e",
+    "url": "https://api.prod-market.atlas.design/0.2/download_binary_result/d3f34daa-6a56-4f90-bda0-61aac1b6ca2e",
+    "path": "references/atlas/door.png",
+    "bytes": 1661940
+  },
+  {
+    "name": "breaker",
+    "fid": "7a46c656-a913-4b5a-a58f-f2698e2929d7",
+    "url": "https://api.prod-market.atlas.design/0.2/download_binary_result/7a46c656-a913-4b5a-a58f-f2698e2929d7",
+    "path": "references/atlas/breaker.png",
+    "bytes": 1576650
+  },
+  {
+    "name": "creature",
+    "fid": "267f9167-5ab0-49ec-8605-a0bbcdd636b1",
+    "url": "https://api.prod-market.atlas.design/0.2/download_binary_result/267f9167-5ab0-49ec-8605-a0bbcdd636b1",
+    "path": "references/atlas/creature.png",
+    "bytes": 1156806
+  },
+  {
+    "name": "panel",
+    "fid": "cbd57038-3a2c-43f6-8704-55d410088469",
+    "url": "https://api.prod-market.atlas.design/0.2/download_binary_result/cbd57038-3a2c-43f6-8704-55d410088469",
+    "path": "references/atlas/panel.png",
+    "bytes": 1339851
+  }
+]

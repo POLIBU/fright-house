@@ -2,13 +2,13 @@
  {
   "ok": true,
   "mounts": null,
-  "meshes": 8,
-  "tris": 1604,
-  "materials": 6,
+  "meshes": 11,
+  "tris": 1256,
+  "materials": 8,
   "size": [
    0.38,
-   0.521,
-   0.227
+   0.515,
+   0.258
   ],
   "groundOffset": 0,
   "centreOffset": [
@@ -17,20 +17,20 @@
   ],
   "sides": {
    "front": {
-    "coverage": 0.2756,
-    "edgeDensity": 0.066
+    "coverage": 0.2863,
+    "edgeDensity": 0.0985
    },
    "right": {
-    "coverage": 0.1752,
-    "edgeDensity": 0.0647
+    "coverage": 0.222,
+    "edgeDensity": 0.102
    },
    "back": {
-    "coverage": 0.278,
-    "edgeDensity": 0.0523
+    "coverage": 0.3249,
+    "edgeDensity": 0.119
    },
    "left": {
-    "coverage": 0.1791,
-    "edgeDensity": 0.0617
+    "coverage": 0.2211,
+    "edgeDensity": 0.0899
    }
   },
   "error": null,
@@ -41,12 +41,12 @@
   "ok": true,
   "mounts": "back",
   "meshes": 13,
-  "tris": 1516,
+  "tris": 2344,
   "materials": 8,
   "size": [
-   0.62,
-   0.76,
-   0.252
+   0.63,
+   0.55,
+   0.264
   ],
   "groundOffset": 0,
   "centreOffset": [
@@ -55,20 +55,20 @@
   ],
   "sides": {
    "front": {
-    "coverage": 0.3783,
-    "edgeDensity": 0.0983
+    "coverage": 0.3667,
+    "edgeDensity": 0.131
    },
    "right": {
-    "coverage": 0.1781,
-    "edgeDensity": 0.0801
+    "coverage": 0.2144,
+    "edgeDensity": 0.0876
    },
    "back": {
-    "coverage": 0.4193,
-    "edgeDensity": 0.0198
+    "coverage": 0.0397,
+    "edgeDensity": 0.0854
    },
    "left": {
-    "coverage": 0.1764,
-    "edgeDensity": 0.0587
+    "coverage": 0.0808,
+    "edgeDensity": 0.1747
    }
   },
   "error": null,
@@ -76,15 +76,15 @@
   "problems": []
  },
  {
-  "ok": false,
+  "ok": true,
   "mounts": null,
-  "meshes": 9,
-  "tris": 2020,
-  "materials": 5,
+  "meshes": 25,
+  "tris": 4204,
+  "materials": 6,
   "size": [
    0.105,
    0.067,
-   0.021
+   0.025
   ],
   "groundOffset": 0,
   "centreOffset": [
@@ -93,38 +93,36 @@
   ],
   "sides": {
    "front": {
-    "coverage": 0.2474,
-    "edgeDensity": 0.1344
+    "coverage": 0.3726,
+    "edgeDensity": 0.1465
    },
    "right": {
-    "coverage": 0.0923,
-    "edgeDensity": 0.1102
+    "coverage": 0.1189,
+    "edgeDensity": 0.1746
    },
    "back": {
-    "coverage": 0.3861,
-    "edgeDensity": 0.0091
+    "coverage": 0.2136,
+    "edgeDensity": 0.1889
    },
    "left": {
-    "coverage": 0.1189,
-    "edgeDensity": 0.0829
+    "coverage": 0.0598,
+    "edgeDensity": 0.301
    }
   },
   "error": null,
   "name": "cassette",
-  "problems": [
-   "back face is nearly featureless next to the others, it was probably never modelled"
-  ]
+  "problems": []
  },
  {
   "ok": true,
   "mounts": null,
-  "meshes": 31,
-  "tris": 4812,
-  "materials": 12,
+  "meshes": 38,
+  "tris": 4044,
+  "materials": 15,
   "size": [
-   1.221,
-   2.61,
-   0.76
+   0.976,
+   2.595,
+   0.68
   ],
   "groundOffset": 0,
   "centreOffset": [
@@ -133,20 +131,20 @@
   ],
   "sides": {
    "front": {
-    "coverage": 0.1211,
-    "edgeDensity": 0.1286
+    "coverage": 0.0552,
+    "edgeDensity": 0.1566
    },
    "right": {
-    "coverage": 0.077,
-    "edgeDensity": 0.112
+    "coverage": 0.0643,
+    "edgeDensity": 0.1404
    },
    "back": {
-    "coverage": 0.1425,
-    "edgeDensity": 0.0779
+    "coverage": 0.1291,
+    "edgeDensity": 0.0773
    },
    "left": {
-    "coverage": 0.0943,
-    "edgeDensity": 0.0924
+    "coverage": 0.0977,
+    "edgeDensity": 0.078
    }
   },
   "error": null,
@@ -156,13 +154,13 @@
  {
   "ok": true,
   "mounts": "back",
-  "meshes": 21,
-  "tris": 252,
-  "materials": 7,
+  "meshes": 43,
+  "tris": 928,
+  "materials": 8,
   "size": [
-   1.36,
-   2.665,
-   0.303
+   1.37,
+   2.668,
+   0.215
   ],
   "groundOffset": 0,
   "centreOffset": [
@@ -171,20 +169,20 @@
   ],
   "sides": {
    "front": {
-    "coverage": 0.2991,
-    "edgeDensity": 0.1306
+    "coverage": 0.3238,
+    "edgeDensity": 0.1127
    },
    "right": {
-    "coverage": 0.0677,
-    "edgeDensity": 0.1697
+    "coverage": 0.0607,
+    "edgeDensity": 0.131
    },
    "back": {
-    "coverage": 0.3287,
-    "edgeDensity": 0.0846
+    "coverage": 0.3243,
+    "edgeDensity": 0.0448
    },
    "left": {
-    "coverage": 0.0676,
-    "edgeDensity": 0.1602
+    "coverage": 0.0599,
+    "edgeDensity": 0.0582
    }
   },
   "error": null,
@@ -194,13 +192,13 @@
  {
   "ok": true,
   "mounts": "back",
-  "meshes": 19,
-  "tris": 4180,
-  "materials": 6,
+  "meshes": 26,
+  "tris": 5888,
+  "materials": 12,
   "size": [
-   1.04,
-   1.58,
-   0.212
+   0.83,
+   1.62,
+   0.405
   ],
   "groundOffset": 0,
   "centreOffset": [
@@ -209,20 +207,20 @@
   ],
   "sides": {
    "front": {
-    "coverage": 0.2595,
-    "edgeDensity": 0.2106
+    "coverage": 0.2759,
+    "edgeDensity": 0.198
    },
    "right": {
-    "coverage": 0.0462,
-    "edgeDensity": 0.4885
+    "coverage": 0.1116,
+    "edgeDensity": 0.1995
    },
    "back": {
-    "coverage": 0.2789,
-    "edgeDensity": 0.0469
+    "coverage": 0.3314,
+    "edgeDensity": 0.0125
    },
    "left": {
-    "coverage": 0.0468,
-    "edgeDensity": 0.4127
+    "coverage": 0.1113,
+    "edgeDensity": 0.1925
    }
   },
   "error": null,
@@ -270,13 +268,13 @@
  {
   "ok": true,
   "mounts": "back",
-  "meshes": 39,
-  "tris": 10736,
-  "materials": 6,
+  "meshes": 43,
+  "tris": 11576,
+  "materials": 5,
   "size": [
-   0.388,
-   0.552,
-   0.211
+   0.447,
+   0.447,
+   0.218
   ],
   "groundOffset": 0,
   "centreOffset": [
@@ -285,20 +283,20 @@
   ],
   "sides": {
    "front": {
-    "coverage": 0.2591,
-    "edgeDensity": 0.0801
+    "coverage": 0.2799,
+    "edgeDensity": 0.0858
    },
    "right": {
-    "coverage": 0.1462,
-    "edgeDensity": 0.06
+    "coverage": 0.1851,
+    "edgeDensity": 0.0523
    },
    "back": {
-    "coverage": 0.2962,
-    "edgeDensity": 0.0261
+    "coverage": 0.3205,
+    "edgeDensity": 0.0387
    },
    "left": {
-    "coverage": 0.1308,
-    "edgeDensity": 0.0543
+    "coverage": 0.1659,
+    "edgeDensity": 0.0618
    }
   },
   "error": null,
@@ -308,13 +306,13 @@
  {
   "ok": true,
   "mounts": null,
-  "meshes": 19,
-  "tris": 348,
-  "materials": 8,
+  "meshes": 35,
+  "tris": 2496,
+  "materials": 13,
   "size": [
-   0.43,
-   0.154,
-   0.27
+   0.4,
+   0.341,
+   0.171
   ],
   "groundOffset": 0,
   "centreOffset": [
@@ -323,20 +321,20 @@
   ],
   "sides": {
    "front": {
-    "coverage": 0.2569,
-    "edgeDensity": 0.0756
+    "coverage": 0.3198,
+    "edgeDensity": 0.1597
    },
    "right": {
-    "coverage": 0.2019,
-    "edgeDensity": 0.0728
+    "coverage": 0.1786,
+    "edgeDensity": 0.099
    },
    "back": {
-    "coverage": 0.3318,
-    "edgeDensity": 0.1034
+    "coverage": 0.2683,
+    "edgeDensity": 0.0941
    },
    "left": {
-    "coverage": 0.249,
-    "edgeDensity": 0.1103
+    "coverage": 0.174,
+    "edgeDensity": 0.0977
    }
   },
   "error": null,
@@ -346,13 +344,13 @@
  {
   "ok": true,
   "mounts": null,
-  "meshes": 9,
-  "tris": 1404,
-  "materials": 2,
+  "meshes": 219,
+  "tris": 16228,
+  "materials": 5,
   "size": [
-   0.19,
-   0.223,
-   0.377
+   4.2,
+   3.2,
+   0.228
   ],
   "groundOffset": 0,
   "centreOffset": [
@@ -361,20 +359,58 @@
   ],
   "sides": {
    "front": {
-    "coverage": 0.1595,
-    "edgeDensity": 0.1479
+    "coverage": 0.3845,
+    "edgeDensity": 0.227
    },
    "right": {
-    "coverage": 0.2429,
-    "edgeDensity": 0.1447
+    "coverage": 0.0361,
+    "edgeDensity": 0.1202
    },
    "back": {
-    "coverage": 0.1558,
-    "edgeDensity": 0.1458
+    "coverage": 0.3759,
+    "edgeDensity": 0.2458
    },
    "left": {
-    "coverage": 0.2431,
-    "edgeDensity": 0.1004
+    "coverage": 0.0348,
+    "edgeDensity": 0.1097
+   }
+  },
+  "error": null,
+  "name": "rotating_panel",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 24,
+  "tris": 5372,
+  "materials": 7,
+  "size": [
+   0.175,
+   0.255,
+   0.346
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2152,
+    "edgeDensity": 0.1759
+   },
+   "right": {
+    "coverage": 0.2737,
+    "edgeDensity": 0.1403
+   },
+   "back": {
+    "coverage": 0.2235,
+    "edgeDensity": 0.0857
+   },
+   "left": {
+    "coverage": 0.2749,
+    "edgeDensity": 0.1626
    }
   },
   "error": null,

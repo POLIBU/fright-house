@@ -67,7 +67,7 @@
       "name": "midway",
       "state": {
         "view": 7,
-        "progress": 123,
+        "progress": 115,
         "draws": 92,
         "tris": 38435
       }
@@ -85,9 +85,9 @@
       "name": "loading",
       "state": {
         "view": 9,
-        "progress": 337,
-        "draws": 36,
-        "tris": 16141
+        "progress": 315,
+        "draws": 40,
+        "tris": 17295
       }
     }
   ],

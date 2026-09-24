@@ -1,0 +1,15 @@
+# Fright House — true 2D candidate
+
+Open http://localhost:8089/two-d/index.html . This is a separate short playable scene; the main 3D game is unchanged.
+
+The approved concept supplies the L-shaped room, ticket counter, clown mural, red door, optical wallpaper and narrow side corridor. The generated background is static artwork; the player, collectible items, flashlight, lever, rotating wall and pursuing clown are drawn and animated by Canvas 2D. This is not a full conversion of the maze or cart ride.
+
+Controls: arrows/WASD move; E/Enter examine or continue dialogue; F toggles light; Escape pauses. Touch buttons provide the same actions. Find the three belongings, operate the brass lever, and unlock the service exit. The clown uses the same collision boundaries as the player. Restart clears clues, dialogue, wall state, sound and chase.
+
+Art: built-in imagegen tool, using the previously approved generated concept as the reference. Project asset: [assets/foyer-l.png](assets/foyer-l.png). Original output was copied into this directory. No paid API or third-party image assets used. Existing local game audio is reused.
+
+Final production prompt:
+
+Use case: precise-object-edit. Input image is the approved Fright House 2D concept sheet. Create a production background from ONLY THE LEFT EXPLORATION SCREEN, filling the new image. Preserve its beautiful detailed pixel art, exact L-shaped room layout and architectural proportions, left ticket counter, balloons, circus murals, giant clown face wall decoration, back red door, multicolored bulbs, left shelf, flat checker floor and lower-right narrow exit corridor. Crop away title, border and entire right encounter panel. Remove the human player AND flashlight cone, remove all UI text and clues counter and examine hint. Remove the large teal rotating cylindrical wall panel and its lever (they will be rendered dynamically), leave its circular metal floor track and unobstructed floor beneath. Remove the counter that projects into the left middle of the walkable floor, leaving the ticket counter against the back-left wall. Absolutely preserve L shape: main room is top left and wide, bottom left is black void, corridor descends from right side along right edge down to bottom. Clear walkable floor main room between about x=13%-90%, y=29%-66%; corridor at x=77%-92%, y=55%-100%. Draw low wall ledges around inside L corner matching the concept. No people or creatures, no interface, no borders, no title. This is actual 2D sprite-game pixel art background with flat orthogonal checkerboard floor and front-facing north wall, not a 3D render. Keep tiny scenery details but walkable floor empty. Landscape 4:3 framing.
+
+Validation: three model tests cover L-shaped boundaries, directional movement, rotating-wall collision and creature navigation. Real browser input playthroughs cover keyboard and touch, all three clues, wall interaction, whisper encounter, escape, pause and reset. See ../validation/two-d/results.json and matching screenshots. Touch is browser emulation, not a physical-device test.

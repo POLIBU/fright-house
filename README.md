@@ -1,5 +1,8 @@
 # Fright House
 
+> **Top-down candidate:** [Play Level 1](http://localhost:8089/two-d/index.html). The approved street includes animated lights, a rotating Ferris wheel and an inspectable newspaper. [Review the next level concept](http://localhost:8089/two-d/art-review/index.html). The full 20-area adaptation is in progress; later levels require concept review.
+
+
 A browser horror puzzle game set in an abandoned funhouse in 1987. Investigate three children’s belongings, learn how the rotating walls connect the maze, restore power, and escape with the recording before the creature reaches you.
 
 [Play Fright House](https://polibu.github.io/fright-house/) · Team: **POLIBU** · Public jam contact: pvvf418@gmail.com

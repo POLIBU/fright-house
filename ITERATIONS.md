@@ -114,3 +114,17 @@ Improved: opening progression and architectural landmarks, distinctive room enco
 Validation: 22 pure model tests pass. Keyboard entrance and full touch entrance passed, including pause/fall and both room triggers. Keyboard maze-to-coast passed before the pixel/axe changes. Full real-touch maze-to-coast passed on the selected pixel renderer with seven axe wind-ups countered by seven flashes, zero hits and zero browser errors; maze peak 637 calls / 536,381 triangles, cart peak 393 calls / 74,853 triangles. Focused final desktop/mobile render, axe-flash, pause and smooth-fallback checks pass with zero missing resources or browser errors. Local mobile emulation at 2× CPU throttle loaded in 1.163 s with 2,801,795 resource bytes; this is a local-server emulation, not a physical-phone network benchmark. Both modes remain under the planned rendering budgets.
 
 The final touch entrance repeat passed on the selected rendering with the corrected stair/landing geometry. All work remains local; nothing has been published.
+
+## V10 — approved top-down street (Level 1)
+
+User selected the detailed top-down 2D direction and requested a concept review before every level. The Level 1 facade/street concept was explicitly approved, with animated bulbs, a turning Ferris wheel and a bench newspaper.
+
+Changed: the /two-d/ entry now starts at the approved street. The previous ticket-hall mini-game remains at /two-d/ticket-hall.html. Added independently animated Ferris wheel spokes with upright gondolas, slow coloured-light modulation, drifting fog, a collected newspaper clipping, notices/ticket/stall inspections, field notes, optional local resume, and turnstile completion. Added shared 20-area campaign metadata and checkpoint/progression foundations using the original 22-node maze.
+
+Improved: approved artwork now supports actual exploration; the clipping tells part of the children’s story; environmental motion uses a shared pause-aware clock. Street geometry restricts movement to pavement and the entrance. Click/tap routing and keyboard/touch controls are supported.
+
+Limits/regressions: only Level 1 is campaign-ready; the old ticket-hall remains a separate study, and the remaining areas require concept review. Character art remains temporary, not approved production sprites. The independent Ferris wheel is code-drawn to animate over an imagegen clean plate. The larger source images are retained for art review; only the street plate is loaded during play. No deployment or publishing occurred.
+
+Retained: existing 3D and isometric versions, all earlier approved references and original game models. Production clown sprites await user appearance approval.
+
+Validation: 38 model tests passed, including nine campaign/street tests. Desktop keyboard/mouse and emulated-touch playthroughs reached the entrance after all four discoveries; pause froze animation/audio; saved progress resumed; restart cleared state; no browser errors or missing resources. Matching frames and local load measurements are in validation/street. Physical mobile performance and full-campaign budgets are not yet validated.

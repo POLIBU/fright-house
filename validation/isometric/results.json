@@ -1,0 +1,24 @@
+[
+  {
+    "mode": "keyboard-and-mouse",
+    "rightMovesRight": true,
+    "clue": true,
+    "hiddenRoom": true,
+    "wall": true,
+    "escaped": true,
+    "pause": true,
+    "reset": true,
+    "errors": []
+  },
+  {
+    "mode": "touch",
+    "rightMovesRight": true,
+    "clue": true,
+    "hiddenRoom": true,
+    "wall": true,
+    "escaped": true,
+    "pause": true,
+    "reset": true,
+    "errors": []
+  }
+]

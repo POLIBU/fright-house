@@ -1,0 +1,114 @@
+[
+  {
+    "touch": false,
+    "cageBlocks": true,
+    "cornerCrateBlocks": true,
+    "solidLayers": [
+      {
+        "name": "cage-back",
+        "depth": 138,
+        "meshes": 1,
+        "solidVolumes": 0
+      },
+      {
+        "name": "cage-front",
+        "depth": 202,
+        "meshes": 1,
+        "solidVolumes": 0
+      },
+      {
+        "name": "cage-side",
+        "depth": 203,
+        "meshes": 1,
+        "solidVolumes": 0
+      },
+      {
+        "name": "cage-rim",
+        "depth": 139,
+        "meshes": 5,
+        "solidVolumes": 0
+      },
+      {
+        "name": "prize-front",
+        "depth": 242,
+        "meshes": 1,
+        "solidVolumes": 0
+      },
+      {
+        "name": "prize-middle",
+        "depth": 238,
+        "meshes": 1,
+        "solidVolumes": 0
+      },
+      {
+        "name": "prize-back",
+        "depth": 207,
+        "meshes": 1,
+        "solidVolumes": 0
+      },
+      {
+        "name": "prize-right",
+        "depth": 241,
+        "meshes": 1,
+        "solidVolumes": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "touch": true,
+    "cageBlocks": true,
+    "cornerCrateBlocks": true,
+    "solidLayers": [
+      {
+        "name": "cage-back",
+        "depth": 138,
+        "meshes": 1,
+        "solidVolumes": 0
+      },
+      {
+        "name": "cage-front",
+        "depth": 202,
+        "meshes": 1,
+        "solidVolumes": 0
+      },
+      {
+        "name": "cage-side",
+        "depth": 203,
+        "meshes": 1,
+        "solidVolumes": 0
+      },
+      {
+        "name": "cage-rim",
+        "depth": 139,
+        "meshes": 5,
+        "solidVolumes": 0
+      },
+      {
+        "name": "prize-front",
+        "depth": 242,
+        "meshes": 1,
+        "solidVolumes": 0
+      },
+      {
+        "name": "prize-middle",
+        "depth": 238,
+        "meshes": 1,
+        "solidVolumes": 0
+      },
+      {
+        "name": "prize-back",
+        "depth": 207,
+        "meshes": 1,
+        "solidVolumes": 0
+      },
+      {
+        "name": "prize-right",
+        "depth": 241,
+        "meshes": 1,
+        "solidVolumes": 0
+      }
+    ],
+    "errors": []
+  }
+]

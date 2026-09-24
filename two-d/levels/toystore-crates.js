@@ -8,17 +8,11 @@ export const STORE_CRATES = [
  {id:'prize-right',x:437,y:221,w:27,h:20,height:22,kind:'wood'}
 ];
 export function crateContains(crate,x,y,r=4){
- // The cage is angled in the painted room; its floor is a convex quadrilateral.
- if(crate.kind==='cage'){
-  const points=cageFootprint();let inside=false;
-  for(let i=0,j=points.length-1;i<points.length;j=i++){
-   const a=points[i],b=points[j];
-   if((a.y>y)!==(b.y>y)&&x<(b.x-a.x)*(y-a.y)/(b.y-a.y)+a.x)inside=!inside;
-   const dx=b.x-a.x,dy=b.y-a.y,t=Math.max(0,Math.min(1,((x-a.x)*dx+(y-a.y)*dy)/(dx*dx+dy*dy)));
-   if(Math.hypot(x-a.x-t*dx,y-a.y-t*dy)<r)return true;
-  }
-  return inside;
- }
+ // Reserve the full base and wheel clearance, including the rear corners.
+ // The painted slanted face alone leaves triangular strips that look walkable
+ // through the crate, especially with the larger investigator sprite.
+ if(crate.kind==='cage')return x+r>219&&x-r<343&&y+r>126&&y-r<206;
+
  return x+r>crate.x&&x-r<crate.x+crate.w&&y+r>crate.y&&y-r<crate.y+crate.h;
 }
 export function cageFootprint(){return [{x:240,y:138},{x:340,y:163},{x:323,y:202},{x:223,y:176}];}

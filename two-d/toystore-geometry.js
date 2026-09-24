@@ -26,4 +26,7 @@ for(const crate of STORE_CRATES){
 }
 projectedVolume(THREE,bench,mat,[[101,178],[157,178],[157,192],[101,192]],24);
 projectedVolume(THREE,shelf,mat,[[169,94],[330,94],[330,100],[169,100]],38);
+// Raised jambs and lintel are drawn in front when the player goes beneath them.
+const portal=part('entry-door-frame',250);
+for(const points of [[[82,184],[86,187],[86,245],[82,244]],[[109,201],[114,203],[114,249],[109,248]],[[82,184],[114,201],[114,206],[82,189]]]){const shape=new THREE.Shape();points.forEach(([x,y],i)=>shape[i?'lineTo':'moveTo']((x-240)*.05,(360-y)*.05));shape.closePath();portal.add(new THREE.Mesh(new THREE.ExtrudeGeometry(shape,{depth:.3,bevelEnabled:false}),mat));}
 return root;}

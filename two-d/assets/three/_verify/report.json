@@ -39,6 +39,44 @@
  },
  {
   "ok": true,
+  "mounts": "back",
+  "meshes": 20,
+  "tris": 368,
+  "materials": 4,
+  "size": [
+   1.06,
+   2.16,
+   0.349
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.3051,
+    "edgeDensity": 0.1324
+   },
+   "right": {
+    "coverage": 0.0956,
+    "edgeDensity": 0.0961
+   },
+   "back": {
+    "coverage": 0.3235,
+    "edgeDensity": 0.0558
+   },
+   "left": {
+    "coverage": 0.0959,
+    "edgeDensity": 0.1058
+   }
+  },
+  "error": null,
+  "name": "archer-entry-door",
+  "problems": []
+ },
+ {
+  "ok": true,
   "mounts": null,
   "meshes": 47,
   "tris": 1468,
@@ -111,6 +149,44 @@
   },
   "error": null,
   "name": "awakened-toys",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 142,
+  "tris": 3564,
+  "materials": 4,
+  "size": [
+   3.1,
+   1.265,
+   0.62
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0.06
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.0892,
+    "edgeDensity": 0.2713
+   },
+   "right": {
+    "coverage": 0.0589,
+    "edgeDensity": 0.1729
+   },
+   "back": {
+    "coverage": 0.2043,
+    "edgeDensity": 0.1686
+   },
+   "left": {
+    "coverage": 0.0876,
+    "edgeDensity": 0.1491
+   }
+  },
+  "error": null,
+  "name": "backstage-machinery",
   "problems": []
  },
  {
@@ -422,6 +498,44 @@
  {
   "ok": true,
   "mounts": null,
+  "meshes": 22,
+  "tris": 1712,
+  "materials": 5,
+  "size": [
+   0.47,
+   0.614,
+   0.47
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2198,
+    "edgeDensity": 0.0501
+   },
+   "right": {
+    "coverage": 0.2138,
+    "edgeDensity": 0.0503
+   },
+   "back": {
+    "coverage": 0.2574,
+    "edgeDensity": 0.0469
+   },
+   "left": {
+    "coverage": 0.2486,
+    "edgeDensity": 0.0533
+   }
+  },
+  "error": null,
+  "name": "haunted-trash",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
   "meshes": 20,
   "tris": 720,
   "materials": 3,
@@ -460,6 +574,120 @@
  {
   "ok": true,
   "mounts": null,
+  "meshes": 73,
+  "tris": 6204,
+  "materials": 8,
+  "size": [
+   1.94,
+   1.23,
+   0.87
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.233,
+    "edgeDensity": 0.1465
+   },
+   "right": {
+    "coverage": 0.1983,
+    "edgeDensity": 0.0667
+   },
+   "back": {
+    "coverage": 0.2457,
+    "edgeDensity": 0.0941
+   },
+   "left": {
+    "coverage": 0.2029,
+    "edgeDensity": 0.0883
+   }
+  },
+  "error": null,
+  "name": "library-desk",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 22,
+  "tris": 8668,
+  "materials": 3,
+  "size": [
+   0.434,
+   0.237,
+   0.266
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2071,
+    "edgeDensity": 0.0918
+   },
+   "right": {
+    "coverage": 0.1582,
+    "edgeDensity": 0.0792
+   },
+   "back": {
+    "coverage": 0.2127,
+    "edgeDensity": 0.081
+   },
+   "left": {
+    "coverage": 0.1434,
+    "edgeDensity": 0.1245
+   }
+  },
+  "error": null,
+  "name": "library-phone",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 56,
+  "tris": 800,
+  "materials": 5,
+  "size": [
+   1.047,
+   1.44,
+   0.72
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.3519,
+    "edgeDensity": 0.1417
+   },
+   "right": {
+    "coverage": 0.2642,
+    "edgeDensity": 0.1349
+   },
+   "back": {
+    "coverage": 0.3852,
+    "edgeDensity": 0.1414
+   },
+   "left": {
+    "coverage": 0.2643,
+    "edgeDensity": 0.125
+   }
+  },
+  "error": null,
+  "name": "lost-property-cupboard",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
   "meshes": 10,
   "tris": 590,
   "materials": 3,
@@ -493,6 +721,44 @@
   },
   "error": null,
   "name": "raven",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": "back",
+  "meshes": 176,
+  "tris": 10536,
+  "materials": 13,
+  "size": [
+   1.581,
+   2,
+   0.463
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0.026
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.3938,
+    "edgeDensity": 0.152
+   },
+   "right": {
+    "coverage": 0.1507,
+    "edgeDensity": 0.0627
+   },
+   "back": {
+    "coverage": 0.4038,
+    "edgeDensity": 0.0622
+   },
+   "left": {
+    "coverage": 0.1506,
+    "edgeDensity": 0.0984
+   }
+  },
+  "error": null,
+  "name": "specimen-library",
   "problems": []
  },
  {
@@ -612,35 +878,35 @@
  {
   "ok": true,
   "mounts": null,
-  "meshes": 79,
-  "tris": 4460,
-  "materials": 6,
+  "meshes": 89,
+  "tris": 11464,
+  "materials": 12,
   "size": [
-   0.408,
-   0.445,
-   0.459
+   0.477,
+   0.434,
+   0.422
   ],
-  "groundOffset": 0,
+  "groundOffset": -0.002,
   "centreOffset": [
    0,
    0
   ],
   "sides": {
    "front": {
-    "coverage": 0.2169,
-    "edgeDensity": 0.2131
+    "coverage": 0.2451,
+    "edgeDensity": 0.2512
    },
    "right": {
-    "coverage": 0.2102,
-    "edgeDensity": 0.2284
+    "coverage": 0.2328,
+    "edgeDensity": 0.25
    },
    "back": {
-    "coverage": 0.2019,
-    "edgeDensity": 0.2445
+    "coverage": 0.2447,
+    "edgeDensity": 0.2408
    },
    "left": {
-    "coverage": 0.2101,
-    "edgeDensity": 0.2447
+    "coverage": 0.2492,
+    "edgeDensity": 0.2361
    }
   },
   "error": null,

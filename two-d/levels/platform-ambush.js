@@ -1,7 +1,7 @@
 // Telegraphs and projectiles share the same state used by the 3D renderer.
 const floors=[690,493,355,181];
 export function newAmbush(floor=0){return {archer:{phase:'rest',age:0,targetX:0,targetY:0,shots:0},arrows:[],balloons:[{id:'bomb-'+floor,x:[578,520,358,682][floor],y:floors[floor]-38,phase:'idle',age:0}],floor};}
-export function archerOrigin(floor){return {x:floor%2?873:87,y:floors[Math.max(0,floor-1)]-23};}
+export function archerOrigin(floor,clown){if(clown)return {x:clown.x,y:clown.y-48};return {x:floor%2?873:87,y:floors[Math.max(0,floor-1)]-23};}
 export function arrowPoint(a,t){
  // First rise through the open stairwell, then descend toward the locked aim point.
  const p=Math.min(1,Math.max(0,t)),q=1-p;
@@ -11,9 +11,9 @@ export function tickAmbush(s,dt){
  const m=s.ambush;if(!m||!s.power||s.stair)return;
  if(m.floor!==s.floor){s.ambush=newAmbush(s.floor);return;}
  const archer=m.archer;archer.age+=dt;
- if(s.floor>0){
+ if(s.floor>0&&!s.clown?.stair&&(!s.clown||s.clown.floor===s.floor-1)){
   if(archer.phase==='rest'&&archer.age>=2){archer.phase='aim';archer.age=0;archer.targetX=Math.max(145,Math.min(820,s.x));archer.targetY=floors[s.floor]-16;}
-  if(archer.phase==='aim'&&archer.age>=1.15){const origin=archerOrigin(s.floor),a={id:'arrow-'+(++archer.shots),age:0,startX:origin.x,startY:origin.y,controlX:origin.x,controlY:floors[s.floor]-180,targetX:archer.targetX,targetY:archer.targetY};a.x=a.previousX=origin.x;a.y=a.previousY=origin.y;m.arrows.push(a);archer.phase='release';archer.age=0;}
+  if(archer.phase==='aim'&&archer.age>=1.15){const origin=archerOrigin(s.floor,s.clown),a={id:'arrow-'+(++archer.shots),age:0,startX:origin.x,startY:origin.y,controlX:origin.x,controlY:floors[s.floor]-180,targetX:archer.targetX,targetY:archer.targetY};a.x=a.previousX=origin.x;a.y=a.previousY=origin.y;m.arrows.push(a);archer.phase='release';archer.age=0;}
   if(archer.phase==='release'&&archer.age>.3){archer.phase='rest';archer.age=0;}
  }
  for(const a of m.arrows){a.previousX=a.x;a.previousY=a.y;a.age+=dt;const p=arrowPoint(a,a.age/1.35);a.x=p.x;a.y=p.y;const next=arrowPoint(a,Math.min(1,a.age/1.35+.01));a.angle=Math.atan2(next.y-a.y,next.x-a.x);}

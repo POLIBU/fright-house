@@ -108,3 +108,19 @@ All five new asset modules pass the official 404 harness. Validation and compari
 ## V19 local playtest
 
 Open `test.html` to select Levels 1–4, a platformer floor, or the toy-room quick start. All levels offer a LEVEL SELECT return link. The approved clown/bomb encounters, packed crate with tracking luminous eyes, revised four-direction investigator and deeper prop volumes are implemented. See `../validation/three-d-v19/index.html` and `../ITERATIONS.md` for checks and limitations.
+
+
+## V20 candidate
+
+Levels 1–4 retain their approved compositions with expanded 3D interactions and independent animation. See `../ITERATIONS.md` for acceptance results and `../validation/walking-v20/` for motion previews and evidence. The carousel blast uses a 6×4 transparent sheet at 30 fps, driven by simulation age; lingering smoke and fragments share that clock. The old compartment clue is removed.
+
+Level 5 awaits concept approval: heavy pedestal desk, patterned rug, green banker lamp, ringing telephone, physical specimen shelves and jars, then a jar-break worm chase. Review `art-review/level-5.html`; do not treat its artwork as an implemented level.
+
+
+## V21 — specimen library
+
+The approved Level 5 is now playable at `level-5.html` and linked from the Level 4 exit and level-select page. Solid procedural desks/shelves, a green banker lamp, 97 jars, an opening phone receiver, wavering light, a breaking jar, a 24-frame worm and swept bile collisions replace the static concept props. The rug and architecture remain an approved painted plate. The phone checkpoint skips the completed call for testing; restart resets it. All encounter motion, sound and lighting pause together. Read-only telemetry is `window.frightLibrary`.
+
+The library is now 1,680 pixels wide, with a following camera, alternating shelf obstacles, a far-end exit and a 2.4-second unlatching action. The investigator is 68 pixels tall in this room; the entrance has solid jambs and separately drawn overhead trim.
+
+The Level 4 crate reserves its full base/wheel clearance rather than only the slanted painted floor polygon. A toy landing was adjusted to remain outside that solid area. See `../validation/library-v21/` for comparisons and test evidence.

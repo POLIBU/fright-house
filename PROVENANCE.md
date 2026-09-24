@@ -130,3 +130,15 @@ The cage and stacked wooden crates now use original Three.js Shape/ExtrudeGeomet
 `two-d/assets/characters/investigator-v2.png` was generated with built-in imagegen after the user rejected the first design as too close to their reference. Revised brief: original lean adult investigator, narrow tilted olive-brown hat, auburn hair/stubble, short ochre coat, burgundy scarf, satchel, gray trousers and brass magnifier; front/left/back/right views on transparency. The user then approved implementation. The game samples the four frames from the unchanged PNG, with code-driven walking bob. The rejected first sheet is not shipped.
 
 The new projected-volume helper uses ordinary Shape/ExtrudeGeometry and the already-declared clean artwork. Toy eye/pupil meshes and crate foreground faces are original code changes. No downloaded meshes, paid services or imported mesh payloads were added.
+
+### V20 original sprites, clean plates and Level 5 concept
+
+Built-in `image_gen` produced the investigator walking/jumping sheets, clown walking/shooting/stair sheets, street turnstile clean plate, storeroom bin clean plate, carousel explosion sheets and specimen-library concept. Exact final prompts and project asset paths are recorded in `validation/walking-v20/image-prompts.json`. The rejected opaque-background explosion draft is not shipped. References were the approved game artwork and user-supplied prop photographs. These declared raster images are visual textures/sprites, not geometry payloads.
+
+The lost-property cupboard, rear clown door, backstage machinery, haunted bin and connected tin carousel are original constructor-built Three.js modules. No downloaded mesh data was added. Raven calls, wingbeats, music-box notes and the mechanical burst use local Web Audio synthesis. The Level 5 image is concept-only pending user appearance approval.
+
+### V21 specimen library
+
+The approved Level 5 image, architecture-only plate and 24-frame crawling/spitting worm sheet were generated with built-in image_gen. Exact prompts and saved project paths: `validation/library-v21/image-prompts.json`. The lamp and desk/rug photographs supplied by the user guide the original prop designs. `library-desk.js`, `library-phone.js` and `specimen-library.js` use only constructor geometry, named pivots and a deterministic Canvas wood-grain texture (`helpers/library-wood.js`). Static opaque shelf geometry is merged at runtime with Three.js BufferGeometryUtils; transparent jar shells remain separate. No mesh payloads or downloaded models.
+
+The two short telephone lines in `two-d/audio/library-child-one.wav` and `library-child-two.wav` are synthesized locally with the installed macOS Junior and Kathy voices at 125/117 words per minute: “You can’t escape.” A telephone filter and delayed overlap are applied through Web Audio. Ringing, glass and bile cues are locally synthesized. No paid voice service or real child's recording was used.

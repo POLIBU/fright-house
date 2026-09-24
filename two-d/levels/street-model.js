@@ -12,7 +12,7 @@ export const INTERACTIONS = [
   {id:'ticket',x:143,y:269,r:20,label:'EXAMINE · abandoned admission ticket'},
   {id:'stall',x:335,y:189,r:22,label:'LISTEN · shuttered prize stall'},
   {id:'toy',x:285,y:273,r:20,label:'EXAMINE · wind-up carousel'},
-  {id:'entrance',x:239,y:147,r:19,label:'PUSH · broken turnstile'},
+  {id:'entrance',x:239,y:166,r:24,label:'PUSH · broken turnstile'},
 ];
 const floors=[
   [190,290,293,362], [95,256,331,297], [91,245,174,287], [104,237,124,258],
@@ -21,7 +21,7 @@ const floors=[
 export function newStreet(){return {x:239,y:342,face:'up',walk:0,time:0,light:true,gate:false,gateProgress:0,newspaper:false,notices:false,ticket:false,stall:false,toy:false,shutter:0,ravens:newRavens(),phase:'street'};}
 export function blocked(x,y,s,r=4){
   if(![[-r,-r],[r,-r],[-r,r],[r,r]].every(([dx,dy])=>floors.some(([a,b,c,d])=>x+dx>=a&&x+dx<=c&&y+dy>=b&&y+dy<=d)))return true;
-  if(s.gateProgress<1&&y-r<140)return true;
+  if(s.gateProgress<1&&y-r<153)return true;
   return false;
 }
 export function move(s,dx,dy,dt){
@@ -29,13 +29,15 @@ export function move(s,dx,dy,dt){
   const old={x:s.x,y:s.y};
   if(!blocked(s.x+dx,s.y,s))s.x+=dx;
   if(!blocked(s.x,s.y+dy,s))s.y+=dy;
-  if(Math.hypot(old.x-s.x,old.y-s.y)>.001){s.walk+=dt*9;s.face=Math.abs(dx)>Math.abs(dy)?dx>0?'right':'left':dy>0?'down':'up';}
+  s.moving=Math.hypot(old.x-s.x,old.y-s.y)>.001;
+  if(s.moving){s.walk+=dt*9;s.face=Math.abs(dx)>Math.abs(dy)?dx>0?'right':'left':dy>0?'down':'up';}
 }
 export function near(s){
   return INTERACTIONS.filter(o=>Math.hypot(o.x-s.x,o.y-s.y)<o.r).sort((a,b)=>Math.hypot(a.x-s.x,a.y-s.y)-Math.hypot(b.x-s.x,b.y-s.y))[0]||null;
 }
 export function wheelAngle(time){return time*Math.PI/40;}
-export function bulbLevel(time,index,reduced=false){return reduced?.68:.55+.35*Math.sin(time*.95+index*.83)+.08*Math.sin(time*.27+index);}
+export function bulbLevel(time,index,reduced=false){if(reduced)return .68;const phase=(time+index*.29)%2.4;return phase<1.12?.95:phase<1.26?.95-(phase-1.12)/.14*.88:phase<2.2?.07:.07+(phase-2.2)/.2*.88;}
+
 export function path(s,x,y){
   const size=5,key=(x,y)=>x+','+y,start=[Math.round(s.x/size),Math.round(s.y/size)],goal=[Math.round(x/size),Math.round(y/size)],q=[start],prev=new Map([[key(...start),null]]);let end=null;
   for(let n=0;n<q.length;n++){const [a,b]=q[n];if(Math.hypot(a-goal[0],b-goal[1])<=1){end=[a,b];break;}

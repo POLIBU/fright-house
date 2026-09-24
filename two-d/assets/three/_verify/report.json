@@ -78,13 +78,13 @@
  {
   "ok": true,
   "mounts": null,
-  "meshes": 16,
-  "tris": 520,
-  "materials": 2,
+  "meshes": 56,
+  "tris": 1184,
+  "materials": 3,
   "size": [
-   1.86,
-   1.98,
-   0.23
+   2,
+   5.92,
+   0.27
   ],
   "groundOffset": 0,
   "centreOffset": [
@@ -93,20 +93,20 @@
   ],
   "sides": {
    "front": {
-    "coverage": 0.1142,
-    "edgeDensity": 0.1966
+    "coverage": 0.1953,
+    "edgeDensity": 0.0741
    },
    "right": {
-    "coverage": 0.0463,
-    "edgeDensity": 0.2083
+    "coverage": 0.0257,
+    "edgeDensity": 0.1225
    },
    "back": {
-    "coverage": 0.1173,
-    "edgeDensity": 0.1232
+    "coverage": 0.1974,
+    "edgeDensity": 0.0269
    },
    "left": {
-    "coverage": 0.0463,
-    "edgeDensity": 0.1929
+    "coverage": 0.0257,
+    "edgeDensity": 0.1413
    }
   },
   "error": null,

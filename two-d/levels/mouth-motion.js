@@ -1,0 +1,2 @@
+export function mouthProgress(time){const t=Math.max(0,Math.min(1,time/1.45));return t*t*(3-2*t);}
+export function poseJaws(root,progress){const p=Math.max(0,Math.min(1,progress)),m=root.userData.motion,{lower,upper}=root.userData.joints;lower.position.y=m.lowerY+m.travel*p;upper.position.y=m.upperY-m.travel*p;return {lowerEdge:lower.position.y+m.toothDepth,upperEdge:upper.position.y-m.toothDepth};}

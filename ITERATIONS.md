@@ -154,3 +154,9 @@ Improved: newspaper selection is unambiguous, the ticket can be examined from bo
 Validation: 42 model checks and desktop/emulated-touch runs through both implemented areas, with screenshots and browser-error checks in `validation/hybrid-street`.
 
 Final asset gate: all five standalone procedural modules pass the official 404 verifier (ticket, turnstile, jaws, raven and carousel). The first ticket verification page timed out while loading; a fresh full run completed 5/5 clean. The in-game front/back ticket views were visually checked. The kiosk interior uses dim 3D shelves, hooks and ticket stock instead of a flat empty opening. Hall resume/restart also pass, retaining street clues.
+
+## V13 — continuous mouth closure
+
+The upper and lower jaws now move together along one smooth closing curve, with both tooth rows meeting at the same seam. Continuous opaque backing fills the doorway behind the teeth; the lower jaw no longer leaves exposed background beneath it. A straight-on mouth camera removes oblique gaps, the actor disappears inside before the seal, and the scene fades only after closure. Independent per-object render-cache keys prevent the turnstile and mouth from sharing stale progress.
+
+Validation: the geometry test samples the motion to verify a monotonically shrinking gap and exactly meeting tooth edges. Browser captures at four points show continuous closure, verify pause freezes it, and confirm arrival in Level 2 without browser errors. Evidence: `validation/mouth-closure`.

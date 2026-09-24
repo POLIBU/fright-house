@@ -56,3 +56,13 @@ The service exit now begins **The Last Ride**, a 420 m cart escape through the f
 Use **TEST CHECKPOINTS / SKIP AHEAD** on the title screen, or **TEST CHECKPOINTS** in pause, to start the maze chase, cart ride, or final stretch with all evidence recovered. These are explicit review controls. A corner teddy has a doll-like human face in its belly and three independently tracking eyes. The creature's original coat silhouette is replaced by an irregular dark mass, ragged strands and heavier smoke. Creature and ambient laughter are louder.
 
 Additional validation: `tests/ride-model.test.mjs`, `tests/cart-playthrough.mjs` (`CART_TOUCH=1` for real touch), `tests/maze-to-cart.mjs`, and `tests/haunting.mjs`. Reports and review screenshots are under `validation/haunting/`.
+
+## Eight-hour refinement candidate
+
+The local refinement series preserves V00 (`7b974913ae34`) and records accepted commits in `ITERATIONS.md`. `/art-preview/iterations.html` compares matched maze and road cameras, including moving-hazard frame sequences. `/art-preview/contact-sheet.html` audits the 29 physical maze wall panels and 25 individual lamps. `/art-preview/road.html` reviews the six obstacle families and four carnival districts.
+
+The floor skeleton has been removed. Arrow keys turn the camera; A/D strafe in the maze and steer the cart. The three evidence displays are a drawer desk, steel trolley and carnival cabinet; maintenance has its own reinforced workbench. Collected clues queue quiet suspense events after reading. Sprinting and wall mechanisms attract the creature; sight overrides hearing, and losing sight produces a search of the last known area. Creature grunts and breathing are louder nearby and muffled behind walls.
+
+The road now has wrecked carts, collapsed stalls, tangled beams, lifting signs, rolling barrels and stalled machinery. Advance reflectors mark their swept lanes; each row retains a clear track. Animated rendering and collision share the same hazard state. Four districts add a ticket entrance, midway, carousel yard and loading shed, with selected signs, shutters, gondolas, carousel parts and distant lights moving on pause-safe simulation time.
+
+All refinements remain local. Browser tests are emulated desktop/touch input, not physical-phone or first-time human playtesting. Final test evidence and the strongest candidate recommendation are tracked in `ITERATIONS.md`.

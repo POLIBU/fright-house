@@ -48,5 +48,5 @@ export function lampFixture(index,color,dark){
  if(kind===3){const shape=new THREE.Shape();for(let i=0;i<=40;i++){const a=i/40*Math.PI*2,r=radius*(1+.18*Math.cos(a*8));const x=Math.cos(a)*r,z=Math.sin(a)*r;i?shape.lineTo(x,z):shape.moveTo(x,z);}const shade=mesh(hanger,new THREE.ExtrudeGeometry(shape,{depth:.035,bevelEnabled:true,bevelThickness:.007,bevelSize:.007,bevelSegments:1}),cap);shade.rotation.x=Math.PI/2;mesh(hanger,new THREE.CylinderGeometry(.042,.06,.10,12),brass,0,.025,0);}
  if(kind===4){box(hanger,.08,.08,.08,cap,0,.0,0);for(const side of [-1,1]){const points=[new THREE.Vector3(side*.04,.015,0),new THREE.Vector3(side*.10,-.08,.015),new THREE.Vector3(side*.065,-.17,0)];mesh(hanger,new THREE.TubeGeometry(new THREE.CatmullRomCurve3(points),12,.008,5,false),iron);}mesh(hanger,new THREE.TorusGeometry(radius,.008,5,20,Math.PI*1.35),cap,0,-.05,0).rotation.x=Math.PI/2;}
  const bulb=mesh(hanger,new THREE.SphereGeometry(.035+(index%4)*.004,12,8),new THREE.MeshBasicMaterial({color:dark?0x332c24:color}),0,bulbY,0);bulb.castShadow=false;
- return {root,bulb,hanger,drop,signature:`${kind}:${drop.toFixed(3)}:${radius.toFixed(3)}:${index}`,kind};
+ return {root,bulb,hanger,drop,radius,tilt:hanger.rotation.z,wearTone:index%4,signature:`${kind}:${drop.toFixed(3)}:${radius.toFixed(3)}:${index}`,kind};
 }

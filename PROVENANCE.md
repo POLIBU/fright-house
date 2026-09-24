@@ -67,3 +67,7 @@ The user added a second playable escape stage beyond the service door: a winding
 The monster no longer has a readable human coat/body: its central form is an irregular dark organic mass, torn strands and 38 depth-tested smoke billows, with the existing eight jointed arms and grasping claws. This is an original creature informed by the user's broad survival-horror references, not a copied franchise character.
 
 An original corner teddy follows the user-supplied reference in construction: worn textured plush, teeth, dark fabric sockets and a doll-like human face in an abdomen insert. Two bear eyes and the open doll eye rotate toward the player. The reference screenshot is not shipped. Plush fibre marks and lunar surface texture are generated with canvas drawing; all meshes are built with Three.js geometry operations. The existing Atlas laugh has been mixed louder; no additional external audio, AI service or paid generation was used.
+
+## Local refinement V01–V08
+
+New furniture, five fixture families, repaired spiral panels, six road obstacle families and four carnival districts are original procedural Three.js geometry. Wall wear, cloth motion, scenery animation and creature limb animation use original code. Deep grunts, breath and creaks are synthesized locally through Web Audio; existing licensed audio and its attribution remain unchanged. No external assets, paid generation or reference-game content were downloaded for these passes. The floor prop skeleton was removed in V01.

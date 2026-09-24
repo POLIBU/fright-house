@@ -7,16 +7,17 @@
     ],
     "yaw": 0,
     "pitch": 0,
-    "fps": 59.99999999999997,
+    "fps": 59.999999999999986,
     "speed": 0,
     "score": 3,
     "over": false,
-    "draws": 321,
-    "tris": 189984,
+    "draws": 383,
+    "tris": 314356,
     "phase": "chase",
     "paused": false,
     "dialog": null,
     "ride": null,
+    "park": null,
     "gates": [
       1,
       1,
@@ -35,28 +36,145 @@
     "power": true,
     "recording": true,
     "jamSolved": false,
-    "timeLeft": 170.63369999999566,
-    "grace": -0.01630000000003835,
+    "timeLeft": 170.6336999999953,
+    "grace": -0.01640000000003998,
     "monster": [
-      3.239999999999998,
+      3.037274999999995,
       0
     ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "suspense": {
+      "active": null,
+      "queued": [],
+      "seen": [],
+      "quiet": 0
+    },
     "atmosphere": {
+      "dressing": {
+        "walls": 29,
+        "wallDesigns": [
+          "panel-0-repair-1",
+          "panel-1-repair-2",
+          "panel-2-repair-3",
+          "panel-3-repair-1",
+          "panel-4-repair-2",
+          "panel-5-repair-3",
+          "panel-6-repair-1",
+          "panel-7-repair-2",
+          "panel-8-repair-3",
+          "panel-9-repair-1",
+          "panel-10-repair-2",
+          "panel-11-repair-3",
+          "panel-12-repair-1",
+          "panel-13-repair-2",
+          "panel-14-repair-3",
+          "panel-15-repair-1",
+          "panel-16-repair-2",
+          "panel-17-repair-3",
+          "panel-18-repair-1",
+          "panel-19-repair-2",
+          "panel-20-repair-3",
+          "panel-21-repair-1",
+          "panel-22-repair-2",
+          "panel-23-repair-3",
+          "panel-24-repair-1",
+          "panel-25-repair-2",
+          "panel-26-repair-3",
+          "panel-27-repair-1",
+          "panel-28-repair-2"
+        ],
+        "lamps": [
+          "0:0.220:0.130:0",
+          "1:0.339:0.144:1",
+          "2:0.458:0.158:2",
+          "3:0.247:0.172:3",
+          "4:0.366:0.186:4",
+          "0:0.485:0.200:5",
+          "1:0.274:0.214:6",
+          "2:0.393:0.130:7",
+          "3:0.512:0.144:8",
+          "4:0.301:0.158:9",
+          "0:0.420:0.172:10",
+          "1:0.539:0.186:11",
+          "2:0.328:0.200:12",
+          "3:0.447:0.214:13",
+          "4:0.566:0.130:14",
+          "0:0.355:0.144:15",
+          "1:0.474:0.158:16",
+          "2:0.593:0.172:17",
+          "3:0.382:0.186:18",
+          "4:0.501:0.200:19",
+          "0:0.620:0.214:20",
+          "1:0.409:0.130:21",
+          "2:0.528:0.144:22",
+          "3:0.647:0.158:23",
+          "4:0.436:0.172:24"
+        ],
+        "lampFamilies": 5,
+        "tables": [
+          "reception-desk",
+          "steel-trolley",
+          "carnival-cabinet",
+          "maintenance-bench"
+        ]
+      },
+      "suspenseLevel": 0,
+      "glimpse": false,
+      "clothTime": 9.366300000000024,
+      "swing": [
+        -0.07512563261382786,
+        -0.08567408951451969,
+        -0.0874223145476708,
+        -0.07938876517238161,
+        -0.06608388501961338
+      ],
       "faces": 3,
+      "teddyEyes": [
+        {
+          "yaw": 0.06766605606758981,
+          "pitch": -0.45
+        },
+        {
+          "yaw": 0.09585104311357434,
+          "pitch": -0.2823536531986584
+        },
+        {
+          "yaw": -0.0523366982502811,
+          "pitch": -0.2832192836847124
+        }
+      ],
       "fishBags": 6,
       "webs": 2,
-      "skeletons": 1,
+      "skeletons": 0,
       "faceY": 0.5737221630926544,
       "balloons": 10,
       "balloonY": 2.7285793096644957,
-      "melt": 0.8021013009163851,
-      "meltAge": 1.3499999999999999,
-      "lightScale": 0.2772855576884291,
+      "melt": 0.8020775516475671,
+      "meltAge": 1.3498999999999974,
+      "lightScale": 0.2772936324398272,
       "arms": 8,
+      "reveal": 1,
       "reach": 0,
       "smoke": 38
     },
     "monsterLaugh": true,
+    "monsterGrunt": true,
+    "monsterBreath": true,
+    "viewRight": [
+      1,
+      0
+    ],
     "audioState": "running",
     "near": "release",
     "evidenceVisible": {

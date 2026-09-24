@@ -2,31 +2,31 @@
   "success": true,
   "state": {
     "pos": [
-      0.3741809572851891,
-      1.0280272160358732
+      0.4076384592728246,
+      1.1199602922650576
     ],
-    "yaw": 1.5555515289306636,
-    "pitch": -0.22099365234375,
-    "fps": 54.19005225469317,
-    "speed": 5.424501859620461,
+    "yaw": 1.5641098022460933,
+    "pitch": -0.216348388671875,
+    "fps": 56.13627564847054,
+    "speed": 5.538566097791655,
     "score": 3,
     "over": false,
-    "draws": 124,
-    "tris": 49978,
+    "draws": 122,
+    "tris": 49954,
     "phase": "ride",
     "paused": false,
     "dialog": null,
     "ride": {
-      "progress": 1.2280272160358732,
+      "progress": 1.3199602922650575,
       "length": 420,
       "lateral": 0,
-      "speed": 5.42450185962046,
-      "gap": 22.883027216035845,
+      "speed": 5.538566097791648,
+      "gap": 22.86374029226504,
       "energy": 1,
       "hits": 0,
       "status": "riding",
       "next": {
-        "distance": 26.771972783964127,
+        "distance": 26.68003970773494,
         "lanes": [
           0
         ],
@@ -52,27 +52,142 @@
     "recording": true,
     "jamSolved": true,
     "timeLeft": 109.63340000000002,
-    "grace": -0.016500000000014753,
+    "grace": -0.016299999999995526,
     "monster": [
-      -7.688664451020237,
-      -21.654999999999973
+      -7.651129800196577,
+      -21.54377999999998
     ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "suspense": {
+      "active": null,
+      "queued": [],
+      "seen": [],
+      "quiet": 3
+    },
     "atmosphere": {
+      "dressing": {
+        "walls": 29,
+        "wallDesigns": [
+          "panel-0-repair-1",
+          "panel-1-repair-2",
+          "panel-2-repair-3",
+          "panel-3-repair-1",
+          "panel-4-repair-2",
+          "panel-5-repair-3",
+          "panel-6-repair-1",
+          "panel-7-repair-2",
+          "panel-8-repair-3",
+          "panel-9-repair-1",
+          "panel-10-repair-2",
+          "panel-11-repair-3",
+          "panel-12-repair-1",
+          "panel-13-repair-2",
+          "panel-14-repair-3",
+          "panel-15-repair-1",
+          "panel-16-repair-2",
+          "panel-17-repair-3",
+          "panel-18-repair-1",
+          "panel-19-repair-2",
+          "panel-20-repair-3",
+          "panel-21-repair-1",
+          "panel-22-repair-2",
+          "panel-23-repair-3",
+          "panel-24-repair-1",
+          "panel-25-repair-2",
+          "panel-26-repair-3",
+          "panel-27-repair-1",
+          "panel-28-repair-2"
+        ],
+        "lamps": [
+          "0:0.220:0.130:0",
+          "1:0.339:0.144:1",
+          "2:0.458:0.158:2",
+          "3:0.247:0.172:3",
+          "4:0.366:0.186:4",
+          "0:0.485:0.200:5",
+          "1:0.274:0.214:6",
+          "2:0.393:0.130:7",
+          "3:0.512:0.144:8",
+          "4:0.301:0.158:9",
+          "0:0.420:0.172:10",
+          "1:0.539:0.186:11",
+          "2:0.328:0.200:12",
+          "3:0.447:0.214:13",
+          "4:0.566:0.130:14",
+          "0:0.355:0.144:15",
+          "1:0.474:0.158:16",
+          "2:0.593:0.172:17",
+          "3:0.382:0.186:18",
+          "4:0.501:0.200:19",
+          "0:0.620:0.214:20",
+          "1:0.409:0.130:21",
+          "2:0.528:0.144:22",
+          "3:0.647:0.158:23",
+          "4:0.436:0.172:24"
+        ],
+        "lampFamilies": 5,
+        "tables": [
+          "reception-desk",
+          "steel-trolley",
+          "carnival-cabinet",
+          "maintenance-bench"
+        ]
+      },
+      "suspenseLevel": 0,
+      "glimpse": false,
+      "clothTime": 18.332599999999843,
+      "swing": [
+        -0.0833252804505983,
+        -0.086109740799408,
+        -0.08768450253022421,
+        -0.08793131500741228,
+        -0.086831644803509
+      ],
       "faces": 3,
+      "teddyEyes": [
+        {
+          "yaw": -0.7226910373527896,
+          "pitch": -0.057835800161080954
+        },
+        {
+          "yaw": -0.7153998397607725,
+          "pitch": -0.026684237895917878
+        },
+        {
+          "yaw": -0.7254296263124579,
+          "pitch": -0.0264504427066199
+        }
+      ],
       "fishBags": 6,
       "webs": 2,
-      "skeletons": 1,
-      "faceY": 0.43061755564264076,
+      "skeletons": 0,
+      "faceY": 0.5431316174633712,
       "balloons": 10,
-      "balloonY": 2.8091729938412757,
-      "melt": 0.9999994953294513,
-      "meltAge": 12.082799999999981,
-      "lightScale": 0.21000017158798656,
+      "balloonY": 2.7099964983272335,
+      "melt": 0.9999957963610873,
+      "meltAge": 10.31630000000001,
+      "lightScale": 0.21000142923723036,
       "arms": 8,
       "reach": 0,
       "smoke": 38
     },
     "monsterLaugh": true,
+    "monsterGrunt": true,
+    "viewRight": [
+      -0.9419558717384346,
+      0.3357367059132568
+    ],
     "audioState": "running",
     "near": "exit",
     "evidenceVisible": {
@@ -84,7 +199,7 @@
       {
         "id": "stretch",
         "mode": 0,
-        "updates": 10
+        "updates": 11
       },
       {
         "id": "wide",

@@ -1,0 +1,10 @@
+v08 PASS [
+  { name: 'canopy', draws: 460, tris: 400021 },
+  { name: 'clown', draws: 144, tris: 160294 },
+  { name: 'fish', draws: 114, tris: 56358 },
+  { name: 'teddy', draws: 192, tris: 199736 },
+  { name: 'bag-table', draws: 294, tris: 294516 },
+  { name: 'shoe-table', draws: 35, tris: 87872 },
+  { name: 'tape-table', draws: 455, tris: 403936 },
+  { name: 'maintenance', draws: 32, tris: 35690 }
+]

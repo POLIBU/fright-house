@@ -1,0 +1,885 @@
+{
+  "observations": [
+    {
+      "name": "wreck",
+      "state": {
+        "view": 0,
+        "progress": 21,
+        "draws": 379,
+        "tris": 71346,
+        "landmarks": {
+          "age": 0.55,
+          "districts": [
+            "ticket entrance",
+            "midway stalls",
+            "carousel yard",
+            "loading district"
+          ],
+          "buildings": [
+            {
+              "name": "ticket-proscenium",
+              "station": 15,
+              "lateral": 0
+            },
+            {
+              "name": "octagonal-ticket-kiosk",
+              "station": 23,
+              "lateral": 7.7
+            },
+            {
+              "name": "boarded-admission-office",
+              "station": 45,
+              "lateral": -7.4
+            },
+            {
+              "name": "ring-toss",
+              "station": 106,
+              "lateral": -6.5
+            },
+            {
+              "name": "salt-taffy",
+              "station": 125,
+              "lateral": 6.75
+            },
+            {
+              "name": "prize-cage",
+              "station": 144,
+              "lateral": -7
+            },
+            {
+              "name": "fortune-awning",
+              "station": 163,
+              "lateral": 7.25
+            },
+            {
+              "name": "arched-arcade",
+              "station": 176,
+              "lateral": 8.3
+            },
+            {
+              "name": "carousel-yard",
+              "station": 230,
+              "lateral": -10.4
+            },
+            {
+              "name": "wheel-yard",
+              "station": 270,
+              "lateral": 13
+            },
+            {
+              "name": "loading-shed",
+              "station": 331,
+              "lateral": 9.2
+            },
+            {
+              "name": "maintenance-gantry",
+              "station": 365,
+              "lateral": -7.7
+            },
+            {
+              "name": "exit-searchlight",
+              "station": 389,
+              "lateral": 9
+            }
+          ],
+          "animated": 24,
+          "marqueeSections": 48,
+          "searchlight": true
+        }
+      }
+    },
+    {
+      "name": "stall",
+      "state": {
+        "view": 1,
+        "progress": 48,
+        "draws": 369,
+        "tris": 68386,
+        "landmarks": {
+          "age": 0.55,
+          "districts": [
+            "ticket entrance",
+            "midway stalls",
+            "carousel yard",
+            "loading district"
+          ],
+          "buildings": [
+            {
+              "name": "ticket-proscenium",
+              "station": 15,
+              "lateral": 0
+            },
+            {
+              "name": "octagonal-ticket-kiosk",
+              "station": 23,
+              "lateral": 7.7
+            },
+            {
+              "name": "boarded-admission-office",
+              "station": 45,
+              "lateral": -7.4
+            },
+            {
+              "name": "ring-toss",
+              "station": 106,
+              "lateral": -6.5
+            },
+            {
+              "name": "salt-taffy",
+              "station": 125,
+              "lateral": 6.75
+            },
+            {
+              "name": "prize-cage",
+              "station": 144,
+              "lateral": -7
+            },
+            {
+              "name": "fortune-awning",
+              "station": 163,
+              "lateral": 7.25
+            },
+            {
+              "name": "arched-arcade",
+              "station": 176,
+              "lateral": 8.3
+            },
+            {
+              "name": "carousel-yard",
+              "station": 230,
+              "lateral": -10.4
+            },
+            {
+              "name": "wheel-yard",
+              "station": 270,
+              "lateral": 13
+            },
+            {
+              "name": "loading-shed",
+              "station": 331,
+              "lateral": 9.2
+            },
+            {
+              "name": "maintenance-gantry",
+              "station": 365,
+              "lateral": -7.7
+            },
+            {
+              "name": "exit-searchlight",
+              "station": 389,
+              "lateral": 9
+            }
+          ],
+          "animated": 24,
+          "marqueeSections": 48,
+          "searchlight": true
+        }
+      }
+    },
+    {
+      "name": "beams",
+      "state": {
+        "view": 2,
+        "progress": 77,
+        "draws": 362,
+        "tris": 64753,
+        "landmarks": {
+          "age": 0.55,
+          "districts": [
+            "ticket entrance",
+            "midway stalls",
+            "carousel yard",
+            "loading district"
+          ],
+          "buildings": [
+            {
+              "name": "ticket-proscenium",
+              "station": 15,
+              "lateral": 0
+            },
+            {
+              "name": "octagonal-ticket-kiosk",
+              "station": 23,
+              "lateral": 7.7
+            },
+            {
+              "name": "boarded-admission-office",
+              "station": 45,
+              "lateral": -7.4
+            },
+            {
+              "name": "ring-toss",
+              "station": 106,
+              "lateral": -6.5
+            },
+            {
+              "name": "salt-taffy",
+              "station": 125,
+              "lateral": 6.75
+            },
+            {
+              "name": "prize-cage",
+              "station": 144,
+              "lateral": -7
+            },
+            {
+              "name": "fortune-awning",
+              "station": 163,
+              "lateral": 7.25
+            },
+            {
+              "name": "arched-arcade",
+              "station": 176,
+              "lateral": 8.3
+            },
+            {
+              "name": "carousel-yard",
+              "station": 230,
+              "lateral": -10.4
+            },
+            {
+              "name": "wheel-yard",
+              "station": 270,
+              "lateral": 13
+            },
+            {
+              "name": "loading-shed",
+              "station": 331,
+              "lateral": 9.2
+            },
+            {
+              "name": "maintenance-gantry",
+              "station": 365,
+              "lateral": -7.7
+            },
+            {
+              "name": "exit-searchlight",
+              "station": 389,
+              "lateral": 9
+            }
+          ],
+          "animated": 24,
+          "marqueeSections": 48,
+          "searchlight": true
+        }
+      }
+    },
+    {
+      "name": "sign",
+      "state": {
+        "view": 3,
+        "progress": 107,
+        "draws": 348,
+        "tris": 60622,
+        "landmarks": {
+          "age": 0.5499999999999999,
+          "districts": [
+            "ticket entrance",
+            "midway stalls",
+            "carousel yard",
+            "loading district"
+          ],
+          "buildings": [
+            {
+              "name": "ticket-proscenium",
+              "station": 15,
+              "lateral": 0
+            },
+            {
+              "name": "octagonal-ticket-kiosk",
+              "station": 23,
+              "lateral": 7.7
+            },
+            {
+              "name": "boarded-admission-office",
+              "station": 45,
+              "lateral": -7.4
+            },
+            {
+              "name": "ring-toss",
+              "station": 106,
+              "lateral": -6.5
+            },
+            {
+              "name": "salt-taffy",
+              "station": 125,
+              "lateral": 6.75
+            },
+            {
+              "name": "prize-cage",
+              "station": 144,
+              "lateral": -7
+            },
+            {
+              "name": "fortune-awning",
+              "station": 163,
+              "lateral": 7.25
+            },
+            {
+              "name": "arched-arcade",
+              "station": 176,
+              "lateral": 8.3
+            },
+            {
+              "name": "carousel-yard",
+              "station": 230,
+              "lateral": -10.4
+            },
+            {
+              "name": "wheel-yard",
+              "station": 270,
+              "lateral": 13
+            },
+            {
+              "name": "loading-shed",
+              "station": 331,
+              "lateral": 9.2
+            },
+            {
+              "name": "maintenance-gantry",
+              "station": 365,
+              "lateral": -7.7
+            },
+            {
+              "name": "exit-searchlight",
+              "station": 389,
+              "lateral": 9
+            }
+          ],
+          "animated": 24,
+          "marqueeSections": 48,
+          "searchlight": true
+        }
+      }
+    },
+    {
+      "name": "barrel",
+      "state": {
+        "view": 4,
+        "progress": 137,
+        "draws": 328,
+        "tris": 56821,
+        "landmarks": {
+          "age": 0.5499000000000002,
+          "districts": [
+            "ticket entrance",
+            "midway stalls",
+            "carousel yard",
+            "loading district"
+          ],
+          "buildings": [
+            {
+              "name": "ticket-proscenium",
+              "station": 15,
+              "lateral": 0
+            },
+            {
+              "name": "octagonal-ticket-kiosk",
+              "station": 23,
+              "lateral": 7.7
+            },
+            {
+              "name": "boarded-admission-office",
+              "station": 45,
+              "lateral": -7.4
+            },
+            {
+              "name": "ring-toss",
+              "station": 106,
+              "lateral": -6.5
+            },
+            {
+              "name": "salt-taffy",
+              "station": 125,
+              "lateral": 6.75
+            },
+            {
+              "name": "prize-cage",
+              "station": 144,
+              "lateral": -7
+            },
+            {
+              "name": "fortune-awning",
+              "station": 163,
+              "lateral": 7.25
+            },
+            {
+              "name": "arched-arcade",
+              "station": 176,
+              "lateral": 8.3
+            },
+            {
+              "name": "carousel-yard",
+              "station": 230,
+              "lateral": -10.4
+            },
+            {
+              "name": "wheel-yard",
+              "station": 270,
+              "lateral": 13
+            },
+            {
+              "name": "loading-shed",
+              "station": 331,
+              "lateral": 9.2
+            },
+            {
+              "name": "maintenance-gantry",
+              "station": 365,
+              "lateral": -7.7
+            },
+            {
+              "name": "exit-searchlight",
+              "station": 389,
+              "lateral": 9
+            }
+          ],
+          "animated": 24,
+          "marqueeSections": 48,
+          "searchlight": true
+        }
+      }
+    },
+    {
+      "name": "machinery",
+      "state": {
+        "view": 5,
+        "progress": 168,
+        "draws": 296,
+        "tris": 51888,
+        "landmarks": {
+          "age": 0.5498999999999997,
+          "districts": [
+            "ticket entrance",
+            "midway stalls",
+            "carousel yard",
+            "loading district"
+          ],
+          "buildings": [
+            {
+              "name": "ticket-proscenium",
+              "station": 15,
+              "lateral": 0
+            },
+            {
+              "name": "octagonal-ticket-kiosk",
+              "station": 23,
+              "lateral": 7.7
+            },
+            {
+              "name": "boarded-admission-office",
+              "station": 45,
+              "lateral": -7.4
+            },
+            {
+              "name": "ring-toss",
+              "station": 106,
+              "lateral": -6.5
+            },
+            {
+              "name": "salt-taffy",
+              "station": 125,
+              "lateral": 6.75
+            },
+            {
+              "name": "prize-cage",
+              "station": 144,
+              "lateral": -7
+            },
+            {
+              "name": "fortune-awning",
+              "station": 163,
+              "lateral": 7.25
+            },
+            {
+              "name": "arched-arcade",
+              "station": 176,
+              "lateral": 8.3
+            },
+            {
+              "name": "carousel-yard",
+              "station": 230,
+              "lateral": -10.4
+            },
+            {
+              "name": "wheel-yard",
+              "station": 270,
+              "lateral": 13
+            },
+            {
+              "name": "loading-shed",
+              "station": 331,
+              "lateral": 9.2
+            },
+            {
+              "name": "maintenance-gantry",
+              "station": 365,
+              "lateral": -7.7
+            },
+            {
+              "name": "exit-searchlight",
+              "station": 389,
+              "lateral": 9
+            }
+          ],
+          "animated": 24,
+          "marqueeSections": 48,
+          "searchlight": true
+        }
+      }
+    },
+    {
+      "name": "tickets",
+      "state": {
+        "view": 6,
+        "progress": 8,
+        "draws": 395,
+        "tris": 71743,
+        "landmarks": {
+          "age": 0.55,
+          "districts": [
+            "ticket entrance",
+            "midway stalls",
+            "carousel yard",
+            "loading district"
+          ],
+          "buildings": [
+            {
+              "name": "ticket-proscenium",
+              "station": 15,
+              "lateral": 0
+            },
+            {
+              "name": "octagonal-ticket-kiosk",
+              "station": 23,
+              "lateral": 7.7
+            },
+            {
+              "name": "boarded-admission-office",
+              "station": 45,
+              "lateral": -7.4
+            },
+            {
+              "name": "ring-toss",
+              "station": 106,
+              "lateral": -6.5
+            },
+            {
+              "name": "salt-taffy",
+              "station": 125,
+              "lateral": 6.75
+            },
+            {
+              "name": "prize-cage",
+              "station": 144,
+              "lateral": -7
+            },
+            {
+              "name": "fortune-awning",
+              "station": 163,
+              "lateral": 7.25
+            },
+            {
+              "name": "arched-arcade",
+              "station": 176,
+              "lateral": 8.3
+            },
+            {
+              "name": "carousel-yard",
+              "station": 230,
+              "lateral": -10.4
+            },
+            {
+              "name": "wheel-yard",
+              "station": 270,
+              "lateral": 13
+            },
+            {
+              "name": "loading-shed",
+              "station": 331,
+              "lateral": 9.2
+            },
+            {
+              "name": "maintenance-gantry",
+              "station": 365,
+              "lateral": -7.7
+            },
+            {
+              "name": "exit-searchlight",
+              "station": 389,
+              "lateral": 9
+            }
+          ],
+          "animated": 24,
+          "marqueeSections": 48,
+          "searchlight": true
+        }
+      }
+    },
+    {
+      "name": "midway",
+      "state": {
+        "view": 7,
+        "progress": 115,
+        "draws": 339,
+        "tris": 57282,
+        "landmarks": {
+          "age": 0.5500000000000003,
+          "districts": [
+            "ticket entrance",
+            "midway stalls",
+            "carousel yard",
+            "loading district"
+          ],
+          "buildings": [
+            {
+              "name": "ticket-proscenium",
+              "station": 15,
+              "lateral": 0
+            },
+            {
+              "name": "octagonal-ticket-kiosk",
+              "station": 23,
+              "lateral": 7.7
+            },
+            {
+              "name": "boarded-admission-office",
+              "station": 45,
+              "lateral": -7.4
+            },
+            {
+              "name": "ring-toss",
+              "station": 106,
+              "lateral": -6.5
+            },
+            {
+              "name": "salt-taffy",
+              "station": 125,
+              "lateral": 6.75
+            },
+            {
+              "name": "prize-cage",
+              "station": 144,
+              "lateral": -7
+            },
+            {
+              "name": "fortune-awning",
+              "station": 163,
+              "lateral": 7.25
+            },
+            {
+              "name": "arched-arcade",
+              "station": 176,
+              "lateral": 8.3
+            },
+            {
+              "name": "carousel-yard",
+              "station": 230,
+              "lateral": -10.4
+            },
+            {
+              "name": "wheel-yard",
+              "station": 270,
+              "lateral": 13
+            },
+            {
+              "name": "loading-shed",
+              "station": 331,
+              "lateral": 9.2
+            },
+            {
+              "name": "maintenance-gantry",
+              "station": 365,
+              "lateral": -7.7
+            },
+            {
+              "name": "exit-searchlight",
+              "station": 389,
+              "lateral": 9
+            }
+          ],
+          "animated": 24,
+          "marqueeSections": 48,
+          "searchlight": true
+        }
+      }
+    },
+    {
+      "name": "carousel",
+      "state": {
+        "view": 8,
+        "progress": 217,
+        "draws": 227,
+        "tris": 43299,
+        "landmarks": {
+          "age": 0.5500000000000003,
+          "districts": [
+            "ticket entrance",
+            "midway stalls",
+            "carousel yard",
+            "loading district"
+          ],
+          "buildings": [
+            {
+              "name": "ticket-proscenium",
+              "station": 15,
+              "lateral": 0
+            },
+            {
+              "name": "octagonal-ticket-kiosk",
+              "station": 23,
+              "lateral": 7.7
+            },
+            {
+              "name": "boarded-admission-office",
+              "station": 45,
+              "lateral": -7.4
+            },
+            {
+              "name": "ring-toss",
+              "station": 106,
+              "lateral": -6.5
+            },
+            {
+              "name": "salt-taffy",
+              "station": 125,
+              "lateral": 6.75
+            },
+            {
+              "name": "prize-cage",
+              "station": 144,
+              "lateral": -7
+            },
+            {
+              "name": "fortune-awning",
+              "station": 163,
+              "lateral": 7.25
+            },
+            {
+              "name": "arched-arcade",
+              "station": 176,
+              "lateral": 8.3
+            },
+            {
+              "name": "carousel-yard",
+              "station": 230,
+              "lateral": -10.4
+            },
+            {
+              "name": "wheel-yard",
+              "station": 270,
+              "lateral": 13
+            },
+            {
+              "name": "loading-shed",
+              "station": 331,
+              "lateral": 9.2
+            },
+            {
+              "name": "maintenance-gantry",
+              "station": 365,
+              "lateral": -7.7
+            },
+            {
+              "name": "exit-searchlight",
+              "station": 389,
+              "lateral": 9
+            }
+          ],
+          "animated": 24,
+          "marqueeSections": 48,
+          "searchlight": true
+        }
+      }
+    },
+    {
+      "name": "loading",
+      "state": {
+        "view": 9,
+        "progress": 315,
+        "draws": 103,
+        "tris": 19079,
+        "landmarks": {
+          "age": 0.5499000000000008,
+          "districts": [
+            "ticket entrance",
+            "midway stalls",
+            "carousel yard",
+            "loading district"
+          ],
+          "buildings": [
+            {
+              "name": "ticket-proscenium",
+              "station": 15,
+              "lateral": 0
+            },
+            {
+              "name": "octagonal-ticket-kiosk",
+              "station": 23,
+              "lateral": 7.7
+            },
+            {
+              "name": "boarded-admission-office",
+              "station": 45,
+              "lateral": -7.4
+            },
+            {
+              "name": "ring-toss",
+              "station": 106,
+              "lateral": -6.5
+            },
+            {
+              "name": "salt-taffy",
+              "station": 125,
+              "lateral": 6.75
+            },
+            {
+              "name": "prize-cage",
+              "station": 144,
+              "lateral": -7
+            },
+            {
+              "name": "fortune-awning",
+              "station": 163,
+              "lateral": 7.25
+            },
+            {
+              "name": "arched-arcade",
+              "station": 176,
+              "lateral": 8.3
+            },
+            {
+              "name": "carousel-yard",
+              "station": 230,
+              "lateral": -10.4
+            },
+            {
+              "name": "wheel-yard",
+              "station": 270,
+              "lateral": 13
+            },
+            {
+              "name": "loading-shed",
+              "station": 331,
+              "lateral": 9.2
+            },
+            {
+              "name": "maintenance-gantry",
+              "station": 365,
+              "lateral": -7.7
+            },
+            {
+              "name": "exit-searchlight",
+              "station": 389,
+              "lateral": 9
+            }
+          ],
+          "animated": 24,
+          "marqueeSections": 48,
+          "searchlight": true
+        }
+      }
+    }
+  ],
+  "errors": []
+}

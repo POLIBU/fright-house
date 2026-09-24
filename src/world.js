@@ -45,7 +45,7 @@ export async function buildWorld(scene,{assetBase='./assets/',audit=false}={}){
  for(let z=0;z<N;z++)for(let x=0;x<N;x++){
   const seed=x+z*5,dark=[6,8,13,16,18].includes(seed),profile=profiles[(x*3+z*2)%profiles.length];
   const base=(x===4&&z>2)?{color:0x8bc6c0,intensity:13}:dark?{color:0xc98758,intensity:.7}:profile;
-  const lamp=lampFixture(seed,base.color,dark);lamp.root.position.set(x*SIZE,3.25,z*SIZE);if(seed%5===0){scene.add(lamp.root);swinging.push({pivot:lamp.hanger,base:lamp.hanger.rotation.z,seed});}else staticRoot.add(lamp.root);lampDesigns.push(lamp.signature);fixtures.push(lamp.bulb);if(audit){const copy=lamp.root.clone();copy.position.set(0,0,0);auditObjects.push({name:'Lamp '+seed,spec:{kind:lamp.kind,drop:lamp.drop,signature:lamp.signature},mesh:copy});}
+  const lamp=lampFixture(seed,base.color,dark);lamp.root.position.set(x*SIZE,3.25,z*SIZE);if(seed%5===0){scene.add(lamp.root);swinging.push({pivot:lamp.hanger,base:lamp.hanger.rotation.z,seed});}else staticRoot.add(lamp.root);lampDesigns.push(lamp.signature);fixtures.push(lamp.bulb);if(audit){const copy=lamp.root.clone();copy.position.set(0,0,0);auditObjects.push({name:'Lamp '+seed,spec:{kind:lamp.kind,drop:lamp.drop,radius:lamp.radius,tilt:lamp.tilt,wearTone:lamp.wearTone,signature:lamp.signature},mesh:copy});}
   const l=new THREE.PointLight(base.color,base.intensity*(.94+seed*.005),dark?3.4:5.6,2);l.position.set(x*SIZE,3.25-lamp.drop-.09,z*SIZE);l.userData.baseColor=base.color;l.userData.baseIntensity=l.intensity;l.userData.flicker=seed===8||seed===16;scene.add(l);lights.push(l);
  }
  const mirrors=addMirrors(scene);

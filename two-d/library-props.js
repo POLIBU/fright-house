@@ -1,4 +1,4 @@
-import {SHELF_AMBUSHES} from './levels/library-model.js';
+import {SHELF_AMBUSHES,LIBRARY_AISLE_SHELVES} from './levels/library-model.js';
 import {mergeGeometries} from '../vendor/addons/utils/BufferGeometryUtils.js';
 import * as THREE from '../vendor/three.module.js';
 import deskAsset from './assets/three/library-desk.js';import shelfAsset from './assets/three/specimen-library.js';import phoneAsset from './assets/three/library-phone.js';import doorAsset from './assets/three/archer-entry-door.js';
@@ -7,7 +7,7 @@ function fit(body,x,y,w,h,rx=.28,ry=.05){const g=new THREE.Group(),posed=new THR
 function shelf(){const body=shelfAsset(THREE),batches=new Map(),remove=[];body.updateMatrixWorld(true);body.traverse(m=>{if(!m.isMesh||m.material.transparent)return;const geometry=m.geometry.toNonIndexed().applyMatrix4(m.matrixWorld);if(!batches.has(m.material))batches.set(m.material,[]);batches.get(m.material).push(geometry);remove.push(m);});for(const m of remove)m.removeFromParent();for(const [mat,geometries]of batches){body.add(new THREE.Mesh(mergeGeometries(geometries),mat));for(const g of geometries)g.dispose();}return body;}
 
 const desk=fit(deskAsset(THREE),188,208,140,88,.44,.03),phone=fit(phoneAsset(THREE),148,150,20,15,.48,.12),backA=fit(shelf(),180,117,101,104,.15,.04),backB=fit(shelf(),280,117,101,104,.15,-.04),right=fit(shelf(),449,162,34,134,.18,.58),display=fit(shelf(),362,265,94,49,.48,.05);phone.depth=208;phone.g.position.z=65;
-const lowerRight=fit(shelf(),449,265,31,35,.3,.2);for(const [i,x]of [550,750,970,1190,1410,1530].entries())fit(shelf(),x,122,98+(i%3)*3,96+(i%2)*4,.16,(i%2?.035:-.035));for(const [x,y,w,h]of [[669,199,97,72],[898,277,104,77],[1139,199,107,68],[1354,277,96,75]])fit(shelf(),x,y,w,h,.4,.04);
+const lowerRight=fit(shelf(),449,265,31,35,.3,.2);for(const [i,x]of [550,750,970,1190,1410,1530].entries())fit(shelf(),x,122,98+(i%3)*3,96+(i%2)*4,.16,(i%2?.035:-.035));for(const {x,y,w,h}of LIBRARY_AISLE_SHELVES)fit(shelf(),x,y,w,h,.4,.04);
 const cabinet=fit(shelf(),35,198,29,71,.3,.2);
 const source=shelfAsset(THREE),jarBody=source.userData.jars[5];jarBody.removeFromParent();jarBody.position.set(0,0,0);const jar=fit(jarBody,417,162,20,29,.2,.1);jar.depth=162;
 const ambushJars=SHELF_AMBUSHES.map(a=>{const source=shelfAsset(THREE),body=source.userData.jars[5];body.removeFromParent();body.position.set(0,0,0);const o=fit(body,a.x,116,19,28,.2,.05);o.g.position.z=40;return o;});

@@ -1,0 +1,62 @@
+[
+  {
+    "touch": false,
+    "shelves": [
+      {
+        "id": "aisle-north-1",
+        "crossed": true,
+        "x": 731.7223999999993,
+        "y": 168
+      },
+      {
+        "id": "aisle-south-1",
+        "crossed": true,
+        "x": 963.8387999999984,
+        "y": 246
+      },
+      {
+        "id": "aisle-north-2",
+        "crossed": true,
+        "x": 1206.5694000000012,
+        "y": 168
+      },
+      {
+        "id": "aisle-south-2",
+        "crossed": true,
+        "x": 1415.7305999999974,
+        "y": 246
+      }
+    ],
+    "errors": []
+  },
+  {
+    "touch": true,
+    "shelves": [
+      {
+        "id": "aisle-north-1",
+        "crossed": true,
+        "x": 732,
+        "y": 168
+      },
+      {
+        "id": "aisle-south-1",
+        "crossed": true,
+        "x": 966,
+        "y": 246
+      },
+      {
+        "id": "aisle-north-2",
+        "crossed": true,
+        "x": 1206,
+        "y": 168
+      },
+      {
+        "id": "aisle-south-2",
+        "crossed": true,
+        "x": 1416,
+        "y": 246
+      }
+    ],
+    "errors": []
+  }
+]

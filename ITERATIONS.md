@@ -257,3 +257,11 @@ Validation: 85 model tests pass. Full desktop and touch Level 5 runs complete th
 - Tradeoff: the harder route is less forgiving (desktop/touch test escape with one health remaining). Phone remains stylized to match the low-resolution game rather than photorealistic.
 - Retained: approved library artwork, room scale, long scrolling layout, existing main pursuer and far-end timed exit, controls and checkpoints.
 - Evidence: `validation/library-v22/index.html`, endpoint attachment regression, entrance traversal regression, shelf attack timing/pause/reset regression and browser playthrough results. All 88 model tests pass. Keyboard escape also passes (one health, nine shots, all four ambushes fire); desktop/touch passes include all four attackers (14 shots). The generated phone passes the 404 asset verifier: 8,676 triangles, grounded and centered, four modeled sides.
+
+### V23 — Walk behind the library shelves
+
+- Changed: replaced all four freestanding aisle shelves' full-height collision rectangles with 18-pixel floor footprints. Their placement and width now come from one shared rendering/collision layout. Corrected the upper side shelf and entrance cabinet to use their bases too.
+- Improved: you can cross behind each cabinet by keyboard or click/touch, while the shelving naturally occludes the character. Front approaches still stop at the solid base. Creatures and bile use the same floor obstacles.
+- Retained: shelf models, positions, story, four jar ambushes, chasing worm and delayed exit. Wall-backed shelving remains against the wall.
+- Tradeoff: rear aisles provide more escape choices and shorten some chase routes; this removes unintended invisible barriers. No added geometry or assets.
+- Validation: 89 model tests pass, including direct rear traversal and solid-base checks for every aisle shelf. Browser evidence and recordings: `validation/library-v23/`.

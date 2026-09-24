@@ -71,3 +71,9 @@ An original corner teddy follows the user-supplied reference in construction: wo
 ## Local refinement V01–V08
 
 New furniture, five fixture families, repaired spiral panels, six road obstacle families and four carnival districts are original procedural Three.js geometry. Wall wear, cloth motion, scenery animation and creature limb animation use original code. Deep grunts, breath and creaks are synthesized locally through Web Audio; existing licensed audio and its attribution remain unchanged. No external assets, paid generation or reference-game content were downloaded for these passes. The floor prop skeleton was removed in V01.
+
+## September 24 entrance and visual direction
+
+The added facade, doors, animatronics, specimen jars, damaged toys, insects, rats, vegetation, park fixtures and festoon bulbs are original procedural Three.js models informed by the user's screenshots. Reference screenshots are not shipped. The local `monsterCall.m4a` is synthesized with the installed macOS Whisper voice, reading the user-supplied line “Come here, darling.” Clanks and swarm buzzing are synthesized locally in Web Audio. No voice actor identity is imitated and no external generation or rental service is used.
+
+The selected fake-2D look uses an original low-resolution render target, 16-level-per-channel palette, ordered dithering and screen-space edge darkening. It does not incorporate textures or artwork from referenced games. The separate style-study files are outside the game project; `?look=smooth` preserves a smooth comparison in the playable game.

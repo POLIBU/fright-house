@@ -25,3 +25,9 @@ kbd{border:1px solid #b7a582;border-bottom:3px solid #796544;background:#d5c6a3;
 .cart-ride .help>*{display:none}.cart-ride #danger{color:#d8a481;font-size:11px;letter-spacing:.08em}.cart-ride #stamina{background:#4b483888}
 
 #menu,.pausecard{touch-action:pan-y}
+
+#flashlight{position:absolute;right:18px;top:95px;font:12px "Special Elite",monospace;padding:12px;background:#242c24;color:#ddc898;border:1px solid #8b764e;pointer-events:auto;}
+
+#grain{inset:-10%;opacity:.20;z-index:2;mix-blend-mode:soft-light;animation:film-grain .32s steps(1) infinite;}@keyframes film-grain{0%{transform:translate(0,0)}25%{transform:translate(2%,-3%)}50%{transform:translate(-3%,1%)}75%{transform:translate(1%,3%)}}.game-paused #grain{animation-play-state:paused;}@media(prefers-reduced-motion:reduce){#grain{animation:none;}}
+
+@media(max-width:700px){#flashlight{top:215px;right:18px;max-width:76px;font-size:11px;padding:11px 8px;}}

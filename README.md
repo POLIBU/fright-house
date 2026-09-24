@@ -66,3 +66,13 @@ The floor skeleton has been removed. Arrow keys turn the camera; A/D strafe in t
 The road now has wrecked carts, collapsed stalls, tangled beams, lifting signs, rolling barrels and stalled machinery. Advance reflectors mark their swept lanes; each row retains a clear track. Animated rendering and collision share the same hazard state. Four districts add a ticket entrance, midway, carousel yard and loading shed, with selected signs, shutters, gondolas, carousel parts and distant lights moving on pause-safe simulation time.
 
 All refinements remain local. Browser tests are emulated desktop/touch input, not physical-phone or first-time human playtesting. Final test evidence and the strongest candidate recommendation are tracked in `ITERATIONS.md`.
+
+## Current candidate: pixelated carnival horror
+
+The playable game now defaults to the selected fake-2D visual treatment: low-resolution scenery, reduced colours, dithering and darkened edges. Text and controls remain full resolution. Open `/?look=smooth` for the previous smooth rendering. First-person movement is retained pending the separate fixed-camera choice.
+
+The new beginning approaches a colourful clown-mouth facade through foggy amusement grounds, then passes a broken turnstile and empty ticket booth. F (or LIGHT) toggles the flashlight. Find the corridor switch, pass the barrel, climb to the moving-floor gallery, and open the red room door. A disturbance leads to a fall into the lower labyrinth. **The entire puzzle maze remains flat**, with an irregular 22-room footprint and varied illusion walls. Stairs and uneven floors are confined to the opening sequence.
+
+Black double doors lead to the storage-room swarm. Other additions include a ceiling animatronic, grasping hands, specimen jars and books, rats, coloured festoon bulbs, and a player reflection in all three mirrors. The clown whispers “Come here, darling.” The cart pursuer throws axes: look back with E / LOOK BACK, steer out of the aimed track, or press F / FLASH while looking back to stun it. Flash recharges in seven seconds; it cannot recall an axe already in flight.
+
+`/art-preview/entrance.html` reviews the new facade, doors and rooms. `/art-preview/tour.html` includes the specimen shelf. MAZE START is available alongside the existing chase/cart checkpoints. New validation is stored in `validation/iterations/v09/`; desktop and touch browser tests still require the local `PLAYWRIGHT_MODULE` and `CHROME_PATH` environment variables.

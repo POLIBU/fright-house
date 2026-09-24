@@ -1,4 +1,6 @@
 import * as THREE from 'three';
+import {floorHeight} from './model.js';
+import {horrorHead} from './horror-head.js';
 
 // Lightweight live geometry: jointed limbs, depth-tested smoke and drifting latex.
 export function createCreature(){
@@ -10,11 +12,7 @@ export function createCreature(){
  core.computeVertexNormals();const mass=new THREE.Mesh(core,hideBody);mass.castShadow=true;body.add(mass);
  // Ragged membranous scraps disrupt the outline; no coat, legs, or readable human torso.
  for(let i=0;i<13;i++){const a=i*2.3999,pts=[];for(let j=0;j<=9;j++){const u=j/9;pts.push(new THREE.Vector3(Math.sin(a)*(.20+u*.23)+Math.sin(u*5+i)*.07,1.52-u*(.8+(i%3)*.16),Math.cos(a)*(.17+u*.13)));}const m=new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts),16,.013+(i%3)*.007,5,false),torn);body.add(m);}
- // A broken jaw arc and mismatched buried eyes briefly emerge from the smoke.
- const jawPts=[];for(let i=0;i<16;i++){const u=i/15; jawPts.push(new THREE.Vector3((u-.5)*.34,2.08-Math.sin(u*Math.PI)*.19+.045*u,.235+Math.sin(u*Math.PI)*.035));}
- body.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(jawPts),24,.027,6,false),torn));
- const toothMat=new THREE.MeshStandardMaterial({color:0x817665,roughness:.88});for(let i=0;i<7;i++){const u=i/6,mesh=new THREE.Mesh(new THREE.ConeGeometry(.016,.064+(i%3)*.018,7),toothMat);mesh.position.set((u-.5)*.31,2.09-Math.sin(u*Math.PI)*.18+.045*u,.26);mesh.rotation.z=(u-.5)*-.8;body.add(mesh);}
- const eyeMat=new THREE.MeshStandardMaterial({color:0xa87840,emissive:0x7a3215,emissiveIntensity:.35,roughness:.24});for(const [x,y,z] of [[-.10,2.27,.24],[.12,2.32,.23]]){const eye=new THREE.Mesh(new THREE.SphereGeometry(.026,14,10),eyeMat);eye.position.set(x,y,z);body.add(eye);}
+ const head=horrorHead();head.root.position.set(0,2.15,.14);head.root.scale.setScalar(.94);body.add(head.root);
 
  const bone=new THREE.MeshStandardMaterial({color:0x615c50,roughness:.79});
  const hide=new THREE.MeshStandardMaterial({color:0x222724,roughness:.91});
@@ -33,10 +31,11 @@ export function createCreature(){
  const canvas=document.createElement('canvas');canvas.width=canvas.height=96;const ctx=canvas.getContext('2d'),gradient=ctx.createRadialGradient(48,48,0,48,48,48);
  gradient.addColorStop(0,'rgba(255,255,255,.58)');gradient.addColorStop(.4,'rgba(255,255,255,.34)');gradient.addColorStop(1,'rgba(255,255,255,0)');ctx.fillStyle=gradient;ctx.fillRect(0,0,96,96);
  const map=new THREE.CanvasTexture(canvas),smoke=new THREE.Group();root.add(smoke);
- const motes=Array.from({length:38},(_,i)=>{const material=new THREE.SpriteMaterial({map,color:0x080a09,opacity:.6,depthWrite:false,depthTest:true});const p=new THREE.Sprite(material);p.userData.seed=i*2.399963;smoke.add(p);return p;});
+ const motes=Array.from({length:38},(_,i)=>{const material=new THREE.SpriteMaterial({map,color:0x010202,opacity:.85,depthWrite:false,depthTest:true});const p=new THREE.Sprite(material);p.userData.seed=i*2.399963;smoke.add(p);return p;});
  const wrist=new THREE.Vector3(),knuckle=new THREE.Vector3(),tip=new THREE.Vector3();
  let reach=0,reveal=0;
- function update(t,dt,{distance=8,clear=true,laughing=false,grunting=false}={}){
+ function update(t,dt,{distance=8,clear=true,laughing=false,grunting=false,speaking=false,lookX=0,lookY=0}={}){
+  head.update(t,{speaking:speaking||laughing,lookX,lookY});
   reveal=Math.min(1,reveal+dt*.75);root.scale.y=.35+.65*(1-(1-reveal)**3);
   reach=THREE.MathUtils.damp(reach,clear?THREE.MathUtils.clamp((5-distance)/3,0,1):0,5,dt);
   body.rotation.z=Math.sin(t*2.3)*.035+Math.sin(t*.67)*.018;body.scale.x=1+Math.sin(t*1.9)*.025+(grunting?.028*Math.sin(t*19):0);body.rotation.x=-.025-reach*.07;body.position.y=.035*Math.sin(t*3.8)+(laughing?.018*Math.sin(t*24):0);
@@ -48,10 +47,10 @@ export function createCreature(){
    link(arm.pieces[0],a,b);link(arm.pieces[1],b,c);arm.elbow.position.copy(b);arm.palm.position.copy(c);arm.palm.rotation.x=-.6-reach*.3;
    for(let f=0;f<3;f++){wrist.copy(c).add(new THREE.Vector3((f-1)*.045,-.02,0));knuckle.copy(wrist).add(new THREE.Vector3((f-1)*.07,-.10-.04*flex,.16));tip.copy(knuckle).add(new THREE.Vector3(-(f-1)*.035,-.15*flex-.035,.09-.06*flex));link(arm.fingers[f][0],wrist,knuckle);link(arm.fingers[f][1],knuckle,tip);}
   }
-  for(let i=0;i<motes.length;i++){const p=motes[i],seed=p.userData.seed,life=(t*.18+i/38)%1,angle=seed+t*.25,radius=.20+life*.58;
-   p.position.set(Math.sin(angle)*radius,.13+life*2.85,Math.cos(angle)*radius+.02);const size=.95+Math.sin(life*Math.PI)*1.10;p.scale.set(size,size,1);p.material.rotation=seed+t*.12;p.material.opacity=Math.sin(life*Math.PI)*(.88-.18*reach+.07*Math.sin(t*.73+i))*(.5+.5*reveal);
+  for(let i=0;i<motes.length;i++){const p=motes[i],seed=p.userData.seed,life=(t*.18+i/38)%1,angle=seed+t*.25,radius=.16+life*.56;
+   p.position.set(Math.sin(angle)*radius,.10+life*2.55,Math.cos(angle)*radius+.02);const size=.95+Math.sin(life*Math.PI)*1.10;p.scale.set(size,size,1);p.material.rotation=seed+t*.12;p.material.opacity=Math.sin(life*Math.PI)*(1.12-.08*reach+.05*Math.sin(t*.73+i))*(.5+.5*reveal);
   }
-  root.userData.reveal=reveal;root.userData.reach=reach;root.userData.laughing=laughing;
+  root.userData.mouth=head.root.userData.mouth;root.userData.reveal=reveal;root.userData.reach=reach;root.userData.laughing=laughing;
  }
  update(0,0);return {root,update,reset(){reach=0;reveal=0;update(0,0);},arms,smoke};
 }
@@ -68,7 +67,7 @@ export function addBalloons(scene){
   const knot=new THREE.Mesh(knots,material);knot.position.y=-.345;root.add(knot);
   const points=[];for(let n=0;n<=18;n++)points.push(new THREE.Vector3(.045*Math.sin(n*.5+i),-.37-n*.046,.02*Math.sin(n*.4)));
   const string=new THREE.Line(new THREE.BufferGeometry().setFromPoints(points),cord);root.add(string);
-  root.position.set(spots[i][0]+j*.44,2.72+j*.13,spots[i][1]+j*.18);root.userData.origin=root.position.clone();root.userData.phase=i*1.73+j*2.4;root.userData.colour=colours[(i+j)%colours.length];scene.add(root);balloons.push(root);
+  root.position.set(spots[i][0]+j*.44,2.72+j*.13,spots[i][1]+j*.18);root.position.y+=floorHeight(root.position.x,root.position.z);root.userData.origin=root.position.clone();root.userData.phase=i*1.73+j*2.4;root.userData.colour=colours[(i+j)%colours.length];scene.add(root);balloons.push(root);
  }
  return {items:balloons,update(t){for(const b of balloons){const o=b.userData.origin,p=b.userData.phase;b.position.set(o.x+Math.sin(t*.43+p)*.12,o.y+Math.sin(t*.68+p)*.10,o.z+Math.cos(t*.38+p)*.10);b.rotation.set(Math.sin(t*.52+p)*.06,0,Math.sin(t*.61+p)*.09);}}};
 }

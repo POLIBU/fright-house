@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {floorHeight} from './model.js';
 
 // Original fairground props. Kept beside the route so evidence and wall handles remain accessible.
 export function addAttractions(scene,label){
@@ -9,7 +10,7 @@ export function addAttractions(scene,label){
  function ball(p,radii,mat,x,y,z){const m=mesh(p,new THREE.SphereGeometry(1,20,14),mat,x,y,z);m.scale.set(...radii);return m;}
  function rod(p,a,b,r,mat){a=new THREE.Vector3(...a);b=new THREE.Vector3(...b);const d=b.clone().sub(a),m=mesh(p,new THREE.CylinderGeometry(r,r,d.length(),9),mat,...a.clone().add(b).multiplyScalar(.5).toArray());m.quaternion.setFromUnitVectors(yAxis,d.normalize());return m;}
  function curve(p,points,r,mat){return mesh(p,new THREE.TubeGeometry(new THREE.CatmullRomCurve3(points.map(a=>new THREE.Vector3(...a))),24,r,6,false),mat);}
- const stall=new THREE.Group();stall.position.set(18.45,0,8.4);stall.rotation.y=-Math.PI/2;scene.add(stall);
+ const stall=new THREE.Group();stall.position.set(18.45,floorHeight(18.45,8.4),8.4);stall.rotation.y=-Math.PI/2;scene.add(stall);
  for(const x of [-1.43,1.43]){box(stall,.12,2.70,.14,wood,x,1.35,0);box(stall,.30,.12,.45,wood,x,.06,0);}box(stall,2.98,.16,.18,wood,0,2.57,0);box(stall,2.9,.12,.55,wood,0,.91,.02);
  const sign=label('WIN A FISH',2.8,.36,'#cdb373','#632c28');sign.position.set(0,2.94,.03);stall.add(sign);
  const small=label('ONE LUCKY THROW',1.8,.19,'#b3a27d','#282d25');small.position.set(0,.71,.32);stall.add(small);

@@ -1,0 +1,40 @@
+[
+  {
+    "touch": false,
+    "loadingMs": 249,
+    "transferBytes": 5665778,
+    "won": true,
+    "health": 1,
+    "awake": 24,
+    "render": {
+      "models": 24,
+      "flies": 8,
+      "trash3D": true,
+      "drawCalls": 750,
+      "triangles": 40712
+    },
+    "inspection": true,
+    "pause": true,
+    "retry": true,
+    "errors": []
+  },
+  {
+    "touch": true,
+    "loadingMs": 216,
+    "transferBytes": 5665778,
+    "won": true,
+    "health": 1,
+    "awake": 24,
+    "render": {
+      "models": 24,
+      "flies": 8,
+      "trash3D": true,
+      "drawCalls": 750,
+      "triangles": 40712
+    },
+    "inspection": true,
+    "pause": true,
+    "retry": true,
+    "errors": []
+  }
+]

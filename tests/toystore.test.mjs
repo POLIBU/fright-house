@@ -19,3 +19,5 @@ test('crate volumes block walking from every side and preserve the path behind t
 });
 
 test('large toy crate blocks its rear corner strips as well as the middle',()=>{const s=newStore(true);for(const [x,y]of [[225,132],[333,132],[225,194],[330,201],[281,150]])assert.equal(storeBlocked(s,x,y),true,`${x},${y}`);assert.equal(storeBlocked(s,280,116),false);});
+
+test('larger investigator passes through the threshold both ways without entering the painted frame',()=>{const s=newStore();assert.equal(s.spriteHeight,68);walk(s,72,224);storeAction(s,'entry');tick(s,1);walk(s,144,216);walk(s,72,224);for(const [x,y]of [[96,200],[84,247],[112,246]])assert.ok(storeBlocked(s,x,y));});

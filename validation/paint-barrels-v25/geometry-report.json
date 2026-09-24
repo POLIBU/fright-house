@@ -1,0 +1,78 @@
+[
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 90,
+  "tris": 24472,
+  "materials": 13,
+  "size": [
+   1.73,
+   2.851,
+   2.289
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.155,
+    "edgeDensity": 0.1909
+   },
+   "right": {
+    "coverage": 0.1491,
+    "edgeDensity": 0.1696
+   },
+   "back": {
+    "coverage": 0.2036,
+    "edgeDensity": 0.1515
+   },
+   "left": {
+    "coverage": 0.1687,
+    "edgeDensity": 0.1795
+   }
+  },
+  "error": null,
+  "name": "paint-barrel-launcher",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 14,
+  "tris": 11096,
+  "materials": 4,
+  "size": [
+   0.604,
+   0.883,
+   0.621
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.3119,
+    "edgeDensity": 0.0768
+   },
+   "right": {
+    "coverage": 0.3157,
+    "edgeDensity": 0.0791
+   },
+   "back": {
+    "coverage": 0.3164,
+    "edgeDensity": 0.0566
+   },
+   "left": {
+    "coverage": 0.3149,
+    "edgeDensity": 0.0592
+   }
+  },
+  "error": null,
+  "name": "paint-drum",
+  "problems": []
+ }
+]

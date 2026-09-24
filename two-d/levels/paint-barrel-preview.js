@@ -1,0 +1,5 @@
+// Deterministic asset-review simulation. Full Level 6 traversal is not enabled yet.
+export function newPaintPreview(){return {time:0,age:0,phase:'ready',paused:false,impactCount:0,travel:0,paintAge:0};}
+export function launchPaintPreview(s){if(s.phase!=='ready'||s.paused)return false;s.phase='warning';s.age=0;return true;}
+export function tickPaintPreview(s,dt){if(s.paused)return;dt=Math.max(0,Math.min(.04,dt));s.time+=dt;s.age+=dt;if(s.phase==='warning'&&s.age>=1.15){s.phase='launch';s.age=0;}else if(s.phase==='launch'){s.travel=Math.min(1,s.age/.7);if(s.travel===1){s.phase='rolling';s.age=0;}}else if(s.phase==='rolling'){s.travel=1+s.age*2.05;if(s.travel>=3.9){s.travel=3.9;s.phase='impact';s.age=0;s.impactCount++;}}else if(s.phase==='impact'){s.paintAge=s.age;if(s.age>=2.3)s.phase='spilled';}else if(s.phase==='spilled')s.paintAge+=dt;}
+export function paintDroplet(i,age){const angle=i*2.399963,delay=(i%5)*.012,t=Math.max(0,age-delay),speed=.6+(i%7)*.18;return {x:Math.cos(angle)*speed*t,y:Math.max(.017,.34+(1.4+i%4*.35)*t-3.5*t*t),z:Math.sin(angle)*speed*t,scale:age<delay?0:Math.max(.05,1-t*.28)};}

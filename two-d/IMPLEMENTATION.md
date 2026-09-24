@@ -124,3 +124,16 @@ The approved Level 5 is now playable at `level-5.html` and linked from the Level
 The library is now 1,680 pixels wide, with a following camera, alternating shelf obstacles, a far-end exit and a 2.4-second unlatching action. The investigator is 68 pixels tall in this room; the entrance has solid jambs and separately drawn overhead trim.
 
 The Level 4 crate reserves its full base/wheel clearance rather than only the slanted painted floor polygon. A toy landing was adjusted to remain outside that solid area. See `../validation/library-v21/` for comparisons and test evidence.
+
+
+## Level 6 concept v1 — awaiting user refinements
+
+The next campaign area is the rolling-barrel passage. `art-review/level-6.html` presents a first concept in the approved top-down pixel-art style: a winding service route, barrel rack/chute, warning lamp, side recesses, a gate wheel and onward stairs. The user requested concept art first and will refine it before implementation. No Level 6 gameplay, sprites or transition from Level 5 has been implemented. Keep safe recesses clear during production; the draft image contains some decorative clutter to adjust after review.
+
+Generated using the built-in imagegen tool. Style reference: approved Level 5 concept. Image: `art-review/concepts/06-barrel-passage-v1.png`. Exact prompt: `art-review/concepts/06-barrel-passage-v1-prompt.txt`.
+
+### V25 refinements
+
+Level 6's concept review now includes interactive procedural 3D paint drums and a roller launcher. The reference steel drums replace the wooden barrels pictured in concept v1. Launch warns first; impact pops the lid and spills colored paint. These are review assets; production of the full level still follows concept feedback.
+
+Level 4 now matches Level 5's 68-pixel investigator, with separate entrance frame layers, wall occlusion and solid jambs. Level 1 pavement confetti reacts to footsteps; Level 2 clown eyes rotate and its ledger's final direction sentence has been removed.

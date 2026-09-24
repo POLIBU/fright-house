@@ -6,9 +6,13 @@ export const STORE_SOLIDS=[
  {id:'pedestal',x:420,y:88,w:36,h:24},
  {id:'bin',x:23,y:110,w:32,h:35},
  {id:'partition',x:83,y:90,w:13,h:107},
- {id:'entry-jamb-back',x:81,y:238,w:7,h:10},{id:'entry-jamb-front',x:109,y:242,w:7,h:7}
+ {id:'entry-jamb-back',x:81,y:243,w:7,h:10},{id:'entry-jamb-front',x:109,y:242,w:7,h:8}
 ];
-const floors=[[96,97,466,245],[18,156,86,338],[18,96,80,206],[74,203,118,241],[371,72,408,112]];
+const floors=[[116,97,466,245],[96,97,116,197],[18,156,80,338],[18,96,80,206],[371,72,408,112]];
+// Only the diagonal threshold is floor; the tall painted door opening is not.
+const entryFloor=[[74,222],[74,241],[124,241],[116,218]];
+function inEntry(x,y){let inside=false;for(let i=0,j=entryFloor.length-1;i<entryFloor.length;j=i++){const a=entryFloor[i],b=entryFloor[j];if((a[1]>y)!==(b[1]>y)&&x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0])inside=!inside;}return inside;}
+
 export const STORE_OBJECTS=[{id:'entry',x:72,y:224,r:25,label:'E · OPEN STOREROOM'},{id:'music',x:415,y:127,r:23,label:'E · INSPECT WIND-UP TOY'},{id:'drawing',x:167,y:171,r:19,label:'E · READ CHILD’S DRAWING'},{id:'exit',x:388,y:119,r:24,label:'E · OPEN RED DOOR'}];
 const homes=[
  [187,56,174,111],[206,54,197,111],[230,58,220,112],[254,55,250,111],[277,56,278,111],[306,59,312,111],
@@ -18,14 +22,14 @@ const homes=[
  [243,167,376,198],[265,171,365,220],[288,175,414,191],[312,179,453,174],
  [279,150,350,227],[297,166,183,204]
 ];
-export function newStore(prepared=false){return {ambience:newStoreAmbience(),x:prepared?405:53,y:prepared?133:317,face:'up',walk:0,light:true,time:0,phase:'explore',phaseAge:0,entry:prepared?1:0,openingEntry:false,exit:0,openingExit:false,lights:1,health:3,invincible:0,inspection:false,inspectTime:0,turns:0,keyAngle:0,readDrawing:false,paused:false,notice:prepared?'The key is still in the toy.':'Open the door at the top of the stairs.',noticeAge:5,toys:homes.map((p,i)=>({id:i,kind:i%6,homeX:p[0],homeY:p[1],spawnX:p[2],spawnY:p[3],x:p[0],y:p[1],height:0,phase:'asleep',age:0,speed:14+(i%5)*2.2,heading:0,walk:0}))};}
-export function storeBlocked(s,x,y,r=4){if(![[-r,-r],[r,-r],[-r,r],[r,r]].every(([dx,dy])=>floors.some(([a,b,c,d])=>x+dx>=a&&x+dx<=c&&y+dy>=b&&y+dy<=d)))return true;const solids=[...STORE_SOLIDS];if(s.entry<.85)solids.push({x:84,y:200,w:13,h:44});if(s.exit<.9)solids.push({x:369,y:91,w:42,h:13});return STORE_CRATES.some(o=>crateContains(o,x,y,r))||solids.some(o=>x+r>o.x&&x-r<o.x+o.w&&y+r>o.y&&y-r<o.y+o.h);}
+export function newStore(prepared=false){return {ambience:newStoreAmbience(),x:prepared?405:53,y:prepared?133:317,face:'up',spriteHeight:68,walk:0,light:true,time:0,phase:'explore',phaseAge:0,entry:prepared?1:0,openingEntry:false,exit:0,openingExit:false,lights:1,health:3,invincible:0,inspection:false,inspectTime:0,turns:0,keyAngle:0,readDrawing:false,paused:false,notice:prepared?'The key is still in the toy.':'Open the door at the top of the stairs.',noticeAge:5,toys:homes.map((p,i)=>({id:i,kind:i%6,homeX:p[0],homeY:p[1],spawnX:p[2],spawnY:p[3],x:p[0],y:p[1],height:0,phase:'asleep',age:0,speed:14+(i%5)*2.2,heading:0,walk:0}))};}
+export function storeBlocked(s,x,y,r=6){if(![[-r,-r],[r,-r],[-r,r],[r,r]].every(([dx,dy])=>(inEntry(x+dx,y+dy)||floors.some(([a,b,c,d])=>x+dx>=a&&x+dx<=c&&y+dy>=b&&y+dy<=d))))return true;const solids=[...STORE_SOLIDS];if(s.entry<.85)solids.push({x:84,y:214,w:13,h:29});if(s.exit<.9)solids.push({x:369,y:91,w:42,h:13});return STORE_CRATES.some(o=>crateContains(o,x,y,r))||solids.some(o=>x+r>o.x&&x-r<o.x+o.w&&y+r>o.y&&y-r<o.y+o.h);}
 export function moveStore(s,dx,dy,dt){s.moving=false;if(!dx&&!dy)return;const oldX=s.x,oldY=s.y,n=Math.hypot(dx,dy)||1,dist=78*dt,steps=Math.ceil(dist/2)||1;for(let i=0;i<steps;i++){const x=s.x+dx/n*dist/steps,y=s.y+dy/n*dist/steps;if(!storeBlocked(s,x,s.y))s.x=x;if(!storeBlocked(s,s.x,y))s.y=y;}s.moving=Math.hypot(s.x-oldX,s.y-oldY)>.001;if(s.moving)s.walk+=dt*11;s.face=Math.abs(dx)>Math.abs(dy)?dx>0?'right':'left':dy>0?'down':'up';}
 export function storeNear(s){return STORE_OBJECTS.filter(o=>(s.phase==='explore'||!['music','drawing'].includes(o.id))&&Math.hypot(o.x-s.x,o.y-s.y)<o.r&&(s.phase!=='explore'||s.entry>=.85||o.id==='entry')).sort((a,b)=>Math.hypot(a.x-s.x,a.y-s.y)-Math.hypot(b.x-s.x,b.y-s.y))[0];}
 const cell=6,W=81,H=61,dirs=[[1,0],[-1,0],[0,1],[0,-1]],navCache=new WeakMap();
 const index=(x,y)=>y*W+x;
-function nearest(s,x,y,r=4){const gx=Math.round(x/cell),gy=Math.round(y/cell);for(let radius=0;radius<6;radius++)for(let dy=-radius;dy<=radius;dy++)for(let dx=-radius;dx<=radius;dx++){const a=gx+dx,b=gy+dy;if(a>=0&&a<W&&b>=0&&b<H&&!storeBlocked(s,a*cell,b*cell,r))return [a,b];}return null;}
-function field(s,x,y,r=4){const start=nearest(s,x,y,r);if(!start)return null;const distance=new Int16Array(W*H).fill(-1),q=[start];distance[index(...start)]=0;for(let i=0;i<q.length;i++){const [a,b]=q[i];for(const [dx,dy]of dirs){const nx=a+dx,ny=b+dy;if(nx<0||nx>=W||ny<0||ny>=H)continue;const k=index(nx,ny);if(distance[k]!==-1||storeBlocked(s,nx*cell,ny*cell,r))continue;distance[k]=distance[index(a,b)]+1;q.push([nx,ny]);}}return {distance,start};}
+function nearest(s,x,y,r=6){const gx=Math.round(x/cell),gy=Math.round(y/cell);for(let radius=0;radius<6;radius++)for(let dy=-radius;dy<=radius;dy++)for(let dx=-radius;dx<=radius;dx++){const a=gx+dx,b=gy+dy;if(a>=0&&a<W&&b>=0&&b<H&&!storeBlocked(s,a*cell,b*cell,r))return [a,b];}return null;}
+function field(s,x,y,r=6){const start=nearest(s,x,y,r);if(!start)return null;const distance=new Int16Array(W*H).fill(-1),q=[start];distance[index(...start)]=0;for(let i=0;i<q.length;i++){const [a,b]=q[i];for(const [dx,dy]of dirs){const nx=a+dx,ny=b+dy;if(nx<0||nx>=W||ny<0||ny>=H)continue;const k=index(nx,ny);if(distance[k]!==-1||storeBlocked(s,nx*cell,ny*cell,r))continue;distance[k]=distance[index(a,b)]+1;q.push([nx,ny]);}}return {distance,start};}
 export function storePath(s,x,y){const f=field(s,x,y),start=nearest(s,s.x,s.y);if(!f||!start)return [];let p=start;const route=[];for(let i=0;i<2000;i++){const d=f.distance[index(...p)];if(d<0)return [];if(d===0)break;const next=dirs.map(([dx,dy])=>[p[0]+dx,p[1]+dy]).find(([a,b])=>a>=0&&a<W&&b>=0&&b<H&&f.distance[index(a,b)]===d-1);if(!next)return [];route.push({x:next[0]*cell,y:next[1]*cell});p=next;}return route;}
 export function storeAction(s,id){if(s.paused||s.inspection||['caught','escaped'].includes(s.phase))return null;const o=typeof id==='string'?STORE_OBJECTS.find(o=>o.id===id&&Math.hypot(o.x-s.x,o.y-s.y)<o.r):storeNear(s);if(!o||s.phase!=='explore'&&['music','drawing'].includes(o.id))return null;if(o.id==='entry'){if(s.phase==='explore'){s.openingEntry=true;s.notice='A sweet, rotten smell. The toys are watching.';s.noticeAge=4;}else{s.notice='The entrance has slammed shut. Use the red door!';s.noticeAge=3;}}
  if(o.id==='music'&&s.phase==='explore'){s.inspection=true;s.inspectTime=0;return 'music';}

@@ -1,0 +1,132 @@
+walk false 72 224 {
+  x: 72,
+  y: 222,
+  health: 3,
+  phase: 'explore',
+  phaseAge: 1.9831999999999974
+}
+walk false 167 171 {
+  x: 168,
+  y: 174,
+  health: 3,
+  phase: 'explore',
+  phaseAge: 5.566500000000012
+}
+walk false 415 127 { x: 414, y: 126, health: 3, phase: 'explore', phaseAge: 10.6996 }
+walk false 360 222 {
+  x: 360,
+  y: 222,
+  health: 3,
+  phase: 'blackout',
+  phaseAge: 0.0833000000000011
+}
+walk false 192 222 {
+  x: 192,
+  y: 222,
+  health: 2,
+  phase: 'chase',
+  phaseAge: 2.4999000000000025
+}
+walk false 192 114 {
+  x: 192,
+  y: 114,
+  health: 2,
+  phase: 'chase',
+  phaseAge: 4.333200000000002
+}
+walk false 390 114 {
+  x: 390,
+  y: 120,
+  health: 1,
+  phase: 'chase',
+  phaseAge: 7.79980000000004
+}
+walk true 72 224 {
+  x: 72,
+  y: 222,
+  health: 3,
+  phase: 'explore',
+  phaseAge: 1.9831999999999983
+}
+walk true 167 171 {
+  x: 168,
+  y: 174,
+  health: 3,
+  phase: 'explore',
+  phaseAge: 5.599800000000013
+}
+walk true 415 127 {
+  x: 414,
+  y: 126,
+  health: 3,
+  phase: 'explore',
+  phaseAge: 10.766200000000003
+}
+walk true 360 222 {
+  x: 360,
+  y: 222,
+  health: 3,
+  phase: 'blackout',
+  phaseAge: 0.10010000000000037
+}
+walk true 192 222 {
+  x: 192,
+  y: 222,
+  health: 2,
+  phase: 'chase',
+  phaseAge: 2.549900000000001
+}
+walk true 192 114 {
+  x: 192,
+  y: 114,
+  health: 2,
+  phase: 'chase',
+  phaseAge: 4.399800000000002
+}
+walk true 390 114 {
+  x: 390,
+  y: 120,
+  health: 1,
+  phase: 'chase',
+  phaseAge: 7.88300000000004
+}
+[
+  {
+    touch: false,
+    loadingMs: 249,
+    transferBytes: 5665778,
+    won: true,
+    health: 1,
+    awake: 24,
+    render: {
+      models: 24,
+      flies: 8,
+      trash3D: true,
+      drawCalls: 750,
+      triangles: 40712
+    },
+    inspection: true,
+    pause: true,
+    retry: true,
+    errors: []
+  },
+  {
+    touch: true,
+    loadingMs: 216,
+    transferBytes: 5665778,
+    won: true,
+    health: 1,
+    awake: 24,
+    render: {
+      models: 24,
+      flies: 8,
+      trash3D: true,
+      drawCalls: 750,
+      triangles: 40712
+    },
+    inspection: true,
+    pause: true,
+    retry: true,
+    errors: []
+  }
+]

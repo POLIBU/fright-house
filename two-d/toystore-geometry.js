@@ -27,6 +27,9 @@ for(const crate of STORE_CRATES){
 projectedVolume(THREE,bench,mat,[[101,178],[157,178],[157,192],[101,192]],24);
 projectedVolume(THREE,shelf,mat,[[169,94],[330,94],[330,100],[169,100]],38);
 // Raised jambs and lintel are drawn in front when the player goes beneath them.
-const portal=part('entry-door-frame',250);
-for(const points of [[[82,184],[86,187],[86,245],[82,244]],[[109,201],[114,203],[114,249],[109,248]],[[82,184],[114,201],[114,206],[82,189]]]){const shape=new THREE.Shape();points.forEach(([x,y],i)=>shape[i?'lineTo':'moveTo']((x-240)*.05,(360-y)*.05));shape.closePath();portal.add(new THREE.Mesh(new THREE.ExtrudeGeometry(shape,{depth:.3,bevelEnabled:false}),mat));}
+for(const [name,depth,points]of [
+ ['entry-jamb-back',256,[[82,184],[86,187],[86,256],[82,253]]],
+ ['entry-jamb-front',251,[[109,201],[114,203],[114,251],[109,250]]],
+ ['entry-lintel',266,[[82,184],[114,201],[114,207],[82,190]]]
+]){const portal=part(name,depth),shape=new THREE.Shape();points.forEach(([x,y],i)=>shape[i?'lineTo':'moveTo']((x-240)*.05,(360-y)*.05));shape.closePath();const mesh=new THREE.Mesh(new THREE.ExtrudeGeometry(shape,{depth:.3,bevelEnabled:false}),mat);mesh.userData.solidVolume=true;portal.add(mesh);}
 return root;}

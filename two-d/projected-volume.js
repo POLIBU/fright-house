@@ -1,0 +1,2 @@
+// Constructor-built solid for a fixed-camera painted prop. Ground and height remain separate.
+export function projectedVolume(THREE,parent,material,footprint,height){const shape=new THREE.Shape();footprint.forEach(([x,y],i)=>shape[i?'lineTo':'moveTo']((x-240)*.05,(360-y)*.05));shape.closePath();const geometry=new THREE.ExtrudeGeometry(shape,{depth:height*.05,bevelEnabled:false});geometry.applyMatrix4(new THREE.Matrix4().set(1,0,0,0,0,1,1,0,0,0,1,0,0,0,0,1));const mesh=new THREE.Mesh(geometry,material);mesh.userData.solidVolume=true;parent.add(mesh);return mesh;}

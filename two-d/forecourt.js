@@ -14,5 +14,5 @@ export function createForecourt(image,geometryFactory=generate){
   for(const g of root.children){if((s.y<g.userData.floor)!==front)continue;
    ctx.drawImage(cache.get(g.name),0,0);
   }
- },snapshot(){return {layers:root.children.map(g=>({name:g.name,depth:g.userData.floor,meshes:g.children.length})),shutter:lastShutter};}};
+ },drawLayer(ctx,name){const frame=cache.get(name);if(frame)ctx.drawImage(frame,0,0);},snapshot(){return {layers:root.children.map(g=>({name:g.name,depth:g.userData.floor,meshes:g.children.length,solidVolumes:g.children.filter(m=>m.userData.solidVolume).length})),shutter:lastShutter};}};
 }

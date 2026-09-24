@@ -1,5 +1,7 @@
 # Fright House
 
+> **Playtest hub:** [Choose any updated level](http://localhost:8089/two-d/test.html), with platformer floor shortcuts and a toy-room quick start.
+
 > **Top-down candidate:** [Play Level 1](http://localhost:8089/two-d/index.html). The approved street includes animated lights, a rotating Ferris wheel and an inspectable newspaper. [Play Level 4: the forgotten toys](http://localhost:8089/two-d/level-4.html), or [view approved concepts](http://localhost:8089/two-d/art-review/index.html). Levels 1–4 are playable; Level 2 now includes reactive balloons, a fleeing rat and an animated teddy. The full 20-area adaptation is in progress; later levels require concept review.
 
 

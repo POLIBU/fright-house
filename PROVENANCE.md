@@ -121,3 +121,12 @@ The cage and stacked wooden crates now use original Three.js Shape/ExtrudeGeomet
 ### V18 corridor flies
 
 `two-d/assets/three/corridor-fly.js` is an original constructor-built Three.js insect with ellipsoid body/head/wings, cylinder legs and named wing pivots. Its real-world width is approximately 3.6 cm including wings; the generic verifier's minimum prop-size warning is expected for an insect. Existing hall artwork is retained; flight, scattering and wing motion are code animation.
+
+
+### V19 — approved clown, revised investigator and solid volumes
+
+`two-d/art-review/concepts/clown-archer-v1.png` was generated with built-in imagegen: original red-ringlet-haired carnival archer, worn ivory face, teal/burgundy suit, cream ruff and battered bow, with front/aiming/game-scale views and a red/ochre clockwork bomb balloon. The user explicitly approved this appearance. `clown-archer.js`, `balloon-bomb.js` and `carnival-arrow.js` build original articulated geometry using Three.js constructors; the concept is not encoded as mesh data.
+
+`two-d/assets/characters/investigator-v2.png` was generated with built-in imagegen after the user rejected the first design as too close to their reference. Revised brief: original lean adult investigator, narrow tilted olive-brown hat, auburn hair/stubble, short ochre coat, burgundy scarf, satchel, gray trousers and brass magnifier; front/left/back/right views on transparency. The user then approved implementation. The game samples the four frames from the unchanged PNG, with code-driven walking bob. The rejected first sheet is not shipped.
+
+The new projected-volume helper uses ordinary Shape/ExtrudeGeometry and the already-declared clean artwork. Toy eye/pupil meshes and crate foreground faces are original code changes. No downloaded meshes, paid services or imported mesh payloads were added.

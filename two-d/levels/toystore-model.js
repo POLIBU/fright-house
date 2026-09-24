@@ -11,10 +11,10 @@ export const STORE_OBJECTS=[{id:'entry',x:72,y:224,r:25,label:'E · OPEN STORERO
 const homes=[
  [187,56,174,111],[206,54,197,111],[230,58,220,112],[254,55,250,111],[277,56,278,111],[306,59,312,111],
  [116,95,119,115],[138,100,146,119],[120,147,168,151],[142,146,167,185],
- [243,128,207,138],[265,132,211,155],[285,140,209,177],[307,149,212,209],
- [241,158,237,216],[263,164,264,218],[287,177,294,217],[317,173,345,201],
- [390,214,376,198],[415,219,365,220],[442,213,414,191],[454,196,453,174],
- [353,218,350,227],[183,205,183,204]
+ [248,140,207,138],[269,143,211,155],[291,146,209,177],[313,149,212,209],
+ [241,151,237,216],[263,155,264,218],[286,159,294,217],[311,163,345,201],
+ [243,167,376,198],[265,171,365,220],[288,175,414,191],[312,179,453,174],
+ [279,150,350,227],[297,166,183,204]
 ];
 export function newStore(prepared=false){return {x:prepared?405:53,y:prepared?133:317,face:'up',walk:0,light:true,time:0,phase:'explore',phaseAge:0,entry:prepared?1:0,openingEntry:false,exit:0,openingExit:false,lights:1,health:3,invincible:0,inspection:false,inspectTime:0,turns:0,keyAngle:0,readDrawing:false,paused:false,notice:prepared?'The key is still in the toy.':'Open the door at the top of the stairs.',noticeAge:5,toys:homes.map((p,i)=>({id:i,kind:i%6,homeX:p[0],homeY:p[1],spawnX:p[2],spawnY:p[3],x:p[0],y:p[1],height:0,phase:'asleep',age:0,speed:14+(i%5)*2.2,heading:0,walk:0}))};}
 export function storeBlocked(s,x,y,r=4){if(![[-r,-r],[r,-r],[-r,r],[r,r]].every(([dx,dy])=>floors.some(([a,b,c,d])=>x+dx>=a&&x+dx<=c&&y+dy>=b&&y+dy<=d)))return true;const solids=[...STORE_SOLIDS];if(s.entry<.85)solids.push({x:84,y:200,w:13,h:44});if(s.exit<.9)solids.push({x:369,y:91,w:42,h:13});return STORE_CRATES.some(o=>crateContains(o,x,y,r))||solids.some(o=>x+r>o.x&&x-r<o.x+o.w&&y+r>o.y&&y-r<o.y+o.h);}

@@ -78,8 +78,8 @@
  {
   "ok": true,
   "mounts": null,
-  "meshes": 546,
-  "tris": 29792,
+  "meshes": 588,
+  "tris": 33152,
   "materials": 51,
   "size": [
    3.33,
@@ -94,23 +94,61 @@
   "sides": {
    "front": {
     "coverage": 0.1575,
-    "edgeDensity": 0.4128
+    "edgeDensity": 0.4126
    },
    "right": {
     "coverage": 0.1126,
-    "edgeDensity": 0.3562
+    "edgeDensity": 0.3565
    },
    "back": {
     "coverage": 0.1607,
     "edgeDensity": 0.2191
    },
    "left": {
-    "coverage": 0.1112,
-    "edgeDensity": 0.3479
+    "coverage": 0.1113,
+    "edgeDensity": 0.349
    }
   },
   "error": null,
   "name": "awakened-toys",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 14,
+  "tris": 600,
+  "materials": 3,
+  "size": [
+   0.44,
+   1.014,
+   0.44
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.1322,
+    "edgeDensity": 0.0793
+   },
+   "right": {
+    "coverage": 0.1345,
+    "edgeDensity": 0.0708
+   },
+   "back": {
+    "coverage": 0.1385,
+    "edgeDensity": 0.0673
+   },
+   "left": {
+    "coverage": 0.1366,
+    "edgeDensity": 0.0715
+   }
+  },
+  "error": null,
+  "name": "balloon-bomb",
   "problems": []
  },
  {
@@ -149,6 +187,82 @@
   },
   "error": null,
   "name": "broken-turnstile",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 7,
+  "tris": 296,
+  "materials": 3,
+  "size": [
+   0.677,
+   0.078,
+   0.048
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.0243,
+    "edgeDensity": 0.4747
+   },
+   "right": {
+    "coverage": 0.0102,
+    "edgeDensity": 0.3674
+   },
+   "back": {
+    "coverage": 0.0242,
+    "edgeDensity": 0.5496
+   },
+   "left": {
+    "coverage": 0.009,
+    "edgeDensity": 0.5406
+   }
+  },
+  "error": null,
+  "name": "carnival-arrow",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 67,
+  "tris": 7896,
+  "materials": 6,
+  "size": [
+   0.698,
+   1.296,
+   0.389
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.1509,
+    "edgeDensity": 0.2048
+   },
+   "right": {
+    "coverage": 0.0973,
+    "edgeDensity": 0.1864
+   },
+   "back": {
+    "coverage": 0.1566,
+    "edgeDensity": 0.116
+   },
+   "left": {
+    "coverage": 0.1055,
+    "edgeDensity": 0.148
+   }
+  },
+  "error": null,
+  "name": "clown-archer",
   "problems": []
  },
  {

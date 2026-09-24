@@ -103,3 +103,8 @@ This supersedes the preceding pending statuses. The user approved the toy storer
 Level 2 now has separate real 3D rat, balloons and teddy. Balloons pop on approach, the rat chooses an escape route away from the player and the teddy rocks, raises its arms and turns its head. All reactions pause with the level and reset on restart. New clean plates remove the stationary painted versions while retaining the approved room style.
 
 All five new asset modules pass the official 404 harness. Validation and comparisons: `validation/toystore-v16` and `validation/hall-v16`. The original 3D game and earlier approved levels are preserved. Four chapters are playable; the remaining planned campaign is not presented as complete. Future level and final character concepts still require the user's review.
+
+
+## V19 local playtest
+
+Open `test.html` to select Levels 1–4, a platformer floor, or the toy-room quick start. All levels offer a LEVEL SELECT return link. The approved clown/bomb encounters, packed crate with tracking luminous eyes, revised four-direction investigator and deeper prop volumes are implemented. See `../validation/three-d-v19/index.html` and `../ITERATIONS.md` for checks and limitations.

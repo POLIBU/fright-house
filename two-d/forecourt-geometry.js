@@ -1,3 +1,4 @@
+import {projectedVolume} from './projected-volume.js';
 // Original 404-style relief geometry for the fixed top-down camera.
 // The scene loader projects the approved painting onto these independent solids.
 export default function generate(THREE){
@@ -24,5 +25,8 @@ export default function generate(THREE){
  const bin=layer('litter-bin',247);profile(bin,[[126,232],[139,231],[140,244],[128,246]],.35);profile(bin,[[125,231],[132,227],[141,231],[135,234]],.4);
  const barrel=layer('rusted-drum',257);profile(barrel,[[451,231],[458,228],[468,231],[467,253],[459,256],[451,252]],.45);
  const car=layer('abandoned-cart',293);profile(car,[[391,257],[404,251],[425,258],[438,255],[461,267],[459,282],[445,290],[412,291],[398,281]],.65);
+ projectedVolume(THREE,bench,material,[[22,253],[84,235],[89,240],[27,259]],4);
+ projectedVolume(THREE,kiosk,material,[[378,233],[479,233],[479,244],[378,244]],25);
+ projectedVolume(THREE,car,material,[[402,280],[441,291],[461,281],[425,265]],15);
  return root;
 }

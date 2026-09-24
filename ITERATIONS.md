@@ -206,3 +206,9 @@ Evidence: `validation/toystore-v16/comparison.html`, matching concept/candidate 
 Replaced the central cage's thin bar overlays and the corner stack's sparse strips with extruded Three.js volumes, preserving their painted finish through projected textures. The central crate now uses an angled floor polygon; each wooden crate has its own solid footprint. The same definitions build the meshes and drive player/toy navigation. Complete foreground coverage hides the investigator correctly when walking behind the crate. One toy landing was moved clear of a newly solid box.
 
 Validation: 61 model tests pass, including movement into crates from four sides, routes around them and the full toy-room escape. Desktop keyboard and emulated-touch checks verify that the cage and corner crates stop movement, with no browser errors. Screenshots and results: `validation/toystore-crates`. Retained the approved room artwork and clear escape corridors; this remains fixed-camera textured 3D relief.
+
+## V18 — flying corridor insects
+
+Level 2 now has sixteen procedural 3D flies with independent hovering paths, height changes and moving wing pivots. Nearby flies scatter away from the investigator while staying inside the hall/corridor. Existing 3D teddy, rat and balloon behavior remains intact. Time-based motion freezes during pause and dialogue and resets on restart. Desktop and emulated-touch reaction tests pass without errors; motion recording and before/after captures are in `validation/hall-v18`.
+
+The official asset verifier reports the fly's intended insect-scale width (0.036 m) as below its generic prop-size threshold; visual review confirms this is a deliberately tiny insect, not a unit conversion error. The other thirteen modules are clean. The fly is original Three.js constructor geometry with no external mesh data.

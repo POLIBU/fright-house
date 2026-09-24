@@ -190,6 +190,46 @@
   "problems": []
  },
  {
+  "ok": false,
+  "mounts": null,
+  "meshes": 10,
+  "tris": 416,
+  "materials": 3,
+  "size": [
+   0.036,
+   0.014,
+   0.02
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.0693,
+    "edgeDensity": 0.1287
+   },
+   "right": {
+    "coverage": 0.077,
+    "edgeDensity": 0.0867
+   },
+   "back": {
+    "coverage": 0.0841,
+    "edgeDensity": 0.1166
+   },
+   "left": {
+    "coverage": 0.0761,
+    "edgeDensity": 0.0829
+   }
+  },
+  "error": null,
+  "name": "corridor-fly",
+  "problems": [
+   "0.036m across, not a plausible real-world size"
+  ]
+ },
+ {
   "ok": true,
   "mounts": null,
   "meshes": 6,

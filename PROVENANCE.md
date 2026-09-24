@@ -117,3 +117,7 @@ The new modules `awakened-toys.js`, `storeroom-winder.js`, `storeroom-door.js`, 
 ### V17 crate geometry
 
 The cage and stacked wooden crates now use original Three.js Shape/ExtrudeGeometry construction, with a depth shear matching the approved top-down projection. Shared floor footprints drive both geometry and collision. Their finish uses the already-declared toy-room clean plate; no new images or imported meshes were added.
+
+### V18 corridor flies
+
+`two-d/assets/three/corridor-fly.js` is an original constructor-built Three.js insect with ellipsoid body/head/wings, cylinder legs and named wing pivots. Its real-world width is approximately 3.6 cm including wings; the generic verifier's minimum prop-size warning is expected for an insect. Existing hall artwork is retained; flight, scattering and wing motion are code animation.

@@ -8,7 +8,7 @@ export const AREAS = Object.freeze([
   ['barrel-passage', 'Rolling-barrel passage', 'obstacles', 'Watch the barrel and pass through the safe gap.'],
   ['mezzanine', 'Moving-floor mezzanine', 'obstacles', 'Cross the moving panels to the workshop.'],
   ['workshop', 'Animatronic workshop', 'obstacles', 'Investigate the rig, then escape the disturbance.'],
-  ['landing', 'Lower-maze landing', 'investigate', 'Find another route out of the attraction.'],
+  ['landing', 'The Fall', 'investigate', 'Steer through the shaft and reach the bones below.'],
   ['lost-property', 'Lost-property room', 'investigate', 'Recover Ellie’s backpack.'],
   ['mirrors', 'Distorted-mirror gallery', 'investigate', 'Recover Daniel’s sneaker.'],
   ['prizes', 'Abandoned prize midway', 'investigate', 'Recover the children’s cassette.'],

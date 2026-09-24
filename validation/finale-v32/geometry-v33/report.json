@@ -1,0 +1,116 @@
+[
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 25,
+  "tris": 556,
+  "materials": 6,
+  "size": [
+   1.69,
+   1.28,
+   3.19
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.1865,
+    "edgeDensity": 0.0699
+   },
+   "right": {
+    "coverage": 0.2473,
+    "edgeDensity": 0.068
+   },
+   "back": {
+    "coverage": 0.1763,
+    "edgeDensity": 0.1167
+   },
+   "left": {
+    "coverage": 0.242,
+    "edgeDensity": 0.0885
+   }
+  },
+  "error": null,
+  "name": "escape-car",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 44,
+  "tris": 1624,
+  "materials": 6,
+  "size": [
+   1.403,
+   1.871,
+   0.52
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.0984,
+    "edgeDensity": 0.4886
+   },
+   "right": {
+    "coverage": 0.0538,
+    "edgeDensity": 0.38
+   },
+   "back": {
+    "coverage": 0.0784,
+    "edgeDensity": 0.374
+   },
+   "left": {
+    "coverage": 0.0452,
+    "edgeDensity": 0.4234
+   }
+  },
+  "error": null,
+  "name": "gallery-scarecrow",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 16,
+  "tris": 352,
+  "materials": 2,
+  "size": [
+   0.569,
+   0.47,
+   0.434
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2877,
+    "edgeDensity": 0.0965
+   },
+   "right": {
+    "coverage": 0.27,
+    "edgeDensity": 0.0758
+   },
+   "back": {
+    "coverage": 0.3221,
+    "edgeDensity": 0.1052
+   },
+   "left": {
+    "coverage": 0.2782,
+    "edgeDensity": 0.1016
+   }
+  },
+  "error": null,
+  "name": "ride-obstacle",
+  "problems": []
+ }
+]

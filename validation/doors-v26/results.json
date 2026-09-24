@@ -1,0 +1,14 @@
+[
+  {
+    "touch": false,
+    "storeDoorClickBothWays": true,
+    "libraryDoorBothWays": true,
+    "errors": []
+  },
+  {
+    "touch": true,
+    "storeDoorClickBothWays": true,
+    "libraryDoorBothWays": true,
+    "errors": []
+  }
+]

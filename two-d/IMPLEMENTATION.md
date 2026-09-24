@@ -10,19 +10,21 @@ Level 1 concept v1 was approved in the user message: “yes build this level bas
 
 ## Current delivery
 
-Level 1 at /two-d/index.html is a playable street with the approved facade and forecourt; an independently rotating Ferris wheel with upright gondolas; gently animated coloured bulbs; drifting fog; a readable bench newspaper that disappears when its clipping is collected; missing-child notices; an admission-ticket inspection; a shuttered-stall sound; and a broken turnstile leading to the end of this approved level. Field notes persist locally, with an optional Continue Investigation button. Pause freezes motion and audio. Restart begins a new street investigation.
+Levels 1–11 are playable from `/two-d/test.html`: carnival street, ticket hall, four-floor attraction, toy storeroom, specimen library, paint-barrel passage, moving-floor mezzanine animatronic workshop and The Fall. Each keeps its approved illustration with separate procedural 3D props and collision footprints. Level 8 uses a real operating platform with sprite-based boss and detective combat animations. The user has revised the ending to two final levels after The Fall: Level 10, The Bone Gallery, and Level 11, The Last Ride. Both are approved and implemented; see FINALE-PLAN.md.
 
-Only Level 1 is implemented as campaign content. The full 20-area campaign is not yet playable. The entrance completion screen explicitly identifies the pending next level; the old ticket-hall study is a comparison, not a completed campaign area.
+Dialogue overlays the bottom of gameplay using locally bundled VT323. Narration is removed; letters have short typewriter clicks. The separate Skip button is removed: monochrome Continue reveals the text, then dismisses it. Other controls retain the approved ticket-stamp style. Level 3 shows only one opening message; its voluntarily opened power puzzle remains interactive. Attack warning overlays, target lines, countdowns and pre-attack warning glows are removed throughout the playable levels; actual character animations and attack effects remain. Every real 3D inspector uses an ink-outline hull and a low-resolution pixelated render. Gameplay assets remain procedural Three.js geometry.
+
+Level 2 has one newspaper and five used tickets near the booth; footsteps crumple and lift them before they settle. Level 5's telephone plays only white noise and specimen 087 activates shortly after the call. Level 8 has bottom-centre entry, sliding floor panels, a five-second rising platform, then a lying-to-standing reveal, four fork short circuits (each requires two casing hits to expose the contacts, followed by a third strike), a damaged second phase with unpredictable radial lightning, ambient lamp moths, fading footprints and floating dust. Separate connected-silhouette crops isolate animation frames; the loose eye is anchored to each frame's socket.
 
 ## Shared foundations
 
-The campaign manifest defines 20 areas. The state layer reuses the original 22-node maze connectivity and evidence prerequisites; stores door discovery, journal and one-time events; pauses story transitions; and snapshots checkpoints. It is framework work, not implementation of all those levels. Collision coordinates and illustrations for later areas wait for their concept reviews.
+The legacy campaign manifest defines 20 prototype areas; it is preserved for existing saves and is superseded as a production plan by the 11-level finale direction. The state layer reuses the original 22-node maze connectivity and evidence prerequisites; stores door discovery, journal and one-time events; pauses story transitions; and snapshots checkpoints. It is framework work, not implementation of all those levels. Collision coordinates and illustrations for later areas wait for their concept reviews.
 
 The prototype tests cover exact original maze-node coverage, gate/evidence/power/recording prerequisites, unrevealed door interiors, checkpoint state and versioned saves. Scene controllers will enforce interaction reach, mechanism sweep clearance and actual puzzle button sequences when each approved level is built.
 
 ## Accepted direction
 
-Keep 20 distinct connected areas with story illustrations excluded from the count. Hidden rooms use separate screens. Follow the missing children’s trail, with at least three authored interactions per on-foot area. Use the original backpack, sneaker and cassette as main evidence; street discoveries are separate journal notes. Lower maze floors stay flat. Retain upper moving floors, mechanism puzzles, phone-triggered chase and top-down cart finale. The future monster is a fat human-armed clown carrying an axe, with a whispered “Come here, darling”; no spider limbs. Character concepts are still pending review.
+Keep the approved Levels 1–9, then finish with two new levels: a bone gallery strewn with children's clothing and wall-mounted clowns made of bones, followed by a cart maze pursued by a giant spider made of human limbs. This replaces the older 20-area target and axe-clown finale. Preserve the missing-children investigation, flat maze floors and top-down view. Review each new level concept and the creature appearance before production; retain the approved detective style. See FINALE-PLAN.md for mechanics, transitions and validation.
 
 ## Art provenance
 
@@ -137,3 +139,39 @@ Generated using the built-in imagegen tool. Style reference: approved Level 5 co
 Level 6's concept review now includes interactive procedural 3D paint drums and a roller launcher. The reference steel drums replace the wooden barrels pictured in concept v1. Launch warns first; impact pops the lid and spills colored paint. These are review assets; production of the full level still follows concept feedback.
 
 Level 4 now matches Level 5's 68-pixel investigator, with separate entrance frame layers, wall occlusion and solid jambs. Level 1 pavement confetti reacts to footsteps; Level 2 clown eyes rotate and its ledger's final direction sentence has been removed.
+
+
+## Level 9 — The Fall (approved and playable)
+
+The user changed Level 9 to a falling escape sequence directly after the Level 8 boss. Once the boss is defeated, the investigator starts on a continuous boarded floor, opens the exit door and walks through it. The view turns completely black for one second before the fall into the maintenance pit begins. Transition from the workshop view to a side-on shaft view with a vertically following camera; the investigator steers left and right around real procedural 3D beams, hanging counterweights, broken platforms and pipes. Keep the pixel-art appearance and omit attack-warning overlays. Stagger obstacles so navigable gaps remain; use swept collision at falling speeds. The detective lands on a pile of dry bones, dislodging bones and releasing a large dust cloud that slowly settles. Plan a checkpoint before the fall and freeze fall/camera/dust together on pause. The implemented shaft has eleven moving obstacles, left/right steering, four health points and a capped falling speed.
+
+Concept: `art-review/concepts/09-the-fall-v1.png`; prompt saved beside it. Review at `art-review/level-9.html`. Generated with the built-in imagegen tool. The user approved implementation. Level 8 now leads directly to `level-9.html?arrival=workshop`; Level 9 is also on the level selector. Its 3D door, beams, swinging weights, pipes and bone pile are constructed in Three.js. Eight falling frames and four landing frames match the original investigator-v2 style; the rejected detailed sprite sheet is unused.
+
+## V32 — Final two levels
+
+Level 9 now continues into the bone gallery. Level 10 has four procedural bone heaps, eight wall-mounted skeletal clowns and nineteen reactive 3D garments on a clean painted floor, with shared movement/collision, a scared running sequence and broad auto-aligned cart boarding. The exact requested line is shown in the shared pixel dialogue. Level 11 uses a connected, looped track graph, buffered turn input and immediate reversals, 3D maze walls/cart, twelve isolated limb-spider sprite frames, routefinding pursuit and a cart checkpoint. Reaching the exterior finishes the game. Keyboard and touch controls share the same movement model.
+
+Generated assets use built-in imagegen: bone-gallery-clean.png and characters/limb-spider-v1.png. Exact production, cleanup and sprite prompts are in art-review/concepts/10-gallery-production-prompt.txt, 10-gallery-clean-prompt.txt and 11-spider-sprites-prompt.txt. All new Three.js objects use constructors and procedural operations.
+
+The Level 1 title splash holds the generated retro logo on black and fades before revealing any game text. Level 4’s entry line is now “You can feel the stares through the walls”; its door leaves use vertical hinges without the generic prop tilt. Art provenance and exact prompts: FINALE-ART.md.
+
+## V33 — Watchful gallery and sunrise escape
+
+Replaced Level 10’s repeated bone figures with eight varied procedural scarecrows whose heads and shoulders follow the detective. Ceiling drips leave temporary wet spots; four bone heaps and nineteen reactive garments remain. Level 11 now has eight solid debris obstacles, lateral steering and three-point cart integrity. The spider wakes after six seconds of driving. Lighting uses muted pools of amber light and cooler darkness.
+
+The approved sunrise background shows a different park gate. The detective walks to a procedural car, opens its door, enters and drives offscreen with a fading engine rumble. Dialogue is hidden throughout this animation. The Level 1 logo stays above a separately fading black layer before the opening text appears. Level 4 door leaves use upright hinge geometry; its opening line reads “You can feel the stares through the walls.”
+
+Validation: 128 model tests pass; full desktop/touch finale routes complete with no obstacle hits or browser errors, pause and retry pass. Separate browser checks verify sunrise gate walk, door opening, drive-away, title layering and gallery wet spots. Three new asset modules pass the recipe geometry verifier. Build succeeds. Evidence: validation/finale-v32.
+
+## V34 — Cart crashes, jumps and ink
+Level 11 wooden crates burst into splinters on contact. Every obstacle hit plays a crash and slows the cart, with gradual speed recovery. Added two constructor-built 3D barricades, keyboard/Space/E and touch jumping, grounded shadows, occasional aimed spider ink shots, wall obstruction and temporary draining screen splashes. Level 10 has more frequent ceiling drips and wet spots, soft low clothing flutter and no clothing contact sound. Model and desktop/touch hazard checks cover collision slowdown/audio, jump clearance, ink hit/dodge/expiry, pause and reset.
+
+## V35 — Final cinematic and environment pass
+
+The sunrise ending now uses a constructor-built red 1950s Cadillac-style coupe with long fins, grille, chrome trim, whitewalls, working driver door and illuminated headlamps. Original synthesized C-major waltz plays during departure. Reactive autumn leaves, drifting fog, a running clown silhouette behind the gate and a following zoom/circular iris lead to the generated THE END marquee. The test selector includes a direct ending/replay card.
+
+Level 1 opens directly on its intro: the separate splash has been removed, and a true RGBA title logo replaces the heading above the dialogue. All four 3D inspection modules use black-and-white checkerboard canvas backdrops.
+
+Level 11 has 36 obstacles (27 crates and 9 barricades), preserving buffered steering, jump controls and ink attacks. Level 10 adds procedural trousers, socks, belts and glasses, keeping soft fabric flutter silent and glasses grounded. Level 9 adds four hanging 3D webs that briefly snag the detective and periodically spawned tumbling stones from above; collisions, pause and retry remain consistent.
+
+Verification: desktop/touch full chase and updated fall playthroughs pass; separate browser checks cover cinematic shadow, zoom/iris/title/music/replay, direct intro and all 3D checkerboard inspectors. Model suite and asset verifier run before commit.

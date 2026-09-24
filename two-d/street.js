@@ -1,3 +1,4 @@
+import {assistDoor,STREET_DOORS} from './levels/door-assist.js';
 import {newConfetti,tickConfetti,drawConfetti} from './levels/street-confetti.js';
 import {createRavenSound} from './raven-sound.js';
 import {mouthProgress} from './levels/mouth-motion.js';
@@ -77,7 +78,8 @@ function render(){ctx.clearRect(0,0,480,360);if(ready)ctx.drawImage(bg,0,0,480,3
 }
 function frame(now){const dt=Math.min(.04,(now-last)/1000);last=now;if(running&&!paused&&!dialog){if(s.phase==='entering'){s.entryTime+=dt;s.y=Math.max(115,s.y-dt*20);tick(s,dt);if(s.entryTime>=2.7){enterHall();return;}}else{let dx=Number(keys.has('d')||keys.has('arrowright'))-Number(keys.has('a')||keys.has('arrowleft')),dy=Number(keys.has('s')||keys.has('arrowdown'))-Number(keys.has('w')||keys.has('arrowup'));
   if(!dx&&!dy&&route.length){dx=route[0].x-s.x;dy=route[0].y-s.y;if(Math.hypot(dx,dy)<2){route.shift();dx=dy=0;}}
-  move(s,dx,dy,dt);tick(s,dt);tickConfetti(confetti,s,dt,reduced);ravenSound.update(s.ravens);campaign.elapsed+=dt;
+  if(!route.length){const guided=assistDoor(s,{up:dy<0,down:dy>0,left:dx<0,right:dx>0},STREET_DOORS,path);if(guided.target){dx=guided.target.x-s.x;dy=guided.target.y-s.y;}}
+  move(s,dx,dy,Math.min(dt,Math.hypot(dx,dy)/65));tick(s,dt);tickConfetti(confetti,s,dt,reduced);ravenSound.update(s.ravens);campaign.elapsed+=dt;
   if(!route.length&&pending){interact(pending);pending=null;}
   if(s.gateProgress>=1&&s.y<138){persist();finish();}
 }}render();requestAnimationFrame(frame);}

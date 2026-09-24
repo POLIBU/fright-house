@@ -1,0 +1,48 @@
+[
+  {
+    mobile: false,
+    complete: true,
+    seconds: 52.91,
+    clothes3D: 19,
+    boneHeaps3D: 4,
+    spiderFrames: 12,
+    turns: 18,
+    visited: 73,
+    render: {
+      cart3D: true,
+      boneClowns3D: 0,
+      bonePile3D: false,
+      boneHeaps3D: 0,
+      clothes3D: 0,
+      mazeWalls3D: 156,
+      drawCalls: 31,
+      triangles: 1162
+    },
+    pause: true,
+    retry: true,
+    errors: []
+  },
+  {
+    mobile: true,
+    complete: true,
+    seconds: 52.833,
+    clothes3D: 19,
+    boneHeaps3D: 4,
+    spiderFrames: 12,
+    turns: 18,
+    visited: 73,
+    render: {
+      cart3D: true,
+      boneClowns3D: 0,
+      bonePile3D: false,
+      boneHeaps3D: 0,
+      clothes3D: 0,
+      mazeWalls3D: 156,
+      drawCalls: 31,
+      triangles: 1162
+    },
+    pause: true,
+    retry: true,
+    errors: []
+  }
+]

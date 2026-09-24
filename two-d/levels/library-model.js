@@ -1,3 +1,4 @@
+import {assistDoor,LIBRARY_DOORS} from './door-assist.js';
 export const LIBRARY_WIDTH=1680;
 // Screen height includes the vertical cabinet face; only the base occupies floor.
 // Rendering and collision share these placements so the rear aisles stay walkable.
@@ -14,7 +15,7 @@ const floors=[[96,114,448,269],[18,122,101,199],[18,276,85,341],[431,197,492,239
 const entryPassage=[[65,274],[83,292],[112,263],[94,245]];
 function inEntry(x,y){let inside=false;for(let i=0,j=entryPassage.length-1;i<entryPassage.length;j=i++){const a=entryPassage[i],b=entryPassage[j];if((a[1]>y)!==(b[1]>y)&&x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0])inside=!inside;}return inside;}
 export const SHELF_AMBUSHES=[{id:'jar-092',x:750,y:145},{id:'jar-104',x:970,y:145},{id:'jar-118',x:1210,y:145},{id:'jar-131',x:1460,y:145}];
-export const LIBRARY_OBJECTS=[{id:'phone',x:148,y:218,r:25,label:'E · PICK UP THE RINGING PHONE'},{id:'specimens',x:403,y:160,r:28,label:'E · EXAMINE THE SPECIMENS'},{id:'exit',x:1610,y:138,r:25,label:'E · WORK THE EXIT LATCH'}];
+export const LIBRARY_OBJECTS=[{id:'phone',x:148,y:218,r:25,label:'E · PICK UP THE RINGING PHONE'},{id:'specimens',x:403,y:160,r:28,label:'E · EXAMINE THE SPECIMENS'},{id:'exit',x:1610,y:138,r:42,label:'E · WORK THE EXIT LATCH'}];
 export function newLibrary(checkpoint=false){return {x:checkpoint?363:54,y:checkpoint?188:319,face:'up',spriteHeight:68,walk:0,moving:false,time:0,cameraX:0,unlocking:false,unlockAge:0,paused:false,phase:checkpoint?'search':'ringing',phaseAge:0,phoneAnswered:checkpoint,inspection:false,receiver:0,jar:0,exit:0,openingExit:false,health:3,invincible:0,notice:checkpoint?'Find the specimen marked 087.':'A telephone is ringing inside the library.',noticeAge:5,ambushes:SHELF_AMBUSHES.map(a=>({...a,phase:"sealed",age:0,volleys:0,face:"down",walk:0,aim:null})),shots:[],puddles:[],shotCount:0,damageCount:0,worm:{x:414,y:169,face:'left',phase:'hidden',age:0,walk:0,aim:null,cooldown:2.6},checkpoint};}
 export function libraryBlocked(s,x,y,r=6){if(![[-r,-r],[r,-r],[-r,r],[r,r]].every(([dx,dy])=>(inEntry(x+dx,y+dy)||floors.some(([a,b,c,d])=>x+dx>=a&&x+dx<=c&&y+dy>=b&&y+dy<=d))))return true;if(s.exit<.9&&x+r>1584&&x-r<1639&&y-r<110)return true;return LIBRARY_SOLIDS.some(o=>x+r>o.x&&x-r<o.x+o.w&&y+r>o.y&&y-r<o.y+o.h);}
 export function libraryLineClear(s,a,b,r=2){const n=Math.ceil(Math.hypot(b.x-a.x,b.y-a.y)/3);for(let i=0;i<=n;i++){const t=n?i/n:0;if(libraryBlocked(s,a.x+(b.x-a.x)*t,a.y+(b.y-a.y)*t,r))return false;}return true;}
@@ -25,12 +26,13 @@ export function libraryPath(s,x,y,from=s,r=6){const a=nearest(s,from.x,from.y,r)
 export function libraryNear(s){return LIBRARY_OBJECTS.filter(o=>Math.hypot(o.x-s.x,o.y-s.y)<o.r).sort((a,b)=>Math.hypot(a.x-s.x,a.y-s.y)-Math.hypot(b.x-s.x,b.y-s.y))[0];}
 export function libraryAction(s,id){if(s.paused||s.inspection||['caught','escaped','breaking'].includes(s.phase))return null;const o=id?LIBRARY_OBJECTS.find(o=>o.id===id&&Math.hypot(o.x-s.x,o.y-s.y)<o.r):libraryNear(s);if(!o)return null;if(o.id==='phone'){s.inspection=true;return 'phone';}if(o.id==='specimens'){if(s.phoneAnswered&&s.phase==='search'){s.phase='breaking';s.phaseAge=0;s.notice='Your sleeve catches the shelf. Glass slips against wood…';s.noticeAge=3;return 'jar';}s.notice='The telephone will not stop ringing.';s.noticeAge=3;}if(o.id==='exit'){if(s.phase==='chase'&&!s.unlocking&&!s.openingExit){s.unlocking=true;s.unlockAge=0;s.notice='The lock is grinding open. Dodge its bile until the bolt releases!';s.noticeAge=4;return 'exit';}s.notice=s.unlocking?'The bolt is still turning — keep moving!':'The exit is locked. The desk telephone is still ringing.';s.noticeAge=3;}return o.id;}
 export function answerLibraryPhone(s){if(!s.inspection||s.phoneAnswered)return false;s.phoneAnswered=true;s.phase='call';s.phaseAge=0;return true;}
-export function closeLibraryPhone(s){if(s.phase==='call'&&s.phaseAge<5.2)return false;s.inspection=false;if(s.phase==='call'){s.phase='search';s.phaseAge=0;}return true;}
+export function closeLibraryPhone(s){if(s.phase==='call'&&s.phaseAge<1.6)return false;s.inspection=false;if(s.phase==='call'){s.phase='search';s.phaseAge=0;}return true;}
 function hurt(s){if(s.invincible)return;s.health--;s.damageCount++;s.invincible=1.8;s.notice='It burns. Keep moving — use the furniture as cover!';s.noticeAge=2;if(s.health<=0)s.phase='caught';}
 const routes=new WeakMap();
 export function tickLibrary(s,input,dt){if(s.paused||['caught','escaped'].includes(s.phase))return;dt=Math.max(0,Math.min(.04,dt));s.moving=false;if(s.inspection){if(s.phase==='call'){s.phaseAge+=dt;s.receiver=Math.min(1,s.receiver+dt*2);}return;}s.receiver=Math.max(0,s.receiver-dt*2);s.time+=dt;s.phaseAge+=dt;s.noticeAge=Math.max(0,s.noticeAge-dt);s.invincible=Math.max(0,s.invincible-dt);
+input=assistDoor(s,input,LIBRARY_DOORS,libraryPath);
 if(input.target){const dx=input.target.x-s.x,dy=input.target.y-s.y;moveLibrary(s,dx,dy,Math.min(dt,Math.hypot(dx,dy)/82));}else{const dx=(input.right?1:0)-(input.left?1:0),dy=(input.down?1:0)-(input.up?1:0);if(dx||dy)moveLibrary(s,dx/Math.hypot(dx,dy),dy/Math.hypot(dx,dy),dt);}
-if(s.phase==='search'&&Math.hypot(s.x-410,s.y-164)<28){s.phase='breaking';s.phaseAge=0;s.notice='A jar rolls from its shelf…';s.noticeAge=3;}
+if(s.phase==='search'&&(s.phaseAge>1.2||Math.hypot(s.x-410,s.y-164)<65)){s.phase='breaking';s.phaseAge=0;s.notice='SPECIMEN 087 rattles, then falls from its shelf…';s.noticeAge=3;}
 if(s.phase==='breaking'){s.jar=Math.min(1,s.phaseAge/1.1);if(s.phaseAge>=1.1){s.worm.phase='emerge';s.worm.age=s.phaseAge-1.1;}if(s.phaseAge>=2.3){s.phase='chase';s.phaseAge=0;s.worm.phase='crawl';s.worm.age=0;s.notice='RUN! It raises its head before spitting. Use the desk as cover.';s.noticeAge=5;}}
 s.cameraX+=(Math.max(0,Math.min(LIBRARY_WIDTH-480,s.x-220))-s.cameraX)*Math.min(1,dt*7);
 if(s.unlocking){s.unlockAge+=dt;if(s.unlockAge>=2.4){s.unlocking=false;s.openingExit=true;s.notice='THE EXIT IS OPEN · RUN THROUGH!';s.noticeAge=4;}}
@@ -38,12 +40,12 @@ if(s.openingExit)s.exit=Math.min(1,s.exit+dt*1.4);
 if(s.phase!=='chase')return;const w=s.worm;w.age+=dt;w.cooldown-=dt;
 if(w.phase==='crawl'){
 let nav=routes.get(s);if(!nav||s.time-nav.time>.25){nav={time:s.time,path:libraryPath(s,s.x,s.y,w,6)};routes.set(s,nav);}while(nav.path.length&&Math.hypot(nav.path[0].x-w.x,nav.path[0].y-w.y)<1.2)nav.path.shift();const target=libraryLineClear(s,w,s,6)?s:nav.path[0];if(target){const dx=target.x-w.x,dy=target.y-w.y,n=Math.hypot(dx,dy)||1,step=Math.min(n,(Math.hypot(s.x-w.x,s.y-w.y)>175?104:65)*dt);if(!libraryBlocked(s,w.x+dx/n*step,w.y,6))w.x+=dx/n*step;if(!libraryBlocked(s,w.x,w.y+dy/n*step,6))w.y+=dy/n*step;w.walk+=dt*9;w.face=Math.abs(dx)>Math.abs(dy)?dx>0?'right':'left':dy>0?'down':'up';}
-if(w.cooldown<=0&&Math.hypot(s.x-w.x,s.y-w.y)>25&&Math.hypot(s.x-w.x,s.y-w.y)<285&&libraryLineClear(s,w,s,2)){w.phase='aim';w.age=0;w.aim={x:s.x,y:s.y};s.notice='Its throat swells — MOVE SIDEWAYS!';s.noticeAge=1;}
+if(w.cooldown<=0&&Math.hypot(s.x-w.x,s.y-w.y)>25&&Math.hypot(s.x-w.x,s.y-w.y)<285&&libraryLineClear(s,w,s,2)){w.phase='aim';w.age=0;w.aim={x:s.x,y:s.y};}
 }else if(w.phase==='aim'&&w.age>=.95){const dx=w.aim.x-w.x,dy=w.aim.y-w.y,n=Math.hypot(dx,dy)||1;s.shots.push({x:w.x,y:w.y,vx:dx/n*190,vy:dy/n*190,age:0});s.shotCount++;w.phase='spit';w.age=0;
 }else if(w.phase==='spit'&&w.age>=.42){w.phase='crawl';w.age=0;w.cooldown=2.3;}
 // Local shelf encounters use the same projectile and wall collision rules as the pursuer.
 for(const a of s.ambushes){a.age+=dt;
- if(a.phase==='sealed'&&Math.abs(s.x-a.x)<108){a.phase='rattle';a.age=0;s.notice='GLASS RATTLING — another specimen is waking!';s.noticeAge=2;}
+ if(a.phase==='sealed'&&Math.abs(s.x-a.x)<108){a.phase='rattle';a.age=0;}
  else if(a.phase==='rattle'&&a.age>=1){a.phase='fall';a.age=0;}
  else if(a.phase==='fall'&&a.age>=.7){a.phase='emerge';a.age=0;}
  else if(a.phase==='emerge'&&a.age>=.6){a.phase='crawl';a.age=0;}

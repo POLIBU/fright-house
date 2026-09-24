@@ -1,0 +1,40 @@
+[
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 28,
+  "tris": 980,
+  "materials": 5,
+  "size": [
+   1,
+   0.532,
+   0.612
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.223,
+    "edgeDensity": 0.0828
+   },
+   "right": {
+    "coverage": 0.1572,
+    "edgeDensity": 0.1277
+   },
+   "back": {
+    "coverage": 0.2311,
+    "edgeDensity": 0.0964
+   },
+   "left": {
+    "coverage": 0.1802,
+    "edgeDensity": 0.0999
+   }
+  },
+  "error": null,
+  "name": "workshop-platform",
+  "problems": []
+ }
+]

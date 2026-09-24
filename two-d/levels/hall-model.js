@@ -1,4 +1,4 @@
-export const HALL_OBJECTS=[{id:'ledger',x:126,y:146,r:23,label:'READ · ticket ledger'},{id:'lamp',x:154,y:143,r:18,label:'SWITCH · desk lamp'},{id:'drawer',x:338,y:187,r:25,label:'OPEN · cupboard drawer'},{id:'staff-door',x:408,y:146,r:22,label:'TRY · red staff door'},{id:'onward',x:405,y:327,r:23,label:'EXAMINE · attraction stairs'}];
+export const HALL_OBJECTS=[{id:'ledger',x:126,y:146,r:23,label:'READ · ticket ledger'},{id:'lamp',x:154,y:143,r:18,label:'SWITCH · desk lamp'},{id:'drawer',x:338,y:187,r:25,label:'OPEN · cupboard drawer'},{id:'staff-door',x:408,y:146,r:34,label:'TRY · red staff door'},{id:'onward',x:405,y:327,r:42,label:'EXAMINE · attraction stairs'}];
 export function newHall(){return {x:268,y:116,face:'down',walk:0,time:0,light:true,lamp:true,ledger:false,drawer:false,drawerProgress:0,drawerOpening:false,door:false};}
 const floors=[[58,134,433,199],[157,105,308,199],[58,196,242,226],[327,134,457,168],[378,174,432,353]];
 export const CUPBOARD={x:338,y:161,left:315,right:361,top:143,bottom:174};

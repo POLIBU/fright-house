@@ -1,0 +1,6 @@
+Use case: identity-preserve animation expansion. Reference image is the APPROVED original detective sprite. Match THIS exact pixel-art style, blocky pixels, limited brown/olive/burgundy palette, face, hat, short brown coat, satchel, grey trousers and boots. Do not increase detail, realism or smoothness. Keep the same body proportions and original facial features. NO long flowing trench coat, NO realistic painterly anatomy. The original is a small game sprite intended to render about 65 pixels tall.
+Create a NEW transparent sprite atlas of this same detective: 4 columns by 3 rows, exactly 12 equal cells, whole body with transparent padding between poses.
+Row 1 four frames: falling feet down with arms out, subtle leg movement, original short coat edges and burgundy scarf lifted modestly upward by the fall.
+Row 2 four frames: falling while steering, two left lean poses then two right lean poses.
+Row 3 four frames: landing feet first, crouching with one hand low, recovering, standing.
+Keep coarse crisp pixel clusters just like the reference, dark pixel outlines, minimal facial detail. No magnifying glass in these action poses, no other prop, no dust, no ground, no text, no frame borders. Actual RGBA transparency. Maintain uniform character scale and margins; each pose wholly inside its own grid cell. This replaces a rejected overly detailed animation sheet.

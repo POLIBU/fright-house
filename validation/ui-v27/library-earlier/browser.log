@@ -1,0 +1,46 @@
+[
+  {
+    touch: false,
+    loadMs: 348,
+    transfer: 8230412,
+    escaped: true,
+    health: 1,
+    shots: 10,
+    ambushes: [ [Object], [Object], [Object], [Object] ],
+    render: {
+      desk3D: true,
+      lamp3D: true,
+      phone3D: true,
+      shelves3D: 16,
+      specimenJars: 101,
+      drawCalls: 412,
+      triangles: 96812
+    },
+    phone: true,
+    pause: true,
+    retry: true,
+    errors: []
+  },
+  {
+    touch: true,
+    loadMs: 321,
+    transfer: 8230412,
+    escaped: true,
+    health: 1,
+    shots: 10,
+    ambushes: [ [Object], [Object], [Object], [Object] ],
+    render: {
+      desk3D: true,
+      lamp3D: true,
+      phone3D: true,
+      shelves3D: 16,
+      specimenJars: 101,
+      drawCalls: 412,
+      triangles: 96812
+    },
+    phone: true,
+    pause: true,
+    retry: true,
+    errors: []
+  }
+]

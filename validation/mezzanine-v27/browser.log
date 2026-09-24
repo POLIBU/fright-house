@@ -1,0 +1,46 @@
+false stage 1 health 3
+false stage 2 health 3
+false stage 3 health 3
+true stage 1 health 3
+true stage 2 health 3
+true stage 3 health 3
+[
+  {
+    touch: false,
+    won: true,
+    hits: 0,
+    scarf: true,
+    stages: 3,
+    render: {
+      platforms3D: 27,
+      consoles3D: 3,
+      drawCalls: 369,
+      triangles: 11640
+    },
+    factoryAudio: {
+      started: true,
+      muted: false,
+      kind: 'factory motor, gear clank and steam'
+    },
+    errors: []
+  },
+  {
+    touch: true,
+    won: true,
+    hits: 0,
+    scarf: true,
+    stages: 3,
+    render: {
+      platforms3D: 27,
+      consoles3D: 3,
+      drawCalls: 369,
+      triangles: 11640
+    },
+    factoryAudio: {
+      started: true,
+      muted: false,
+      kind: 'factory motor, gear clank and steam'
+    },
+    errors: []
+  }
+]

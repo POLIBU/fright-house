@@ -1,3 +1,4 @@
+import {assistDoor,STORE_DOORS} from './door-assist.js';
 import {newStoreAmbience,tickStoreAmbience} from './store-ambience.js';
 import {STORE_CRATES,crateContains} from './toystore-crates.js';
 export const TOY_COUNT=24;
@@ -10,10 +11,10 @@ export const STORE_SOLIDS=[
 ];
 const floors=[[116,97,466,245],[96,97,116,197],[18,156,80,338],[18,96,80,206],[371,72,408,112]];
 // Only the diagonal threshold is floor; the tall painted door opening is not.
-const entryFloor=[[74,222],[74,241],[124,241],[116,218]];
+const entryFloor=[[72,216],[72,244],[126,244],[126,216]];
 function inEntry(x,y){let inside=false;for(let i=0,j=entryFloor.length-1;i<entryFloor.length;j=i++){const a=entryFloor[i],b=entryFloor[j];if((a[1]>y)!==(b[1]>y)&&x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0])inside=!inside;}return inside;}
 
-export const STORE_OBJECTS=[{id:'entry',x:72,y:224,r:25,label:'E · OPEN STOREROOM'},{id:'music',x:415,y:127,r:23,label:'E · INSPECT WIND-UP TOY'},{id:'drawing',x:167,y:171,r:19,label:'E · READ CHILD’S DRAWING'},{id:'exit',x:388,y:119,r:24,label:'E · OPEN RED DOOR'}];
+export const STORE_OBJECTS=[{id:'entry',x:72,y:232,r:42,label:'E · OPEN STOREROOM'},{id:'music',x:415,y:127,r:23,label:'E · INSPECT WIND-UP TOY'},{id:'drawing',x:167,y:171,r:19,label:'E · READ CHILD’S DRAWING'},{id:'exit',x:388,y:119,r:38,label:'E · OPEN RED DOOR'}];
 const homes=[
  [187,56,174,111],[206,54,197,111],[230,58,220,112],[254,55,250,111],[277,56,278,111],[306,59,312,111],
  [116,95,119,115],[138,100,146,119],[120,147,168,151],[142,146,167,185],
@@ -22,7 +23,7 @@ const homes=[
  [243,167,376,198],[265,171,365,220],[288,175,414,191],[312,179,453,174],
  [279,150,350,227],[297,166,183,204]
 ];
-export function newStore(prepared=false){return {ambience:newStoreAmbience(),x:prepared?405:53,y:prepared?133:317,face:'up',spriteHeight:68,walk:0,light:true,time:0,phase:'explore',phaseAge:0,entry:prepared?1:0,openingEntry:false,exit:0,openingExit:false,lights:1,health:3,invincible:0,inspection:false,inspectTime:0,turns:0,keyAngle:0,readDrawing:false,paused:false,notice:prepared?'The key is still in the toy.':'Open the door at the top of the stairs.',noticeAge:5,toys:homes.map((p,i)=>({id:i,kind:i%6,homeX:p[0],homeY:p[1],spawnX:p[2],spawnY:p[3],x:p[0],y:p[1],height:0,phase:'asleep',age:0,speed:14+(i%5)*2.2,heading:0,walk:0}))};}
+export function newStore(prepared=false){return {ambience:newStoreAmbience(),x:prepared?405:53,y:prepared?133:317,face:'up',spriteHeight:68,walk:0,light:true,time:0,phase:'explore',phaseAge:0,entry:prepared?1:0,openingEntry:false,exit:0,openingExit:false,lights:1,health:3,invincible:0,inspection:false,inspectTime:0,turns:0,keyAngle:0,readDrawing:false,paused:false,notice:prepared?'The key is still in the toy.':'You can feel the stares through the walls.',noticeAge:5,toys:homes.map((p,i)=>({id:i,kind:i%6,homeX:p[0],homeY:p[1],spawnX:p[2],spawnY:p[3],x:p[0],y:p[1],height:0,phase:'asleep',age:0,speed:14+(i%5)*2.2,heading:0,walk:0}))};}
 export function storeBlocked(s,x,y,r=6){if(![[-r,-r],[r,-r],[-r,r],[r,r]].every(([dx,dy])=>(inEntry(x+dx,y+dy)||floors.some(([a,b,c,d])=>x+dx>=a&&x+dx<=c&&y+dy>=b&&y+dy<=d))))return true;const solids=[...STORE_SOLIDS];if(s.entry<.85)solids.push({x:84,y:214,w:13,h:29});if(s.exit<.9)solids.push({x:369,y:91,w:42,h:13});return STORE_CRATES.some(o=>crateContains(o,x,y,r))||solids.some(o=>x+r>o.x&&x-r<o.x+o.w&&y+r>o.y&&y-r<o.y+o.h);}
 export function moveStore(s,dx,dy,dt){s.moving=false;if(!dx&&!dy)return;const oldX=s.x,oldY=s.y,n=Math.hypot(dx,dy)||1,dist=78*dt,steps=Math.ceil(dist/2)||1;for(let i=0;i<steps;i++){const x=s.x+dx/n*dist/steps,y=s.y+dy/n*dist/steps;if(!storeBlocked(s,x,s.y))s.x=x;if(!storeBlocked(s,s.x,y))s.y=y;}s.moving=Math.hypot(s.x-oldX,s.y-oldY)>.001;if(s.moving)s.walk+=dt*11;s.face=Math.abs(dx)>Math.abs(dy)?dx>0?'right':'left':dy>0?'down':'up';}
 export function storeNear(s){return STORE_OBJECTS.filter(o=>(s.phase==='explore'||!['music','drawing'].includes(o.id))&&Math.hypot(o.x-s.x,o.y-s.y)<o.r&&(s.phase!=='explore'||s.entry>=.85||o.id==='entry')).sort((a,b)=>Math.hypot(a.x-s.x,a.y-s.y)-Math.hypot(b.x-s.x,b.y-s.y))[0];}
@@ -41,6 +42,7 @@ export function tickStore(s,input,dt){if(s.paused||['caught','escaped'].includes
  if(s.phase==='explore'&&s.openingEntry)s.entry=Math.min(1,s.entry+dt/.95);if(s.phase==='dimming'){s.entry=Math.max(0,s.entry-dt*1.7);s.lights=Math.max(0,1-s.phaseAge/2.2);if(s.phaseAge>=2.2){s.phase='blackout';s.phaseAge=0;s.lights=0;}}
  if(s.phase==='blackout'&&s.phaseAge>=.4){s.phase='chase';s.phaseAge=0;s.notice='THE TOYS ARE ALIVE · Keep moving. The red door is releasing.';s.noticeAge=4;}
  if(s.openingExit)s.exit=Math.min(1,s.exit+dt*1.4);
+ input=assistDoor(s,input,STORE_DOORS,storePath);
  if(input.target){const dx=input.target.x-s.x,dy=input.target.y-s.y;moveStore(s,dx,dy,Math.min(dt,Math.hypot(dx,dy)/78));}else moveStore(s,(input.right?1:0)-(input.left?1:0),(input.down?1:0)-(input.up?1:0),dt);
  if(s.phase==='chase'){
   let nav=navCache.get(s);if(!nav||s.time-nav.time>.22){nav={...field(s,s.x,s.y,3),time:s.time};navCache.set(s,nav);}

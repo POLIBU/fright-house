@@ -12,7 +12,7 @@ export const INTERACTIONS = [
   {id:'ticket',x:143,y:269,r:20,label:'EXAMINE · abandoned admission ticket'},
   {id:'stall',x:335,y:189,r:22,label:'LISTEN · shuttered prize stall'},
   {id:'toy',x:285,y:273,r:20,label:'EXAMINE · wind-up carousel'},
-  {id:'entrance',x:239,y:166,r:24,label:'PUSH · broken turnstile'},
+  {id:'entrance',x:239,y:166,r:38,label:'PUSH · broken turnstile'},
 ];
 const floors=[
   [190,290,293,362], [95,256,331,297], [91,245,174,287], [104,237,124,258],

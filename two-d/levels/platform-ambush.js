@@ -18,7 +18,7 @@ export function tickAmbush(s,dt){
  }
  for(const a of m.arrows){a.previousX=a.x;a.previousY=a.y;a.age+=dt;const p=arrowPoint(a,a.age/1.35);a.x=p.x;a.y=p.y;const next=arrowPoint(a,Math.min(1,a.age/1.35+.01));a.angle=Math.atan2(next.y-a.y,next.x-a.x);}
  m.arrows=m.arrows.filter(a=>a.age<1.5&&!a.spent);
- for(const b of m.balloons){b.age+=dt;b.y=floors[s.floor]-38+Math.sin(s.time*2+b.x)*5;if(b.phase==='idle'&&Math.abs(s.x-b.x)<87&&Math.abs(s.y-floors[s.floor])<90){b.phase='fuse';b.age=0;}else if(b.phase==='fuse'&&b.age>=1.6){b.phase='blast';b.age=0;}else if(b.phase==='blast'&&b.age>=.3){b.phase='spent';b.age=0;}}
+ for(const b of m.balloons){b.age+=dt;b.y=floors[s.floor]-38+Math.sin(s.time*2+b.x)*5;if(b.phase==='idle'&&Math.abs(s.x-b.x)<87&&Math.abs(s.y-floors[s.floor])<90){b.phase='fuse';b.age=0;}else if(b.phase==='fuse'&&b.age>=.8){b.phase='blast';b.age=0;}else if(b.phase==='blast'&&b.age>=.3){b.phase='spent';b.age=0;}}
 }
 export function ambushHazards(s){const m=s.ambush;if(!m)return [];return [
  ...m.arrows.map(a=>({id:a.id,kind:'arrow',x:a.x,y:a.y,r:4,active:!a.spent,sweep:{x:a.previousX,y:a.previousY},source:a})),

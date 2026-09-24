@@ -24,3 +24,4 @@ test('all freestanding library shelves allow walking behind them but block their
   s.x=o.x;s.y=backY;advance(s,1,{down:true});assert.ok(s.y<=o.y-o.baseDepth-6+.01,o.id+' front collision');
  }
 });
+test('the static phone can close earlier and specimen 087 wakes without a precise shelf approach',()=>{const s=newLibrary();s.inspection=true;assert.ok(answerLibraryPhone(s));advance(s,1.7);assert.ok(closeLibraryPhone(s));advance(s,1.25);assert.equal(s.phase,'breaking');assert.ok(s.notice.includes('087'));});

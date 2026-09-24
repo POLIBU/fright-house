@@ -1,0 +1,27 @@
+[
+  {
+    "mobile": false,
+    "complete": true,
+    "health": 4,
+    "hits": 0,
+    "render": {
+      "door3D": true,
+      "movingObstacles3D": 11,
+      "bonePile3D": true,
+      "bones": 76,
+      "skulls": 13,
+      "calls": 497,
+      "triangles": 23104
+    },
+    "sprites": {
+      "falling": 8,
+      "landing": 4,
+      "frames": 12,
+      "style": "approved original pixel detective",
+      "isolatedFrames": true
+    },
+    "pause": true,
+    "retry": true,
+    "errors": []
+  }
+]

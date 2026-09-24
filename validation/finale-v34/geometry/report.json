@@ -1,0 +1,40 @@
+[
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 24,
+  "tris": 368,
+  "materials": 3,
+  "size": [
+   1.24,
+   0.62,
+   0.586
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2194,
+    "edgeDensity": 0.1294
+   },
+   "right": {
+    "coverage": 0.1647,
+    "edgeDensity": 0.1021
+   },
+   "back": {
+    "coverage": 0.2188,
+    "edgeDensity": 0.0815
+   },
+   "left": {
+    "coverage": 0.1652,
+    "edgeDensity": 0.0985
+   }
+  },
+  "error": null,
+  "name": "ride-barricade",
+  "problems": []
+ }
+]

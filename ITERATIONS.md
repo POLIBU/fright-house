@@ -279,3 +279,90 @@ Validation: 85 model tests pass. Full desktop and touch Level 5 runs complete th
 - Level 4 investigator now uses Level 5's 68-pixel height and a six-pixel navigation footprint. The entrance has separate extruded jamb/lintel layers, a restricted floor threshold and foreground wall occlusion during crossing, so the actor no longer renders over the header. Closed-door blocking and travel in both directions are checked.
 - Level 1 has scattered pavement confetti which lifts, tumbles and settles when approached by a moving actor. It respects walkable ground, pause and reduced-motion preferences. Level 2's painted clown pupils are animated opposing spirals; the ticket ledger no longer contains the final pencil-arrow sentence.
 - Validation: 94 model tests pass; production build passes. Desktop and touch Level 4 complete the toy chase with all 24 toys active. Additional browser checks cover both-way doorway traversal, confetti movement/pause, spiral-eye renders, blue paint impact and reset, with no browser errors. Evidence: `validation/store-v25/`, `validation/paint-barrels-v25/`, `validation/ambience-v25/`.
+
+
+### V26 — Barrel passage and forgiving doorway navigation
+
+- Implemented approved Level 6: procedural launcher, ribbed steel paint drums, warning light, paint impacts, connected gate and handwheel close-up. Increased drum speed and volley frequency at the user's request; every third volley adds a second drum. Level 5 now leads here.
+- Doorway assistance follows collision-checked routes through broad approach zones rather than teleporting the character. It applies to the street gate, toy storeroom, library and barrel exit; other level door interaction ranges were widened. Solid frames and locked story doors retain collision.
+- Level 3 bomb balloons now explode after 0.8 seconds rather than 1.6 seconds.
+- Desktop/touch barrel playthroughs, Level 4/5 bidirectional doorway traversal and the full four-floor keyboard route pass. Evidence: validation/barrel-v26, doors-v26 and platform-v26. The new gate passes the 404 procedural geometry verifier.
+
+### V27 — Moving-floor level, shared pixel presentation and workshop review
+
+- Built approved Level 7 with 27 procedural moving floor panels, three independent three-position lever puzzles, timed brakes, steam hazards, safe landing checkpoints and factory motor/clank/hiss audio. Level 6 leads to Level 7. Keyboard and touch browser playthroughs complete all three banks with zero damage. The platform and console asset modules pass the 404 verifier.
+- Shared pixel dialogue overlays the bottom of gameplay. VT323 is bundled with its OFL license. The user selected Haunted Ticket from four UI concepts; buttons and Retry use paper/ink ticket shapes and perforated edges.
+- Replaced the old directional drawer hint with: “I locked this drawer empty. Every morning the glove is back. Tonight it was warm.”
+- All existing real 3D close-ups have inverted-hull black outlines and reduced-resolution nearest-neighbour rendering, while retaining interactive geometry.
+- Historical voice trial (removed in V28): British female whispered narration. Bundled local Flo (English UK) speech receives a breathy spectral whisper treatment and a subtle room echo. No speech-generation service. The synthetic whisper is an approximation; dynamic uncatalogued phrases use a matching installed UK female voice when available. Mute, pause, resume and cancellation remain shared across levels.
+- Level 8 animatronic workshop concept v1 generated with built-in imagegen from the Level 7 style reference. Saved at two-d/art-review/concepts/08-workshop-v1.png with its prompt; review page is two-d/art-review/level-8.html. Subsequently refined and implemented in V28.
+- Validation: 107 model tests pass; shared UI loads on all seven levels without browser errors; bundled whisper audio fetch/decode/play/pause/resume/stop checks pass. Validation/ui-v27 contains visual and audio integration evidence.
+
+
+### V28 — Workshop boss, reactive litter and quieter dialogue
+
+- Built approved Level 8 with a procedural operating platform, bottom-centre entrance, 36 isolated clown animation frames and 32 fork movement/attack frames. Contacts visibly open; stabbing them causes an electric short. Four successful strikes now defeat the boss (3 damage each). At half health it breaks down and adds unpredictable twelve-direction lightning bursts. Moths are harmless lamp ambience; dust and fading footprints fill the room.
+- Sprite extraction uses connected silhouettes rather than fixed grid cuts. The loose eye starts at the current frame's socket. Sound uses low grunts, arm whooshes, electrical crackle and periodic clown laughter.
+- Removed narration everywhere. Typewriter clicks accompany dialogue. Replaced the separate Skip button with flat black-and-white Continue navigation; the first press reveals text and the next dismisses it. Level 3 has only the opening dialogue, while the optional power-puzzle close-up is retained.
+- Level 2 has exactly one newspaper and five used tickets near the booth, with footstep-triggered crumpling, lift, tumble and settling. Level 5 phone audio is white noise only; specimen 087 activates earlier.
+- Validation: 116 model tests, eight-level dialogue integration, keyboard/touch boss victories and procedural platform verification passed. Level 2 browser checks confirm paper counts, motion, pause and settling. Evidence is in validation/workshop-v28 and validation/ui-v27. Generated arena and sprite prompts are saved with the art-review concepts.
+
+- Final refinement: removed visual attack telegraphs throughout Levels 1–8 (target lines/circles, attack warning labels, balloon countdowns, launch beacons and steam warnings). Attack timing, character animations, impacts and the boss contact-opening puzzle remain intact. Library click navigation now consumes reached route nodes without an idle frame, and the synchronous static-audio call no longer uses a stale Promise handler.
+
+- Level 8 intro refinement: floor panels slide apart, the operating platform and lying clown rise together over five seconds, and waking begins only after the deck has reached the surface. Collision blocks the open shaft; the entrance remains traversable.
+- Level 9 revised to The Fall: a boss-exit trap, vertically scrolling descent around procedural 3D obstacles, and a bone-pile landing with a dust cloud. Three-beat concept art and generation prompt saved under art-review/concepts/09-the-fall-v1; awaiting user refinement before implementation.
+
+
+### V29 — The Fall and final workshop refinements
+
+- Level 9 approved and implemented: hinged 3D door, collapsing threshold, camera-following descent, eleven moving procedural 3D obstacles, and a 76-bone/13-skull pile with displaced bones and a dust burst. Desktop and touch playthroughs complete without damage; pause and retry pass.
+- Replaced the rejected detailed falling sheet with twelve frames referenced directly from investigator-v2, preserving the original pixel style. Built-in imagegen prompts and approved background are saved beside the review concept; no downloaded meshes are used.
+- Level 8 exits directly to the fall. Its rear 3D door is aligned with the original doorway at the top of the stairs and has matching red planks and a brass star. Opening exposes a dark aperture over the painted leaf, preventing double doors. Fork damage increases from 2 to 3, requiring four successful hits instead of six.
+
+- Final validation: 119 model tests pass; all nine levels pass shared dialogue/typewriter checks. Keyboard and touch boss victories verify four hits and transition to Level 9. Level 9 keyboard/touch routes finish with four health, and all six new procedural asset modules pass the 404 verifier. The production build and whitespace checks pass. Evidence: validation/fall-v29, validation/workshop-v28, validation/ui-v27.
+
+### V30 — Walk through the door before the fall
+
+- Level 9 starts on a continuous boarded floor. The 3D door opens fully before the original investigator walking frames carry him through its threshold. The entire game view goes black for one second, then fades into the camera-following fall. No floating threshold or visible collapsing strip remains.
+- Entry timing and pause behavior are covered by model tests; desktop and touch browser checks cover walking, full blackout and the complete descent.
+
+### V31 — Force the boss contacts open
+
+- Level 8 requires two landed fork strikes against the closed casing before the chest opens. Each casing hit produces a brief physical recoil and metallic clang. A third strike shorts the exposed contacts for the existing three damage. Casing hits do not directly remove health.
+- Grab and lightning recovery no longer open the contacts automatically. Unused openings reseal after 2.4 seconds and reset the two-hit requirement; successful shorts also reset it. The rule applies to both boss phases, with four shorts still required to win.
+- Updated pickup, retry and control text. Model checks cover misses, swing timing, cooldown, two-hit opening, resealing, pause, retry and both phases.
+
+- V31 validation: 121 model tests pass. Desktop and touch boss playthroughs each land eight casing hits and four short circuits, win with three health, and reach Level 9 without browser errors. Production build and whitespace checks pass.
+
+### Finale revision — concept review
+
+- The user replaced the remaining campaign with two final levels: bone gallery and cart maze, pursued by a spider made from human arms and legs. FINALE-PLAN.md records the new 11-level scope, buffered junction controls, procedural 3D props, boarding checkpoint and ending. New levels and creature remain pending concept refinement, per the user's review workflow.
+
+### V32 — Playable finale, reactive clothes and retro title
+
+- The user approved the finale. Level 9 now continues into Level 10’s bone gallery, with four 3D bone heaps, eight bone clowns and nineteen separate 3D garments. Passing clothes lifts, tumbles and settles them. The frightened line reads: “Are those the missing children? I have to get out fast.” Broad cart boarding auto-aligns the player and starts Level 11.
+- The final cart maze has a connected looped track graph, buffered junction turns, immediate reversals, solid procedural walls and a pursuing twelve-frame human-limbed spider. The chase camera includes the cart and nearby pursuer. The exterior exit returns to the street for the ending; getting caught retries at the cart.
+- Level 4’s opening notice is now “You can feel the stares through the walls.” Removed the generic toy-prop tilt from both hinged doors, keeping the leaves upright while they swing. Traversal remains unchanged and passes desktop/touch checks in both directions.
+- A generated retro FRIGHT HOUSE logo appears on black before any Level 1 text, then fades out. Game content is hidden and inert during the splash; reduced-motion and early continue work. Art and prompt paths are in two-d/FINALE-ART.md.
+- Validation: 126 model tests pass, desktop and emulated-touch finale runs reach the ending and verify pause/catch/retry, the fall-to-gallery transition passes, and title timing/startup tests pass. All three new asset modules pass the 404 geometry verifier. Production build and whitespace checks pass. Browser evidence is in validation/finale-v32; this is local browser validation, not a physical-device result.
+
+## V33 — Watchful gallery and sunrise escape
+
+Replaced Level 10’s repeated bone figures with eight varied procedural scarecrows whose heads and shoulders follow the detective. Ceiling drips leave temporary wet spots; four bone heaps and nineteen reactive garments remain. Level 11 now has eight solid debris obstacles, lateral steering and three-point cart integrity. The spider wakes after six seconds of driving. Lighting uses muted pools of amber light and cooler darkness.
+
+The approved sunrise background shows a different park gate. The detective walks to a procedural car, opens its door, enters and drives offscreen with a fading engine rumble. Dialogue is hidden throughout this animation. The Level 1 logo stays above a separately fading black layer before the opening text appears. Level 4 door leaves use upright hinge geometry; its opening line reads “You can feel the stares through the walls.”
+
+Validation: 128 model tests pass; full desktop/touch finale routes complete with no obstacle hits or browser errors, pause and retry pass. Separate browser checks verify sunrise gate walk, door opening, drive-away, title layering and gallery wet spots. Three new asset modules pass the recipe geometry verifier. Build succeeds. Evidence: validation/finale-v32.
+
+## V34 — Cart crashes, jumps and ink
+Level 11 wooden crates burst into splinters on contact. Every obstacle hit plays a crash and slows the cart, with gradual speed recovery. Added two constructor-built 3D barricades, keyboard/Space/E and touch jumping, grounded shadows, occasional aimed spider ink shots, wall obstruction and temporary draining screen splashes. Level 10 has more frequent ceiling drips and wet spots, soft low clothing flutter and no clothing contact sound. Model and desktop/touch hazard checks cover collision slowdown/audio, jump clearance, ink hit/dodge/expiry, pause and reset.
+
+## V35 — Final cinematic and environment pass
+
+The sunrise ending now uses a constructor-built red 1950s Cadillac-style coupe with long fins, grille, chrome trim, whitewalls, working driver door and illuminated headlamps. Original synthesized C-major waltz plays during departure. Reactive autumn leaves, drifting fog, a running clown silhouette behind the gate and a following zoom/circular iris lead to the generated THE END marquee. The test selector includes a direct ending/replay card.
+
+Level 1 opens directly on its intro: the separate splash has been removed, and a true RGBA title logo replaces the heading above the dialogue. All four 3D inspection modules use black-and-white checkerboard canvas backdrops.
+
+Level 11 has 36 obstacles (27 crates and 9 barricades), preserving buffered steering, jump controls and ink attacks. Level 10 adds procedural trousers, socks, belts and glasses, keeping soft fabric flutter silent and glasses grounded. Level 9 adds four hanging 3D webs that briefly snag the detective and periodically spawned tumbling stones from above; collisions, pause and retry remain consistent.
+
+Verification: desktop/touch full chase and updated fall playthroughs pass; separate browser checks cover cinematic shadow, zoom/iris/title/music/replay, direct intro and all 3D checkerboard inspectors. Model suite and asset verifier run before commit.

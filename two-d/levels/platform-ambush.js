@@ -1,5 +1,5 @@
 // Telegraphs and projectiles share the same state used by the 3D renderer.
-const floors=[690,493,355,181];
+import {FLOOR_Y as floors} from './platform-layout.js';
 export function newAmbush(floor=0){return {archer:{phase:'rest',age:0,targetX:0,targetY:0,shots:0},arrows:[],balloons:[{id:'bomb-'+floor,x:[578,520,358,682][floor],y:floors[floor]-38,phase:'idle',age:0}],floor};}
 export function archerOrigin(floor,clown){if(clown)return {x:clown.x,y:clown.y-48};return {x:floor%2?873:87,y:floors[Math.max(0,floor-1)]-23};}
 export function arrowPoint(a,t){

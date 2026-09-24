@@ -265,3 +265,10 @@ Validation: 85 model tests pass. Full desktop and touch Level 5 runs complete th
 - Retained: shelf models, positions, story, four jar ambushes, chasing worm and delayed exit. Wall-backed shelving remains against the wall.
 - Tradeoff: rear aisles provide more escape choices and shorten some chase routes; this removes unintended invisible barriers. No added geometry or assets.
 - Validation: 89 model tests pass, including direct rear traversal and solid-base checks for every aisle shelf. Browser evidence and recordings: `validation/library-v23/`.
+
+### V24 — Level 3 room perspective and character proportions
+
+- Changed: moved the playable floor planes inward from the cutaway's front lip: 18 pixels on the entrance floor, 14 on the railed floor, 5 in the shallow mirror room and 7 on the top floor. Shared layout constants keep stair endpoints, floor props, moving platforms, barrels, spiders, arrows and balloon hazards aligned.
+- Improved: the investigator renders at 80 pixels rather than 58 (38% larger), closer to the doors/counter's scale. The clown is 100 pixels tall and remains larger than the investigator, including walking, shooting and stair frames. The emerging clown reaches the revised entrance floor without a vertical jump.
+- Retained: artwork, inspections, controls, jumping physics, hazard timings and four-floor sequence. No added assets or rendering passes.
+- Validation: all 89 model tests pass. Full keyboard playthrough reaches all four floors and Level 4 without retries (two health remaining), with no browser errors. Screenshots and control checks are in `validation/platform-v24/`.

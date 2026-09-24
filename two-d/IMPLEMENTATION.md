@@ -95,3 +95,11 @@ Current Level 3 controls: A/D or left/right move, Space jumps, up/down or W/S tr
 Prepared `art-review/level-4.html` and `art-review/concepts/04-toy-storeroom-v1.png` for the planned toy storeroom. Proposed flow: upper-attraction exit → landing/closed reveal door → insect burst → child's drawing and winding key → real 3D music-box dial puzzle → onward door. Build brief: `LEVEL-4-PLAN.md`.
 
 This is a review artifact only. It honors the user's direction to see each level's concept before production. No Level 4 gameplay or navigation has been added, and the Level 3 completion state remains unchanged. Approval or revisions to this specific layout are the next input needed before production.
+
+## V16 — approved Level 4 and Level 2 reactions
+
+This supersedes the preceding pending statuses. The user approved the toy storeroom and changed its sequence to wind-up toy → failing lights → at least twenty living toys → door escape. `level-4.html` implements it with 24 independent articulated Three.js prizes, solid furniture, optional journal drawing, a real rotating 3D wind-up inspection, timed red door, health/retry and touch controls. Level 3's completed upper exit now links to it. The older key/dial/insect sequence was a proposal and has been replaced, not left as an unfinished required feature.
+
+Level 2 now has separate real 3D rat, balloons and teddy. Balloons pop on approach, the rat chooses an escape route away from the player and the teddy rocks, raises its arms and turns its head. All reactions pause with the level and reset on restart. New clean plates remove the stationary painted versions while retaining the approved room style.
+
+All five new asset modules pass the official 404 harness. Validation and comparisons: `validation/toystore-v16` and `validation/hall-v16`. The original 3D game and earlier approved levels are preserved. Four chapters are playable; the remaining planned campaign is not presented as complete. Future level and final character concepts still require the user's review.

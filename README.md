@@ -1,6 +1,6 @@
 # Fright House
 
-> **Top-down candidate:** [Play Level 1](http://localhost:8089/two-d/index.html). The approved street includes animated lights, a rotating Ferris wheel and an inspectable newspaper. [Review the next level concept](http://localhost:8089/two-d/art-review/index.html). The full 20-area adaptation is in progress; later levels require concept review.
+> **Top-down candidate:** [Play Level 1](http://localhost:8089/two-d/index.html). The approved street includes animated lights, a rotating Ferris wheel and an inspectable newspaper. [Play Level 4: the forgotten toys](http://localhost:8089/two-d/level-4.html), or [view approved concepts](http://localhost:8089/two-d/art-review/index.html). Levels 1–4 are playable; Level 2 now includes reactive balloons, a fleeing rat and an animated teddy. The full 20-area adaptation is in progress; later levels require concept review.
 
 
 A browser horror puzzle game set in an abandoned funhouse in 1987. Investigate three children’s belongings, learn how the rotating walls connect the maze, restore power, and escape with the recording before the creature reaches you.

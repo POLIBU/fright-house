@@ -78,6 +78,44 @@
  {
   "ok": true,
   "mounts": null,
+  "meshes": 546,
+  "tris": 29792,
+  "materials": 51,
+  "size": [
+   3.33,
+   0.82,
+   1.82
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.1575,
+    "edgeDensity": 0.4128
+   },
+   "right": {
+    "coverage": 0.1126,
+    "edgeDensity": 0.3562
+   },
+   "back": {
+    "coverage": 0.1607,
+    "edgeDensity": 0.2191
+   },
+   "left": {
+    "coverage": 0.1112,
+    "edgeDensity": 0.3479
+   }
+  },
+  "error": null,
+  "name": "awakened-toys",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
   "meshes": 22,
   "tris": 692,
   "materials": 4,
@@ -154,6 +192,82 @@
  {
   "ok": true,
   "mounts": null,
+  "meshes": 6,
+  "tris": 688,
+  "materials": 3,
+  "size": [
+   0.56,
+   0.65,
+   0.234
+  ],
+  "groundOffset": 0.005,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.136,
+    "edgeDensity": 0.0443
+   },
+   "right": {
+    "coverage": 0.0991,
+    "edgeDensity": 0.0431
+   },
+   "back": {
+    "coverage": 0.1361,
+    "edgeDensity": 0.0366
+   },
+   "left": {
+    "coverage": 0.0991,
+    "edgeDensity": 0.0399
+   }
+  },
+  "error": null,
+  "name": "hall-balloons",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 12,
+  "tris": 1220,
+  "materials": 3,
+  "size": [
+   0.163,
+   0.162,
+   0.58
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.0589,
+    "edgeDensity": 0.1243
+   },
+   "right": {
+    "coverage": 0.0854,
+    "edgeDensity": 0.1133
+   },
+   "back": {
+    "coverage": 0.0536,
+    "edgeDensity": 0.1372
+   },
+   "left": {
+    "coverage": 0.0818,
+    "edgeDensity": 0.1169
+   }
+  },
+  "error": null,
+  "name": "hall-rat",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
   "meshes": 20,
   "tris": 720,
   "materials": 3,
@@ -225,6 +339,82 @@
   },
   "error": null,
   "name": "raven",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 13,
+  "tris": 292,
+  "materials": 3,
+  "size": [
+   0.83,
+   1.9,
+   0.19
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2915,
+    "edgeDensity": 0.0366
+   },
+   "right": {
+    "coverage": 0.0524,
+    "edgeDensity": 0.0944
+   },
+   "back": {
+    "coverage": 0.2906,
+    "edgeDensity": 0.0172
+   },
+   "left": {
+    "coverage": 0.0538,
+    "edgeDensity": 0.0771
+   }
+  },
+  "error": null,
+  "name": "storeroom-door",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 20,
+  "tris": 936,
+  "materials": 4,
+  "size": [
+   0.541,
+   0.517,
+   0.318
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2099,
+    "edgeDensity": 0.113
+   },
+   "right": {
+    "coverage": 0.1649,
+    "edgeDensity": 0.1111
+   },
+   "back": {
+    "coverage": 0.2173,
+    "edgeDensity": 0.0721
+   },
+   "left": {
+    "coverage": 0.1898,
+    "edgeDensity": 0.0622
+   }
+  },
+  "error": null,
+  "name": "storeroom-winder",
   "problems": []
  },
  {

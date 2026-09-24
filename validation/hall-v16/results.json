@@ -1,0 +1,20 @@
+[
+  {
+    "touch": false,
+    "balloonsPop": true,
+    "toyMoves": true,
+    "ratFlees": true,
+    "pause": true,
+    "reset": true,
+    "errors": []
+  },
+  {
+    "touch": true,
+    "balloonsPop": true,
+    "toyMoves": true,
+    "ratFlees": true,
+    "pause": true,
+    "reset": true,
+    "errors": []
+  }
+]

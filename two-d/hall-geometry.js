@@ -4,4 +4,4 @@ export default function generate(THREE){const root=new THREE.Group(),material=ne
  const door=part('staff-door',133);box(door,392,63,36,65,.4);box(door,387,56,5,74,.55);box(door,428,56,5,74,.55);box(door,387,54,46,7,.6);
  const shelf=part('lost-property',227);box(shelf,32,186,18,40,.45);box(shelf,33,184,27,5,.5);
  const lamp=part('counter-lamp',106);box(lamp,124,88,10,14,.25);box(lamp,122,100,14,3,.4);
- const balloon=part('tied-balloons',128);for(const [x,y,w,h]of [[37,84,17,23],[47,73,16,22]]){const mesh=new THREE.Mesh(new THREE.SphereGeometry(1,16,10),material);mesh.scale.set(w*.025,h*.025,.2);mesh.position.set((x+w/2-240)*.05,(360-y-h/2)*.05,.2);balloon.add(mesh);}return root;}
+ return root;}

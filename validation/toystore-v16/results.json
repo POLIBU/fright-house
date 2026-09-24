@@ -1,0 +1,36 @@
+[
+  {
+    "touch": false,
+    "loadingMs": 336,
+    "transferBytes": 3486434,
+    "won": true,
+    "health": 1,
+    "awake": 24,
+    "render": {
+      "models": 24,
+      "drawCalls": 592,
+      "triangles": 31312
+    },
+    "inspection": true,
+    "pause": true,
+    "retry": true,
+    "errors": []
+  },
+  {
+    "touch": true,
+    "loadingMs": 163,
+    "transferBytes": 3486434,
+    "won": true,
+    "health": 1,
+    "awake": 24,
+    "render": {
+      "models": 24,
+      "drawCalls": 592,
+      "triangles": 31312
+    },
+    "inspection": true,
+    "pause": true,
+    "retry": true,
+    "errors": []
+  }
+]

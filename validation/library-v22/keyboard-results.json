@@ -1,0 +1,24 @@
+{
+  "phase": "escaped",
+  "health": 1,
+  "shots": 9,
+  "ambushes": [
+    {
+      "id": "jar-092",
+      "volleys": 1
+    },
+    {
+      "id": "jar-104",
+      "volleys": 1
+    },
+    {
+      "id": "jar-118",
+      "volleys": 1
+    },
+    {
+      "id": "jar-131",
+      "volleys": 1
+    }
+  ],
+  "errors": []
+}

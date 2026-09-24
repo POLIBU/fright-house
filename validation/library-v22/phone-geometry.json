@@ -1,0 +1,40 @@
+[
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 48,
+  "tris": 8676,
+  "materials": 6,
+  "size": [
+   0.454,
+   0.275,
+   0.292
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2888,
+    "edgeDensity": 0.1174
+   },
+   "right": {
+    "coverage": 0.2228,
+    "edgeDensity": 0.1128
+   },
+   "back": {
+    "coverage": 0.2628,
+    "edgeDensity": 0.1047
+   },
+   "left": {
+    "coverage": 0.1993,
+    "edgeDensity": 0.1636
+   }
+  },
+  "error": null,
+  "name": "library-phone",
+  "problems": []
+ }
+]

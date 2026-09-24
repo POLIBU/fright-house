@@ -1,3 +1,4 @@
+import {SHELF_AMBUSHES} from './levels/library-model.js';
 import {mergeGeometries} from '../vendor/addons/utils/BufferGeometryUtils.js';
 import * as THREE from '../vendor/three.module.js';
 import deskAsset from './assets/three/library-desk.js';import shelfAsset from './assets/three/specimen-library.js';import phoneAsset from './assets/three/library-phone.js';import doorAsset from './assets/three/archer-entry-door.js';
@@ -9,12 +10,15 @@ const desk=fit(deskAsset(THREE),188,208,140,88,.44,.03),phone=fit(phoneAsset(THR
 const lowerRight=fit(shelf(),449,265,31,35,.3,.2);for(const [i,x]of [550,750,970,1190,1410,1530].entries())fit(shelf(),x,122,98+(i%3)*3,96+(i%2)*4,.16,(i%2?.035:-.035));for(const [x,y,w,h]of [[669,199,97,72],[898,277,104,77],[1139,199,107,68],[1354,277,96,75]])fit(shelf(),x,y,w,h,.4,.04);
 const cabinet=fit(shelf(),35,198,29,71,.3,.2);
 const source=shelfAsset(THREE),jarBody=source.userData.jars[5];jarBody.removeFromParent();jarBody.position.set(0,0,0);const jar=fit(jarBody,417,162,20,29,.2,.1);jar.depth=162;
+const ambushJars=SHELF_AMBUSHES.map(a=>{const source=shelfAsset(THREE),body=source.userData.jars[5];body.removeFromParent();body.position.set(0,0,0);const o=fit(body,a.x,116,19,28,.2,.05);o.g.position.z=40;return o;});
+
 fit(doorAsset(THREE),379,110,39,82,0,0);const door=fit(doorAsset(THREE),1610,110,43,84,0,0);const hinge=door.body.getObjectByName('hinge');
 // Actual fragments fall from the same jar position used by the encounter.
 const shards=[];const material=new THREE.MeshStandardMaterial({color:0xc5d8af,metalness:.25,roughness:.22,transparent:true,opacity:.75});for(let i=0;i<14;i++){const body=new THREE.Mesh(new THREE.ConeGeometry(.8+i%3*.2,2+i%4,3),material);body.rotation.z=i*1.7;scene.add(body);shards.push(body);}let calls=0,tris=0,peakCalls=0,peakTris=0;
 return {drawRange(ctx,s,lo,hi){if(lo===-Infinity){calls=0;tris=0;}camera.position.x=s.cameraX;camera.updateMatrixWorld();const strength=.88+.06*Math.sin(s.time*1.7)+.025*Math.sin(s.time*4.3);glow.intensity=600*strength;key.intensity=1.65+Math.sin(s.time*.9)*.09;door.depth=s.exit>=.85?s.y-1:110;for(const o of all)o.g.visible=o.depth>=lo&&o.depth<hi;
-phone.body.getObjectByName('receiver').position.y=.206+s.receiver*.18;phone.g.rotation.z=s.phase==='ringing'?Math.sin(s.time*44)*(s.time%3<1?.025:0):0;
+phone.body.userData.setReceiver(s.receiver);phone.g.rotation.z=s.phase==='ringing'?Math.sin(s.time*44)*(s.time%3<1?.025:0):0;
+for(let i=0;i<ambushJars.length;i++){const o=ambushJars[i],a=s.ambushes[i],fall=a.phase==='fall'?Math.min(1,a.age/.7):0;o.depth=116+fall*29;o.g.visible=['sealed','rattle','fall'].includes(a.phase)&&o.depth>=lo&&o.depth<hi;o.g.position.y=180-116-fall*29;o.g.rotation.z=a.phase==='rattle'?Math.sin(a.age*39)*.13:fall*1.5;}
 hinge.rotation.y=-s.exit*1.55;jar.g.visible=jar.g.visible&&s.jar<1;jar.g.position.set(417-240-s.jar*7,180-162-s.jar*14,2);jar.g.rotation.z=-s.jar*1.3;
 shards.forEach((p,i)=>{p.visible=s.jar===1&&176>=lo&&176<hi;const t=Math.min(1,Math.max(0,s.phase==='breaking'?s.phaseAge-1.1:1));p.position.set(410-240+Math.cos(i*2.4)*t*(6+i%4*3),180-176+Math.sin(i*2.4)*t*7+Math.sin(t*Math.PI)*9,2);p.rotation.z=i+t*4;});
-renderer.render(scene,camera);calls+=renderer.info.render.calls;tris+=renderer.info.render.triangles;if(hi===Infinity){peakCalls=Math.max(calls,peakCalls);peakTris=Math.max(tris,peakTris);}ctx.drawImage(renderer.domElement,s.cameraX,0);},depths:[117,162,208,260,265],snapshot(){return {desk3D:true,lamp3D:true,phone3D:true,shelves3D:16,specimenJars:97,drawCalls:peakCalls,triangles:peakTris};}};
+renderer.render(scene,camera);calls+=renderer.info.render.calls;tris+=renderer.info.render.triangles;if(hi===Infinity){peakCalls=Math.max(calls,peakCalls);peakTris=Math.max(tris,peakTris);}ctx.drawImage(renderer.domElement,s.cameraX,0);},depths:[117,162,208,260,265],snapshot(){return {desk3D:true,lamp3D:true,phone3D:true,shelves3D:16,specimenJars:101,drawCalls:peakCalls,triangles:peakTris};}};
 }

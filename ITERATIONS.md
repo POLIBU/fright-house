@@ -142,3 +142,15 @@ Tradeoffs: this pass adds a Three.js dependency to the street and a stylized toy
 Validation: all 38 model tests pass. Desktop and emulated-touch complete playthroughs verify toy rotation/zoom/winding/opening, saved clue, frozen world position/time during inspection, all existing object interactions, turnstile completion and restart, with no page errors. New assets contain 692 (turnstile) and 4,460 (toy) rendered triangles in the integration checks. The recommendation is to retain this hybrid Level 1 candidate; it adds tangible interaction without replacing the approved street composition. No publishing occurred.
 
 The official 404 `harness/verify.mjs` also passes both new modules (2/2 clean); its five-view contact sheet and measured bounds are retained beside the modules under `_verify`.
+
+## V12 — textured foreground depth, ticket, ravens and hall transition
+
+Changed: moved the carousel away from the newspaper; replaced image-ticket inspection with a thin 3D ticket carrying geometry-built print, a bent perforated stub and flip/zoom/drag controls. Added separate textured relief solids for the foreground street props, preserving the approved image at the fixed camera. The kiosk shutter now lifts and jams; three 3D ravens fly off in response to proximity.
+
+Entering the clown mouth now closes articulated jaws behind the character and transitions into the playable L-shaped ticket hall. Street clues persist. The hall has ledger, lamp, drawer and locked-door interactions and a route to the upper attraction boundary. The prior study is retained; Level 3 is still pending implementation.
+
+Improved: newspaper selection is unambiguous, the ticket can be examined from both sides, the street reacts to approach and the entrance now advances the campaign. Retained: original painted detail/composition, existing street props, top-down control and checkpoints. Tradeoffs: fixed-camera relief depth is not a complete freely explorable 3D park; distant scenery remains painted. No deployment occurred.
+
+Validation: 42 model checks and desktop/emulated-touch runs through both implemented areas, with screenshots and browser-error checks in `validation/hybrid-street`.
+
+Final asset gate: all five standalone procedural modules pass the official 404 verifier (ticket, turnstile, jaws, raven and carousel). The first ticket verification page timed out while loading; a fresh full run completed 5/5 clean. The in-game front/back ticket views were visually checked. The kiosk interior uses dim 3D shelves, hooks and ticket stock instead of a flat empty opening. Hall resume/restart also pass, retaining street clues.

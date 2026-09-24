@@ -87,3 +87,7 @@ The approved facade/forecourt concept and a clean plate with the static Ferris w
 `two-d/assets/three/broken-turnstile.js` and `windup-carousel.js` are original procedural Three.js assets written through the 404 geometry-as-code method. Metal housing, snapped arms, spindle, tin base, bird carousel, winding key, hinged deck and raised 03 marking are built from constructors and transformations. No downloaded meshes, literal vertex arrays, stock models or embedded images are used. The scene and inspector import the game's existing vendored Three.js library.
 
 The noticeboard/ticket inspection images and approved Level 3 concept are built-in imagegen artwork following the user's original Fright House direction. They are declared image assets, not 3D geometry. Level 3's concept is review artwork, not runtime scene geometry. Briefs and paths are recorded in `two-d/IMPLEMENTATION.md`. All story text is fictional and original; existing audio is reused.
+
+### Layered street and ticket hall (V12)
+
+New ticket, raven and clown-jaw geometry is original constructor-built Three.js code. Ticket glyphs use an original compact bitmap alphabet converted to instanced boxes; no imported font/mesh data. Foreground street relief geometry uses original Shape/Extrude/Box construction; the scene loader projects the already declared street illustration onto it to preserve its appearance. The approved foyer illustration is reused for Level 2. No new images, stock meshes, paid tools or audio sources were added. Raven motion, shutter movement and mouth closure are code animation.

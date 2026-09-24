@@ -11,3 +11,5 @@ The original playable ticket-hall study is preserved at http://localhost:8089/tw
 See IMPLEMENTATION.md for the accepted direction, art approval, source prompts and validation. The 3D game is unchanged.
 
 Level 1 now includes two real 3D props. Click/tap the small carousel beside the newspaper on the bench to inspect it; drag to rotate, zoom, wind it, and open its compartment for the fifth clue. Push the broken turnstile to open the entrance. The street remains top-down; the original illustrated background is retained. Level 3 is approved concept art and is not yet playable.
+
+V12: the toy is now beside the right-hand park gate; the bench newspaper has its own unobstructed target. The ticket is a rotatable two-sided 3D object. Ravens take flight when approached; the kiosk shutter reacts when pulled. Walk through the clown mouth to see it close and enter the ticket hall, retaining your field notes. Level 3 is not yet playable.

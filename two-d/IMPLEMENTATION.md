@@ -59,3 +59,17 @@ Fixed two interaction defects: asynchronous modal cleanup could erase the next c
 Level 3's four-floor side-view concept (`art-review/concepts/03-platform-attraction-v1.png`) was explicitly approved, with separate obstacles and hybrid 3D barrels/platforms/gearbox proposed. It is not yet a playable campaign level. Future levels must separate scenery, collisions and moving obstacles; benches, kiosks and closed gates must block movement. This Level 1 pass does not convert all background scenery into 3D.
 
 Validation: `tests/props3d-browser.mjs` drives real input through all five street discoveries, including the live 3D inspection, then opens the turnstile and completes the level, on desktop and emulated touch. Evidence is under `validation/props3d`. All 38 existing model tests pass. This is local browser validation, not a deployed jam-gate or physical-phone result.
+
+## V12 — preserve the painting, add depth and connect the hall
+
+The user clarified that the scene should look the same while gaining 3D and interaction. Independent shallow 3D solids now match the approved bench, noticeboard, park gates, kiosk, lamps, bin, drum and abandoned cart. At scene load, their UVs are projected from the existing original street artwork; the fixed top-down camera retains its painted appearance. This is a 2.5D relief scene, not a newly modeled free-camera environment. Foreground solids are composited by depth around the actor and the existing solid pavement boundaries remain authoritative. The kiosk has a separate shutter that lifts and jams when pulled.
+
+The carousel has moved to the right-hand park gate (interaction point 285,273), away from the newspaper's click region. The ticket is a real thin extruded/perforated 3D object with a bent stub, geometry-built print on both faces, free rotation, zoom and a dedicated flip control. Its existing fictional date/serial are preserved. Three procedural 3D ravens react once to player proximity, flap away and reset with a fresh street; their state shares the pause-aware level clock.
+
+Walking through the opened turnstile now starts a 2.7-second sequence: the character enters, procedural clown jaws close behind them and the view fades into `level-2.html`. The campaign enters ticket-hall through its existing passage, preserving street notes. The hall uses the previously reviewed L-shaped artwork, collision, temporary actor and a new controller with ledger, desk lamp, lost-property drawer, closed staff door and onward stairs. The lower maze wall puzzle is not transplanted into the hall. The original study page remains separate. Reloading or continuing the campaign retains hall discoveries; restarting the hall clears its own discoveries while preserving the street.
+
+Level 3 remains approved artwork, not playable content; the hall’s onward interaction explicitly says so. No new generated background was substituted for the approved images.
+
+Validation: 42 model tests; real desktop/touch browser input covers the newspaper, relocated toy, both ticket faces, raven reactions, kiosk shutter, pause, mouth closure, carried clues and the ticket hall ledger/drawer/onward route. Matching screenshots and results: `validation/hybrid-street/`.
+
+The same projected-texture 3D layer renderer is used for the hall counter, staff door, shelf, lamp and tied balloons. Independent scene geometry lives in `forecourt-geometry.js` and `hall-geometry.js`; movable standalone props remain in `assets/three`.

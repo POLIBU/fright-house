@@ -2,6 +2,44 @@
  {
   "ok": true,
   "mounts": null,
+  "meshes": 28,
+  "tris": 11992,
+  "materials": 3,
+  "size": [
+   0.132,
+   0.066,
+   0.005
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.3054,
+    "edgeDensity": 0.177
+   },
+   "right": {
+    "coverage": 0.0231,
+    "edgeDensity": 0.3231
+   },
+   "back": {
+    "coverage": 0.3055,
+    "edgeDensity": 0.121
+   },
+   "left": {
+    "coverage": 0.0182,
+    "edgeDensity": 0.4722
+   }
+  },
+  "error": null,
+  "name": "admission-ticket",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
   "meshes": 22,
   "tris": 692,
   "materials": 4,
@@ -35,6 +73,82 @@
   },
   "error": null,
   "name": "broken-turnstile",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 16,
+  "tris": 520,
+  "materials": 2,
+  "size": [
+   1.86,
+   1.98,
+   0.23
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.1142,
+    "edgeDensity": 0.1966
+   },
+   "right": {
+    "coverage": 0.0463,
+    "edgeDensity": 0.2083
+   },
+   "back": {
+    "coverage": 0.1173,
+    "edgeDensity": 0.1232
+   },
+   "left": {
+    "coverage": 0.0463,
+    "edgeDensity": 0.1929
+   }
+  },
+  "error": null,
+  "name": "clown-jaws",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 10,
+  "tris": 590,
+  "materials": 3,
+  "size": [
+   0.427,
+   0.262,
+   0.52
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   -0.006,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.0242,
+    "edgeDensity": 0.0792
+   },
+   "right": {
+    "coverage": 0.0184,
+    "edgeDensity": 0.1465
+   },
+   "back": {
+    "coverage": 0.0621,
+    "edgeDensity": 0.0591
+   },
+   "left": {
+    "coverage": 0.0466,
+    "edgeDensity": 0.0692
+   }
+  },
+  "error": null,
+  "name": "raven",
   "problems": []
  },
  {

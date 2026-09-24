@@ -11,3 +11,9 @@ test('pause freezes all gameplay and retry resets toy, door, damage and light st
 test('idle player can be caught; toys cannot cross furniture while pursuing',()=>{const s=newStore(true);wind(s);for(let i=0;i<1800&&s.phase!=='caught';i++){tickStore(s,{},1/60);assert.ok(s.toys.filter(t=>t.phase==='chasing').every(t=>!storeBlocked(s,t.x,t.y,3)));}assert.equal(s.phase,'caught');assert.equal(s.health,0);});
 test('hall balloons pop only once and approaching the teddy animates it',()=>{const s={x:69,y:146,reactions:newHallReactions()};const events=[];for(let i=0;i<90;i++)events.push(...tickHallReactions(s,1/60));assert.equal(events.filter(e=>e==='pop').length,2);assert.ok(s.reactions.balloons.every(b=>b.popped));s.x=85;s.y=206;tickHallReactions(s,.02);assert.ok(s.reactions.toy.awake);assert.ok(s.reactions.toy.age>0);assert.ok(hallBlocked(65,215));assert.ok(newHallReactions().balloons.every(b=>!b.popped));});
 test('hall rat escapes in either direction without passing through walls or the teddy',()=>{for(const x of [180,220]){const s={x,y:200,reactions:newHallReactions()},events=[];for(let i=0;i<600;i++){events.push(...tickHallReactions(s,1/60));assert.ok(!hallBlocked(s.reactions.rat.x,s.reactions.rat.y,2));}assert.equal(events.filter(e=>e==='scurry').length,1);assert.equal(s.reactions.rat.phase,'gone');}});
+test('crate volumes block walking from every side and preserve the path behind the cage',()=>{
+ for(const [x,y,dx,dy,axis,limit,sign]of [[190,160,1,0,'x',235,1],[360,180,-1,0,'x',325,-1],[280,120,0,1,'y',150,1],[280,224,0,-1,'y',187,-1],[410,192,1,0,'x',434,1]]){
+  const s=newStore(true);s.x=x;s.y=y;assert.ok(!storeBlocked(s,x,y));for(let i=0;i<180;i++){moveStore(s,dx,dy,1/60);assert.ok(!storeBlocked(s,s.x,s.y));}assert.ok(sign*(s[axis]-limit)<=0,JSON.stringify({x,y,actual:s[axis],limit}));
+ }
+ const s=newStore(true);s.x=190;s.y=114;walk(s,390,114);assert.ok(s.x>385);s.x=360;s.y=222;walk(s,192,222);assert.ok(s.x<197);
+});

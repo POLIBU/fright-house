@@ -113,3 +113,7 @@ The user approved Level 4's concept, then specified winding a toy, lights failin
 `two-d/assets/foyer-reactive-clean.png` is a built-in imagegen edit of the approved hall: remove only the two balloons/strings beside the booth, the lower-left teddy and the small floor rat; preserve all other artwork. These declared raster backgrounds are not mesh payloads.
 
 The new modules `awakened-toys.js`, `storeroom-winder.js`, `storeroom-door.js`, `hall-rat.js` and `hall-balloons.js` are original constructor-built Three.js geometry. The 24 toys use six families with named limb/head pivots. The rat has a tube tail; balloon strings and key loops use ordinary Three.js curves/primitives. Projected relief furniture uses original boxes with the declared background texture. No downloaded meshes, paid services or imported geometry data were added. Existing local ambience is reused; popping, winding and failing music cues use Web Audio synthesis.
+
+### V17 crate geometry
+
+The cage and stacked wooden crates now use original Three.js Shape/ExtrudeGeometry construction, with a depth shear matching the approved top-down projection. Shared floor footprints drive both geometry and collision. Their finish uses the already-declared toy-room clean plate; no new images or imported meshes were added.

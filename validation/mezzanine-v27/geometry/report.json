@@ -1,0 +1,78 @@
+[
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 12,
+  "tris": 1236,
+  "materials": 3,
+  "size": [
+   1,
+   1.235,
+   0.64
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2936,
+    "edgeDensity": 0.0576
+   },
+   "right": {
+    "coverage": 0.2247,
+    "edgeDensity": 0.0672
+   },
+   "back": {
+    "coverage": 0.2959,
+    "edgeDensity": 0.0719
+   },
+   "left": {
+    "coverage": 0.2251,
+    "edgeDensity": 0.077
+   }
+  },
+  "error": null,
+  "name": "mezzanine-console",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 15,
+  "tris": 452,
+  "materials": 4,
+  "size": [
+   1,
+   0.169,
+   0.64
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2303,
+    "edgeDensity": 0.0612
+   },
+   "right": {
+    "coverage": 0.2222,
+    "edgeDensity": 0.0861
+   },
+   "back": {
+    "coverage": 0.2332,
+    "edgeDensity": 0.101
+   },
+   "left": {
+    "coverage": 0.2255,
+    "edgeDensity": 0.0992
+   }
+  },
+  "error": null,
+  "name": "mezzanine-platform",
+  "problems": []
+ }
+]

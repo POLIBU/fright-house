@@ -1,0 +1,2 @@
+Cart pause freezes movement and audio
+PASS: full cart escape without collisions touch { peakDraws: 131, peakTris: 56898 }

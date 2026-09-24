@@ -1,0 +1,175 @@
+{
+  "floors": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "attempts": 0,
+  "seconds": 30.788,
+  "errors": [],
+  "final": {
+    "x": 161.6308000000022,
+    "y": 141.06658049999996,
+    "vx": -132,
+    "vy": -7.499999999999991,
+    "floor": 3,
+    "time": 29.348699999999617,
+    "floorTime": 6.049700000000023,
+    "walk": 325.51959999999355,
+    "face": "left",
+    "light": true,
+    "grounded": false,
+    "coyote": 0,
+    "jumpBuffer": 0,
+    "jumpHeld": false,
+    "jumpAge": 0.799900000000001,
+    "landingAge": 0,
+    "health": 2,
+    "invincible": 1.4499999999999997,
+    "checkpoint": 3,
+    "power": true,
+    "powerAge": 27.33219999999967,
+    "riddleSolved": true,
+    "lever": 1,
+    "pulling": false,
+    "inspection": null,
+    "puzzleMessage": "POWER RESTORED. The safety gate is open.",
+    "stairCooldown": 0,
+    "clown": {
+      "x": 191.79079999999982,
+      "y": 350,
+      "floor": 2,
+      "walk": 186.87539999999947,
+      "moving": true,
+      "stair": null,
+      "face": "right"
+    },
+    "spiders": [
+      {
+        "id": "spider-0",
+        "nest": 245,
+        "x": 245,
+        "y": 342,
+        "phase": "hidden",
+        "age": 0,
+        "target": 155,
+        "cooldown": 0.5834000000000035,
+        "returnX": 139
+      },
+      {
+        "id": "spider-1",
+        "nest": 350,
+        "x": 350,
+        "y": 342,
+        "phase": "hidden",
+        "age": 0,
+        "target": 258.3956000000002,
+        "cooldown": 1.533300000000004,
+        "returnX": 242.39560000000017
+      },
+      {
+        "id": "spider-2",
+        "nest": 457,
+        "x": 457,
+        "y": 342,
+        "phase": "hidden",
+        "age": 0,
+        "target": 366.1999999999997,
+        "cooldown": 2.3500000000000005,
+        "returnX": 350.1999999999997
+      }
+    ],
+    "ambush": {
+      "archer": {
+        "phase": "rest",
+        "age": 0.26659999999999856,
+        "targetX": 392.61760000000197,
+        "targetY": 158,
+        "shots": 1
+      },
+      "arrows": [],
+      "balloons": [
+        {
+          "id": "bomb-3",
+          "x": 682,
+          "y": 132.70884593645962,
+          "phase": "spent",
+          "age": 2.9997999999999987
+        }
+      ],
+      "floor": 3
+    },
+    "fuses": [
+      0,
+      1,
+      2
+    ],
+    "status": "escaped",
+    "paused": false,
+    "stair": null,
+    "chaser": 793.7143999999902,
+    "flash": 0,
+    "cooldown": 2.2667000000000046,
+    "hits": 2,
+    "notice": "ARROW · Move away from the marked aim point.",
+    "noticeAge": 2.3500000000000005,
+    "running": true,
+    "hazards": [
+      {
+        "id": "press",
+        "kind": "press",
+        "x": 350,
+        "y": 165,
+        "r": 19,
+        "active": true,
+        "warning": false,
+        "until": 0
+      }
+    ],
+    "platforms": [
+      {
+        "id": "lift-0",
+        "x": 535,
+        "w": 64,
+        "y": 353.5279409350675
+      },
+      {
+        "id": "lift-1",
+        "x": 611,
+        "w": 64,
+        "y": 363.95070078223245
+      },
+      {
+        "id": "lift-2",
+        "x": 687,
+        "w": 64,
+        "y": 351.214380571757
+      }
+    ],
+    "render": {
+      "drawCalls": 176,
+      "triangles": 4100,
+      "machinery": {
+        "real3D": true,
+        "behindWall": true,
+        "flywheel": -49.89278999999935,
+        "idler": 99.7855799999987,
+        "drive": 64.56713999999916,
+        "pulley": 129.1342799999983,
+        "crank": -64.56713999999916,
+        "piston": 0.6882452466447716,
+        "beltPhase": 64.56713999999916
+      },
+      "objects": [
+        "trunk",
+        "press"
+      ]
+    },
+    "inspectionView": {
+      "open": false,
+      "angle": 2.6,
+      "triangles": 200
+    }
+  }
+}

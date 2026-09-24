@@ -1,0 +1,31 @@
+{
+  "confetti": {
+    "count": 149,
+    "airborne": 3
+  },
+  "doorCrossingBothWays": true,
+  "paintPreview": {
+    "time": 3.3497999999999952,
+    "age": 0.03339999999999964,
+    "phase": "impact",
+    "paused": true,
+    "impactCount": 1,
+    "travel": 3.9,
+    "paintAge": 0.03339999999999964,
+    "color": "blue",
+    "paintColor": "#42cbbb",
+    "drawCalls": 111,
+    "triangles": 43656,
+    "barrelPosition": [
+      0,
+      0.32,
+      2.000499998033047
+    ],
+    "lidPosition": [
+      0,
+      0.8883899999999997,
+      0.013359999999999856
+    ]
+  },
+  "errors": []
+}

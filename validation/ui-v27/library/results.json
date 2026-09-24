@@ -1,0 +1,80 @@
+[
+  {
+    "touch": false,
+    "loadMs": 423,
+    "transfer": 8731299,
+    "escaped": true,
+    "health": 1,
+    "shots": 14,
+    "ambushes": [
+      {
+        "id": "jar-092",
+        "volleys": 2
+      },
+      {
+        "id": "jar-104",
+        "volleys": 1
+      },
+      {
+        "id": "jar-118",
+        "volleys": 2
+      },
+      {
+        "id": "jar-131",
+        "volleys": 2
+      }
+    ],
+    "render": {
+      "desk3D": true,
+      "lamp3D": true,
+      "phone3D": true,
+      "shelves3D": 16,
+      "specimenJars": 101,
+      "drawCalls": 412,
+      "triangles": 96812
+    },
+    "phone": true,
+    "pause": true,
+    "retry": true,
+    "errors": []
+  },
+  {
+    "touch": true,
+    "loadMs": 321,
+    "transfer": 8731299,
+    "escaped": true,
+    "health": 1,
+    "shots": 14,
+    "ambushes": [
+      {
+        "id": "jar-092",
+        "volleys": 2
+      },
+      {
+        "id": "jar-104",
+        "volleys": 1
+      },
+      {
+        "id": "jar-118",
+        "volleys": 2
+      },
+      {
+        "id": "jar-131",
+        "volleys": 2
+      }
+    ],
+    "render": {
+      "desk3D": true,
+      "lamp3D": true,
+      "phone3D": true,
+      "shelves3D": 16,
+      "specimenJars": 101,
+      "drawCalls": 412,
+      "triangles": 96812
+    },
+    "phone": true,
+    "pause": true,
+    "retry": true,
+    "errors": []
+  }
+]

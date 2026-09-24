@@ -1,0 +1,153 @@
+{
+  "floors": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "attempts": 0,
+  "seconds": 30.979,
+  "errors": [],
+  "final": {
+    "x": 161.61760000000123,
+    "y": 181,
+    "vx": 0,
+    "vy": 0,
+    "floor": 3,
+    "time": 29.35529999999956,
+    "floorTime": 6.0164000000000195,
+    "walk": 328.5665999999934,
+    "face": "left",
+    "light": true,
+    "grounded": true,
+    "coyote": 0.1,
+    "jumpBuffer": 0,
+    "jumpHeld": false,
+    "health": 3,
+    "invincible": 0,
+    "checkpoint": 3,
+    "power": true,
+    "riddleSolved": true,
+    "lever": 1,
+    "pulling": false,
+    "inspection": null,
+    "puzzleMessage": "POWER RESTORED. The safety gate is open.",
+    "stairCooldown": 0,
+    "spiders": [
+      {
+        "id": "spider-0",
+        "nest": 245,
+        "x": 245,
+        "y": 347,
+        "phase": "hidden",
+        "age": 0,
+        "target": 155,
+        "cooldown": 0.6334999999999993,
+        "returnX": 139
+      },
+      {
+        "id": "spider-1",
+        "nest": 350,
+        "x": 350,
+        "y": 347,
+        "phase": "hidden",
+        "age": 0,
+        "target": 258.3956000000002,
+        "cooldown": 1.633400000000001,
+        "returnX": 242.39560000000017
+      },
+      {
+        "id": "spider-2",
+        "nest": 457,
+        "x": 457,
+        "y": 347,
+        "phase": "hidden",
+        "age": 0,
+        "target": 366.1868,
+        "cooldown": 2.4500000000000006,
+        "returnX": 350.1868
+      }
+    ],
+    "ambush": {
+      "archer": {
+        "phase": "aim",
+        "age": 0.5331999999999971,
+        "targetX": 232.0132000000013,
+        "targetY": 165,
+        "shots": 1
+      },
+      "arrows": [],
+      "balloons": [
+        {
+          "id": "bomb-3",
+          "x": 682,
+          "y": 139.7588170824921,
+          "phase": "spent",
+          "age": 2.9665
+        }
+      ],
+      "floor": 3
+    },
+    "fuses": [
+      0,
+      1,
+      2
+    ],
+    "status": "escaped",
+    "paused": false,
+    "stair": null,
+    "chaser": 795.512599999989,
+    "flash": 0,
+    "cooldown": 2.283400000000006,
+    "hits": 0,
+    "notice": "RUN LEFT · Flash the pursuer with F. Reach the EXIT.",
+    "noticeAge": 0,
+    "running": true,
+    "hazards": [
+      {
+        "id": "press",
+        "kind": "press",
+        "x": 350,
+        "y": 172,
+        "r": 19,
+        "active": true,
+        "warning": false,
+        "until": 0
+      }
+    ],
+    "platforms": [
+      {
+        "id": "lift-0",
+        "x": 535,
+        "w": 64,
+        "y": 357.80142819230946
+      },
+      {
+        "id": "lift-1",
+        "x": 611,
+        "w": 64,
+        "y": 368.99341781440614
+      },
+      {
+        "id": "lift-2",
+        "x": 687,
+        "w": 64,
+        "y": 356.9554142983384
+      }
+    ],
+    "render": {
+      "drawCalls": 81,
+      "triangles": 8064,
+      "objects": [
+        "clown-archer",
+        "trunk",
+        "press"
+      ]
+    },
+    "inspectionView": {
+      "open": false,
+      "angle": 2.6,
+      "triangles": 200
+    }
+  }
+}

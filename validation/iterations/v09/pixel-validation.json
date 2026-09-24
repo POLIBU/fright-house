@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "mobile": false,
+      "loadMs": 617,
+      "bytes": 2801795,
+      "rendering": {
+        "style": "fake-2d",
+        "internalResolution": [
+          240,
+          160
+        ],
+        "paletteLevels": 16
+      },
+      "draws": 381,
+      "tris": 118453,
+      "axeWindup": {
+        "phase": "windup",
+        "age": 0.033299999999999275,
+        "lateral": 0,
+        "start": 0,
+        "target": 0,
+        "hit": false,
+        "distance": 28.809759999999976,
+        "height": 1.15,
+        "angle": 111.4624000000004
+      },
+      "flashCount": 1,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "mobile": true,
+      "loadMs": 1163,
+      "bytes": 2801795,
+      "rendering": {
+        "style": "fake-2d",
+        "internalResolution": [
+          160,
+          346
+        ],
+        "paletteLevels": 16
+      },
+      "draws": 385,
+      "tris": 71381,
+      "axeWindup": {
+        "phase": "windup",
+        "age": 0.016600000000000364,
+        "lateral": 0,
+        "start": 0,
+        "target": 0,
+        "hit": false,
+        "distance": 28.690355000000004,
+        "height": 1.15,
+        "angle": 111.19520000000045
+      },
+      "flashCount": 1,
+      "errors": [],
+      "missing": []
+    }
+  ]
+}

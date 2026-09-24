@@ -1,0 +1,38 @@
+[
+  {
+    "touch": false,
+    "escaped": true,
+    "health": 1,
+    "launches": 10,
+    "hitCount": 2,
+    "render": {
+      "launcher3D": true,
+      "drums3D": true,
+      "gate3D": true,
+      "drawCalls": 138,
+      "triangles": 47808
+    },
+    "pause": true,
+    "inspection": true,
+    "restart": true,
+    "errors": []
+  },
+  {
+    "touch": true,
+    "escaped": true,
+    "health": 1,
+    "launches": 10,
+    "hitCount": 2,
+    "render": {
+      "launcher3D": true,
+      "drums3D": true,
+      "gate3D": true,
+      "drawCalls": 138,
+      "triangles": 47808
+    },
+    "pause": true,
+    "inspection": true,
+    "restart": true,
+    "errors": []
+  }
+]

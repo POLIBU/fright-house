@@ -1,0 +1,230 @@
+[
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 497,
+  "tris": 23104,
+  "materials": 2,
+  "size": [
+   1.598,
+   0.483,
+   0.84
+  ],
+  "groundOffset": 0.009,
+  "centreOffset": [
+   0.002,
+   -0.003
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.0994,
+    "edgeDensity": 0.6102
+   },
+   "right": {
+    "coverage": 0.1053,
+    "edgeDensity": 0.5804
+   },
+   "back": {
+    "coverage": 0.1117,
+    "edgeDensity": 0.524
+   },
+   "left": {
+    "coverage": 0.105,
+    "edgeDensity": 0.5857
+   }
+  },
+  "error": null,
+  "name": "fall-bones",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 39,
+  "tris": 1284,
+  "materials": 3,
+  "size": [
+   1.176,
+   1.47,
+   0.24
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.3525,
+    "edgeDensity": 0.0897
+   },
+   "right": {
+    "coverage": 0.093,
+    "edgeDensity": 0.0634
+   },
+   "back": {
+    "coverage": 0.3727,
+    "edgeDensity": 0.0978
+   },
+   "left": {
+    "coverage": 0.095,
+    "edgeDensity": 0.0459
+   }
+  },
+  "error": null,
+  "name": "fall-door",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 16,
+  "tris": 736,
+  "materials": 3,
+  "size": [
+   1.03,
+   0.335,
+   0.334
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2258,
+    "edgeDensity": 0.056
+   },
+   "right": {
+    "coverage": 0.1324,
+    "edgeDensity": 0.0511
+   },
+   "back": {
+    "coverage": 0.2276,
+    "edgeDensity": 0.1053
+   },
+   "left": {
+    "coverage": 0.1385,
+    "edgeDensity": 0.0801
+   }
+  },
+  "error": null,
+  "name": "fall-obstacle",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 4,
+  "tris": 592,
+  "materials": 2,
+  "size": [
+   1.097,
+   0.265,
+   0.23
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.0954,
+    "edgeDensity": 0.0379
+   },
+   "right": {
+    "coverage": 0.0504,
+    "edgeDensity": 0.0648
+   },
+   "back": {
+    "coverage": 0.1009,
+    "edgeDensity": 0.0388
+   },
+   "left": {
+    "coverage": 0.0758,
+    "edgeDensity": 0.0452
+   }
+  },
+  "error": null,
+  "name": "fall-pipe",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 8,
+  "tris": 992,
+  "materials": 2,
+  "size": [
+   0.594,
+   1.147,
+   0.58
+  ],
+  "groundOffset": 0.02,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.1884,
+    "edgeDensity": 0.0862
+   },
+   "right": {
+    "coverage": 0.1875,
+    "edgeDensity": 0.0803
+   },
+   "back": {
+    "coverage": 0.1888,
+    "edgeDensity": 0.0912
+   },
+   "left": {
+    "coverage": 0.1876,
+    "edgeDensity": 0.0895
+   }
+  },
+  "error": null,
+  "name": "fall-weight",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 24,
+  "tris": 352,
+  "materials": 3,
+  "size": [
+   0.888,
+   1.3,
+   0.179
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.3654,
+    "edgeDensity": 0.0874
+   },
+   "right": {
+    "coverage": 0.0858,
+    "edgeDensity": 0.0986
+   },
+   "back": {
+    "coverage": 0.3666,
+    "edgeDensity": 0.0684
+   },
+   "left": {
+    "coverage": 0.0858,
+    "edgeDensity": 0.1252
+   }
+  },
+  "error": null,
+  "name": "workshop-exit",
+  "problems": []
+ }
+]

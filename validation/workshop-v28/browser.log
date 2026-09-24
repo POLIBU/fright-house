@@ -1,0 +1,46 @@
+[
+  {
+    mobile: false,
+    entrance: true,
+    escaped: true,
+    health: 3,
+    shorts: 4,
+    ambientMoths: 12,
+    seenBolts: true,
+    sprites: {
+      frames: 36,
+      walk: 12,
+      grab: 6,
+      electric: 6,
+      wake: 6,
+      contacts: 6,
+      height: 148,
+      transparent: true,
+      isolatedFrames: true,
+      bounds: [Array]
+    },
+    errors: []
+  },
+  {
+    mobile: true,
+    entrance: true,
+    escaped: true,
+    health: 3,
+    shorts: 4,
+    ambientMoths: 12,
+    seenBolts: true,
+    sprites: {
+      frames: 36,
+      walk: 12,
+      grab: 6,
+      electric: 6,
+      wake: 6,
+      contacts: 6,
+      height: 148,
+      transparent: true,
+      isolatedFrames: true,
+      bounds: [Array]
+    },
+    errors: []
+  }
+]

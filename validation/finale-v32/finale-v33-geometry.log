@@ -1,0 +1,7 @@
+ok    escape-car                556 tris  25 meshes  1.69x1.28x3.19m
+ok    gallery-scarecrow        1624 tris  44 meshes  1.403x1.871x0.52m
+ok    ride-obstacle             352 tris  16 meshes  0.569x0.47x0.434m
+
+3/3 clean
+sheet:  /tmp/finale-assets-v33/_verify/sheet.png
+report: /tmp/finale-assets-v33/_verify/report.json

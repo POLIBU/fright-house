@@ -1,0 +1,26 @@
+[
+  {
+    "touch": false,
+    "errors": [],
+    "render": {
+      "drawCalls": 14,
+      "triangles": 168,
+      "objects": [
+        "trunk",
+        "press"
+      ]
+    }
+  },
+  {
+    "touch": true,
+    "errors": [],
+    "render": {
+      "drawCalls": 14,
+      "triangles": 168,
+      "objects": [
+        "trunk",
+        "press"
+      ]
+    }
+  }
+]

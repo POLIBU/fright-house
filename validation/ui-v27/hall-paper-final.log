@@ -1,0 +1,1 @@
+PASS: one newspaper, five tickets; footstep lift, pause, settling; no browser errors { newspapers: 1, tickets: 5, lifts: 1, airborne: 0 }

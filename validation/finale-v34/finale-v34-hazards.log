@@ -1,0 +1,8 @@
+[
+  { mobile: false, kind: 'crate', passed: true },
+  { mobile: false, kind: 'barricade', passed: true },
+  { mobile: false, kind: 'ink', passed: true },
+  { mobile: true, kind: 'crate', passed: true },
+  { mobile: true, kind: 'barricade', passed: true },
+  { mobile: true, kind: 'ink', passed: true }
+]

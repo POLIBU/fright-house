@@ -1,0 +1,50 @@
+[
+  {
+    "touch": false,
+    "errors": [],
+    "render": {
+      "drawCalls": 190,
+      "triangles": 4700,
+      "machinery": {
+        "real3D": true,
+        "behindWall": true,
+        "flywheel": 0,
+        "idler": 0,
+        "drive": 0,
+        "pulley": 0,
+        "crank": 0,
+        "piston": 0.56,
+        "beltPhase": 0
+      },
+      "objects": [
+        "trunk",
+        "bomb-3",
+        "press"
+      ]
+    }
+  },
+  {
+    "touch": true,
+    "errors": [],
+    "render": {
+      "drawCalls": 190,
+      "triangles": 4700,
+      "machinery": {
+        "real3D": true,
+        "behindWall": true,
+        "flywheel": 0,
+        "idler": 0,
+        "drive": 0,
+        "pulley": 0,
+        "crank": 0,
+        "piston": 0.56,
+        "beltPhase": 0
+      },
+      "objects": [
+        "trunk",
+        "bomb-3",
+        "press"
+      ]
+    }
+  }
+]

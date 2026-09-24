@@ -1,0 +1,8 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {newStreet,tick,near,path,INTERACTIONS} from '../two-d/levels/street-model.js';
+import {newRavens,tickRavens,ravenPose} from '../two-d/levels/ravens.js';
+import {newHall,HALL_OBJECTS,hallPath,hallBlocked} from '../two-d/levels/hall-model.js';
+test('raven flights trigger by proximity, animate once, and reset',()=>{const birds=newRavens();tickRavens(birds,{x:240,y:340},.1);assert.ok(birds.every(r=>r.phase==='perched'));tickRavens(birds,{x:194,y:305},.1);assert.equal(birds[0].phase,'flying');const before=ravenPose(birds[0]);tickRavens(birds,{x:194,y:305},1);assert.notDeepEqual(ravenPose(birds[0]),before);tickRavens(birds,{x:194,y:305},4);assert.equal(birds[0].phase,'gone');assert.equal(newRavens()[0].phase,'perched');});
+test('toy is separated from newspaper and every object is reachable',()=>{const s=newStreet();for(const o of INTERACTIONS)assert.ok(path(s,o.x,o.y).length,o.id);s.x=100;s.y=260;assert.equal(near(s).id,'newspaper');s.x=285;s.y=273;assert.equal(near(s).id,'toy');});
+test('kiosk shutter opens only after interaction and resets with street',()=>{const s=newStreet();tick(s,1);assert.equal(s.shutter,0);s.stall=true;tick(s,1);assert.ok(s.shutter>0&&s.shutter<1);tick(s,1);assert.equal(s.shutter,1);assert.equal(newStreet().shutter,0);});
+test('ticket hall interactions and onward corridor are reachable without crossing counter or void',()=>{const s=newHall();for(const o of HALL_OBJECTS)assert.ok(hallPath(s,o.x,o.y).length,o.id);for(const p of [[90,100],[300,300],[20,180]])assert.ok(hallBlocked(...p));});

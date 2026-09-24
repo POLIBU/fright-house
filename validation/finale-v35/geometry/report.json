@@ -1,0 +1,306 @@
+[
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 3,
+  "tris": 592,
+  "materials": 3,
+  "size": [
+   0.673,
+   0.182,
+   0.061
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   -0.016,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.1144,
+    "edgeDensity": 0.139
+   },
+   "right": {
+    "coverage": 0.0273,
+    "edgeDensity": 0.1716
+   },
+   "back": {
+    "coverage": 0.1191,
+    "edgeDensity": 0.1218
+   },
+   "left": {
+    "coverage": 0.0234,
+    "edgeDensity": 0.1104
+   }
+  },
+  "error": null,
+  "name": "belt",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 7,
+  "tris": 436,
+  "materials": 2,
+  "size": [
+   0.702,
+   0.537,
+   0.06
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2333,
+    "edgeDensity": 0.0692
+   },
+   "right": {
+    "coverage": 0.0344,
+    "edgeDensity": 0.233
+   },
+   "back": {
+    "coverage": 0.24,
+    "edgeDensity": 0.0324
+   },
+   "left": {
+    "coverage": 0.0342,
+    "edgeDensity": 0.1557
+   }
+  },
+  "error": null,
+  "name": "child-clothes",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 81,
+  "tris": 9712,
+  "materials": 14,
+  "size": [
+   2.16,
+   1.825,
+   5.88
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   -0.04
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.138,
+    "edgeDensity": 0.1611
+   },
+   "right": {
+    "coverage": 0.2016,
+    "edgeDensity": 0.2046
+   },
+   "back": {
+    "coverage": 0.1387,
+    "edgeDensity": 0.2805
+   },
+   "left": {
+    "coverage": 0.2028,
+    "edgeDensity": 0.2255
+   }
+  },
+  "error": null,
+  "name": "escape-car",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 4,
+  "tris": 188,
+  "materials": 1,
+  "size": [
+   0.806,
+   0.884,
+   0.765
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   -0.03,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2107,
+    "edgeDensity": 0.0509
+   },
+   "right": {
+    "coverage": 0.2222,
+    "edgeDensity": 0.041
+   },
+   "back": {
+    "coverage": 0.2345,
+    "edgeDensity": 0.0312
+   },
+   "left": {
+    "coverage": 0.219,
+    "edgeDensity": 0.0432
+   }
+  },
+  "error": null,
+  "name": "fall-stone",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 16,
+  "tris": 3072,
+  "materials": 1,
+  "size": [
+   1.002,
+   1.281,
+   0.063
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0.009
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.0442,
+    "edgeDensity": 0.8525
+   },
+   "right": {
+    "coverage": 0.0161,
+    "edgeDensity": 0.8677
+   },
+   "back": {
+    "coverage": 0.0449,
+    "edgeDensity": 0.8303
+   },
+   "left": {
+    "coverage": 0.0161,
+    "edgeDensity": 0.7427
+   }
+  },
+  "error": null,
+  "name": "fall-web",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 7,
+  "tris": 952,
+  "materials": 3,
+  "size": [
+   0.392,
+   0.219,
+   0.046
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.166,
+    "edgeDensity": 0.2034
+   },
+   "right": {
+    "coverage": 0.0374,
+    "edgeDensity": 0.2634
+   },
+   "back": {
+    "coverage": 0.1547,
+    "edgeDensity": 0.1353
+   },
+   "left": {
+    "coverage": 0.0369,
+    "edgeDensity": 0.2697
+   }
+  },
+  "error": null,
+  "name": "glasses",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 7,
+  "tris": 916,
+  "materials": 2,
+  "size": [
+   0.483,
+   0.673,
+   0.065
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.3076,
+    "edgeDensity": 0.0763
+   },
+   "right": {
+    "coverage": 0.0481,
+    "edgeDensity": 0.3452
+   },
+   "back": {
+    "coverage": 0.3087,
+    "edgeDensity": 0.0688
+   },
+   "left": {
+    "coverage": 0.0468,
+    "edgeDensity": 0.1907
+   }
+  },
+  "error": null,
+  "name": "pants",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 8,
+  "tris": 512,
+  "materials": 2,
+  "size": [
+   0.586,
+   0.527,
+   0.044
+  ],
+  "groundOffset": 0.002,
+  "centreOffset": [
+   0.003,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2242,
+    "edgeDensity": 0.0866
+   },
+   "right": {
+    "coverage": 0.0336,
+    "edgeDensity": 0.2061
+   },
+   "back": {
+    "coverage": 0.2202,
+    "edgeDensity": 0.0379
+   },
+   "left": {
+    "coverage": 0.0336,
+    "edgeDensity": 0.1276
+   }
+  },
+  "error": null,
+  "name": "socks",
+  "problems": []
+ }
+]

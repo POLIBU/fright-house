@@ -1,0 +1,8 @@
+import * as THREE from 'three';
+import {bakeStatic} from '../assetlib.js';
+export function addRats(parent,spots,height=()=>0){
+ const body=new THREE.Group(),fur=new THREE.MeshStandardMaterial({color:0x454438,roughness:1}),pink=new THREE.MeshStandardMaterial({color:0x795e4d,roughness:.85}),black=new THREE.MeshStandardMaterial({color:0x060b08,roughness:.3});
+ function ball(x,y,z,sx,sy,sz,m){const q=new THREE.Mesh(new THREE.SphereGeometry(1,12,8),m);q.position.set(x,y,z);q.scale.set(sx,sy,sz);body.add(q);}
+ ball(0,.085,0,.073,.076,.15,fur);ball(0,.10,.14,.052,.051,.074,fur);ball(0,.083,.201,.016,.018,.025,pink);for(const s of [-1,1]){ball(s*.041,.144,.114,.029,.034,.013,pink);ball(s*.037,.118,.174,.009,.009,.008,black);for(const z of [-.09,.075])ball(s*.063,.017,z,.026,.015,.038,pink);}const proto=bakeStatic(body),items=spots.map(([x,z],i)=>{const root=new THREE.Group(),model=proto.clone();root.add(model);const tail=new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3([new THREE.Vector3(0,.055,-.12),new THREE.Vector3(.05,.036,-.24),new THREE.Vector3(.10,.019,-.36),new THREE.Vector3(.06,.011,-.44)]),16,.009,5,false),pink);root.add(tail);root.position.set(x,height(x,z),z);parent.add(root);return {root,model,tail,x,z,seed:i*2.1};});
+ return {update(t){for(const r of items){const phase=t*.7+r.seed,run=Math.max(0,Math.sin(phase)),x=r.x+Math.sin(phase)*.52,z=r.z+Math.sin(phase*.6)*.28;r.root.position.set(x,height(x,z)+.01,z);r.root.rotation.y=Math.atan2(Math.cos(phase)*.52,Math.cos(phase*.6)*.168);r.model.rotation.z=Math.sin(t*25+r.seed)*.035*run;r.tail.rotation.y=Math.sin(t*7+r.seed)*.22;}},state:()=>({count:items.length})};
+}

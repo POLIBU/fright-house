@@ -1,0 +1,95 @@
+{
+  "observations": [
+    {
+      "name": "wreck",
+      "state": {
+        "view": 0,
+        "progress": 21,
+        "draws": 234,
+        "tris": 58915
+      }
+    },
+    {
+      "name": "stall",
+      "state": {
+        "view": 1,
+        "progress": 48,
+        "draws": 230,
+        "tris": 56407
+      }
+    },
+    {
+      "name": "beams",
+      "state": {
+        "view": 2,
+        "progress": 77,
+        "draws": 221,
+        "tris": 52354
+      }
+    },
+    {
+      "name": "sign",
+      "state": {
+        "view": 3,
+        "progress": 107,
+        "draws": 212,
+        "tris": 47707
+      }
+    },
+    {
+      "name": "barrel",
+      "state": {
+        "view": 4,
+        "progress": 137,
+        "draws": 197,
+        "tris": 44206
+      }
+    },
+    {
+      "name": "machinery",
+      "state": {
+        "view": 5,
+        "progress": 168,
+        "draws": 177,
+        "tris": 39889
+      }
+    },
+    {
+      "name": "tickets",
+      "state": {
+        "view": 6,
+        "progress": 8,
+        "draws": 240,
+        "tris": 58992
+      }
+    },
+    {
+      "name": "midway",
+      "state": {
+        "view": 7,
+        "progress": 115,
+        "draws": 201,
+        "tris": 44351
+      }
+    },
+    {
+      "name": "carousel",
+      "state": {
+        "view": 8,
+        "progress": 217,
+        "draws": 125,
+        "tris": 32896
+      }
+    },
+    {
+      "name": "loading",
+      "state": {
+        "view": 9,
+        "progress": 315,
+        "draws": 90,
+        "tris": 19847
+      }
+    }
+  ],
+  "errors": []
+}

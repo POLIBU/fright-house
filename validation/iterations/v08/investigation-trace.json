@@ -1,0 +1,1392 @@
+[
+  {
+    "monster": [
+      4.762124999999999,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 169.7504999999993
+  },
+  {
+    "monster": [
+      5.099849999999995,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 169.6003999999993
+  },
+  {
+    "monster": [
+      5.437124999999997,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 169.45049999999924
+  },
+  {
+    "monster": [
+      5.774624999999997,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 169.3004999999992
+  },
+  {
+    "monster": [
+      6.112124999999996,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 169.15049999999917
+  },
+  {
+    "monster": [
+      6.487199999999993,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 168.98379999999915
+  },
+  {
+    "monster": [
+      6.824474999999992,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 168.8338999999991
+  },
+  {
+    "monster": [
+      7.1621999999999915,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 168.68379999999905
+  },
+  {
+    "monster": [
+      7.49947499999999,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 168.533899999999
+  },
+  {
+    "monster": [
+      7.836974999999988,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 168.38389999999893
+  },
+  {
+    "monster": [
+      8.212049999999987,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 168.21719999999883
+  },
+  {
+    "monster": [
+      8.511974999999984,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 168.06719999999876
+  },
+  {
+    "monster": [
+      8.84947499999998,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 167.91719999999873
+  },
+  {
+    "monster": [
+      9.186974999999979,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 167.76719999999867
+  },
+  {
+    "monster": [
+      9.524474999999978,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 167.6171999999986
+  },
+  {
+    "monster": [
+      9.861974999999978,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 167.4671999999985
+  },
+  {
+    "monster": [
+      10.236824999999977,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 167.30059999999844
+  },
+  {
+    "monster": [
+      10.574549999999975,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 167.1504999999984
+  },
+  {
+    "monster": [
+      10.912049999999974,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 167.00049999999834
+  },
+  {
+    "monster": [
+      11.24932499999997,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 166.85059999999828
+  },
+  {
+    "monster": [
+      11.586824999999969,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 166.70059999999822
+  },
+  {
+    "monster": [
+      11.961899999999964,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 166.53389999999817
+  },
+  {
+    "monster": [
+      12.299399999999961,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 166.38389999999814
+  },
+  {
+    "monster": [
+      12.599324999999961,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 166.23399999999808
+  },
+  {
+    "monster": [
+      12.937049999999955,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 166.08389999999807
+  },
+  {
+    "monster": [
+      13.274549999999952,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 165.93389999999803
+  },
+  {
+    "monster": [
+      13.64962499999995,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 165.76719999999798
+  },
+  {
+    "monster": [
+      13.986899999999945,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 165.61729999999795
+  },
+  {
+    "monster": [
+      14.324399999999942,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 165.46729999999792
+  },
+  {
+    "monster": [
+      14.661899999999946,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 165.31729999999786
+  },
+  {
+    "monster": [
+      14.999399999999948,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 165.1672999999978
+  },
+  {
+    "monster": [
+      15.374249999999947,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 165.00069999999775
+  },
+  {
+    "monster": [
+      15.711749999999949,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 164.8506999999977
+  },
+  {
+    "monster": [
+      16.04924999999995,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 164.70069999999757
+  },
+  {
+    "monster": [
+      16.386749999999942,
+      0
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 164.55069999999745
+  },
+  {
+    "monster": [
+      16.68790541767057,
+      0.037336465222451536
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 164.38409999999732
+  },
+  {
+    "monster": [
+      16.696996573836966,
+      0.37493908148091826
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 164.23399999999725
+  },
+  {
+    "monster": [
+      16.706081673270404,
+      0.7123167792741846
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 164.08399999999716
+  },
+  {
+    "monster": [
+      16.715166772703842,
+      1.049694477067451
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 163.9339999999971
+  },
+  {
+    "monster": [
+      16.724251872137284,
+      1.3870721748607178
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 163.78399999999698
+  },
+  {
+    "monster": [
+      16.73434238924136,
+      1.761786337876436
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 163.61739999999685
+  },
+  {
+    "monster": [
+      16.743433545407758,
+      2.0993889541349033
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 163.46729999999673
+  },
+  {
+    "monster": [
+      16.75251258810824,
+      2.4365417334629695
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 163.31739999999664
+  },
+  {
+    "monster": [
+      16.761597687541677,
+      2.773919431256236
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 163.16739999999655
+  },
+  {
+    "monster": [
+      16.77068278697512,
+      3.1112971290495026
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 163.01739999999643
+  },
+  {
+    "monster": [
+      16.78077936081215,
+      3.4862362105304214
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 162.8506999999963
+  },
+  {
+    "monster": [
+      16.789858403512625,
+      3.823388989858496
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 162.7007999999962
+  },
+  {
+    "monster": [
+      16.796953379313234,
+      4.123443829206728
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 162.5506999999961
+  },
+  {
+    "monster": [
+      16.797193814415643,
+      4.460943743563696
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 162.40069999999605
+  },
+  {
+    "monster": [
+      16.797434089227984,
+      4.798218657977763
+    ],
+    "investigation": {
+      "mode": "investigate",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": null,
+      "source": "telephone",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 1
+    },
+    "time": 162.25079999999596
+  },
+  {
+    "monster": [
+      16.797707921656613,
+      5.182598560438596
+    ],
+    "investigation": {
+      "mode": "pursue",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "source": "sight",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 2
+    },
+    "time": 162.10069999999592
+  },
+  {
+    "monster": [
+      16.798016504972043,
+      5.615758450521153
+    ],
+    "investigation": {
+      "mode": "pursue",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "source": "sight",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 2
+    },
+    "time": 161.93409999999582
+  },
+  {
+    "monster": [
+      16.79829434109038,
+      6.0057583515558735
+    ],
+    "investigation": {
+      "mode": "pursue",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "source": "sight",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 2
+    },
+    "time": 161.78409999999576
+  },
+  {
+    "monster": [
+      16.798572177208715,
+      6.3957582525905945
+    ],
+    "investigation": {
+      "mode": "pursue",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "source": "sight",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 2
+    },
+    "time": 161.63409999999573
+  },
+  {
+    "monster": [
+      16.79885001332705,
+      6.7857581536253155
+    ],
+    "investigation": {
+      "mode": "pursue",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "source": "sight",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 2
+    },
+    "time": 161.4840999999957
+  },
+  {
+    "monster": [
+      16.799127849445387,
+      7.175758054660036
+    ],
+    "investigation": {
+      "mode": "pursue",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "source": "sight",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 2
+    },
+    "time": 161.33409999999563
+  },
+  {
+    "monster": [
+      16.79943643276081,
+      7.608917944742604
+    ],
+    "investigation": {
+      "mode": "pursue",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "source": "sight",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 2
+    },
+    "time": 161.16749999999556
+  },
+  {
+    "monster": [
+      16.799714454103217,
+      7.999177845711344
+    ],
+    "investigation": {
+      "mode": "pursue",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "source": "sight",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 2
+    },
+    "time": 161.01739999999552
+  },
+  {
+    "monster": [
+      16.799931132512345,
+      8.346017768776612
+    ],
+    "investigation": {
+      "mode": "pursue",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "source": "sight",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 2
+    },
+    "time": 160.86739999999546
+  },
+  {
+    "monster": [
+      16.79993744199207,
+      8.735757768725543
+    ],
+    "investigation": {
+      "mode": "pursue",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "source": "sight",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 2
+    },
+    "time": 160.71749999999543
+  },
+  {
+    "monster": [
+      16.79994375568093,
+      9.125757768674434
+    ],
+    "investigation": {
+      "mode": "pursue",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "source": "sight",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 2
+    },
+    "time": 160.56749999999533
+  },
+  {
+    "monster": [
+      16.799950772293812,
+      9.559177768617637
+    ],
+    "investigation": {
+      "mode": "pursue",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "source": "sight",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 2
+    },
+    "time": 160.40079999999526
+  },
+  {
+    "monster": [
+      16.799957081773538,
+      9.94891776856656
+    ],
+    "investigation": {
+      "mode": "pursue",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "source": "sight",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 2
+    },
+    "time": 160.25089999999517
+  },
+  {
+    "monster": [
+      16.79996339967152,
+      10.339177768515423
+    ],
+    "investigation": {
+      "mode": "pursue",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "source": "sight",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 2
+    },
+    "time": 160.10079999999508
+  },
+  {
+    "monster": [
+      16.79996971336037,
+      10.729177768464316
+    ],
+    "investigation": {
+      "mode": "pursue",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "source": "sight",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 2
+    },
+    "time": 159.950799999995
+  },
+  {
+    "monster": [
+      16.799976027049215,
+      11.119177768413207
+    ],
+    "investigation": {
+      "mode": "pursue",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "source": "sight",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 2
+    },
+    "time": 159.80079999999492
+  },
+  {
+    "monster": [
+      16.799983043662085,
+      11.552597768356403
+    ],
+    "investigation": {
+      "mode": "pursue",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "source": "sight",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 2
+    },
+    "time": 159.63409999999485
+  },
+  {
+    "monster": [
+      16.799989353141804,
+      11.942337768305334
+    ],
+    "investigation": {
+      "mode": "pursue",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "source": "sight",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 2
+    },
+    "time": 159.48419999999476
+  },
+  {
+    "monster": [
+      16.79999566683065,
+      12.332337768254225
+    ],
+    "investigation": {
+      "mode": "pursue",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "source": "sight",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 2
+    },
+    "time": 159.33419999999464
+  },
+  {
+    "monster": [
+      16.79999853188837,
+      12.678917768231521
+    ],
+    "investigation": {
+      "mode": "pursue",
+      "target": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "lastSeen": {
+        "x": 16.8,
+        "z": 16.8
+      },
+      "source": "sight",
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 2
+    },
+    "time": 159.18419999999452
+  }
+]

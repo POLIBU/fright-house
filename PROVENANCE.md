@@ -33,3 +33,112 @@ Additional hum, steps and ticks are original Web Audio synthesis. Dialogue was w
 Three.js r169 and BufferGeometryUtils: MIT, `vendor/THREE-LICENSE.txt`.
 
 `assetlib.js`, `surfaces.js` and the unused development `rig.js`: documented helpers copied from 404-game-recipe, Apache 2.0, `licenses/404-RECIPE-LICENSE.txt`. The rig is excluded from the build. No warehouse reference-game implementation was copied.
+
+
+## User-directed visual revision
+
+The earlier cartoon pass added twelve unique original masks (now in `references/cartoon-pass/`) and four detailed doors in `assets/art/`, generated as standalone Three.js modules and verified from five views. This pass follows the user’s supplied references directly; it is not described as three independent candidates per new mask. Each mask was used once in that earlier maze revision. New paint, canopy weave and clue-paper marks are procedural. The user’s reference screenshots are not redistributed in the runtime or source.
+
+`vendor/addons/objects/Reflector.js` is the official Three.js r169 planar reflector (MIT, existing Three.js license). Our mirror shader adds three distinct distortions and limits offscreen renders. `vendor/fonts/SpecialElite-Regular.ttf` is Special Elite by Brian J. Bonislawsky / Astigmatic, from the official Google Fonts repository; its Apache 2.0 license is included beside the font.
+
+`audio/laughter.mp3`: 10-second distant clown laughter, Atlas ElevenLabs SFX v2, FID `21f08bfb-8e72-4b3a-8fed-21661c463614`, same Fright House project. This workflow cost 31 credits total (9 for the generation node); cumulative reported Atlas usage is 192 credits. The very quiet source is normalized on decode and mixed softly, with long gaps and suppression during spoken clues.
+
+
+## Humanoid sculpt revision
+
+The earlier humanoid pass created twelve standalone original procedural heads made in response to the user’s request for more realistic humanoid faces. Each deforms a Three.js sphere into a continuous anatomical surface, removes computed triangles for actual eye/mouth apertures, and constructs the remaining features with geometry operations. Vertex colors intentionally add subtle casting variation; no literal imported vertex arrays, scans, mesh downloads or photographic textures are used. The five-view verifier report is in `assets/humanoid/_verify/`.
+
+No RunPod deployment or model generation was used for this revision. The previous cartoon faces moved to `references/cartoon-pass/` and are excluded from the shipped build.
+
+
+## Current direction — visual review 04
+
+The latest user direction supersedes the twelve-face cast: exactly three floating decorations remain in the maze, with a 2.55 m crooked-smile clown, a small hollow cast and a sleeping face. Gate doors no longer carry repeated heads. Unused humanoid designs are archived outside the shipped assets.
+
+Original procedural scene additions: ten drifting balloons in six faded colours; a six-bag fish-prize stall with translucent crinkled plastic, murky water, modeled fish and instanced circling flies; two triangular corner cobwebs; and a jointed fake skeleton lying beside the route. The creature has eight independently animated two-segment limbs and curling claws, plus 38 depth-tested soft smoke billows. Its reaching is visual; maze collision still determines capture.
+
+Chase fixture intensity falls from 55% during the phone warning to 21% after the creature appears. The existing spiral texture is animated with uneven downward runs, preserving collision and layout. Echoed, pitch-shifted creature laughter reuses the existing Atlas SFX, with distance, stereo direction and wall muffling. No new paid generation, model downloads or external services were used. The local scene tour provides creature/props/lighting/audio controls for review.
+
+
+## Last Ride and teddy revision
+
+The user added a second playable escape stage beyond the service door: a winding 420 m cart route through closed booths, broken railway carts, barricades, timber, a derelict carousel and Ferris-wheel silhouettes. Dense outdoor fog, a procedural cratered red moon and warm cart headlights limit visibility while hazard reflectors identify obstacles. Three-track steering, boost energy, brake-induced pursuit, thirteen obstacle rows and a final coast-road gate form the new stage. Test checkpoints are available from the title and pause menus.
+
+The monster no longer has a readable human coat/body: its central form is an irregular dark organic mass, torn strands and 38 depth-tested smoke billows, with the existing eight jointed arms and grasping claws. This is an original creature informed by the user's broad survival-horror references, not a copied franchise character.
+
+An original corner teddy follows the user-supplied reference in construction: worn textured plush, teeth, dark fabric sockets and a doll-like human face in an abdomen insert. Two bear eyes and the open doll eye rotate toward the player. The reference screenshot is not shipped. Plush fibre marks and lunar surface texture are generated with canvas drawing; all meshes are built with Three.js geometry operations. The existing Atlas laugh has been mixed louder; no additional external audio, AI service or paid generation was used.
+
+## Local refinement V01–V08
+
+New furniture, five fixture families, repaired spiral panels, six road obstacle families and four carnival districts are original procedural Three.js geometry. Wall wear, cloth motion, scenery animation and creature limb animation use original code. Deep grunts, breath and creaks are synthesized locally through Web Audio; existing licensed audio and its attribution remain unchanged. No external assets, paid generation or reference-game content were downloaded for these passes. The floor prop skeleton was removed in V01.
+
+## September 24 entrance and visual direction
+
+The added facade, doors, animatronics, specimen jars, damaged toys, insects, rats, vegetation, park fixtures and festoon bulbs are original procedural Three.js models informed by the user's screenshots. Reference screenshots are not shipped. The local `monsterCall.m4a` is synthesized with the installed macOS Whisper voice, reading the user-supplied line “Come here, darling.” Clanks and swarm buzzing are synthesized locally in Web Audio. No voice actor identity is imitated and no external generation or rental service is used.
+
+The selected fake-2D look uses an original low-resolution render target, 16-level-per-channel palette, ordered dithering and screen-space edge darkening. It does not incorporate textures or artwork from referenced games. The separate style-study files are outside the game project; `?look=smooth` preserves a smooth comparison in the playable game.
+
+### Top-down Level 1 street (September 24)
+
+The approved facade/forecourt concept and a clean plate with the static Ferris wheel removed were generated using the built-in imagegen tool, referencing the previously approved original 2D foyer concept. Project copies: two-d/art-review/concepts/01-street-v1.png and two-d/assets/street-clean.png. Exact prompts and approval context are recorded in two-d/IMPLEMENTATION.md. Original fictional newspaper text, code-drawn animated wheel/lights/paper and the existing temporary actor are used; existing game audio is reused. No third-party stock images or paid API/GPU service were added.
+
+### Hybrid Level 1 inspections (September 24)
+
+`two-d/assets/three/broken-turnstile.js` and `windup-carousel.js` are original procedural Three.js assets written through the 404 geometry-as-code method. Metal housing, snapped arms, spindle, tin base, bird carousel, winding key, hinged deck and raised 03 marking are built from constructors and transformations. No downloaded meshes, literal vertex arrays, stock models or embedded images are used. The scene and inspector import the game's existing vendored Three.js library.
+
+The noticeboard/ticket inspection images and approved Level 3 concept are built-in imagegen artwork following the user's original Fright House direction. They are declared image assets, not 3D geometry. Level 3's concept is review artwork, not runtime scene geometry. Briefs and paths are recorded in `two-d/IMPLEMENTATION.md`. All story text is fictional and original; existing audio is reused.
+
+### Layered street and ticket hall (V12)
+
+New ticket, raven and clown-jaw geometry is original constructor-built Three.js code. Ticket glyphs use an original compact bitmap alphabet converted to instanced boxes; no imported font/mesh data. Foreground street relief geometry uses original Shape/Extrude/Box construction; the scene loader projects the already declared street illustration onto it to preserve its appearance. The approved foyer illustration is reused for Level 2. No new images, stock meshes, paid tools or audio sources were added. Raven motion, shutter movement and mouth closure are code animation.
+
+### Level 3 platformer trial
+
+`two-d/assets/platform-clean.png` was edited with built-in imagegen from the user-approved original concept `two-d/art-review/concepts/03-platform-attraction-v1.png`. Brief: preserve composition, floors, stairs, doors, mirrors, lighting and pixel style; remove only the large painted barrel and three machinery barriers, reconstructing wall/floor behind them so independent game props can move there. The original is preserved.
+
+`two-d/assets/three/attraction-obstacles.js` is original geometry-as-code: wooden barrel staves and iron hoops, seven-plank lift, mechanical press and strapped crate, made with Three.js boxes/cylinders/toruses/cones/spheres and transforms. No imported meshes, mesh payloads or downloaded textures. Verified with the official 404 harness (1,468 triangles, 47 meshes, clean). Existing local ambience is reused; mechanism cues use Web Audio synthesis. Temporary investigator art is reused, and the temporary pursuer is a code-drawn shadow.
+
+### Level 3 V15: wall lever and leaping spiders
+
+`two-d/assets/three/wall-power-lever.js` and `leaping-spider.js` are original constructor-built Three.js modules with named articulation pivots. The spider uses spheres and segment cylinders for its body, eyes and eight jointed legs. The mains lever uses a wall plate, bolt heads, slotted backing, brass shaft and red cylindrical grip. The plate’s flat back is a legitimate flush wall-mount surface, declared with `userData.mounts = 'back'`. Both pass the official 404 geometry harness; no external mesh data or new image assets were used. The riddle text and close-up layout are authored in HTML/CSS, with a live 3D lever view.
+
+### Level 4 concept draft — pending user review
+
+`two-d/art-review/concepts/04-toy-storeroom-v1.png` was generated with built-in imagegen using the approved `two-d/assets/foyer-l.png` as a style reference. Brief: an original top-down 1987 carnival toy storeroom, irregular L-shaped enclosed footprint, bottom-left stair arrival, open entry door, solid shelving and a central wheeled prize cage with a passable loop, foul refuse alcove with flies, damaged dolls and plush prizes, child's drawing on a workbench, winding key on the cage and a three-dial brass/burgundy music box beside a red onward door. Match the established burgundy/teal/ochre pixel-art palette and festoon lights; no character sprites, imported meshes or graphic human gore. This is concept art only, not a production background or completed level.
+
+### V16 — approved toy-room sequence and reactive hall
+
+The user approved Level 4's concept, then specified winding a toy, lights failing, at least twenty toys awakening and escaping through the door. This supersedes the concept's earlier key/dial puzzle. The clean plate `two-d/assets/toystore-clean.png` was generated with built-in imagegen using `04-toy-storeroom-v1.png`: preserve composition, architecture, lighting, cage, furniture and drawing; remove all stationary toys, balls, loose doll parts, winding key/music box and door leaves so independent props can animate. The original concept remains intact.
+
+`two-d/assets/foyer-reactive-clean.png` is a built-in imagegen edit of the approved hall: remove only the two balloons/strings beside the booth, the lower-left teddy and the small floor rat; preserve all other artwork. These declared raster backgrounds are not mesh payloads.
+
+The new modules `awakened-toys.js`, `storeroom-winder.js`, `storeroom-door.js`, `hall-rat.js` and `hall-balloons.js` are original constructor-built Three.js geometry. The 24 toys use six families with named limb/head pivots. The rat has a tube tail; balloon strings and key loops use ordinary Three.js curves/primitives. Projected relief furniture uses original boxes with the declared background texture. No downloaded meshes, paid services or imported geometry data were added. Existing local ambience is reused; popping, winding and failing music cues use Web Audio synthesis.
+
+### V17 crate geometry
+
+The cage and stacked wooden crates now use original Three.js Shape/ExtrudeGeometry construction, with a depth shear matching the approved top-down projection. Shared floor footprints drive both geometry and collision. Their finish uses the already-declared toy-room clean plate; no new images or imported meshes were added.
+
+### V18 corridor flies
+
+`two-d/assets/three/corridor-fly.js` is an original constructor-built Three.js insect with ellipsoid body/head/wings, cylinder legs and named wing pivots. Its real-world width is approximately 3.6 cm including wings; the generic verifier's minimum prop-size warning is expected for an insect. Existing hall artwork is retained; flight, scattering and wing motion are code animation.
+
+
+### V19 — approved clown, revised investigator and solid volumes
+
+`two-d/art-review/concepts/clown-archer-v1.png` was generated with built-in imagegen: original red-ringlet-haired carnival archer, worn ivory face, teal/burgundy suit, cream ruff and battered bow, with front/aiming/game-scale views and a red/ochre clockwork bomb balloon. The user explicitly approved this appearance. `clown-archer.js`, `balloon-bomb.js` and `carnival-arrow.js` build original articulated geometry using Three.js constructors; the concept is not encoded as mesh data.
+
+`two-d/assets/characters/investigator-v2.png` was generated with built-in imagegen after the user rejected the first design as too close to their reference. Revised brief: original lean adult investigator, narrow tilted olive-brown hat, auburn hair/stubble, short ochre coat, burgundy scarf, satchel, gray trousers and brass magnifier; front/left/back/right views on transparency. The user then approved implementation. The game samples the four frames from the unchanged PNG, with code-driven walking bob. The rejected first sheet is not shipped.
+
+The new projected-volume helper uses ordinary Shape/ExtrudeGeometry and the already-declared clean artwork. Toy eye/pupil meshes and crate foreground faces are original code changes. No downloaded meshes, paid services or imported mesh payloads were added.
+
+### V20 original sprites, clean plates and Level 5 concept
+
+Built-in `image_gen` produced the investigator walking/jumping sheets, clown walking/shooting/stair sheets, street turnstile clean plate, storeroom bin clean plate, carousel explosion sheets and specimen-library concept. Exact final prompts and project asset paths are recorded in `validation/walking-v20/image-prompts.json`. The rejected opaque-background explosion draft is not shipped. References were the approved game artwork and user-supplied prop photographs. These declared raster images are visual textures/sprites, not geometry payloads.
+
+The lost-property cupboard, rear clown door, backstage machinery, haunted bin and connected tin carousel are original constructor-built Three.js modules. No downloaded mesh data was added. Raven calls, wingbeats, music-box notes and the mechanical burst use local Web Audio synthesis. The Level 5 image is concept-only pending user appearance approval.
+
+### V21 specimen library
+
+The approved Level 5 image, architecture-only plate and 24-frame crawling/spitting worm sheet were generated with built-in image_gen. Exact prompts and saved project paths: `validation/library-v21/image-prompts.json`. The lamp and desk/rug photographs supplied by the user guide the original prop designs. `library-desk.js`, `library-phone.js` and `specimen-library.js` use only constructor geometry, named pivots and a deterministic Canvas wood-grain texture (`helpers/library-wood.js`). Static opaque shelf geometry is merged at runtime with Three.js BufferGeometryUtils; transparent jar shells remain separate. No mesh payloads or downloaded models.
+
+The two short telephone lines in `two-d/audio/library-child-one.wav` and `library-child-two.wav` are synthesized locally with the installed macOS Junior and Kathy voices at 125/117 words per minute: “You can’t escape.” A telephone filter and delayed overlap are applied through Web Audio. Ringing, glass and bile cues are locally synthesized. No paid voice service or real child's recording was used.

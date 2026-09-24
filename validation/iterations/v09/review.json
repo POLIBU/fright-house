@@ -1,0 +1,1203 @@
+{
+  "errors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "captures": [
+    {
+      "view": "entry-0",
+      "rats": {
+        "count": 6
+      },
+      "foul": {
+        "flies": 80,
+        "spiders": 12,
+        "plushToys": 4
+      },
+      "doors": [
+        {
+          "kind": "double",
+          "open": 0,
+          "hands": 0
+        },
+        {
+          "kind": "glow",
+          "open": 0,
+          "hands": 0
+        },
+        {
+          "kind": "red",
+          "open": 0,
+          "hands": 0
+        },
+        {
+          "kind": "hands",
+          "open": 0,
+          "hands": 7
+        }
+      ],
+      "jaw": 0.16910043237463068,
+      "animatronicY": 14,
+      "draws": 284,
+      "tris": 196640
+    },
+    {
+      "view": "entry-1",
+      "rats": {
+        "count": 6
+      },
+      "foul": {
+        "flies": 80,
+        "spiders": 12,
+        "plushToys": 4
+      },
+      "doors": [
+        {
+          "kind": "double",
+          "open": 0,
+          "hands": 0
+        },
+        {
+          "kind": "glow",
+          "open": 0,
+          "hands": 0
+        },
+        {
+          "kind": "red",
+          "open": 0,
+          "hands": 0
+        },
+        {
+          "kind": "hands",
+          "open": 0,
+          "hands": 7
+        }
+      ],
+      "jaw": 0.09718984322733004,
+      "animatronicY": 14,
+      "draws": 119,
+      "tris": 149722
+    },
+    {
+      "view": "entry-2",
+      "rats": {
+        "count": 6
+      },
+      "foul": {
+        "flies": 80,
+        "spiders": 12,
+        "plushToys": 4
+      },
+      "doors": [
+        {
+          "kind": "double",
+          "open": 0,
+          "hands": 0
+        },
+        {
+          "kind": "glow",
+          "open": 0,
+          "hands": 0
+        },
+        {
+          "kind": "red",
+          "open": 0,
+          "hands": 0
+        },
+        {
+          "kind": "hands",
+          "open": 0,
+          "hands": 7
+        }
+      ],
+      "jaw": 0.11256095907464839,
+      "animatronicY": 14,
+      "draws": 45,
+      "tris": 111406
+    },
+    {
+      "view": "entry-3",
+      "rats": {
+        "count": 6
+      },
+      "foul": {
+        "flies": 80,
+        "spiders": 12,
+        "plushToys": 4
+      },
+      "doors": [
+        {
+          "kind": "double",
+          "open": 0,
+          "hands": 0
+        },
+        {
+          "kind": "glow",
+          "open": 0,
+          "hands": 0
+        },
+        {
+          "kind": "red",
+          "open": 0,
+          "hands": 0
+        },
+        {
+          "kind": "hands",
+          "open": 0,
+          "hands": 7
+        }
+      ],
+      "jaw": 0.17499563930284856,
+      "animatronicY": 14,
+      "draws": 146,
+      "tris": 7260
+    },
+    {
+      "view": "entry-4",
+      "rats": {
+        "count": 6
+      },
+      "foul": {
+        "flies": 80,
+        "spiders": 12,
+        "plushToys": 4
+      },
+      "doors": [
+        {
+          "kind": "double",
+          "open": 0,
+          "hands": 0
+        },
+        {
+          "kind": "glow",
+          "open": 0,
+          "hands": 0
+        },
+        {
+          "kind": "red",
+          "open": 0.9951728545974498,
+          "hands": 0
+        },
+        {
+          "kind": "hands",
+          "open": 0,
+          "hands": 7
+        }
+      ],
+      "jaw": 0.7150164174163238,
+      "animatronicY": 10.214364078653086,
+      "draws": 398,
+      "tris": 256506
+    },
+    {
+      "view": "entry-5",
+      "rats": {
+        "count": 6
+      },
+      "foul": {
+        "flies": 80,
+        "spiders": 12,
+        "plushToys": 4
+      },
+      "doors": [
+        {
+          "kind": "double",
+          "open": 0,
+          "hands": 0
+        },
+        {
+          "kind": "glow",
+          "open": 0,
+          "hands": 0
+        },
+        {
+          "kind": "red",
+          "open": 0.0040700697376738265,
+          "hands": 0
+        },
+        {
+          "kind": "hands",
+          "open": 0,
+          "hands": 7
+        }
+      ],
+      "jaw": 0.09393515850769472,
+      "animatronicY": 14,
+      "draws": 130,
+      "tris": 2712
+    },
+    {
+      "view": "entry-6",
+      "rats": {
+        "count": 6
+      },
+      "foul": {
+        "flies": 80,
+        "spiders": 12,
+        "plushToys": 4
+      },
+      "doors": [
+        {
+          "kind": "double",
+          "open": 0.9962406153804942,
+          "hands": 0
+        },
+        {
+          "kind": "glow",
+          "open": 0,
+          "hands": 0
+        },
+        {
+          "kind": "red",
+          "open": 0.00001295413980152339,
+          "hands": 0
+        },
+        {
+          "kind": "hands",
+          "open": 0,
+          "hands": 7
+        }
+      ],
+      "jaw": 0.16846913028639643,
+      "animatronicY": 14,
+      "draws": 29,
+      "tris": 82994
+    },
+    {
+      "view": "entry-7",
+      "rats": {
+        "count": 6
+      },
+      "foul": {
+        "flies": 80,
+        "spiders": 12,
+        "plushToys": 4
+      },
+      "doors": [
+        {
+          "kind": "double",
+          "open": 0.003749293500498673,
+          "hands": 0
+        },
+        {
+          "kind": "glow",
+          "open": 0,
+          "hands": 0
+        },
+        {
+          "kind": "red",
+          "open": 4.125080764392047e-8,
+          "hands": 0
+        },
+        {
+          "kind": "hands",
+          "open": 0,
+          "hands": 7
+        }
+      ],
+      "jaw": 0.13723431761103325,
+      "animatronicY": 14,
+      "draws": 86,
+      "tris": 3300
+    },
+    {
+      "view": "maze-0",
+      "atmosphere": {
+        "rats": {
+          "count": 5
+        },
+        "specimens": {
+          "jars": 4,
+          "headFloating": true,
+          "books": 21
+        },
+        "playerReflection": {
+          "visibleInMirrors": true,
+          "position": [
+            0.3,
+            0,
+            4.2
+          ],
+          "walkPhase": 44.55
+        },
+        "dressing": {
+          "walls": 32,
+          "wallDesigns": [
+            "panel-0-repair-1",
+            "panel-1-repair-2",
+            "panel-2-repair-3",
+            "panel-3-repair-1",
+            "panel-4-repair-2",
+            "panel-5-repair-3",
+            "panel-6-repair-1",
+            "panel-7-repair-2",
+            "panel-8-repair-3",
+            "panel-9-repair-1",
+            "panel-10-repair-2",
+            "panel-11-repair-3",
+            "panel-12-repair-1",
+            "panel-13-repair-2",
+            "panel-14-repair-3",
+            "panel-15-repair-1",
+            "panel-16-repair-2",
+            "panel-17-repair-3",
+            "panel-18-repair-1",
+            "panel-19-repair-2",
+            "panel-20-repair-3",
+            "panel-21-repair-1",
+            "panel-22-repair-2",
+            "panel-23-repair-3",
+            "panel-24-repair-1",
+            "panel-25-repair-2",
+            "panel-26-repair-3",
+            "panel-27-repair-1",
+            "panel-28-repair-2",
+            "panel-29-repair-3",
+            "panel-30-repair-1",
+            "panel-31-repair-2"
+          ],
+          "lamps": [
+            "0:0.220:0.130:0",
+            "2:0.458:0.158:2",
+            "3:0.247:0.172:3",
+            "4:0.366:0.186:4",
+            "0:0.485:0.200:5",
+            "1:0.274:0.214:6",
+            "2:0.393:0.130:7",
+            "4:0.301:0.158:9",
+            "0:0.420:0.172:10",
+            "1:0.539:0.186:11",
+            "2:0.328:0.200:12",
+            "3:0.447:0.214:13",
+            "4:0.566:0.130:14",
+            "0:0.355:0.144:15",
+            "1:0.474:0.158:16",
+            "2:0.593:0.172:17",
+            "3:0.382:0.186:18",
+            "4:0.501:0.200:19",
+            "0:0.620:0.214:20",
+            "1:0.409:0.130:21",
+            "2:0.528:0.144:22",
+            "4:0.436:0.172:24"
+          ],
+          "lampFamilies": 5,
+          "tables": [
+            "reception-desk",
+            "steel-trolley",
+            "carnival-cabinet",
+            "maintenance-bench"
+          ]
+        },
+        "suspenseLevel": 0,
+        "glimpse": false,
+        "clothTime": 0.31659999999999994,
+        "swing": [
+          -0.06637767390541587,
+          -0.0857300249674248,
+          -0.08307028516140057,
+          -0.06212040880189601,
+          -0.052196978860296575
+        ],
+        "faces": 3,
+        "teddyEyes": [
+          {
+            "yaw": -0.85,
+            "pitch": -0.04916998543125107
+          },
+          {
+            "yaw": -0.85,
+            "pitch": -0.02269232839850638
+          },
+          {
+            "yaw": -0.85,
+            "pitch": -0.02244019095804616
+          }
+        ],
+        "fishBags": 6,
+        "webs": 2,
+        "skeletons": 0,
+        "faceY": 0.5118199737253217,
+        "balloons": 10,
+        "balloonY": 2.7413628788650484,
+        "melt": 0,
+        "meltAge": 0,
+        "lightScale": 1,
+        "arms": 8,
+        "reveal": 0.23744999999999997,
+        "reach": 0.09086462466004987,
+        "smoke": 0
+      },
+      "laughing": false,
+      "grunting": false,
+      "speaking": false,
+      "draws": 559,
+      "tris": 438670,
+      "mirrors": [
+        {
+          "id": "stretch",
+          "mode": 0,
+          "updates": 9
+        },
+        {
+          "id": "wide",
+          "mode": 1,
+          "updates": 0
+        },
+        {
+          "id": "ripple",
+          "mode": 2,
+          "updates": 0
+        }
+      ]
+    },
+    {
+      "view": "maze-1",
+      "atmosphere": {
+        "rats": {
+          "count": 5
+        },
+        "specimens": {
+          "jars": 4,
+          "headFloating": true,
+          "books": 21
+        },
+        "playerReflection": {
+          "visibleInMirrors": true,
+          "position": [
+            12.6,
+            0,
+            0.4
+          ],
+          "walkPhase": 115.35489036782698
+        },
+        "dressing": {
+          "walls": 32,
+          "wallDesigns": [
+            "panel-0-repair-1",
+            "panel-1-repair-2",
+            "panel-2-repair-3",
+            "panel-3-repair-1",
+            "panel-4-repair-2",
+            "panel-5-repair-3",
+            "panel-6-repair-1",
+            "panel-7-repair-2",
+            "panel-8-repair-3",
+            "panel-9-repair-1",
+            "panel-10-repair-2",
+            "panel-11-repair-3",
+            "panel-12-repair-1",
+            "panel-13-repair-2",
+            "panel-14-repair-3",
+            "panel-15-repair-1",
+            "panel-16-repair-2",
+            "panel-17-repair-3",
+            "panel-18-repair-1",
+            "panel-19-repair-2",
+            "panel-20-repair-3",
+            "panel-21-repair-1",
+            "panel-22-repair-2",
+            "panel-23-repair-3",
+            "panel-24-repair-1",
+            "panel-25-repair-2",
+            "panel-26-repair-3",
+            "panel-27-repair-1",
+            "panel-28-repair-2",
+            "panel-29-repair-3",
+            "panel-30-repair-1",
+            "panel-31-repair-2"
+          ],
+          "lamps": [
+            "0:0.220:0.130:0",
+            "2:0.458:0.158:2",
+            "3:0.247:0.172:3",
+            "4:0.366:0.186:4",
+            "0:0.485:0.200:5",
+            "1:0.274:0.214:6",
+            "2:0.393:0.130:7",
+            "4:0.301:0.158:9",
+            "0:0.420:0.172:10",
+            "1:0.539:0.186:11",
+            "2:0.328:0.200:12",
+            "3:0.447:0.214:13",
+            "4:0.566:0.130:14",
+            "0:0.355:0.144:15",
+            "1:0.474:0.158:16",
+            "2:0.593:0.172:17",
+            "3:0.382:0.186:18",
+            "4:0.501:0.200:19",
+            "0:0.620:0.214:20",
+            "1:0.409:0.130:21",
+            "2:0.528:0.144:22",
+            "4:0.436:0.172:24"
+          ],
+          "lampFamilies": 5,
+          "tables": [
+            "reception-desk",
+            "steel-trolley",
+            "carnival-cabinet",
+            "maintenance-bench"
+          ]
+        },
+        "suspenseLevel": 0,
+        "glimpse": false,
+        "clothTime": 1.483299999999999,
+        "swing": [
+          -0.055365727941830915,
+          -0.07449322962446048,
+          -0.08787714801218739,
+          -0.07840915424204611,
+          -0.05819194846503457
+        ],
+        "faces": 3,
+        "teddyEyes": [
+          {
+            "yaw": -0.85,
+            "pitch": -0.06368916962588282
+          },
+          {
+            "yaw": -0.85,
+            "pitch": -0.029568442934873897
+          },
+          {
+            "yaw": -0.85,
+            "pitch": -0.02917516077605327
+          }
+        ],
+        "fishBags": 6,
+        "webs": 2,
+        "skeletons": 0,
+        "faceY": 0.5697149995844117,
+        "balloons": 10,
+        "balloonY": 2.804610986315087,
+        "melt": 0,
+        "meltAge": 0,
+        "lightScale": 1,
+        "arms": 8,
+        "reveal": 1,
+        "reach": 0.00026603450988168403,
+        "smoke": 0
+      },
+      "laughing": false,
+      "grunting": false,
+      "speaking": false,
+      "draws": 579,
+      "tris": 467975,
+      "mirrors": [
+        {
+          "id": "stretch",
+          "mode": 0,
+          "updates": 11
+        },
+        {
+          "id": "wide",
+          "mode": 1,
+          "updates": 68
+        },
+        {
+          "id": "ripple",
+          "mode": 2,
+          "updates": 0
+        }
+      ]
+    },
+    {
+      "view": "maze-2",
+      "atmosphere": {
+        "rats": {
+          "count": 5
+        },
+        "specimens": {
+          "jars": 4,
+          "headFloating": true,
+          "books": 21
+        },
+        "playerReflection": {
+          "visibleInMirrors": true,
+          "position": [
+            8.4,
+            0,
+            16.3
+          ],
+          "walkPhase": 205.80439285402088
+        },
+        "dressing": {
+          "walls": 32,
+          "wallDesigns": [
+            "panel-0-repair-1",
+            "panel-1-repair-2",
+            "panel-2-repair-3",
+            "panel-3-repair-1",
+            "panel-4-repair-2",
+            "panel-5-repair-3",
+            "panel-6-repair-1",
+            "panel-7-repair-2",
+            "panel-8-repair-3",
+            "panel-9-repair-1",
+            "panel-10-repair-2",
+            "panel-11-repair-3",
+            "panel-12-repair-1",
+            "panel-13-repair-2",
+            "panel-14-repair-3",
+            "panel-15-repair-1",
+            "panel-16-repair-2",
+            "panel-17-repair-3",
+            "panel-18-repair-1",
+            "panel-19-repair-2",
+            "panel-20-repair-3",
+            "panel-21-repair-1",
+            "panel-22-repair-2",
+            "panel-23-repair-3",
+            "panel-24-repair-1",
+            "panel-25-repair-2",
+            "panel-26-repair-3",
+            "panel-27-repair-1",
+            "panel-28-repair-2",
+            "panel-29-repair-3",
+            "panel-30-repair-1",
+            "panel-31-repair-2"
+          ],
+          "lamps": [
+            "0:0.220:0.130:0",
+            "2:0.458:0.158:2",
+            "3:0.247:0.172:3",
+            "4:0.366:0.186:4",
+            "0:0.485:0.200:5",
+            "1:0.274:0.214:6",
+            "2:0.393:0.130:7",
+            "4:0.301:0.158:9",
+            "0:0.420:0.172:10",
+            "1:0.539:0.186:11",
+            "2:0.328:0.200:12",
+            "3:0.447:0.214:13",
+            "4:0.566:0.130:14",
+            "0:0.355:0.144:15",
+            "1:0.474:0.158:16",
+            "2:0.593:0.172:17",
+            "3:0.382:0.186:18",
+            "4:0.501:0.200:19",
+            "0:0.620:0.214:20",
+            "1:0.409:0.130:21",
+            "2:0.528:0.144:22",
+            "4:0.436:0.172:24"
+          ],
+          "lampFamilies": 5,
+          "tables": [
+            "reception-desk",
+            "steel-trolley",
+            "carnival-cabinet",
+            "maintenance-bench"
+          ]
+        },
+        "suspenseLevel": 0,
+        "glimpse": false,
+        "clothTime": 2.6664999999999974,
+        "swing": [
+          -0.0521656313334074,
+          -0.060286135270817845,
+          -0.07966021111995451,
+          -0.087842873092977,
+          -0.0753544570695771
+        ],
+        "faces": 3,
+        "teddyEyes": [
+          {
+            "yaw": -0.7195740903455646,
+            "pitch": -0.10907429739437069
+          },
+          {
+            "yaw": -0.7057997007223812,
+            "pitch": -0.05004971001971967
+          },
+          {
+            "yaw": -0.7247884456084464,
+            "pitch": -0.0492321055748777
+          }
+        ],
+        "fishBags": 6,
+        "webs": 2,
+        "skeletons": 0,
+        "faceY": 0.5593897438889784,
+        "balloons": 10,
+        "balloonY": 2.817075900901822,
+        "melt": 0,
+        "meltAge": 0,
+        "lightScale": 1,
+        "arms": 8,
+        "reveal": 1,
+        "reach": 7.172190591368851e-7,
+        "smoke": 0
+      },
+      "laughing": false,
+      "grunting": false,
+      "speaking": false,
+      "draws": 528,
+      "tris": 350164,
+      "mirrors": [
+        {
+          "id": "stretch",
+          "mode": 0,
+          "updates": 11
+        },
+        {
+          "id": "wide",
+          "mode": 1,
+          "updates": 71
+        },
+        {
+          "id": "ripple",
+          "mode": 2,
+          "updates": 68
+        }
+      ]
+    },
+    {
+      "view": "maze-6",
+      "atmosphere": {
+        "rats": {
+          "count": 5
+        },
+        "specimens": {
+          "jars": 4,
+          "headFloating": true,
+          "books": 21
+        },
+        "playerReflection": {
+          "visibleInMirrors": true,
+          "position": [
+            8.4,
+            0,
+            4.2
+          ],
+          "walkPhase": 272.3543928540209
+        },
+        "dressing": {
+          "walls": 32,
+          "wallDesigns": [
+            "panel-0-repair-1",
+            "panel-1-repair-2",
+            "panel-2-repair-3",
+            "panel-3-repair-1",
+            "panel-4-repair-2",
+            "panel-5-repair-3",
+            "panel-6-repair-1",
+            "panel-7-repair-2",
+            "panel-8-repair-3",
+            "panel-9-repair-1",
+            "panel-10-repair-2",
+            "panel-11-repair-3",
+            "panel-12-repair-1",
+            "panel-13-repair-2",
+            "panel-14-repair-3",
+            "panel-15-repair-1",
+            "panel-16-repair-2",
+            "panel-17-repair-3",
+            "panel-18-repair-1",
+            "panel-19-repair-2",
+            "panel-20-repair-3",
+            "panel-21-repair-1",
+            "panel-22-repair-2",
+            "panel-23-repair-3",
+            "panel-24-repair-1",
+            "panel-25-repair-2",
+            "panel-26-repair-3",
+            "panel-27-repair-1",
+            "panel-28-repair-2",
+            "panel-29-repair-3",
+            "panel-30-repair-1",
+            "panel-31-repair-2"
+          ],
+          "lamps": [
+            "0:0.220:0.130:0",
+            "2:0.458:0.158:2",
+            "3:0.247:0.172:3",
+            "4:0.366:0.186:4",
+            "0:0.485:0.200:5",
+            "1:0.274:0.214:6",
+            "2:0.393:0.130:7",
+            "4:0.301:0.158:9",
+            "0:0.420:0.172:10",
+            "1:0.539:0.186:11",
+            "2:0.328:0.200:12",
+            "3:0.447:0.214:13",
+            "4:0.566:0.130:14",
+            "0:0.355:0.144:15",
+            "1:0.474:0.158:16",
+            "2:0.593:0.172:17",
+            "3:0.382:0.186:18",
+            "4:0.501:0.200:19",
+            "0:0.620:0.214:20",
+            "1:0.409:0.130:21",
+            "2:0.528:0.144:22",
+            "4:0.436:0.172:24"
+          ],
+          "lampFamilies": 5,
+          "tables": [
+            "reception-desk",
+            "steel-trolley",
+            "carnival-cabinet",
+            "maintenance-bench"
+          ]
+        },
+        "suspenseLevel": 0,
+        "glimpse": false,
+        "clothTime": 3.8330999999999933,
+        "swing": [
+          -0.0585644369706754,
+          -0.05232384604036857,
+          -0.06453544602025023,
+          -0.08245151052921745,
+          -0.08736940530453904
+        ],
+        "faces": 3,
+        "teddyEyes": [
+          {
+            "yaw": -0.85,
+            "pitch": -0.06930394671083201
+          },
+          {
+            "yaw": -0.85,
+            "pitch": -0.032111179653849305
+          },
+          {
+            "yaw": -0.85,
+            "pitch": -0.03159971139480081
+          }
+        ],
+        "fishBags": 6,
+        "webs": 2,
+        "skeletons": 0,
+        "faceY": 0.4898683056078211,
+        "balloons": 10,
+        "balloonY": 2.770991386242945,
+        "melt": 0,
+        "meltAge": 0,
+        "lightScale": 1,
+        "arms": 8,
+        "reveal": 1,
+        "reach": 0.46493668887082046,
+        "smoke": 38
+      },
+      "laughing": false,
+      "grunting": false,
+      "speaking": false,
+      "draws": 591,
+      "tris": 378467,
+      "mirrors": [
+        {
+          "id": "stretch",
+          "mode": 0,
+          "updates": 11
+        },
+        {
+          "id": "wide",
+          "mode": 1,
+          "updates": 71
+        },
+        {
+          "id": "ripple",
+          "mode": 2,
+          "updates": 70
+        }
+      ]
+    },
+    {
+      "view": "maze-13",
+      "atmosphere": {
+        "rats": {
+          "count": 5
+        },
+        "specimens": {
+          "jars": 4,
+          "headFloating": true,
+          "books": 21
+        },
+        "playerReflection": {
+          "visibleInMirrors": true,
+          "position": [
+            16.7,
+            2.6999999999999997,
+            -0.7
+          ],
+          "walkPhase": 325.36594819811546
+        },
+        "dressing": {
+          "walls": 32,
+          "wallDesigns": [
+            "panel-0-repair-1",
+            "panel-1-repair-2",
+            "panel-2-repair-3",
+            "panel-3-repair-1",
+            "panel-4-repair-2",
+            "panel-5-repair-3",
+            "panel-6-repair-1",
+            "panel-7-repair-2",
+            "panel-8-repair-3",
+            "panel-9-repair-1",
+            "panel-10-repair-2",
+            "panel-11-repair-3",
+            "panel-12-repair-1",
+            "panel-13-repair-2",
+            "panel-14-repair-3",
+            "panel-15-repair-1",
+            "panel-16-repair-2",
+            "panel-17-repair-3",
+            "panel-18-repair-1",
+            "panel-19-repair-2",
+            "panel-20-repair-3",
+            "panel-21-repair-1",
+            "panel-22-repair-2",
+            "panel-23-repair-3",
+            "panel-24-repair-1",
+            "panel-25-repair-2",
+            "panel-26-repair-3",
+            "panel-27-repair-1",
+            "panel-28-repair-2",
+            "panel-29-repair-3",
+            "panel-30-repair-1",
+            "panel-31-repair-2"
+          ],
+          "lamps": [
+            "0:0.220:0.130:0",
+            "2:0.458:0.158:2",
+            "3:0.247:0.172:3",
+            "4:0.366:0.186:4",
+            "0:0.485:0.200:5",
+            "1:0.274:0.214:6",
+            "2:0.393:0.130:7",
+            "4:0.301:0.158:9",
+            "0:0.420:0.172:10",
+            "1:0.539:0.186:11",
+            "2:0.328:0.200:12",
+            "3:0.447:0.214:13",
+            "4:0.566:0.130:14",
+            "0:0.355:0.144:15",
+            "1:0.474:0.158:16",
+            "2:0.593:0.172:17",
+            "3:0.382:0.186:18",
+            "4:0.501:0.200:19",
+            "0:0.620:0.214:20",
+            "1:0.409:0.130:21",
+            "2:0.528:0.144:22",
+            "4:0.436:0.172:24"
+          ],
+          "lampFamilies": 5,
+          "tables": [
+            "reception-desk",
+            "steel-trolley",
+            "carnival-cabinet",
+            "maintenance-bench"
+          ]
+        },
+        "suspenseLevel": 0,
+        "glimpse": false,
+        "clothTime": 5.016400000000004,
+        "swing": [
+          -0.07123927907703465,
+          -0.05548117189559331,
+          -0.053249985709449485,
+          -0.06662447501922336,
+          -0.0831438779132252
+        ],
+        "faces": 3,
+        "teddyEyes": [
+          {
+            "yaw": -0.85,
+            "pitch": -0.22334970711466776
+          },
+          {
+            "yaw": -0.85,
+            "pitch": -0.19246685108136444
+          },
+          {
+            "yaw": -0.85,
+            "pitch": -0.19039288115853123
+          }
+        ],
+        "fishBags": 6,
+        "webs": 2,
+        "skeletons": 0,
+        "faceY": 0.41979568484788354,
+        "balloons": 10,
+        "balloonY": 2.693369327829901,
+        "melt": 0,
+        "meltAge": 0,
+        "lightScale": 1,
+        "arms": 8,
+        "reveal": 1,
+        "reach": 0.0014805795832255177,
+        "smoke": 0
+      },
+      "laughing": false,
+      "grunting": false,
+      "speaking": false,
+      "draws": 42,
+      "tris": 90902,
+      "mirrors": [
+        {
+          "id": "stretch",
+          "mode": 0,
+          "updates": 11
+        },
+        {
+          "id": "wide",
+          "mode": 1,
+          "updates": 71
+        },
+        {
+          "id": "ripple",
+          "mode": 2,
+          "updates": 70
+        }
+      ]
+    },
+    {
+      "view": "maze-16",
+      "atmosphere": {
+        "rats": {
+          "count": 5
+        },
+        "specimens": {
+          "jars": 4,
+          "headFloating": true,
+          "books": 21
+        },
+        "playerReflection": {
+          "visibleInMirrors": true,
+          "position": [
+            4.2,
+            -0.04999999999999982,
+            7.8
+          ],
+          "walkPhase": 408.5051387161858
+        },
+        "dressing": {
+          "walls": 32,
+          "wallDesigns": [
+            "panel-0-repair-1",
+            "panel-1-repair-2",
+            "panel-2-repair-3",
+            "panel-3-repair-1",
+            "panel-4-repair-2",
+            "panel-5-repair-3",
+            "panel-6-repair-1",
+            "panel-7-repair-2",
+            "panel-8-repair-3",
+            "panel-9-repair-1",
+            "panel-10-repair-2",
+            "panel-11-repair-3",
+            "panel-12-repair-1",
+            "panel-13-repair-2",
+            "panel-14-repair-3",
+            "panel-15-repair-1",
+            "panel-16-repair-2",
+            "panel-17-repair-3",
+            "panel-18-repair-1",
+            "panel-19-repair-2",
+            "panel-20-repair-3",
+            "panel-21-repair-1",
+            "panel-22-repair-2",
+            "panel-23-repair-3",
+            "panel-24-repair-1",
+            "panel-25-repair-2",
+            "panel-26-repair-3",
+            "panel-27-repair-1",
+            "panel-28-repair-2",
+            "panel-29-repair-3",
+            "panel-30-repair-1",
+            "panel-31-repair-2"
+          ],
+          "lamps": [
+            "0:0.220:0.130:0",
+            "2:0.458:0.158:2",
+            "3:0.247:0.172:3",
+            "4:0.366:0.186:4",
+            "0:0.485:0.200:5",
+            "1:0.274:0.214:6",
+            "2:0.393:0.130:7",
+            "4:0.301:0.158:9",
+            "0:0.420:0.172:10",
+            "1:0.539:0.186:11",
+            "2:0.328:0.200:12",
+            "3:0.447:0.214:13",
+            "4:0.566:0.130:14",
+            "0:0.355:0.144:15",
+            "1:0.474:0.158:16",
+            "2:0.593:0.172:17",
+            "3:0.382:0.186:18",
+            "4:0.501:0.200:19",
+            "0:0.620:0.214:20",
+            "1:0.409:0.130:21",
+            "2:0.528:0.144:22",
+            "4:0.436:0.172:24"
+          ],
+          "lampFamilies": 5,
+          "tables": [
+            "reception-desk",
+            "steel-trolley",
+            "carnival-cabinet",
+            "maintenance-bench"
+          ]
+        },
+        "suspenseLevel": 0,
+        "glimpse": false,
+        "clothTime": 6.149700000000018,
+        "swing": [
+          -0.08283965027703404,
+          -0.06729700690616477,
+          -0.053993620654603953,
+          -0.053950497252132995,
+          -0.067203361683108
+        ],
+        "faces": 3,
+        "teddyEyes": [
+          {
+            "yaw": -0.85,
+            "pitch": -0.062282789725514445
+          },
+          {
+            "yaw": -0.85,
+            "pitch": -0.02703348724022976
+          },
+          {
+            "yaw": -0.85,
+            "pitch": -0.02664033318872403
+          }
+        ],
+        "fishBags": 6,
+        "webs": 2,
+        "skeletons": 0,
+        "faceY": 0.4095964601322241,
+        "balloons": 10,
+        "balloonY": 2.6337492852515387,
+        "melt": 0,
+        "meltAge": 0,
+        "lightScale": 1,
+        "arms": 8,
+        "reveal": 1,
+        "reach": 0.16193873173354856,
+        "smoke": 0
+      },
+      "laughing": false,
+      "grunting": false,
+      "speaking": false,
+      "draws": 798,
+      "tris": 647100,
+      "mirrors": [
+        {
+          "id": "stretch",
+          "mode": 0,
+          "updates": 11
+        },
+        {
+          "id": "wide",
+          "mode": 1,
+          "updates": 71
+        },
+        {
+          "id": "ripple",
+          "mode": 2,
+          "updates": 136
+        }
+      ]
+    }
+  ]
+}

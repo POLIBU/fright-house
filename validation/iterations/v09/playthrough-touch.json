@@ -1,0 +1,686 @@
+{
+  "success": true,
+  "cartResult": {
+    "state": {
+      "rendering": {
+        "style": "fake-2d",
+        "internalResolution": [
+          160,
+          346
+        ],
+        "paletteLevels": 16
+      },
+      "entrance": null,
+      "floor": 0,
+      "eyeHeight": 1.337799757402267,
+      "monsterMouth": 0.4093054225314655,
+      "monsterCall": false,
+      "pos": [
+        -1.9480944571353342,
+        419.8154882015619
+      ],
+      "yaw": 1.5641746695810055,
+      "pitch": -0.218630126953125,
+      "fps": 59.99999999999997,
+      "speed": 0,
+      "score": 3,
+      "over": true,
+      "draws": 29,
+      "tris": 9950,
+      "phase": "escaped",
+      "paused": false,
+      "dialog": null,
+      "ride": {
+        "axe": null,
+        "axeHits": 0,
+        "throws": 7,
+        "stun": 1.1000000000000003,
+        "flashCooldown": 5.900000000000004,
+        "flashLight": 0,
+        "flashCount": 7,
+        "age": 58.58100000000184,
+        "progress": 420,
+        "length": 420,
+        "lateral": -0.046100000000000134,
+        "speed": 7.199999999999994,
+        "gap": 29.71476000000016,
+        "energy": 1,
+        "hits": 0,
+        "status": "escaped",
+        "hazards": [
+          {
+            "id": "hazard-12-0",
+            "kind": "wreck",
+            "distance": 389,
+            "lateral": 0,
+            "height": 0,
+            "angle": 0,
+            "halfWidth": 0.48,
+            "halfDepth": 0.73,
+            "moving": false
+          }
+        ],
+        "next": null
+      },
+      "park": {
+        "age": 58.58100000000184,
+        "districts": [
+          "ticket entrance",
+          "midway stalls",
+          "carousel yard",
+          "loading district"
+        ],
+        "buildings": [
+          {
+            "name": "ticket-proscenium",
+            "station": 15,
+            "lateral": 0
+          },
+          {
+            "name": "octagonal-ticket-kiosk",
+            "station": 23,
+            "lateral": 7.7
+          },
+          {
+            "name": "boarded-admission-office",
+            "station": 45,
+            "lateral": -7.4
+          },
+          {
+            "name": "ring-toss",
+            "station": 106,
+            "lateral": -6.5
+          },
+          {
+            "name": "salt-taffy",
+            "station": 125,
+            "lateral": 6.75
+          },
+          {
+            "name": "prize-cage",
+            "station": 144,
+            "lateral": -7
+          },
+          {
+            "name": "fortune-awning",
+            "station": 163,
+            "lateral": 7.25
+          },
+          {
+            "name": "arched-arcade",
+            "station": 176,
+            "lateral": 8.3
+          },
+          {
+            "name": "carousel-yard",
+            "station": 230,
+            "lateral": -10.4
+          },
+          {
+            "name": "wheel-yard",
+            "station": 270,
+            "lateral": 13
+          },
+          {
+            "name": "loading-shed",
+            "station": 331,
+            "lateral": 9.2
+          },
+          {
+            "name": "maintenance-gantry",
+            "station": 365,
+            "lateral": -7.7
+          },
+          {
+            "name": "exit-searchlight",
+            "station": 389,
+            "lateral": 9
+          }
+        ],
+        "animated": 24,
+        "marqueeSections": 48,
+        "searchlight": true
+      },
+      "gates": [
+        1,
+        1,
+        0
+      ],
+      "rotating": [
+        0,
+        0,
+        0
+      ],
+      "found": [
+        "bag",
+        "shoe",
+        "tape"
+      ],
+      "power": true,
+      "recording": true,
+      "jamSolved": true,
+      "timeLeft": 50.96899999998892,
+      "grace": -0.016300000000038246,
+      "monster": [
+        7.814984655695701,
+        390.29425827807705
+      ],
+      "investigation": {
+        "mode": "dormant",
+        "target": null,
+        "lastSeen": null,
+        "source": null,
+        "searchAge": 0,
+        "searchStep": 0,
+        "revision": 0
+      },
+      "suspense": {
+        "active": null,
+        "queued": [],
+        "seen": [],
+        "quiet": 3
+      },
+      "atmosphere": {
+        "festoonBulbs": 26,
+        "rats": {
+          "count": 5
+        },
+        "specimens": {
+          "jars": 4,
+          "headFloating": true,
+          "books": 21
+        },
+        "playerReflection": {
+          "visibleInMirrors": true,
+          "position": [
+            -0.02756403200648215,
+            0.0037041399485451265,
+            16.799817429636686
+          ],
+          "walkPhase": 1037.9783975000066
+        },
+        "dressing": {
+          "walls": 32,
+          "wallDesigns": [
+            "panel-0-repair-1",
+            "panel-1-repair-2",
+            "panel-2-repair-3",
+            "panel-3-repair-1",
+            "panel-4-repair-2",
+            "panel-5-repair-3",
+            "panel-6-repair-1",
+            "panel-7-repair-2",
+            "panel-8-repair-3",
+            "panel-9-repair-1",
+            "panel-10-repair-2",
+            "panel-11-repair-3",
+            "panel-12-repair-1",
+            "panel-13-repair-2",
+            "panel-14-repair-3",
+            "panel-15-repair-1",
+            "panel-16-repair-2",
+            "panel-17-repair-3",
+            "panel-18-repair-1",
+            "panel-19-repair-2",
+            "panel-20-repair-3",
+            "panel-21-repair-1",
+            "panel-22-repair-2",
+            "panel-23-repair-3",
+            "panel-24-repair-1",
+            "panel-25-repair-2",
+            "panel-26-repair-3",
+            "panel-27-repair-1",
+            "panel-28-repair-2",
+            "panel-29-repair-3",
+            "panel-30-repair-1",
+            "panel-31-repair-2"
+          ],
+          "lamps": [
+            "0:0.220:0.130:0",
+            "2:0.458:0.158:2",
+            "3:0.247:0.172:3",
+            "4:0.366:0.186:4",
+            "0:0.485:0.200:5",
+            "1:0.274:0.214:6",
+            "2:0.393:0.130:7",
+            "4:0.301:0.158:9",
+            "0:0.420:0.172:10",
+            "1:0.539:0.186:11",
+            "2:0.328:0.200:12",
+            "3:0.447:0.214:13",
+            "4:0.566:0.130:14",
+            "0:0.355:0.144:15",
+            "1:0.474:0.158:16",
+            "2:0.593:0.172:17",
+            "3:0.382:0.186:18",
+            "4:0.501:0.200:19",
+            "0:0.620:0.214:20",
+            "1:0.409:0.130:21",
+            "2:0.528:0.144:22",
+            "4:0.436:0.172:24"
+          ],
+          "lampFamilies": 5,
+          "tables": [
+            "reception-desk",
+            "steel-trolley",
+            "carnival-cabinet",
+            "maintenance-bench"
+          ]
+        },
+        "suspenseLevel": 0,
+        "glimpse": false,
+        "clothTime": 18.91579999999985,
+        "swing": [
+          -0.0779952368348714,
+          -0.08163819641796008,
+          -0.08459833556877797,
+          -0.08670198102886177,
+          -0.08782571057273818
+        ],
+        "faces": 3,
+        "teddyEyes": [
+          {
+            "yaw": -0.7226909620588964,
+            "pitch": -0.05782645189866151
+          },
+          {
+            "yaw": -0.715399766821554,
+            "pitch": -0.02667490805974891
+          },
+          {
+            "yaw": -0.7254295511776585,
+            "pitch": -0.02644119462336544
+          }
+        ],
+        "fishBags": 6,
+        "webs": 2,
+        "skeletons": 0,
+        "faceY": 0.5066375063504679,
+        "balloons": 10,
+        "balloonY": 2.749205363383885,
+        "melt": 0.9999979122006725,
+        "meltAge": 10.899499999999927,
+        "lightScale": 0.21000070985177138,
+        "arms": 8,
+        "reveal": 1,
+        "reach": 0,
+        "smoke": 38
+      },
+      "monsterLaugh": false,
+      "monsterGrunt": false,
+      "monsterBreath": false,
+      "viewRight": [
+        -0.9414411111124168,
+        -0.3371774522523973
+      ],
+      "audioState": "running",
+      "near": "exit",
+      "evidenceVisible": {
+        "bag": false,
+        "shoe": false,
+        "tape": false
+      },
+      "mirrors": [
+        {
+          "id": "stretch",
+          "mode": 0,
+          "updates": 839
+        },
+        {
+          "id": "wide",
+          "mode": 1,
+          "updates": 317
+        },
+        {
+          "id": "ripple",
+          "mode": 2,
+          "updates": 229
+        }
+      ],
+      "ready": true
+    },
+    "peakDraws": 393,
+    "peakTris": 74853
+  },
+  "mazePeakDraws": 637,
+  "mazePeakTris": 536381,
+  "state": {
+    "rendering": {
+      "style": "fake-2d",
+      "internalResolution": [
+        160,
+        346
+      ],
+      "paletteLevels": 16
+    },
+    "entrance": null,
+    "floor": 0,
+    "eyeHeight": 1.337799757402267,
+    "monsterMouth": 0.4093054225314655,
+    "monsterCall": false,
+    "pos": [
+      -1.9480944571353342,
+      419.8154882015619
+    ],
+    "yaw": 1.5641746695810055,
+    "pitch": -0.218630126953125,
+    "fps": 59.99999999999997,
+    "speed": 0,
+    "score": 3,
+    "over": true,
+    "draws": 29,
+    "tris": 9950,
+    "phase": "escaped",
+    "paused": false,
+    "dialog": null,
+    "ride": {
+      "axe": null,
+      "axeHits": 0,
+      "throws": 7,
+      "stun": 1.1000000000000003,
+      "flashCooldown": 5.900000000000004,
+      "flashLight": 0,
+      "flashCount": 7,
+      "age": 58.58100000000184,
+      "progress": 420,
+      "length": 420,
+      "lateral": -0.046100000000000134,
+      "speed": 7.199999999999994,
+      "gap": 29.71476000000016,
+      "energy": 1,
+      "hits": 0,
+      "status": "escaped",
+      "hazards": [
+        {
+          "id": "hazard-12-0",
+          "kind": "wreck",
+          "distance": 389,
+          "lateral": 0,
+          "height": 0,
+          "angle": 0,
+          "halfWidth": 0.48,
+          "halfDepth": 0.73,
+          "moving": false
+        }
+      ],
+      "next": null
+    },
+    "park": {
+      "age": 58.58100000000184,
+      "districts": [
+        "ticket entrance",
+        "midway stalls",
+        "carousel yard",
+        "loading district"
+      ],
+      "buildings": [
+        {
+          "name": "ticket-proscenium",
+          "station": 15,
+          "lateral": 0
+        },
+        {
+          "name": "octagonal-ticket-kiosk",
+          "station": 23,
+          "lateral": 7.7
+        },
+        {
+          "name": "boarded-admission-office",
+          "station": 45,
+          "lateral": -7.4
+        },
+        {
+          "name": "ring-toss",
+          "station": 106,
+          "lateral": -6.5
+        },
+        {
+          "name": "salt-taffy",
+          "station": 125,
+          "lateral": 6.75
+        },
+        {
+          "name": "prize-cage",
+          "station": 144,
+          "lateral": -7
+        },
+        {
+          "name": "fortune-awning",
+          "station": 163,
+          "lateral": 7.25
+        },
+        {
+          "name": "arched-arcade",
+          "station": 176,
+          "lateral": 8.3
+        },
+        {
+          "name": "carousel-yard",
+          "station": 230,
+          "lateral": -10.4
+        },
+        {
+          "name": "wheel-yard",
+          "station": 270,
+          "lateral": 13
+        },
+        {
+          "name": "loading-shed",
+          "station": 331,
+          "lateral": 9.2
+        },
+        {
+          "name": "maintenance-gantry",
+          "station": 365,
+          "lateral": -7.7
+        },
+        {
+          "name": "exit-searchlight",
+          "station": 389,
+          "lateral": 9
+        }
+      ],
+      "animated": 24,
+      "marqueeSections": 48,
+      "searchlight": true
+    },
+    "gates": [
+      1,
+      1,
+      0
+    ],
+    "rotating": [
+      0,
+      0,
+      0
+    ],
+    "found": [
+      "bag",
+      "shoe",
+      "tape"
+    ],
+    "power": true,
+    "recording": true,
+    "jamSolved": true,
+    "timeLeft": 50.96899999998892,
+    "grace": -0.016300000000038246,
+    "monster": [
+      7.814984655695701,
+      390.29425827807705
+    ],
+    "investigation": {
+      "mode": "dormant",
+      "target": null,
+      "lastSeen": null,
+      "source": null,
+      "searchAge": 0,
+      "searchStep": 0,
+      "revision": 0
+    },
+    "suspense": {
+      "active": null,
+      "queued": [],
+      "seen": [],
+      "quiet": 3
+    },
+    "atmosphere": {
+      "festoonBulbs": 26,
+      "rats": {
+        "count": 5
+      },
+      "specimens": {
+        "jars": 4,
+        "headFloating": true,
+        "books": 21
+      },
+      "playerReflection": {
+        "visibleInMirrors": true,
+        "position": [
+          -0.02756403200648215,
+          0.0037041399485451265,
+          16.799817429636686
+        ],
+        "walkPhase": 1037.9783975000066
+      },
+      "dressing": {
+        "walls": 32,
+        "wallDesigns": [
+          "panel-0-repair-1",
+          "panel-1-repair-2",
+          "panel-2-repair-3",
+          "panel-3-repair-1",
+          "panel-4-repair-2",
+          "panel-5-repair-3",
+          "panel-6-repair-1",
+          "panel-7-repair-2",
+          "panel-8-repair-3",
+          "panel-9-repair-1",
+          "panel-10-repair-2",
+          "panel-11-repair-3",
+          "panel-12-repair-1",
+          "panel-13-repair-2",
+          "panel-14-repair-3",
+          "panel-15-repair-1",
+          "panel-16-repair-2",
+          "panel-17-repair-3",
+          "panel-18-repair-1",
+          "panel-19-repair-2",
+          "panel-20-repair-3",
+          "panel-21-repair-1",
+          "panel-22-repair-2",
+          "panel-23-repair-3",
+          "panel-24-repair-1",
+          "panel-25-repair-2",
+          "panel-26-repair-3",
+          "panel-27-repair-1",
+          "panel-28-repair-2",
+          "panel-29-repair-3",
+          "panel-30-repair-1",
+          "panel-31-repair-2"
+        ],
+        "lamps": [
+          "0:0.220:0.130:0",
+          "2:0.458:0.158:2",
+          "3:0.247:0.172:3",
+          "4:0.366:0.186:4",
+          "0:0.485:0.200:5",
+          "1:0.274:0.214:6",
+          "2:0.393:0.130:7",
+          "4:0.301:0.158:9",
+          "0:0.420:0.172:10",
+          "1:0.539:0.186:11",
+          "2:0.328:0.200:12",
+          "3:0.447:0.214:13",
+          "4:0.566:0.130:14",
+          "0:0.355:0.144:15",
+          "1:0.474:0.158:16",
+          "2:0.593:0.172:17",
+          "3:0.382:0.186:18",
+          "4:0.501:0.200:19",
+          "0:0.620:0.214:20",
+          "1:0.409:0.130:21",
+          "2:0.528:0.144:22",
+          "4:0.436:0.172:24"
+        ],
+        "lampFamilies": 5,
+        "tables": [
+          "reception-desk",
+          "steel-trolley",
+          "carnival-cabinet",
+          "maintenance-bench"
+        ]
+      },
+      "suspenseLevel": 0,
+      "glimpse": false,
+      "clothTime": 18.91579999999985,
+      "swing": [
+        -0.0779952368348714,
+        -0.08163819641796008,
+        -0.08459833556877797,
+        -0.08670198102886177,
+        -0.08782571057273818
+      ],
+      "faces": 3,
+      "teddyEyes": [
+        {
+          "yaw": -0.7226909620588964,
+          "pitch": -0.05782645189866151
+        },
+        {
+          "yaw": -0.715399766821554,
+          "pitch": -0.02667490805974891
+        },
+        {
+          "yaw": -0.7254295511776585,
+          "pitch": -0.02644119462336544
+        }
+      ],
+      "fishBags": 6,
+      "webs": 2,
+      "skeletons": 0,
+      "faceY": 0.5066375063504679,
+      "balloons": 10,
+      "balloonY": 2.749205363383885,
+      "melt": 0.9999979122006725,
+      "meltAge": 10.899499999999927,
+      "lightScale": 0.21000070985177138,
+      "arms": 8,
+      "reveal": 1,
+      "reach": 0,
+      "smoke": 38
+    },
+    "monsterLaugh": false,
+    "monsterGrunt": false,
+    "monsterBreath": false,
+    "viewRight": [
+      -0.9414411111124168,
+      -0.3371774522523973
+    ],
+    "audioState": "running",
+    "near": "exit",
+    "evidenceVisible": {
+      "bag": false,
+      "shoe": false,
+      "tape": false
+    },
+    "mirrors": [
+      {
+        "id": "stretch",
+        "mode": 0,
+        "updates": 839
+      },
+      {
+        "id": "wide",
+        "mode": 1,
+        "updates": 317
+      },
+      {
+        "id": "ripple",
+        "mode": 2,
+        "updates": 229
+      }
+    ],
+    "ready": true
+  },
+  "errors": []
+}

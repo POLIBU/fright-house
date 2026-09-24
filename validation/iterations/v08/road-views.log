@@ -1,0 +1,12 @@
+PASS road views [
+  { name: 'wreck', draws: 379, tris: 71346 },
+  { name: 'stall', draws: 369, tris: 68386 },
+  { name: 'beams', draws: 362, tris: 64753 },
+  { name: 'sign', draws: 348, tris: 60622 },
+  { name: 'barrel', draws: 328, tris: 56821 },
+  { name: 'machinery', draws: 296, tris: 51888 },
+  { name: 'tickets', draws: 395, tris: 71743 },
+  { name: 'midway', draws: 339, tris: 57282 },
+  { name: 'carousel', draws: 227, tris: 43299 },
+  { name: 'loading', draws: 103, tris: 19079 }
+]

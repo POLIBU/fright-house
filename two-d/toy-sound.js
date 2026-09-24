@@ -1,0 +1,5 @@
+// Local Web Audio music-box tines and a short tin/spring clatter.
+export function createToySound(isMuted=()=>false){let ac;const nodes=new Set();let notes=0,bursts=0;function ready(){if(isMuted())return false;ac||=new AudioContext();ac.resume();return true;}
+ function tone(freq,duration,gain,type='sine'){if(!ready())return;const o=ac.createOscillator(),g=ac.createGain();o.type=type;o.frequency.setValueAtTime(freq,ac.currentTime);g.gain.setValueAtTime(gain,ac.currentTime);g.gain.exponentialRampToValueAtTime(.0001,ac.currentTime+duration);o.connect(g).connect(ac.destination);o.start();o.stop(ac.currentTime+duration);nodes.add(o);o.onended=()=>{nodes.delete(o);g.disconnect();};}
+ return {unlock(){ready();},note(index){notes++;const f=[659,784,988,784,659,587,523,659,784,659,494,392][index%12];tone(f,.45,.055);tone(f*2.76,.22,.012);},burst(){bursts++;for(let i=0;i<8;i++)tone(110+i*i*47,.12+i*.045,.025,'triangle');tone(57,.4,.075,'sawtooth');},stop(){for(const n of nodes)try{n.stop();}catch{}nodes.clear();ac?.suspend();},suspend(){ac?.suspend();},resume(){if(!isMuted())ac?.resume();},snapshot(){return {notes,bursts,state:ac?.state||'not-started'};}};
+}

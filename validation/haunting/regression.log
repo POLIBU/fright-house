@@ -1,0 +1,4 @@
+PASS: chase darkens, paint melts, creature laughs, pause freezes effects/audio
+PASS: approaching creature reaches and capture stops laughter
+PASS: checkpoint resets haunting effects and keeps evidence
+PASS: haunting effects return after retry

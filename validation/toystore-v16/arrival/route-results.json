@@ -1,0 +1,132 @@
+{
+  "floors": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "attempts": 0,
+  "seconds": 36.247,
+  "errors": [],
+  "final": {
+    "x": 159.42639999999992,
+    "y": 136.2251530000004,
+    "vx": -132,
+    "vy": 75.85500000000283,
+    "floor": 3,
+    "time": 34.815299999999674,
+    "floorTime": 5.683200000000017,
+    "walk": 393.282999999992,
+    "face": "left",
+    "light": true,
+    "grounded": false,
+    "coyote": 0,
+    "jumpBuffer": 0,
+    "jumpHeld": false,
+    "health": 3,
+    "invincible": 0,
+    "checkpoint": 3,
+    "power": true,
+    "riddleSolved": true,
+    "lever": 1,
+    "pulling": false,
+    "inspection": null,
+    "puzzleMessage": "POWER RESTORED. The safety gate is open.",
+    "stairCooldown": 0,
+    "spiders": [
+      {
+        "id": "spider-0",
+        "nest": 245,
+        "x": 245,
+        "y": 347,
+        "phase": "hidden",
+        "age": 0,
+        "target": 169.19120000000038,
+        "cooldown": 0.6501000000000018,
+        "returnX": 153.19120000000038
+      },
+      {
+        "id": "spider-1",
+        "nest": 350,
+        "x": 350,
+        "y": 347,
+        "phase": "hidden",
+        "age": 0,
+        "target": 296.7824000000002,
+        "cooldown": 1.6167000000000014,
+        "returnX": 280.7824000000002
+      },
+      {
+        "id": "spider-2",
+        "nest": 457,
+        "x": 457,
+        "y": 347,
+        "phase": "hidden",
+        "age": 0,
+        "target": 404.58679999999976,
+        "cooldown": 2.433300000000004,
+        "returnX": 388.58679999999976
+      }
+    ],
+    "fuses": [
+      0,
+      1,
+      2
+    ],
+    "status": "escaped",
+    "paused": false,
+    "stair": null,
+    "chaser": 810.8053999999951,
+    "flash": 0,
+    "cooldown": 2.5832999999999995,
+    "hits": 1,
+    "notice": "RUN LEFT · Flash the pursuer with F. Reach the EXIT.",
+    "noticeAge": 0,
+    "running": true,
+    "hazards": [
+      {
+        "id": "press",
+        "kind": "press",
+        "x": 350,
+        "y": 172,
+        "r": 19,
+        "active": true,
+        "warning": false,
+        "until": 0
+      }
+    ],
+    "platforms": [
+      {
+        "id": "lift-0",
+        "x": 535,
+        "w": 64,
+        "y": 350.4414448324299
+      },
+      {
+        "id": "lift-1",
+        "x": 611,
+        "w": 64,
+        "y": 367.2696458060996
+      },
+      {
+        "id": "lift-2",
+        "x": 687,
+        "w": 64,
+        "y": 363.72942845169143
+      }
+    ],
+    "render": {
+      "drawCalls": 14,
+      "triangles": 168,
+      "objects": [
+        "trunk",
+        "press"
+      ]
+    },
+    "inspectionView": {
+      "open": false,
+      "angle": 2.6,
+      "triangles": 200
+    }
+  }
+}

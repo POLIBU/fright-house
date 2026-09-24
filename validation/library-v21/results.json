@@ -1,0 +1,44 @@
+[
+  {
+    "touch": false,
+    "loadMs": 675,
+    "transfer": 8209940,
+    "escaped": true,
+    "health": 2,
+    "shots": 7,
+    "render": {
+      "desk3D": true,
+      "lamp3D": true,
+      "phone3D": true,
+      "shelves3D": 16,
+      "specimenJars": 97,
+      "drawCalls": 386,
+      "triangles": 96804
+    },
+    "phone": true,
+    "pause": true,
+    "retry": true,
+    "errors": []
+  },
+  {
+    "touch": true,
+    "loadMs": 278,
+    "transfer": 8209940,
+    "escaped": true,
+    "health": 2,
+    "shots": 7,
+    "render": {
+      "desk3D": true,
+      "lamp3D": true,
+      "phone3D": true,
+      "shelves3D": 16,
+      "specimenJars": 97,
+      "drawCalls": 386,
+      "triangles": 96804
+    },
+    "phone": true,
+    "pause": true,
+    "retry": true,
+    "errors": []
+  }
+]

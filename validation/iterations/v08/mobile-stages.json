@@ -1,0 +1,157 @@
+{
+  "peakDraws": 420,
+  "peakTris": 322036,
+  "observations": [
+    {
+      "phase": "chase",
+      "draws": 383,
+      "tris": 314356
+    },
+    {
+      "phase": "chase",
+      "draws": 383,
+      "tris": 314356
+    },
+    {
+      "phase": "chase",
+      "draws": 383,
+      "tris": 314356
+    },
+    {
+      "phase": "chase",
+      "draws": 401,
+      "tris": 314932
+    },
+    {
+      "phase": "chase",
+      "draws": 409,
+      "tris": 315748
+    },
+    {
+      "phase": "chase",
+      "draws": 415,
+      "tris": 317620
+    },
+    {
+      "phase": "chase",
+      "draws": 416,
+      "tris": 317788
+    },
+    {
+      "phase": "chase",
+      "draws": 417,
+      "tris": 317956
+    },
+    {
+      "phase": "chase",
+      "draws": 418,
+      "tris": 318124
+    },
+    {
+      "phase": "chase",
+      "draws": 420,
+      "tris": 322036
+    },
+    {
+      "phase": "ride",
+      "draws": 358,
+      "tris": 67941
+    },
+    {
+      "phase": "ride",
+      "draws": 355,
+      "tris": 67217
+    },
+    {
+      "phase": "ride",
+      "draws": 353,
+      "tris": 67145
+    },
+    {
+      "phase": "ride",
+      "draws": 353,
+      "tris": 67145
+    },
+    {
+      "phase": "ride",
+      "draws": 353,
+      "tris": 67145
+    },
+    {
+      "phase": "ride",
+      "draws": 351,
+      "tris": 67097
+    },
+    {
+      "phase": "ride",
+      "draws": 351,
+      "tris": 67097
+    },
+    {
+      "phase": "ride",
+      "draws": 351,
+      "tris": 67097
+    },
+    {
+      "phase": "ride",
+      "draws": 355,
+      "tris": 70478
+    },
+    {
+      "phase": "ride",
+      "draws": 356,
+      "tris": 71406
+    },
+    {
+      "phase": "ride",
+      "draws": 353,
+      "tris": 71372
+    },
+    {
+      "phase": "ride",
+      "draws": 350,
+      "tris": 71321
+    },
+    {
+      "phase": "ride",
+      "draws": 351,
+      "tris": 71333
+    },
+    {
+      "phase": "ride",
+      "draws": 355,
+      "tris": 71421
+    },
+    {
+      "phase": "ride",
+      "draws": 355,
+      "tris": 72733
+    },
+    {
+      "phase": "ride",
+      "draws": 359,
+      "tris": 72865
+    },
+    {
+      "phase": "ride",
+      "draws": 363,
+      "tris": 73753
+    },
+    {
+      "phase": "ride",
+      "draws": 370,
+      "tris": 73849
+    },
+    {
+      "phase": "ride",
+      "draws": 371,
+      "tris": 73985
+    },
+    {
+      "phase": "ride",
+      "draws": 370,
+      "tris": 73961
+    }
+  ],
+  "errors": []
+}

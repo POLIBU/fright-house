@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "checks": [
+    {
+      "orientation": 3.141592653589793,
+      "passed": true
+    },
+    {
+      "orientation": 1.5707963267948966,
+      "passed": true
+    },
+    {
+      "orientation": 0,
+      "passed": true
+    },
+    {
+      "orientation": -1.5707963267948966,
+      "passed": true
+    }
+  ],
+  "cart": true,
+  "errors": []
+}

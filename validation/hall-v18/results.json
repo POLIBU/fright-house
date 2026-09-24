@@ -1,0 +1,22 @@
+[
+  {
+    "touch": false,
+    "fliesMove": true,
+    "balloonsPop": true,
+    "toyMoves": true,
+    "ratFlees": true,
+    "pause": true,
+    "reset": true,
+    "errors": []
+  },
+  {
+    "touch": true,
+    "fliesMove": true,
+    "balloonsPop": true,
+    "toyMoves": true,
+    "ratFlees": true,
+    "pause": true,
+    "reset": true,
+    "errors": []
+  }
+]

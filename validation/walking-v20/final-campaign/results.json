@@ -1,0 +1,36 @@
+[
+  {
+    "mobile": false,
+    "newspaperSelectable": true,
+    "ticket3d": true,
+    "ticketBack": true,
+    "toyRelocated": true,
+    "ravens": true,
+    "shutter": true,
+    "pause": true,
+    "mouthCloses": true,
+    "level2Playable": true,
+    "cluesPreserved": true,
+    "hallLedgerAndDrawer": true,
+    "hallResume": true,
+    "hallRestart": true,
+    "errors": []
+  },
+  {
+    "mobile": true,
+    "newspaperSelectable": true,
+    "ticket3d": true,
+    "ticketBack": true,
+    "toyRelocated": true,
+    "ravens": true,
+    "shutter": true,
+    "pause": true,
+    "mouthCloses": true,
+    "level2Playable": true,
+    "cluesPreserved": true,
+    "hallLedgerAndDrawer": true,
+    "hallResume": true,
+    "hallRestart": true,
+    "errors": []
+  }
+]

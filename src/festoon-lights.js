@@ -1,0 +1,8 @@
+import * as THREE from 'three';
+export function addFestoon(parent,paths){
+ const root=new THREE.Group();parent.add(root);const colors=[0xd83b26,0xbab729,0x218d62,0x29689d],locations=[];const wireMat=new THREE.MeshStandardMaterial({color:0x263e2a,roughness:.88});
+ for(const path of paths){const curve=new THREE.CatmullRomCurve3(path.map(p=>new THREE.Vector3(...p))),length=curve.getLength();root.add(new THREE.Mesh(new THREE.TubeGeometry(curve,Math.ceil(length*9),.012,5,false),wireMat));for(let i=0;i<=Math.floor(length/.32);i++)locations.push(curve.getPointAt(i/Math.floor(length/.32)));}
+ const bulbs=new THREE.InstancedMesh(new THREE.LatheGeometry([[0,-.09],[.025,-.06],[.043,0],[.037,.055],[.025,.08]].map(p=>new THREE.Vector2(...p)),12),new THREE.MeshBasicMaterial({color:0xffffff}),locations.length),caps=new THREE.InstancedMesh(new THREE.CylinderGeometry(.027,.027,.055,8),wireMat,locations.length);root.add(bulbs,caps);const dummy=new THREE.Object3D();for(let i=0;i<locations.length;i++){dummy.position.copy(locations[i]);dummy.position.y-=.025;dummy.rotation.set(.08*Math.sin(i),0,.15*Math.cos(i*1.7));dummy.updateMatrix();caps.setMatrixAt(i,dummy.matrix);dummy.position.y-=.11;dummy.updateMatrix();bulbs.setMatrixAt(i,dummy.matrix);bulbs.setColorAt(i,new THREE.Color(colors[i%4]).multiplyScalar(i%13===0?.08:1));}
+ // A few lights illuminate nearby paint; the remaining bulbs share two instanced draws.
+ for(let i=0;i<Math.min(3,paths.length);i++){const p=paths[i][Math.floor(paths[i].length/2)],light=new THREE.PointLight(colors[i],2.5,3.2,2);light.position.set(p[0],p[1]-.15,p[2]);root.add(light);}return {root,count:locations.length};
+}

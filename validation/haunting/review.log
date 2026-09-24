@@ -1,0 +1,151 @@
+creature {
+  atmosphere: {
+    faces: 3,
+    fishBags: 6,
+    webs: 2,
+    skeletons: 1,
+    faceY: 0.5445632225369177,
+    balloons: 10,
+    balloonY: 2.774634991655982,
+    melt: 0,
+    meltAge: 0,
+    lightScale: 1,
+    arms: 8,
+    reach: 0.4598959398895427,
+    smoke: 26
+  },
+  laughing: false,
+  draws: 305,
+  tris: 177977,
+  mirrors: [
+    { id: 'stretch', mode: 0, updates: 0 },
+    { id: 'wide', mode: 1, updates: 0 },
+    { id: 'ripple', mode: 2, updates: 0 }
+  ]
+}
+clown {
+  atmosphere: {
+    faces: 3,
+    fishBags: 6,
+    webs: 2,
+    skeletons: 1,
+    faceY: 0.5670304846775516,
+    balloons: 10,
+    balloonY: 2.800793775640528,
+    melt: 0,
+    meltAge: 0,
+    lightScale: 1,
+    arms: 8,
+    reach: 0.4056070977023398,
+    smoke: 0
+  },
+  laughing: false,
+  draws: 113,
+  tris: 146329,
+  mirrors: [
+    { id: 'stretch', mode: 0, updates: 28 },
+    { id: 'wide', mode: 1, updates: 0 },
+    { id: 'ripple', mode: 2, updates: 0 }
+  ]
+}
+fish {
+  atmosphere: {
+    faces: 3,
+    fishBags: 6,
+    webs: 2,
+    skeletons: 1,
+    faceY: 0.5749661957356353,
+    balloons: 10,
+    balloonY: 2.817018670707439,
+    melt: 0,
+    meltAge: 0,
+    lightScale: 1,
+    arms: 8,
+    reach: 0.028120863099940486,
+    smoke: 0
+  },
+  laughing: false,
+  draws: 110,
+  tris: 54974,
+  mirrors: [
+    { id: 'stretch', mode: 0, updates: 30 },
+    { id: 'wide', mode: 1, updates: 0 },
+    { id: 'ripple', mode: 2, updates: 0 }
+  ]
+}
+skeleton {
+  atmosphere: {
+    faces: 3,
+    fishBags: 6,
+    webs: 2,
+    skeletons: 1,
+    faceY: 0.5593857180791406,
+    balloons: 10,
+    balloonY: 2.8170742682956877,
+    melt: 0,
+    meltAge: 0,
+    lightScale: 1,
+    arms: 8,
+    reach: 0.0007815405523419701,
+    smoke: 0
+  },
+  laughing: false,
+  draws: 145,
+  tris: 198685,
+  mirrors: [
+    { id: 'stretch', mode: 0, updates: 67 },
+    { id: 'wide', mode: 1, updates: 0 },
+    { id: 'ripple', mode: 2, updates: 0 }
+  ]
+}
+web {
+  atmosphere: {
+    faces: 3,
+    fishBags: 6,
+    webs: 2,
+    skeletons: 1,
+    faceY: 0.5205286770672083,
+    balloons: 10,
+    balloonY: 2.794532131350614,
+    melt: 0,
+    meltAge: 0,
+    lightScale: 1,
+    arms: 8,
+    reach: 0.00002172072858447513,
+    smoke: 0
+  },
+  laughing: false,
+  draws: 14,
+  tris: 32018,
+  mirrors: [
+    { id: 'stretch', mode: 0, updates: 69 },
+    { id: 'wide', mode: 1, updates: 0 },
+    { id: 'ripple', mode: 2, updates: 0 }
+  ]
+}
+chase {
+  atmosphere: {
+    faces: 3,
+    fishBags: 6,
+    webs: 2,
+    skeletons: 1,
+    faceY: 0.5531170441289376,
+    balloons: 10,
+    balloonY: 2.6830245011093647,
+    melt: 0.9978871552145431,
+    meltAge: 5.13310000000001,
+    lightScale: 0.2107183672270554,
+    arms: 8,
+    reach: 0.46655093150531124,
+    smoke: 26
+  },
+  laughing: true,
+  draws: 305,
+  tris: 177977,
+  mirrors: [
+    { id: 'stretch', mode: 0, updates: 69 },
+    { id: 'wide', mode: 1, updates: 0 },
+    { id: 'ripple', mode: 2, updates: 0 }
+  ]
+}
+{ errors: [] }

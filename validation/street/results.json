@@ -1,0 +1,26 @@
+[
+  {
+    "mode": "keyboard-and-mouse",
+    "notes": 4,
+    "newspaper": true,
+    "animatedWheel": true,
+    "animatedLights": true,
+    "pause": true,
+    "resume": true,
+    "completed": true,
+    "restart": true,
+    "errors": []
+  },
+  {
+    "mode": "touch",
+    "notes": 4,
+    "newspaper": true,
+    "animatedWheel": true,
+    "animatedLights": true,
+    "pause": true,
+    "resume": true,
+    "completed": true,
+    "restart": true,
+    "errors": []
+  }
+]

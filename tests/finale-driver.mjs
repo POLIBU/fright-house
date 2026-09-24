@@ -1,0 +1,4 @@
+import {DIRS,RIDE_OBSTACLES,mazeRoute,EXIT} from '../two-d/levels/finale-model.js';
+export function routeTurn(s){const v=DIRS[s.cart.dir],hazard=RIDE_OBSTACLES.find(o=>o.kind!=='barricade'&&!s.hitObstacles.includes(o.id)&&o.vertical===(v[1]!==0)&&Math.abs((o.x-s.cart.x)*-v[1]+(o.y-s.cart.y)*v[0])<30&&((o.x-s.cart.x)*v[0]+(o.y-s.cart.y)*v[1])<70&&((o.x-s.cart.x)*v[0]+(o.y-s.cart.y)*v[1])>-32);if(hazard)return hazard.vertical?(hazard.side<0?'right':'left'):(hazard.side<0?'down':'up');return mazeRoute(s.cart.to||s.cart,EXIT)[1]?.dir;}
+
+export function routeJump(s){const v=DIRS[s.cart.dir];return RIDE_OBSTACLES.some(o=>o.kind==='barricade'&&!s.hitObstacles.includes(o.id)&&o.vertical===(v[1]!==0)&&Math.abs((o.x-s.cart.x)*-v[1]+(o.y-s.cart.y)*v[0])<35&&((o.x-s.cart.x)*v[0]+(o.y-s.cart.y)*v[1])<52&&((o.x-s.cart.x)*v[0]+(o.y-s.cart.y)*v[1])>22);}

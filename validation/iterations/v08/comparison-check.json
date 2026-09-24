@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "modes": [
+    "maze",
+    "road",
+    "motion",
+    "creature"
+  ],
+  "errors": []
+}

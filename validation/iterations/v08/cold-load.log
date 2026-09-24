@@ -1,0 +1,28 @@
+screenshots     /Users/poli/Projects/fright-house/validation/iterations/v08/mobile/loaded.png
+                /Users/poli/Projects/fright-house/validation/iterations/v08/mobile/started.png
+                /Users/poli/Projects/fright-house/validation/iterations/v08/mobile/moving.png
+verdict.json    /Users/poli/Projects/fright-house/validation/iterations/v08/mobile/verdict.json
+held            #stick dragged up and held 6 s
+path length     11.7 m over the run
+wire bytes      2.7 MB compressed, 42 responses
+renderer        ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)
+
+=== 404 JAM VERDICT ===
+url             http://localhost:8089/
+utc             2026-09-24T06:12:17.954Z
+commit          v08-candidate
+viewport        390x844 @3x phone, real touch, Android Chrome UA
+network         4G: 4 Mbps down, 1 Mbps up, 60 ms latency, CPU 2x slower
+ready           7.6 s   budget 20 s   PASS
+weight          2.7 MB   budget 10 MB   PASS
+started         yes (tap on #begin)
+moved           11.7 m   needs 1 m   PASS
+peak draws      276   budget 900   PASS
+peak tris       277,050   budget 1,500,000   PASS
+median fps      59.999999999999986 (ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version))
+errors          0   PASS
+404s            0   PASS
+external deps   none
+outside folder  none, every file came from the game folder
+RESULT: PASS
+=== END ===

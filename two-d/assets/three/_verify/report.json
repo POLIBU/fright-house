@@ -40,6 +40,44 @@
  {
   "ok": true,
   "mounts": null,
+  "meshes": 47,
+  "tris": 1468,
+  "materials": 3,
+  "size": [
+   4.024,
+   0.73,
+   0.668
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   -0.022,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.0778,
+    "edgeDensity": 0.3102
+   },
+   "right": {
+    "coverage": 0.059,
+    "edgeDensity": 0.3209
+   },
+   "back": {
+    "coverage": 0.0845,
+    "edgeDensity": 0.2767
+   },
+   "left": {
+    "coverage": 0.0651,
+    "edgeDensity": 0.2682
+   }
+  },
+  "error": null,
+  "name": "attraction-obstacles",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
   "meshes": 22,
   "tris": 692,
   "materials": 4,
@@ -93,20 +131,20 @@
   ],
   "sides": {
    "front": {
-    "coverage": 0.1953,
-    "edgeDensity": 0.0741
+    "coverage": 0.1961,
+    "edgeDensity": 0.0797
    },
    "right": {
     "coverage": 0.0257,
-    "edgeDensity": 0.1225
+    "edgeDensity": 0.123
    },
    "back": {
-    "coverage": 0.1974,
-    "edgeDensity": 0.0269
+    "coverage": 0.1988,
+    "edgeDensity": 0.0336
    },
    "left": {
     "coverage": 0.0257,
-    "edgeDensity": 0.1413
+    "edgeDensity": 0.142
    }
   },
   "error": null,

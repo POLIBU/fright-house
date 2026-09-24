@@ -91,3 +91,9 @@ The noticeboard/ticket inspection images and approved Level 3 concept are built-
 ### Layered street and ticket hall (V12)
 
 New ticket, raven and clown-jaw geometry is original constructor-built Three.js code. Ticket glyphs use an original compact bitmap alphabet converted to instanced boxes; no imported font/mesh data. Foreground street relief geometry uses original Shape/Extrude/Box construction; the scene loader projects the already declared street illustration onto it to preserve its appearance. The approved foyer illustration is reused for Level 2. No new images, stock meshes, paid tools or audio sources were added. Raven motion, shutter movement and mouth closure are code animation.
+
+### Level 3 platformer trial
+
+`two-d/assets/platform-clean.png` was edited with built-in imagegen from the user-approved original concept `two-d/art-review/concepts/03-platform-attraction-v1.png`. Brief: preserve composition, floors, stairs, doors, mirrors, lighting and pixel style; remove only the large painted barrel and three machinery barriers, reconstructing wall/floor behind them so independent game props can move there. The original is preserved.
+
+`two-d/assets/three/attraction-obstacles.js` is original geometry-as-code: wooden barrel staves and iron hoops, seven-plank lift, mechanical press and strapped crate, made with Three.js boxes/cylinders/toruses/cones/spheres and transforms. No imported meshes, mesh payloads or downloaded textures. Verified with the official 404 harness (1,468 triangles, 47 meshes, clean). Existing local ambience is reused; mechanism cues use Web Audio synthesis. Temporary investigator art is reused, and the temporary pursuer is a code-drawn shadow.

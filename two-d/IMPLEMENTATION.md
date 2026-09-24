@@ -73,3 +73,11 @@ Level 3 remains approved artwork, not playable content; the hall’s onward inte
 Validation: 42 model tests; real desktop/touch browser input covers the newspaper, relocated toy, both ticket faces, raven reactions, kiosk shutter, pause, mouth closure, carried clues and the ticket hall ledger/drawer/onward route. Matching screenshots and results: `validation/hybrid-street/`.
 
 The same projected-texture 3D layer renderer is used for the hall counter, staff door, shelf, lamp and tied balloons. Independent scene geometry lives in `forecourt-geometry.js` and `hall-geometry.js`; movable standalone props remain in `assets/three`.
+
+## V14 — Level 3 playable trial (supersedes earlier pending status)
+
+`level-3.html` implements the approved four-floor side-view concept. Enter directly for testing or finish the hall ledger/drawer and use the onward stairs. `levels/platform-model.js` owns movement, solid boundaries, jump timing, shared hazard poses, power/fuse requirements, floor checkpoints, chase, camera flash and completion. `platform-props.js` draws constructor-built meshes from `assets/three/attraction-obstacles.js` into the same illustrated scene. The background is `assets/platform-clean.png`; the original approved concept remains intact.
+
+Left/right or A/D move, Space/W/up jumps, E operates the switch/stairs/exit, F flashes. Touch buttons provide the same actions. The final shadow is temporary character art. Test selectors intentionally skip to prepared safe landings; these are separate from normal campaign entry. Local storage retains the last platformer landing; the hall campaign's existing notes are preserved separately. A full level restart clears platformer progression only. The current playable sequence ends at the upper exit; no later level is implied.
+
+The user's subsequent request prioritized trying this platformer. Level 2's reactive rat and further prop/collision refinement remain pending; they are not represented as completed in this pass.

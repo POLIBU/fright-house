@@ -1,0 +1,86 @@
+{
+  "floors": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "attempts": 0,
+  "seconds": 28.619,
+  "errors": [],
+  "final": {
+    "x": 157.42640000000213,
+    "y": 137.66344700000028,
+    "vx": -132,
+    "vy": 86.6450000000019,
+    "floor": 3,
+    "time": 28.398799999999635,
+    "floorTime": 5.716400000000018,
+    "walk": 317.8217999999931,
+    "face": "left",
+    "light": true,
+    "grounded": false,
+    "coyote": 0,
+    "jumpBuffer": 0,
+    "jumpHeld": false,
+    "health": 3,
+    "invincible": 0,
+    "checkpoint": 3,
+    "power": true,
+    "fuses": [
+      0,
+      1,
+      2
+    ],
+    "status": "escaped",
+    "paused": false,
+    "stair": null,
+    "chaser": 810.8107999999895,
+    "flash": 0,
+    "cooldown": 2.600000000000003,
+    "hits": 1,
+    "notice": "RUN LEFT · Flash the pursuer with F. Reach the EXIT.",
+    "noticeAge": 0,
+    "running": true,
+    "hazards": [
+      {
+        "id": "press",
+        "kind": "press",
+        "x": 350,
+        "y": 172,
+        "r": 19,
+        "active": true,
+        "warning": false,
+        "until": 0
+      }
+    ],
+    "platforms": [
+      {
+        "id": "lift-0",
+        "x": 535,
+        "w": 64,
+        "y": 351.15069645872944
+      },
+      {
+        "id": "lift-1",
+        "x": 611,
+        "w": 64,
+        "y": 367.6103105067735
+      },
+      {
+        "id": "lift-2",
+        "x": 687,
+        "w": 64,
+        "y": 363.1359804371129
+      }
+    ],
+    "render": {
+      "drawCalls": 14,
+      "triangles": 168,
+      "objects": [
+        "trunk",
+        "press"
+      ]
+    }
+  }
+}

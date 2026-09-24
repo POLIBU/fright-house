@@ -89,3 +89,9 @@ Current Level 3 controls: A/D or left/right move, Space jumps, up/down or W/S tr
 `power-inspection.js` and its stylesheet show the wall inscription and a live Three.js red lever from `assets/three/wall-power-lever.js`. Model state enforces the answer-before-lever-before-power order, freezes world simulation while inspecting, and resets correctly. The same lever asset is mounted visibly on the lower-floor wall.
 
 `levels/platform-spiders.js` replaces the mirror pendulum with three proximity-triggered spiders. Warning targets lock before an 0.8-second leap, then crawl/retreat and cooldown. `assets/three/leaping-spider.js` provides the articulated geometry. Model and renderer share positions. The moving platforms to the right of the mirrors are retained.
+
+## Level 4 concept draft — awaiting the user's visual review
+
+Prepared `art-review/level-4.html` and `art-review/concepts/04-toy-storeroom-v1.png` for the planned toy storeroom. Proposed flow: upper-attraction exit → landing/closed reveal door → insect burst → child's drawing and winding key → real 3D music-box dial puzzle → onward door. Build brief: `LEVEL-4-PLAN.md`.
+
+This is a review artifact only. It honors the user's direction to see each level's concept before production. No Level 4 gameplay or navigation has been added, and the Level 3 completion state remains unchanged. Approval or revisions to this specific layout are the next input needed before production.

@@ -1,0 +1,78 @@
+[
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 22,
+  "tris": 692,
+  "materials": 4,
+  "size": [
+   1.608,
+   1.21,
+   0.856
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.1298,
+    "edgeDensity": 0.1255
+   },
+   "right": {
+    "coverage": 0.1157,
+    "edgeDensity": 0.0758
+   },
+   "back": {
+    "coverage": 0.1384,
+    "edgeDensity": 0.0915
+   },
+   "left": {
+    "coverage": 0.1383,
+    "edgeDensity": 0.0646
+   }
+  },
+  "error": null,
+  "name": "broken-turnstile",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
+  "meshes": 79,
+  "tris": 4460,
+  "materials": 6,
+  "size": [
+   0.408,
+   0.445,
+   0.459
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.2169,
+    "edgeDensity": 0.2131
+   },
+   "right": {
+    "coverage": 0.2102,
+    "edgeDensity": 0.2284
+   },
+   "back": {
+    "coverage": 0.2019,
+    "edgeDensity": 0.2445
+   },
+   "left": {
+    "coverage": 0.2101,
+    "edgeDensity": 0.2447
+   }
+  },
+  "error": null,
+  "name": "windup-carousel",
+  "problems": []
+ }
+]

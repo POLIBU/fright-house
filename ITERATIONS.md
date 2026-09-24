@@ -128,3 +128,17 @@ Limits/regressions: only Level 1 is campaign-ready; the old ticket-hall remains 
 Retained: existing 3D and isometric versions, all earlier approved references and original game models. Production clown sprites await user appearance approval.
 
 Validation: 38 model tests passed, including nine campaign/street tests. Desktop keyboard/mouse and emulated-touch playthroughs reached the entrance after all four discoveries; pause froze animation/audio; saved progress resumed; restart cleared state; no browser errors or missing resources. Matching frames and local load measurements are in validation/street. Physical mobile performance and full-campaign budgets are not yet validated.
+
+## V11 — Level 1 real 3D inspections and turnstile
+
+Changed: added an independently rendered procedural wind-up carousel on the bench and a procedural broken turnstile. The toy opens in a real 3D viewer with full rotation, mouse/touch drag, zoom, winding animation, a hinged compartment and a persistent fifth clue. Added detailed image close-ups for the noticeboard/ticket and a readable newspaper view. Gate rendering and collision use the same opening progress.
+
+Improved: inspection reveals other sides and working mechanisms instead of just tilting an image. Separate moving parts give the street its first interactive 3D props. Fixed lost clicks after modal closure and ambiguous nearby-object routing. Cached prop renders reduce ongoing street GPU work.
+
+Retained: V10 approved street artwork, top-down movement, animated lights/Ferris wheel, newspaper collection, previous four notes, pause/save/restart and separate older game versions. The Level 3 concept is approved and saved, but implementation remains pending.
+
+Tradeoffs: this pass adds a Three.js dependency to the street and a stylized toy close-up; most scenery is still illustrated. No claim that every level or every prop has been converted. Desktop and touch comparison screenshots are in `validation/props3d`, with the V10 baseline in `validation/street`.
+
+Validation: all 38 model tests pass. Desktop and emulated-touch complete playthroughs verify toy rotation/zoom/winding/opening, saved clue, frozen world position/time during inspection, all existing object interactions, turnstile completion and restart, with no page errors. New assets contain 692 (turnstile) and 4,460 (toy) rendered triangles in the integration checks. The recommendation is to retain this hybrid Level 1 candidate; it adds tangible interaction without replacing the approved street composition. No publishing occurred.
+
+The official 404 `harness/verify.mjs` also passes both new modules (2/2 clean); its five-view contact sheet and measured bounds are retained beside the modules under `_verify`.

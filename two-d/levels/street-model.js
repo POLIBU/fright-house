@@ -10,13 +10,14 @@ export const INTERACTIONS = [
   {id:'notices',x:111,y:241,r:24,label:'EXAMINE · missing-child notices'},
   {id:'ticket',x:143,y:269,r:20,label:'EXAMINE · abandoned admission ticket'},
   {id:'stall',x:335,y:189,r:22,label:'LISTEN · shuttered prize stall'},
+  {id:'toy',x:101,y:251,r:20,label:'EXAMINE · wind-up carousel'},
   {id:'entrance',x:239,y:147,r:19,label:'PUSH · broken turnstile'},
 ];
 const floors=[
   [190,290,293,362], [95,256,331,297], [91,245,174,287], [104,237,124,258],
   [186,195,291,306], [144,151,362,201], [188,151,291,226], [223,127,254,161],
 ];
-export function newStreet(){return {x:239,y:342,face:'up',walk:0,time:0,light:true,gate:false,gateProgress:0,newspaper:false,notices:false,ticket:false,stall:false,phase:'street'};}
+export function newStreet(){return {x:239,y:342,face:'up',walk:0,time:0,light:true,gate:false,gateProgress:0,newspaper:false,notices:false,ticket:false,stall:false,toy:false,phase:'street'};}
 export function blocked(x,y,s,r=4){
   if(![[-r,-r],[r,-r],[-r,r],[r,r]].every(([dx,dy])=>floors.some(([a,b,c,d])=>x+dx>=a&&x+dx<=c&&y+dy>=b&&y+dy<=d)))return true;
   if(s.gateProgress<1&&y-r<140)return true;

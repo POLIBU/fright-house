@@ -1,0 +1,40 @@
+[
+  {
+    "mobile": false,
+    "realGeometry": 4460,
+    "draws": 79,
+    "drag": true,
+    "rotate": true,
+    "zoom": true,
+    "wind": true,
+    "hinge": true,
+    "clue": true,
+    "persist": true,
+    "freeze": true,
+    "closeReturnsToPosition": true,
+    "allInspections": true,
+    "turnstile": true,
+    "completed": true,
+    "restart": true,
+    "errors": []
+  },
+  {
+    "mobile": true,
+    "realGeometry": 4460,
+    "draws": 79,
+    "drag": true,
+    "rotate": true,
+    "zoom": true,
+    "wind": true,
+    "hinge": true,
+    "clue": true,
+    "persist": true,
+    "freeze": true,
+    "closeReturnsToPosition": true,
+    "allInspections": true,
+    "turnstile": true,
+    "completed": true,
+    "restart": true,
+    "errors": []
+  }
+]

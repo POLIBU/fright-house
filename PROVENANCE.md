@@ -81,3 +81,9 @@ The selected fake-2D look uses an original low-resolution render target, 16-leve
 ### Top-down Level 1 street (September 24)
 
 The approved facade/forecourt concept and a clean plate with the static Ferris wheel removed were generated using the built-in imagegen tool, referencing the previously approved original 2D foyer concept. Project copies: two-d/art-review/concepts/01-street-v1.png and two-d/assets/street-clean.png. Exact prompts and approval context are recorded in two-d/IMPLEMENTATION.md. Original fictional newspaper text, code-drawn animated wheel/lights/paper and the existing temporary actor are used; existing game audio is reused. No third-party stock images or paid API/GPU service were added.
+
+### Hybrid Level 1 inspections (September 24)
+
+`two-d/assets/three/broken-turnstile.js` and `windup-carousel.js` are original procedural Three.js assets written through the 404 geometry-as-code method. Metal housing, snapped arms, spindle, tin base, bird carousel, winding key, hinged deck and raised 03 marking are built from constructors and transformations. No downloaded meshes, literal vertex arrays, stock models or embedded images are used. The scene and inspector import the game's existing vendored Three.js library.
+
+The noticeboard/ticket inspection images and approved Level 3 concept are built-in imagegen artwork following the user's original Fright House direction. They are declared image assets, not 3D geometry. Level 3's concept is review artwork, not runtime scene geometry. Briefs and paths are recorded in `two-d/IMPLEMENTATION.md`. All story text is fictional and original; existing audio is reused.

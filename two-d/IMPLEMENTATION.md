@@ -45,3 +45,17 @@ Use case: precise-object-edit. Production clean background plate for the approve
 See tests/campaign.test.mjs, tests/street.test.mjs and tests/street-browser.mjs; results and screenshots are saved under validation/street. Touch checks are browser emulation, not physical-phone testing. Full-game mobile budget acceptance waits for complete-game implementation.
 
 Next: present the Level 2 ticket-hall concept for review before adapting the old study into its campaign role. Do not silently carry its placeholder three-item/monster mini-game into the final ticket hall.
+
+## Level 1 hybrid inspection pass — September 24
+
+The user approved adding a real 3D turnstile and a wind-up toy while retaining the approved top-down street. Both are original Three.js geometry-as-code modules under `assets/three/`, with constructors, named moving pivots, real-world dimensions, centered footprints and ground at y=0. No mesh data, downloaded models or texture files are used in these objects.
+
+The bench toy is an original tin carousel: drag through a full turn, zoom, use alternative rotation buttons, wind the rotating key/display, and open a hinged deck to reveal a physical brass 03 plate and a story clue. The compartment discovery is the fifth field note and persists with optional resume. The 3D turnstile replaces the former 2D line animation, uses the same opening progress as entry collision, and is composited around the player by depth. Cached street renders avoid rendering static 3D props every frame. Close-up inspection renders live geometry.
+
+The missing-child board and ticket use generated close-up artwork, selectable poster/stamp details and a small perspective tilt; these remain image inspections, not full 3D. The newspaper is readable dirty-paper typography. Close-up artwork lives in `assets/inspection/missing-board.png` and `assets/inspection/admission-ticket.png`; generated using the built-in imagegen tool from the approved street direction. Board brief: weathered wooden noticeboard, three anonymous missing-child posters beneath an amber lamp, detailed pixel art, no personal contact information. Ticket brief: worn cream/burgundy admission ticket, FRIGHT HOUSE / ADMIT ONE / OCT 17 1987 / 087, matching pixel art.
+
+Fixed two interaction defects: asynchronous modal cleanup could erase the next click's path, and nearest-object selection could override the explicitly clicked object when interaction ranges overlapped. Closing is now synchronous and queued interactions honor the selected reachable object.
+
+Level 3's four-floor side-view concept (`art-review/concepts/03-platform-attraction-v1.png`) was explicitly approved, with separate obstacles and hybrid 3D barrels/platforms/gearbox proposed. It is not yet a playable campaign level. Future levels must separate scenery, collisions and moving obstacles; benches, kiosks and closed gates must block movement. This Level 1 pass does not convert all background scenery into 3D.
+
+Validation: `tests/props3d-browser.mjs` drives real input through all five street discoveries, including the live 3D inspection, then opens the turnstile and completes the level, on desktop and emulated touch. Evidence is under `validation/props3d`. All 38 existing model tests pass. This is local browser validation, not a deployed jam-gate or physical-phone result.

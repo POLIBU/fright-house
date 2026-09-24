@@ -1,0 +1,22 @@
+[
+  {
+    "touch": false,
+    "riddle": true,
+    "lever3D": true,
+    "inspectionFreezesWorld": true,
+    "stairsStopAndReverse": true,
+    "spidersLeap": true,
+    "reset": true,
+    "errors": []
+  },
+  {
+    "touch": true,
+    "riddle": true,
+    "lever3D": true,
+    "inspectionFreezesWorld": true,
+    "stairsStopAndReverse": true,
+    "spidersLeap": true,
+    "reset": true,
+    "errors": []
+  }
+]

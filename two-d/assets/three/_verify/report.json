@@ -154,6 +154,44 @@
  {
   "ok": true,
   "mounts": null,
+  "meshes": 20,
+  "tris": 720,
+  "materials": 3,
+  "size": [
+   0.472,
+   0.227,
+   0.582
+  ],
+  "groundOffset": 0.003,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.1054,
+    "edgeDensity": 0.1722
+   },
+   "right": {
+    "coverage": 0.1007,
+    "edgeDensity": 0.2453
+   },
+   "back": {
+    "coverage": 0.1053,
+    "edgeDensity": 0.1341
+   },
+   "left": {
+    "coverage": 0.099,
+    "edgeDensity": 0.2345
+   }
+  },
+  "error": null,
+  "name": "leaping-spider",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": null,
   "meshes": 10,
   "tris": 590,
   "materials": 3,
@@ -187,6 +225,44 @@
   },
   "error": null,
   "name": "raven",
+  "problems": []
+ },
+ {
+  "ok": true,
+  "mounts": "back",
+  "meshes": 8,
+  "tris": 200,
+  "materials": 4,
+  "size": [
+   0.48,
+   0.72,
+   0.163
+  ],
+  "groundOffset": 0,
+  "centreOffset": [
+   0,
+   0
+  ],
+  "sides": {
+   "front": {
+    "coverage": 0.3428,
+    "edgeDensity": 0.0265
+   },
+   "right": {
+    "coverage": 0.0439,
+    "edgeDensity": 0.089
+   },
+   "back": {
+    "coverage": 0.3829,
+    "edgeDensity": 0.0077
+   },
+   "left": {
+    "coverage": 0.1035,
+    "edgeDensity": 0.0688
+   }
+  },
+  "error": null,
+  "name": "wall-power-lever",
   "problems": []
  },
  {

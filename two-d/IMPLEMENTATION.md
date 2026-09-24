@@ -81,3 +81,11 @@ The same projected-texture 3D layer renderer is used for the hall counter, staff
 Left/right or A/D move, Space/W/up jumps, E operates the switch/stairs/exit, F flashes. Touch buttons provide the same actions. The final shadow is temporary character art. Test selectors intentionally skip to prepared safe landings; these are separate from normal campaign entry. Local storage retains the last platformer landing; the hall campaign's existing notes are preserved separately. A full level restart clears platformer progression only. The current playable sequence ends at the upper exit; no later level is implied.
 
 The user's subsequent request prioritized trying this platformer. Level 2's reactive rat and further prop/collision refinement remain pending; they are not represented as completed in this pass.
+
+## V15 — direct stairs and the wall-power inspection
+
+Current Level 3 controls: A/D or left/right move, Space jumps, up/down or W/S traverse stairs, E examines the wall panel or uses the exit, F flashes. Touch buttons mirror these actions. `levels/platform-stairs.js` defines tread paths shared with the player’s foot positions; traversal stops or reverses with input and supports jumping onto slopes. Stairs no longer respond to E.
+
+`power-inspection.js` and its stylesheet show the wall inscription and a live Three.js red lever from `assets/three/wall-power-lever.js`. Model state enforces the answer-before-lever-before-power order, freezes world simulation while inspecting, and resets correctly. The same lever asset is mounted visibly on the lower-floor wall.
+
+`levels/platform-spiders.js` replaces the mirror pendulum with three proximity-triggered spiders. Warning targets lock before an 0.8-second leap, then crawl/retreat and cooldown. `assets/three/leaping-spider.js` provides the articulated geometry. Model and renderer share positions. The moving platforms to the right of the mirrors are retained.

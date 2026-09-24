@@ -14,4 +14,6 @@ Level 1 now includes two real 3D props. Click/tap the small carousel beside the 
 
 V12: the toy is now beside the right-hand park gate; the bench newspaper has its own unobstructed target. The ticket is a rotatable two-sided 3D object. Ravens take flight when approached; the kiosk shutter reacts when pulled. Walk through the clown mouth to see it close and enter the ticket hall, retaining your field notes. Level 3 is not yet playable.
 
-Level 3 is playable at [level-3.html](./level-3.html): a four-floor side-view platformer using the approved concept, separate procedural 3D obstacles and solid collision. Move with A/D or arrows, jump with Space/W/up, use switches/stairs/exit with E and flash with F. Touch buttons are below the stage. Test checkpoints jump to any of the four floors. It also follows the ticket hall once its two clues are found.
+Level 3 is playable at [level-3.html](./level-3.html): a four-floor side-view platformer using the approved concept, separate procedural 3D obstacles and solid collision. Move with A/D or arrows, jump with Space, walk stairs with up/down or W/S, inspect the wall riddle or use the exit with E and flash with F. Touch buttons are below the stage. Test checkpoints jump to any of the four floors. It also follows the ticket hall once its two clues are found.
+
+The wall riddle unlocks a red lever in a real 3D close-up. Mirror-gallery spiders now emerge and leap at marked landing spots; the earlier swinging obstacle has been removed.

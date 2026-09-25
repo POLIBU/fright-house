@@ -8,7 +8,7 @@ import spider from './assets/three/leaping-spider.js';
 import clown from './assets/three/clown-archer.js';
 import bomb from './assets/three/balloon-bomb.js';
 import arrow from './assets/three/carnival-arrow.js';
-import {archerOrigin,newAmbush} from './levels/platform-ambush.js';
+import {archerOrigin,newAmbush,balloonY} from './levels/platform-ambush.js';
 import wallLever from './assets/three/wall-power-lever.js';
 import {FLOOR_Y,POWER_LEVER,SOLIDS,platforms,hazards} from './levels/platform-model.js';
 export function createPlatformProps(){const renderer=new THREE.WebGLRenderer({alpha:true,antialias:false});renderer.setSize(480,360,false);renderer.outputColorSpace=THREE.SRGBColorSpace;const scene=new THREE.Scene(),camera=new THREE.OrthographicCamera(-480,480,360,-360,.1,2000);camera.position.set(0,0,1000);scene.add(new THREE.HemisphereLight(0xd7c5ad,0x252e30,2));const key=new THREE.DirectionalLight(0xffc88b,2.8);key.position.set(-300,500,800);scene.add(key);const source={entryDoor:entryDoor(THREE),...generate(THREE).userData.parts,spider:spider(THREE),lever:wallLever(THREE),clown:clown(THREE),bomb:bomb(THREE),arrow:arrow(THREE)},objects=new Map();const machine=machinery(THREE);machine.scale.setScalar(79);machine.position.set(435-480,360-124,0);scene.add(machine);let machinePose=machineryPose(0,false),backgroundCalls=0,backgroundTriangles=0,previousState=null,previousTime=-1;let floorAmbushes=Array.from({length:4},(_,i)=>newAmbush(i));
@@ -18,7 +18,7 @@ if(previousState!==s||s.time<previousTime)floorAmbushes=Array.from({length:4},(_
 put('wall-power','lever',POWER_LEVER.x,POWER_LEVER.y,25,39,s.lever);
 for(const o of SOLIDS){const opened=o.id==='gate'?Math.min(1,(s.powerAge||0)/.7):o.id==='exit-gate'?Math.min(1,(s.exitGateAge||0)/.7):0;put(o.id,o.id.includes('gate')?'press':'crate',o.x+o.w/2,FLOOR_Y[o.floor]-opened*(o.h+10),o.w,o.h);}
 for(const p of platforms(s))put(p.id,'lift',p.x+p.w/2,p.y+7,p.w,13);
-for(const ambush of floorAmbushes)for(const b of ambush.balloons)if(['idle','fuse'].includes(b.phase))put(b.id,'bomb',b.x,b.y+24,23,48);
+for(const ambush of floorAmbushes)for(const b of ambush.balloons)if(['idle','fuse'].includes(b.phase))put(b.id,'bomb',b.x,(ambush===s.ambush?b.y:balloonY(ambush.floor,s.time))+24,23,48);
 if(s.power&&s.ambush){const a=s.ambush.archer;if(s.floor>0&&!clownSpritesReady()){const origin=archerOrigin(s.floor);put('clown-archer','clown',origin.x,FLOOR_Y[s.floor-1],48,CLOWN_DRAW_HEIGHT,a.phase==='aim'?Math.min(1,a.age/1.15):0);}for(const a of s.ambush.arrows)put(a.id,'arrow',a.x,a.y,30,5,a.angle||0);}
 const current=hazards(s);const barrel=current.find(h=>h.kind==='barrel')||{x:69,y:FLOOR_Y[1]-14,r:14};put('barrel','barrel',barrel.x,barrel.y+barrel.r,28,28,s.floor===1?s.floorTime*8:0);
 const press=current.find(h=>h.kind==='press')||{x:350,y:FLOOR_Y[3]-66,r:19};put('press','press',press.x,press.y+press.r,38,38);

@@ -17,5 +17,5 @@ export function drawSpriteOutline(ctx,mask,x,y,w,h,time=0){
  c.shadowColor='#fff2cd';c.shadowBlur=1.5;
  for(const [dx,dy]of [[-1,0],[1,0],[0,-1],[0,1]])c.drawImage(mask,pad+dx,pad+dy,w,h);
  c.shadowBlur=0;c.globalCompositeOperation='destination-out';c.drawImage(mask,pad,pad,w,h);
- ctx.save();ctx.imageSmoothingEnabled=false;ctx.globalAlpha*=Math.min(1,2*(.58+.10*Math.sin(time*1.7)));ctx.drawImage(outlineCanvas,x-pad,y-pad);ctx.restore();
+ ctx.save();ctx.imageSmoothingEnabled=false;ctx.globalAlpha*=.5*Math.min(1,2*(.58+.10*Math.sin(time*1.7)));ctx.drawImage(outlineCanvas,x-pad,y-pad);ctx.restore();
 }

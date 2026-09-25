@@ -1,3 +1,4 @@
+import {drawHighlightedSprite} from './item-highlight.js';
 import {newCarousel,poseCarousel} from './levels/carousel-motion.js';
 import {poseJaws} from './levels/mouth-motion.js';
 import * as THREE from '../vendor/three.module.js';
@@ -20,6 +21,6 @@ export function createPropRenderer(){
    if(kind==='toy')poseCarousel(toy,newCarousel(!!progress));raven.visible=false;mouth.visible=kind==='mouth';poseJaws(mouth,progress);gate.visible=kind==='gate';toy.visible=kind==='toy';stub.visible=kind==='ticket';gate.userData.joints.spindle.rotation.z=progress*Math.PI/2;renderer.render(scene,kind==='mouth'?mouthCamera:camera);
    const frame=cache.get(kind)||document.createElement('canvas');frame.width=frame.height=96;frame.getContext('2d').drawImage(renderer.domElement,0,0);cache.set(kind,frame);progressCache.set(kind,progress);
   }
-  if(kind==='gate')ctx.drawImage(cache.get(kind),205,111,70,52);else if(kind==='mouth'){ctx.save();ctx.beginPath();ctx.moveTo(220,150);ctx.lineTo(220,113);ctx.quadraticCurveTo(239,65,261,113);ctx.lineTo(261,150);ctx.closePath();ctx.clip();ctx.drawImage(cache.get(kind),211,89,60,68);ctx.restore();}else if(kind==='toy')ctx.drawImage(cache.get(kind),294,248,27,27);else ctx.drawImage(cache.get(kind),131,257,24,21);
+  if(kind==='gate')ctx.drawImage(cache.get(kind),205,111,70,52);else if(kind==='mouth'){ctx.save();ctx.beginPath();ctx.moveTo(220,150);ctx.lineTo(220,113);ctx.quadraticCurveTo(239,65,261,113);ctx.lineTo(261,150);ctx.closePath();ctx.clip();ctx.drawImage(cache.get(kind),211,89,60,68);ctx.restore();}else if(kind==='toy')drawHighlightedSprite(ctx,cache.get(kind),294,248,27,27,0,progress);else drawHighlightedSprite(ctx,cache.get(kind),131,257,24,21);
  },snapshot(){return {draws:renderer.info.render.calls,triangles:renderer.info.render.triangles};}};
 }

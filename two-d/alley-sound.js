@@ -23,7 +23,7 @@ export function createAlleySound(ac,output){
   if(s.tapeBroken&&!lastTape)play('tape',.8);lastTape=s.tapeBroken;
   if(!active){stop('step');stop('leaves');stop('laugh');inAlley=false;lastLeaves=s.leafFlights;return;}
   if(!inAlley){nextLaugh=s.time+4;inAlley=true;}
-  if(s.moving&&travel>0&&travel<30){distance+=travel;if(distance>=27&&play('step',.42,counts.step%2?.12:-.12,.96+(counts.step%3)*.035))distance%=27;}else distance=22;
+  if(s.moving&&travel>0&&travel<30){distance+=travel;if(distance>=27&&play('step',.21,counts.step%2?.12:-.12,.96+(counts.step%3)*.035))distance%=27;}else distance=22;
   if(s.leafFlights>lastLeaves&&s.time>=nextLeaves){if(play('leaves',.32,Math.max(-.5,Math.min(.5,(s.x-240)/100)),.94+(counts.leaves%3)*.06))nextLeaves=s.time+.55;}lastLeaves=s.leafFlights;
   if(s.phase==='alley'&&s.time>=nextLaugh&&play('laugh',.29,counts.laugh%2?-.65:.65,.94,true))nextLaugh=s.time+13+Math.random()*5;
  }

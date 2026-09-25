@@ -1,3 +1,4 @@
+import {createRoomMusic} from './room-music.js';
 import {playBalloonExplosion} from './room-effects.js';
 import {enterRoom,leaveRoom} from './room-flow.js';
 import {PLAYER_DRAW_HEIGHT} from './levels/platform-layout.js';
@@ -8,7 +9,7 @@ import {newPlatform,tickPlatform,platformAction,retryPlatform,answerPowerRiddle,
 import {createPlatformProps} from './platform-props.js';
 import {drawPlayer,preloadJumpSprites} from './levels/temporary-player.js';
 preloadJumpSprites();
-const $=q=>document.querySelector(q),canvas=$('#game'),ctx=canvas.getContext('2d');ctx.imageSmoothingEnabled=false;const SAVE='fright-house-platform-v1';let saved=0;try{saved=Number(localStorage.getItem(SAVE))||0;}catch{}let s=newPlatform(saved),running=false,last=performance.now(),keys=new Set(),pendingJump=false,props=null,muted=false,ac=null;const bg=new Image();const ambience=new Audio('../audio/ambience.mp3');ambience.loop=true;ambience.volume=.14;let previousFloor=s.floor,previousHits=0,previousAttack='',explosions=0;
+const $=q=>document.querySelector(q),canvas=$('#game'),ctx=canvas.getContext('2d');ctx.imageSmoothingEnabled=false;const SAVE='fright-house-platform-v1';let saved=0;try{saved=Number(localStorage.getItem(SAVE))||0;}catch{}let s=newPlatform(saved),running=false,last=performance.now(),keys=new Set(),pendingJump=false,props=null,muted=false,ac=null;const bg=new Image();const ambience=createRoomMusic(3);ambience.loop=true;ambience.volume=.14;let previousFloor=s.floor,previousHits=0,previousAttack='',explosions=0;
 const inspection=createPowerInspection({getState:()=>s,answer:value=>{answerPowerRiddle(s,value);beep(value==='clock'?280:75,.12);},pull:()=>{if(pullPowerLever(s))beep(120,.4);},close:()=>{closePowerInspection(s);release();inspection.sync();canvas.focus();}});
 function beep(freq=150,duration=.12){if(muted)return;try{ac||=new AudioContext();ac.resume();const o=ac.createOscillator(),g=ac.createGain();o.type='triangle';o.frequency.setValueAtTime(freq,ac.currentTime);o.frequency.exponentialRampToValueAtTime(freq*.45,ac.currentTime+duration);g.gain.setValueAtTime(.045,ac.currentTime);g.gain.exponentialRampToValueAtTime(.001,ac.currentTime+duration);o.connect(g).connect(ac.destination);o.start();o.stop(ac.currentTime+duration);}catch{}}
 function balloonPop(){if(muted)return;try{ac||=new AudioContext();ac.resume();playBalloonExplosion(ac);explosions++;}catch{}}

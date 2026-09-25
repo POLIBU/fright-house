@@ -25,3 +25,8 @@ body.has-pixel-dialogue #story-overlay .advance,body.has-pixel-dialogue #stage #
 body.has-pixel-dialogue #story-overlay .advance:hover,body.has-pixel-dialogue #stage #dialog #continue:hover{color:#fff;background:#1a1a1a}
 body.has-pixel-dialogue #story-overlay .advance:focus-visible,body.has-pixel-dialogue #stage #dialog #continue:focus-visible{outline:2px solid #f4f0e7;outline-offset:1px}
 @media(max-width:650px){body.has-pixel-dialogue footer>div{flex-wrap:wrap;gap:6px}body.has-pixel-dialogue footer>div>span{flex:1 0 100%}body.has-pixel-dialogue footer button{min-height:38px;white-space:nowrap}}
+
+/* Read long text with Continue instead of scrolling inside the game. */
+#stage .pixel-box[data-paged],#stage #dialog[data-paged]{max-height:56%;overflow:hidden}
+#stage .pixel-box[data-paged] .advance,#stage #dialog[data-paged] #continue{position:static;float:none;display:block;margin:8px 0 0 auto;min-height:30px}
+#stage .pixel-box[data-paged] .story-text,#stage #dialog[data-paged] #line{overflow-wrap:anywhere;margin-right:0}

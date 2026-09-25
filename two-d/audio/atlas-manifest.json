@@ -36,6 +36,116 @@
       "brief": "WATER DROPLET SPLASH. A fat drop of liquid water falls into a small pool of water: a clear hollow bloop, tiny liquid splash and watery ripples, then the damp cellar reverberation trails away. Organic liquid bubbling/plopping sound, unmistakably WATER, close microphone. One main drop at the beginning, isolated and quiet afterward. No metal, no mechanical click, no latch, no percussion, no voices, no music.",
       "atlas_description": "The sound of water being poured into a container.",
       "runtime": "Leading silence trimmed on decode; short fade envelope on each visual impact."
+    },
+    {
+      "file": "atlas-score-park.mp3",
+      "fid": "33b64a5e-cb5e-4db3-baee-c001971c0ccb",
+      "model": "Stable Audio 3",
+      "seconds": 30,
+      "use": "Distinct park room music",
+      "brief": "Abandoned carnival gates at midnight. Deep bowed strings, distant rusty fairground organ barely audible, long dissonant harmonics, no pleasant piano melody.",
+      "refinement": null,
+      "atlas_description": "This is a dramatic, orchestral piece featuring a prominent, mournful cello melody accompanied by a string section, creating a somber and reflective atmosphere."
+    },
+    {
+      "file": "atlas-score-hall.mp3",
+      "fid": "911a5c28-8d1a-4838-a57f-feb4af652eb6",
+      "model": "Stable Audio 3",
+      "seconds": 30,
+      "use": "Distinct hall room music",
+      "brief": "An empty decaying ticket hall. Hollow low organ chords, slow detuned celesta fragments and reversed string swells behind walls, eerie claustrophobic mystery.",
+      "refinement": null,
+      "atlas_description": "A short, ambient sound clip featuring a low-frequency, pulsating drone with a slight metallic texture."
+    },
+    {
+      "file": "atlas-score-boss.mp3",
+      "fid": "d5e18f14-fcc3-4fe1-97b6-f90b02099591",
+      "model": "Stable Audio 3",
+      "seconds": 30,
+      "use": "Distinct boss room music",
+      "brief": "Clown animatronic boss combat. Urgent dark string ostinato, deep distorted rhythmic pulses and aggressive dissonant brass swells, relentless stressful horror, no vocals.",
+      "refinement": null,
+      "atlas_description": "A dramatic and suspenseful orchestral piece featuring a prominent brass section, likely from a film score."
+    },
+    {
+      "file": "atlas-score-bones.mp3",
+      "fid": "71e9d3b0-ed1b-4b17-98ea-0c8554f5b76a",
+      "model": "Stable Audio 3",
+      "seconds": 30,
+      "use": "Distinct bones room music",
+      "brief": "Wet underground bone gallery. Sparse hollow glass harmonics, sustained dark low choir-like SYNTH without human voices, deep sub-bass swells, cold cavernous reverberation, fearful suspense.",
+      "refinement": null,
+      "atlas_description": "A haunting, atmospheric soundscape featuring a low, sustained drone and a distant, echoing bell, creating a sense of unease and mystery."
+    },
+    {
+      "file": "atlas-score-circus.mp3",
+      "fid": "3e6a1097-01b4-4949-a032-be7c170c40f9",
+      "model": "Stable Audio 3",
+      "seconds": 30,
+      "use": "Distinct circus room music",
+      "brief": "Dangerous abandoned circus platformer. A warped distant calliope in irregular three-four time, broken minor-key waltz, tape warble and long hollow echoes, sinister rather than playful.",
+      "refinement": "Dark-v2: atonal horror ambient sound masses and acoustic instrumentation, no tonal resolution.",
+      "atlas_description": "A relaxing, ambient soundscape featuring a soft, pulsing synth pad with a gentle, rhythmic quality."
+    },
+    {
+      "file": "atlas-score-toys.mp3",
+      "fid": "8b6e24be-3f7a-4421-a3d0-2cff0af9062a",
+      "model": "Stable Audio 3",
+      "seconds": 30,
+      "use": "Distinct toys room music",
+      "brief": "Room of possessed wooden toys. Sparse detuned plucked music-box notes, unsettling pauses, low bowed glass and creaking harmonics, uncanny and deeply ominous.",
+      "refinement": "Dark-v2: atonal horror ambient sound masses and acoustic instrumentation, no tonal resolution.",
+      "atlas_description": "A slow, atmospheric, and slightly eerie ambient track with a steady, pulsing beat."
+    },
+    {
+      "file": "atlas-score-library.mp3",
+      "fid": "1a47961c-e02d-4971-a19f-80870eff86ba",
+      "model": "Stable Audio 3",
+      "seconds": 30,
+      "use": "Distinct library room music",
+      "brief": "Specimen library horror. Scraped double bass, thin dissonant strings, almost silent pulses rising into tense tremolo, dreadful biological unease.",
+      "refinement": "Dark-v2: atonal horror ambient sound masses and acoustic instrumentation, no tonal resolution.",
+      "atlas_description": "A short, ambient soundscape featuring a steady, rhythmic electronic beat with a slightly distorted, metallic texture."
+    },
+    {
+      "file": "atlas-score-factory.mp3",
+      "fid": "ce86d548-08ed-420b-a1a1-0436d0c5c190",
+      "model": "Stable Audio 3",
+      "seconds": 30,
+      "use": "Distinct factory room music",
+      "brief": "Haunted barrel machinery. Low metallic resonances, uneven industrial percussion, bowed cymbal drones, grinding suspense with sparse dissonant tones.",
+      "refinement": "Dark-v2: atonal horror ambient sound masses and acoustic instrumentation, no tonal resolution.",
+      "atlas_description": "This is a piece of ambient music with a slow, steady, and relaxing tempo."
+    },
+    {
+      "file": "atlas-score-mezzanine.mp3",
+      "fid": "7eeaa5c8-33fa-4a25-8cd0-4c35cfb79158",
+      "model": "Stable Audio 3",
+      "seconds": 30,
+      "use": "Distinct mezzanine room music",
+      "brief": "Suspended moving floors over dark gears. Slow unstable ticking polyrhythm, hollow metal notes, descending bowed strings, perilous industrial dread distinct from pounding factory drums.",
+      "refinement": "Dark-v2: atonal horror ambient sound masses and acoustic instrumentation, no tonal resolution.",
+      "atlas_description": "A short, repetitive, and slightly eerie electronic sound effect."
+    },
+    {
+      "file": "atlas-score-fall.mp3",
+      "fid": "8cca86e5-0a8d-462c-b468-9adfd62788cd",
+      "model": "Stable Audio 3",
+      "seconds": 30,
+      "use": "Distinct fall room music",
+      "brief": "Falling through a bottomless dark shaft. Descending pitch glissandos, distant metallic groans, rushing spectral strings, vertigo and eerie emptiness, no beat.",
+      "refinement": "Dark-v2: atonal horror ambient sound masses and acoustic instrumentation, no tonal resolution.",
+      "atlas_description": "A low-frequency, resonant sound that slowly fades in and out, creating a sense of depth and space."
+    },
+    {
+      "file": "atlas-score-cart.mp3",
+      "fid": "d968fef1-658f-425e-afe4-dc9eed272def",
+      "model": "Stable Audio 3",
+      "seconds": 30,
+      "use": "Distinct cart room music",
+      "brief": "Frantic cart escape from a monster. Unsettling fast muted percussion and dark low strings, irregular accelerating ostinato, no heroic or triumphant melody, urgent horror chase.",
+      "refinement": "Dark-v2: atonal horror ambient sound masses and acoustic instrumentation, no tonal resolution.",
+      "atlas_description": "A low-frequency, rhythmic sound that resembles a heartbeat or a pulsing mechanical noise."
     }
   ],
   "notes": "Generated through Atlas MCP at the user's request. Workspace publication explicitly approved. No real person's voice identity was requested. Automated descriptions are not listening verification."

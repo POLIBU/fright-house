@@ -14,7 +14,8 @@ let leaving=false,entered=false;
 const curtain=document.createElement('div');curtain.id='room-curtain';curtain.setAttribute('aria-hidden','true');stage?.append(curtain);
 const soundButton=document.querySelector('#sound');
 function rememberSound(){try{sessionStorage.setItem('fright-house-muted',String(soundButton?.textContent.includes('OFF')));}catch{}}
-soundButton?.addEventListener('click',()=>queueMicrotask(rememberSound));
+// Save after every click handler has applied the new sound setting.
+soundButton?.addEventListener('click',()=>setTimeout(rememberSound,0));
 function restoreSound(){try{if(sessionStorage.getItem('fright-house-muted')==='true'&&!soundButton?.textContent.includes('OFF'))soundButton?.click();}catch{}}
 // Reveal a useful error rather than leaving the player behind a black loading screen.
 const loadTimer=body.hasAttribute('data-room-loading')?setTimeout(()=>{if(!entered){body.removeAttribute('data-room-loading');body.classList.add('room-load-error');}},20000):null;

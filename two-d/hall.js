@@ -1,3 +1,4 @@
+import {createRoomMusic} from './room-music.js';
 import {enterRoom,leaveRoom} from './room-flow.js';
 import {createHallPaper} from './hall-paper.js';
 import {drawClownEyes} from './hall-eyes.js';
@@ -12,7 +13,7 @@ const $=q=>document.querySelector(q),canvas=$('#game'),ctx=canvas.getContext('2d
 let campaign;try{campaign=loadCampaign(localStorage.getItem(key));}catch{}campaign||=newCampaign();campaign.area='ticket-hall';campaign.paused=false;campaign.story=null;
 let layers=null,reactive=null,popAudio=null;
 let papers=createHallPaper();
-let s={...newHall(),...campaign.hall},running=false,paused=false,dialog=null,route=[],pending=null,keys=new Set(),last=performance.now();const bg=new Image();const audio=new Audio('../audio/ambience.mp3');audio.loop=true;audio.volume=.15;let muted=false;
+let s={...newHall(),...campaign.hall},running=false,paused=false,dialog=null,route=[],pending=null,keys=new Set(),last=performance.now();const bg=new Image();const audio=createRoomMusic(2);audio.loop=true;audio.volume=.15;let muted=false;
 s.reactions||=newHallReactions();s.drawerProgress??=s.drawer?1:0;if(hallBlocked(s.x,s.y)){s.x=268;s.y=180;}
 function reactionSound(kind){if(muted)return;try{popAudio||=new AudioContext();popAudio.resume();const o=popAudio.createOscillator(),g=popAudio.createGain();o.type=kind==='pop'?'sawtooth':'triangle';o.frequency.setValueAtTime(kind==='pop'?330:750,popAudio.currentTime);o.frequency.exponentialRampToValueAtTime(45,popAudio.currentTime+.12);g.gain.setValueAtTime(kind==='pop'?.055:.015,popAudio.currentTime);g.gain.exponentialRampToValueAtTime(.001,popAudio.currentTime+.13);o.connect(g).connect(popAudio.destination);o.start();o.stop(popAudio.currentTime+.14);}catch{}}
 function save(){campaign.hall={...s};checkpoint(campaign);try{localStorage.setItem(key,saveCampaign(campaign));}catch{}}

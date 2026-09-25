@@ -171,3 +171,6 @@ The new alley, bedroom and police/girl/clown animation PNGs were generated with 
 
 ### Bone gallery water — Atlas MCP
 `two-d/audio/atlas-water-drop.mp3`: ElevenLabs SFX v2 through Atlas project `aa77d2d6-967c-410d-828a-be646eefea19`, FID `6916b95c-6dc0-4d3c-ae19-c5dcc9516bfa`. Three-second water source, shaped into individual impacts in Web Audio. First click-like take discarded. Generation/refinement reported 37 credits total. Prompt and automated description recorded in the audio manifest; metadata is not listening verification.
+
+## Distinct room music — September 25, 2026
+Eleven original 30-second scores generated through the already workspace-published Atlas project `aa77d2d6-967c-410d-828a-be646eefea19` using Stable Audio 3. Exact FIDs, briefs and automated descriptions are recorded in `two-d/audio/atlas-manifest.json`. Seven brighter initial drafts were replaced by dark-v2 ambient takes; unused drafts are not shipped. Two Atlas turns reported 66 + 47 = 113 credits total. Machine descriptions are not human listening verification. Runtime pitch/speed varies by room; scores mix with the existing dissonant drones, circus fragments, factory sounds and adaptive chase/boss pulse. Original ending music and gameplay sound effects are retained.

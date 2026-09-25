@@ -26,5 +26,5 @@ for(const crate of STORE_CRATES){
 }
 projectedVolume(THREE,bench,mat,[[101,178],[157,178],[157,192],[101,192]],24);
 projectedVolume(THREE,shelf,mat,[[169,94],[330,94],[330,100],[169,100]],38);
-// Entry frame and hinged leaf are rendered together by the shared library door asset.
+// The side-wall entrance has only an animated leaf; no upright frame.
 return root;}

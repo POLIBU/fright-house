@@ -1,0 +1,20 @@
+// Reference-inspired 1960s black-and-white four-door patrol sedan; front is -Z.
+export default function makePatrolSedan(T){
+ const root=new T.Group(),black=new T.MeshStandardMaterial({color:0x101c22,metalness:.32,roughness:.4}),white=new T.MeshStandardMaterial({color:0xe1dfd2,metalness:.16,roughness:.42}),chrome=new T.MeshStandardMaterial({color:0xc6cfce,metalness:.75,roughness:.22}),glass=new T.MeshStandardMaterial({color:0x29464e,metalness:.15,roughness:.22}),rubber=new T.MeshStandardMaterial({color:0x121617,roughness:1});
+ function box(w,h,d,x,y,z,m,parent=root){const o=new T.Mesh(new T.BoxGeometry(w,h,d),m);o.position.set(x,y,z);parent.add(o);return o;}
+ function side(shape,width,x,mat){const g=new T.ExtrudeGeometry(shape,{depth:width,bevelEnabled:true,bevelThickness:.015,bevelSize:.025,bevelSegments:1,steps:1});g.rotateY(-Math.PI/2);g.translate(x,0,0);const m=new T.Mesh(g,mat);root.add(m);return m;}
+ const body=new T.Shape();body.moveTo(-2.65,.48);body.lineTo(-2.72,.99);body.lineTo(-1.06,1.05);body.lineTo(1.45,1.03);body.lineTo(2.7,.91);body.lineTo(2.66,.49);body.lineTo(2.11,.44);body.absarc(1.68,.44,.43,0,Math.PI,false);body.lineTo(-1.23,.44);body.absarc(-1.66,.44,.43,0,Math.PI,false);body.closePath();side(body,1.88,.94,black);
+ box(1.8,.12,5.2,0,.38,0,black);box(1.79,.07,1.42,0,1.03,-1.86,black);box(1.8,.06,1.01,0,.99,2.11,black);
+ const cabin=new T.Shape();cabin.moveTo(-1.16,1.03);cabin.lineTo(-.62,1.67);cabin.quadraticCurveTo(.2,1.8,.99,1.68);cabin.lineTo(1.66,1.04);cabin.closePath();side(cabin,1.56,.78,glass);box(1.66,.075,1.76,0,1.72,.21,white);
+ for(const x of [-.80,.80]){for(const [a,b]of [[[-1.15,1.05],[-.62,1.67]],[[1.65,1.05],[.99,1.68]]]){const from=new T.Vector3(x,a[1],a[0]),to=new T.Vector3(x,b[1],b[0]),v=to.clone().sub(from),m=new T.Mesh(new T.CylinderGeometry(.032,.032,v.length(),8),white);m.position.copy(from.clone().add(to).multiplyScalar(.5));m.quaternion.setFromUnitVectors(new T.Vector3(0,1,0),v.normalize());root.add(m);}box(.04,.6,.055,x,1.37,.14,white);box(.055,.035,2.64,x,1.06,.16,chrome);}
+ // White front/rear doors and a separate hinged near-side rear door for the escort.
+ const door=new T.Group();door.position.set(.955,.49,.17);root.add(door);
+ for(const x of [-.955,.955]){box(.045,.53,1.21,x,.77,-.47,white);box(.048,.025,1.16,x,.62,-.47,chrome);box(.05,.025,1.21,x,.96,-.47,chrome);box(.065,.035,.18,x*1.03,.92,-.04,chrome);if(x<0)box(.045,.53,1.18,x,.77,.79,white);}
+ box(.045,.53,1.18,0,.28,.61,white,door);box(.055,.025,1.18,.005,.13,.61,chrome,door);box(.065,.035,.18,.027,.43,1.02,chrome,door);
+ // A small original shield on the front door, without copying a department insignia.
+ for(const x of [-.984,.984]){const badge=new T.Mesh(new T.CylinderGeometry(.16,.12,.014,5),new T.MeshStandardMaterial({color:0x856b36,metalness:.3,roughness:.55}));badge.rotation.z=Math.PI/2;badge.position.set(x,.78,-.48);root.add(badge);}
+ for(const z of [-2.73,2.70])box(1.99,.13,.13,0,.49,z,chrome);box(1.82,.3,.04,0,.83,-2.735,chrome);for(let i=0;i<17;i++)box(.045,.25,.012,-.78+i*.097,.83,-2.765,black);
+ for(const x of [-.82,-.57,.57,.82]){const h=new T.Mesh(new T.CylinderGeometry(.1,.1,.03,16),new T.MeshStandardMaterial({color:0xffe6ac,emissive:0xffdb80,emissiveIntensity:1}));h.rotation.x=Math.PI/2;h.position.set(x,.94,-2.77);root.add(h);}for(const x of [-.73,.73])box(.32,.12,.05,x,.8,2.74,new T.MeshStandardMaterial({color:0x831321}));
+ const wheels=[];for(const x of [-.98,.98])for(const z of [-1.66,1.68]){const w=new T.Group();w.position.set(x,.42,z);for(const [r,depth,mat]of [[.43,.2,rubber],[.25,.215,black],[.18,.23,chrome]]){const m=new T.Mesh(new T.CylinderGeometry(r,r,depth,24),mat);m.rotation.z=Math.PI/2;w.add(m);}root.add(w);wheels.push(w);}
+ const mount=new T.Mesh(new T.CylinderGeometry(.25,.29,.09,20),chrome);mount.position.set(0,1.80,.08);root.add(mount);const beacon=new T.Mesh(new T.CylinderGeometry(.16,.16,.26,20),new T.MeshStandardMaterial({color:0xa80b13,emissive:0xff1820,emissiveIntensity:2,roughness:.25}));beacon.position.set(0,1.97,.08);root.add(beacon);root.userData={door,wheels,beacons:[beacon],style:'black-white-vintage-patrol-sedan'};return root;
+}

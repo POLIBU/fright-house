@@ -1,0 +1,5 @@
+export const INSTRUCTION_KEY='fright-house-machine-pages-v1';
+export const MACHINE_PAGES=[{id:'carousel',title:'Platform I · Carousel slip',text:'Two feed pumps. One drive tooth. Keep the vent closed.'},{id:'rabbit',title:'Platform II · Rabbit slip',text:'One feed pump. Two drive teeth. Open the vent halfway.'},{id:'book',title:'Platform III · Maintenance book',text:'Both feed pumps. Disengage the drive. Open the vent fully.'}];
+export function readInstructions(storage=globalThis.localStorage){try{const x=JSON.parse(storage.getItem(INSTRUCTION_KEY)||'[]');return [...new Set(Array.isArray(x)?x:[])].filter(id=>MACHINE_PAGES.some(p=>p.id===id));}catch{return [];}}
+export function takeInstruction(id,storage=globalThis.localStorage){const x=readInstructions(storage);if(!MACHINE_PAGES.some(p=>p.id===id)||x.includes(id))return false;try{storage.setItem(INSTRUCTION_KEY,JSON.stringify([...x,id]));}catch{}return true;}
+export function resetInstructions(storage=globalThis.localStorage){try{storage.removeItem(INSTRUCTION_KEY);}catch{}}

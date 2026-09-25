@@ -3,7 +3,7 @@ export const SECRET_KEY='fright-house-optional-evidence-v1';
 export const SECRETS=[
  {level:1,id:'ribbon',name:'Red hair ribbon',kind:'ribbon',x:111,y:275,text:'A red ribbon. I wonder who it belonged to.'},
  {level:2,id:'glasses',name:'Small spectacles',kind:'glasses',x:338,y:187,drawer:true,text:'Small spectacles. Poor child. Why would someone take them away?'},
- {level:3,id:'knife',name:'Small pocketknife',kind:'knife',x:222,y:672,text:'A small pocketknife. The handle has been worn smooth.'},
+ {level:3,id:'knife',name:'Pocket knife',kind:'knife',x:222,y:672,text:'A pocket knife. The handle has been worn smooth.'},
  {level:4,id:'mitten',name:'Blue mitten',kind:'mitten',x:355,y:233,text:'A blue mitten. So small. Where is the other one?'},
  {level:5,id:'photo',name:'Torn photograph',kind:'photo',x:536,y:145,text:'Three children in a photograph. Someone has torn away the other half.'},
  {level:6,id:'key',name:'Numbered locker key',kind:'key',x:72,y:406,text:'A locker key. Only the number 087 is still readable on its faded tag.'},

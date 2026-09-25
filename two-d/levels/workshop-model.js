@@ -1,3 +1,4 @@
+export const WORKSHOP_LAMPS=[[39,192,'red'],[192,69,'amber'],[495,60,'red'],[667,232,'amber'],[102,79,'red'],[598,46,'amber'],[676,46,'amber'],[589,209,'amber'],[39,328,'amber'],[304,430,'amber'],[402,431,'amber']];
 export const ARENA={width:720,height:540};
 export const REVEAL={openAt:1.8,openDuration:2,riseAt:3.8,riseDuration:5,wakeAt:9.3,standAt:12.3,fightAt:13.9};
 export const HATCH={x:260,y:249,w:200,h:92};
@@ -45,7 +46,7 @@ else if(s.phase==='fight'){
  else if(b.mode==='transform'&&b.age>2.4){mode(b,'pursue');b.sequence=0;}
  for(const bolt of s.shots){bolt.age+=dt;const x=bolt.x,y=bolt.y;bolt.x+=bolt.dx*dt;bolt.y+=bolt.dy*dt;if(segmentDistance(s.x,s.y,x,y,bolt.x,bolt.y)<12){hurt(s);bolt.age=9;}if(workshopBlocked(s,bolt.x,bolt.y,2))bolt.age=9;}s.shots=s.shots.filter(p=>p.age<4);
 }
-for(const m of s.moths){m.age+=dt;const lamp=[[75,215],[190,79],[499,79],[658,231]][m.lamp],angle=m.age*(1.1+m.lamp*.12)+m.offset;m.x=lamp[0]+Math.cos(angle)*18+Math.sin(angle*2.3)*5;m.y=lamp[1]+Math.sin(angle)*12+Math.cos(angle*1.7)*4;}
+for(const m of s.moths){m.age+=dt;const lamp=WORKSHOP_LAMPS[m.lamp],angle=m.age*(1.1+m.lamp*.12)+m.offset;m.x=lamp[0]+Math.cos(angle)*18+Math.sin(angle*2.3)*5;m.y=lamp[1]+10+Math.sin(angle)*12+Math.cos(angle*1.7)*4;}
 if(s.phase==='defeated'){s.exit=Math.min(1,s.exit+dt*.65);if(s.exit>.85&&s.x>622&&s.x<659&&s.y<90)s.phase='escaped';}
 s.cameraX=Math.max(0,Math.min(240,s.x-240));s.cameraY=Math.max(0,Math.min(180,s.y-240));}
 export function retryWorkshop(s){const n=newWorkshop();n.fork=s.checkpoint;n.checkpoint=s.checkpoint;return n;}

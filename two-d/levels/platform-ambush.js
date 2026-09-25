@@ -20,12 +20,12 @@ export function tickAmbush(s,dt){
   if(archer.phase==='aim'&&archer.age>=1.15){const origin=archerOrigin(s.floor,s.clown),a={id:'arrow-'+(++archer.shots),age:0,startX:origin.x,startY:origin.y,controlX:origin.x,controlY:floors[s.floor]-180,targetX:archer.targetX,targetY:archer.targetY};a.x=a.previousX=origin.x;a.y=a.previousY=origin.y;m.arrows.push(a);archer.phase='release';archer.age=0;}
   if(archer.phase==='release'&&archer.age>.3){archer.phase='rest';archer.age=0;}
  }
- for(const a of m.arrows){a.previousX=a.x;a.previousY=a.y;a.age+=dt;const p=arrowPoint(a,a.age/1.35);a.x=p.x;a.y=p.y;const next=arrowPoint(a,Math.min(1,a.age/1.35+.01));a.angle=Math.atan2(next.y-a.y,next.x-a.x);}
- m.arrows=m.arrows.filter(a=>a.age<1.5&&!a.spent);
+ for(const a of m.arrows){a.previousX=a.x;a.previousY=a.y;a.age+=dt;if(a.age>=1.35){a.x=a.targetX;a.y=a.targetY;a.stuck=true;a.impactAge=a.age-1.35;a.angle=Math.atan2(a.targetY-a.controlY,a.targetX-a.controlX);}else{const p=arrowPoint(a,a.age/1.35),next=arrowPoint(a,a.age/1.35+.01);a.x=p.x;a.y=p.y;a.angle=Math.atan2(next.y-a.y,next.x-a.x);}}
+ m.arrows=m.arrows.filter(a=>a.age<2.65&&!a.spent);
  for(const b of m.balloons){b.age+=dt;if(b.phase==='idle'&&Math.abs(s.x-b.x)<64&&Math.abs(s.y-18-b.y)<40){b.phase='fuse';b.age=0;}else if(b.phase==='fuse'&&b.age>=.8){b.phase='blast';b.age=0;}else if(b.phase==='blast'&&b.age>=.3){b.phase='spent';b.age=0;}}
 }
 export function ambushHazards(s){const m=s.ambush;if(!m)return [];return [
- ...m.arrows.map(a=>({id:a.id,kind:'arrow',x:a.x,y:a.y,r:4,active:!a.spent,sweep:{x:a.previousX,y:a.previousY},source:a})),
+ ...m.arrows.map(a=>({id:a.id,kind:'arrow',x:a.x,y:a.y,r:4,active:!a.spent&&!a.stuck,sweep:{x:a.previousX,y:a.previousY},source:a})),
  ...m.balloons.filter(b=>b.phase==='blast').map(b=>({id:b.id,kind:'balloon-bomb',x:b.x,y:b.y,r:32,active:true}))
  ];}
 export function arrowHits(h,s){

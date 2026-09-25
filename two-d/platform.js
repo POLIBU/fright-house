@@ -31,6 +31,9 @@ function render(){ctx.drawImage(bg,0,0,960,720);props.drawBackground(ctx,s);
  {for(const p of s.spiders){ctx.fillStyle='#090a0b';ctx.beginPath();ctx.ellipse(p.nest,FLOOR_Y[2]-4,12,5,0,0,7);ctx.fill();}}
  if(s.power&&s.ambush){const a=s.ambush.archer;for(const b of s.ambush.balloons){if(b.phase==='blast'){glow(b.x,b.y,'#ffb461',48,1-b.age/.3);for(let i=0;i<10;i++){const angle=i*.628,dist=b.age*150;ctx.fillStyle=i%2?'#b9422d':'#ead290';ctx.fillRect(b.x+Math.cos(angle)*dist,b.y+Math.sin(angle)*dist,4,4);}}}}
  props.draw(ctx,s);
+ // A crisp rim keeps the flying projectile readable on small screens and dark scenery.
+ for(const a of s.ambush.arrows){ctx.save();ctx.translate(a.x,a.y);ctx.rotate(a.angle||0);ctx.lineCap='square';ctx.beginPath();ctx.moveTo(-17,0);ctx.lineTo(15,0);ctx.strokeStyle='#100d0b';ctx.lineWidth=8;ctx.stroke();ctx.strokeStyle='#f3dfab';ctx.lineWidth=4;ctx.stroke();ctx.beginPath();ctx.moveTo(22,0);ctx.lineTo(11,-6);ctx.lineTo(11,6);ctx.closePath();ctx.fillStyle='#fff1ca';ctx.fill();ctx.strokeStyle='#100d0b';ctx.lineWidth=2;ctx.stroke();ctx.fillStyle='#d84e39';ctx.fillRect(-18,-5,8,4);ctx.fillRect(-18,1,8,4);ctx.restore();}
+
  for(let floor=0;floor<3;floor++)if(!s.fuses.includes(floor)){const x=[450,410,480][floor],y=FLOOR_Y[floor]-18;glow(x,y,'#f7cf67',23,.6);ctx.fillStyle='#dcc271';ctx.fillRect(x-4,y-7,8,12);ctx.fillStyle='#745732';ctx.fillRect(x-3,y-4,6,6);}
  if(s.floor===0){glow(POWER_LEVER.x,POWER_LEVER.y-20,s.power?'#81ac75':'#e4be7b',28,.22);text(s.power?'E · MAINS ON':'E · WALL LEVER',POWER_LEVER.x,POWER_LEVER.y-50);}
  ctx.save();ctx.translate(s.x,s.y);ctx.globalAlpha=s.invincible&&Math.floor(s.time*12)%2===0?.65:1;drawPlayer(ctx,{...s,x:0,y:0,spriteHeight:PLAYER_DRAW_HEIGHT},Math.abs(s.vx)>0&&s.grounded&&!s.paused&&!s.inspection&&s.status==='playing');ctx.restore();if(s.flash>0){ctx.fillStyle=`rgba(232,239,244,${s.flash*.9})`;ctx.fillRect(0,0,960,720);}

@@ -1,3 +1,4 @@
+import {fadeRoomMusic} from './room-music.js';
 import {installTouchJoystick} from './touch-joystick.js';
 queueMicrotask(installTouchJoystick);
 import {installInstructions} from './instructions-ui.js';
@@ -30,7 +31,7 @@ export function enterRoom(start,resumeAudio=()=>{}){
 }
 export function leaveRoom(path){
  if(leaving)return;const url=new URL(path,location.href);if(url.origin!==location.origin)return;
- leaving=true;rememberSound();body.classList.add('room-leaving');document.querySelector('#game')?.blur();
+ leaving=true;fadeRoomMusic();rememberSound();body.classList.add('room-leaving');document.querySelector('#game')?.blur();
  setTimeout(()=>location.assign(url.href),240);
 }
 // The first room retains its title; restore the shared mute preference there too.

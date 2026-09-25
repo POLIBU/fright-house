@@ -19,7 +19,7 @@ put('wall-power','lever',POWER_LEVER.x,POWER_LEVER.y,25,39,s.lever);
 for(const o of SOLIDS){const opened=o.id==='gate'?Math.min(1,(s.powerAge||0)/.7):o.id==='exit-gate'?Math.min(1,(s.exitGateAge||0)/.7):0;put(o.id,o.id.includes('gate')?'press':'crate',o.x+o.w/2,FLOOR_Y[o.floor]-opened*(o.h+10),o.w,o.h);}
 for(const p of platforms(s))put(p.id,'lift',p.x+p.w/2,p.y+7,p.w,13);
 for(const ambush of floorAmbushes)for(const b of ambush.balloons)if(['idle','fuse'].includes(b.phase))put(b.id,'bomb',b.x,(ambush===s.ambush?b.y:balloonY(ambush.floor,s.time))+24,23,48);
-if(s.power&&s.ambush){const a=s.ambush.archer;if(s.floor>0&&!clownSpritesReady()){const origin=archerOrigin(s.floor);put('clown-archer','clown',origin.x,FLOOR_Y[s.floor-1],48,CLOWN_DRAW_HEIGHT,a.phase==='aim'?Math.min(1,a.age/1.15):0);}for(const a of s.ambush.arrows)put(a.id,'arrow',a.x,a.y,30,5,a.angle||0);}
+if(s.power&&s.ambush){const a=s.ambush.archer;if(s.floor>0&&!clownSpritesReady()){const origin=archerOrigin(s.floor);put('clown-archer','clown',origin.x,FLOOR_Y[s.floor-1],48,CLOWN_DRAW_HEIGHT,a.phase==='aim'?Math.min(1,a.age/1.15):0);}for(const a of s.ambush.arrows)put(a.id,'arrow',a.x,a.y,42,11,a.angle||0);}
 const current=hazards(s);const barrel=current.find(h=>h.kind==='barrel')||{x:69,y:FLOOR_Y[1]-14,r:14};put('barrel','barrel',barrel.x,barrel.y+barrel.r,28,28,s.floor===1?s.floorTime*8:0);
 const press=current.find(h=>h.kind==='press')||{x:350,y:FLOOR_Y[3]-66,r:19};put('press','press',press.x,press.y+press.r,38,38);
 for(const p of s.spiders)put(p.id,'spider',p.x,p.y+9,30,18,p.phase==='hidden'?0:s.floorTime*8);

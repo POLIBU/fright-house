@@ -1,21 +1,14 @@
 # Fright House
 
-> **Playtest hub:** [Choose any updated level](http://localhost:8089/two-d/test.html), with platformer floor shortcuts and a toy-room quick start.
+[Play the latest Fright House](https://polibu.github.io/fright-house/) · Team: **POLIBU**
 
-> **Top-down candidate:** [Play Level 1](http://localhost:8089/two-d/index.html). The approved street includes animated lights, a rotating Ferris wheel and an inspectable newspaper. [Play Level 5: the long specimen library](http://localhost:8089/two-d/level-5.html), or [view approved concepts](http://localhost:8089/two-d/art-review/index.html). Levels 1–5 are playable; Level 2 now includes reactive balloons, a fleeing rat and an animated teddy. The full 20-area adaptation is in progress; later levels require concept review.
-
-
-A browser horror puzzle game set in an abandoned funhouse in 1987. Investigate three children’s belongings, learn how the rotating walls connect the maze, restore power, and escape with the recording before the creature reaches you.
-
-[Play Fright House](https://polibu.github.io/fright-house/) · Team: **POLIBU** · Public jam contact: pvvf418@gmail.com
+A pixel-art horror adventure through an abandoned funhouse, with animated sprites, procedural Three.js objects, and twelve connected areas. Investigate, survive the attractions, escape the cart chase, and discover two endings. Collect all eleven optional belongings to unlock the police ending. Three separate maintenance pages provide the platform instructions.
 
 ## Play
 
-Desktop: WASD to move, mouse to look, Shift to run, E to interact, J for notes, Escape to pause. Arrow keys provide alternative movement/turning; Page Up/Down adjust the view. Click the game to capture the mouse.
+Use arrows or WASD to move, E to interact, and Escape to pause. Click or tap to walk and inspect objects. Individual challenges also show their jump, flashlight or attack controls. Sound can be muted. Reading collected instructions pauses the room.
 
-Touch: left thumbstick moves; drag the right side to look. Use the on-screen interact, run, notes and pause buttons. Landscape gives more room.
-
-Investigation is untimed. Answering the phone starts a three-minute escape. Notes and puzzle screens keep that timer running; pause and leaving the tab stop it. Capture or timeout offers a checkpoint retry. Sound can be muted and the recording has written dialogue.
+The public root opens the current game at `/two-d/`. The earlier first-person prototype remains at `/legacy.html`.
 
 ## Run locally
 
@@ -23,27 +16,22 @@ Requires Node 20 or newer. No package installation is needed for the game.
 
 ```sh
 npm start
-# Open http://127.0.0.1:8087
+# Use the URL printed by the server, then open /two-d/
 npm test
 npm run build
 ```
 
-`dist/` is the standalone static site. GitHub Actions tests and publishes the static build to GitHub Pages on each push to main. Three.js is vendored; the deployed game does not call Atlas or use API keys.
+Use `/two-d/test.html` for local level and ending previews. `dist/` is the standalone static build. GitHub Actions tests and publishes it to GitHub Pages on each push to `main`; HTML entry points and module imports use a commit version to refresh cached scripts and styles. Three.js is vendored. Published gameplay does not call Atlas or require API keys.
 
-## Validation
+## Art, sound and validation
 
-Automated real-input desktop and touch playthroughs reach the ending. Failure-path coverage checks pause, natural timer expiry, creature capture, and checkpoint retries. Model tests check connectivity and legal paths in all eight rotating-wall configurations. The recipe verifier passes all eleven final asset modules.
+The game combines illustrated backgrounds, sprite characters and procedural 3D props rendered with a pixelated look. Atlas-generated sound files are shipped locally; additional effects use Web Audio. Asset prompts, sources and generation details are recorded in [PROVENANCE.md](PROVENANCE.md) and the audio manifest.
 
-Browser tests use Playwright and Chrome; set `PLAYWRIGHT_MODULE` to an installed Playwright module if it is outside normal module resolution, `CHROME_PATH` to Chrome, and optionally `GAME_URL` to a hosted build. Run `node tests/playthrough.mjs`, `node tests/touch-playthrough.mjs`, or `node tests/failure-paths.mjs` with the development server running. Reports and screenshots are under `validation/`.
+Model tests cover progression and collision mechanics. Browser checks cover instruction pickups, transitions, endings, audio loading and touch layouts. Touch checks are browser emulation, not a physical-device test.
 
-Touch validation is browser emulation, not a physical-device test. The 10–15 minute first-play target still needs human playtesting; automated routes already know the solutions.
+## Historical development notes
 
-## Art and sound
-
-All 3D geometry is JavaScript using Three.js constructors. The original ten prop families have three candidate modules and five-view renders. The visual-review branch uses three floating humanoid faces and four distinct doors, with the face sculpts verified from five views. Original procedural architecture, labels and surface marks complete the scene. Atlas generated the object references and five shipped audio files. See [PROVENANCE.md](PROVENANCE.md), [STYLE.md](STYLE.md) and [references/selections.json](references/selections.json).
-
-The setting draws on seaside funhouses and the atmosphere of abandoned amusement attractions. Characters, map and story are original. No reference-game assets or gameplay code were copied. Documented 404 runtime helpers retain their Apache 2.0 license; Three.js retains its MIT license.
-
+The following entries describe earlier iterations and prototypes.
 
 ## Visual review build
 
@@ -81,3 +69,11 @@ The new beginning approaches a colourful clown-mouth facade through foggy amusem
 Black double doors lead to the storage-room swarm. Other additions include a ceiling animatronic, grasping hands, specimen jars and books, rats, coloured festoon bulbs, and a player reflection in all three mirrors. The clown whispers “Come here, darling.” The cart pursuer throws axes: look back with E / LOOK BACK, steer out of the aimed track, or press F / FLASH while looking back to stun it. Flash recharges in seven seconds; it cannot recall an axe already in flight.
 
 `/art-preview/entrance.html` reviews the new facade, doors and rooms. `/art-preview/tour.html` includes the specimen shelf. MAZE START is available alongside the existing chase/cart checkpoints. New validation is stored in `validation/iterations/v09/`; desktop and touch browser tests still require the local `PLAYWRIGHT_MODULE` and `CHROME_PATH` environment variables.
+
+
+The current game begins at `two-d/index.html` and continues automatically through the connected rooms to the sunrise ending. Only the opening has a start screen; room exits fade directly into the next scene. `two-d/test.html` remains a separate room selector for development. New Atlas audio sources are documented in `two-d/audio/atlas-manifest.json`.
+
+### Local epilogue and puzzle previews
+The local selector at `two-d/test.html` now includes the playable alley, arrest, Cadillac/bedroom ending, bedside-lamp reach animation, and library book chase. Direct previews: `two-d/level-12.html`, `?preview=arrest`, `?preview=escape`, `?preview=bedroom`, `?preview=lamp`. Preview branches never insert evidence into the real save. Normal play goes from the cart maze to the alley; all 11 optional items select arrest, otherwise the Cadillac escape continues into the bedroom.
+
+POCKETS lists optional evidence (one object per room, levels 1–11); near a visible object press E or use PICK UP. In the fall/cart rooms, steer into it. INSTRUCTIONS separately stores the three machine pages: open the street carousel, wind the wooden rabbit, then retrieve the falling maintenance book during the library chase. The library latch requires the book. Level 2’s ledger and cupboard remain optional. Start a fresh game from Level 1 to clear both collections; room retries preserve collections.

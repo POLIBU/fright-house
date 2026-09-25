@@ -142,3 +142,32 @@ The lost-property cupboard, rear clown door, backstage machinery, haunted bin an
 The approved Level 5 image, architecture-only plate and 24-frame crawling/spitting worm sheet were generated with built-in image_gen. Exact prompts and saved project paths: `validation/library-v21/image-prompts.json`. The lamp and desk/rug photographs supplied by the user guide the original prop designs. `library-desk.js`, `library-phone.js` and `specimen-library.js` use only constructor geometry, named pivots and a deterministic Canvas wood-grain texture (`helpers/library-wood.js`). Static opaque shelf geometry is merged at runtime with Three.js BufferGeometryUtils; transparent jar shells remain separate. No mesh payloads or downloaded models.
 
 The two short telephone lines in `two-d/audio/library-child-one.wav` and `library-child-two.wav` are synthesized locally with the installed macOS Junior and Kathy voices at 125/117 words per minute: “You can’t escape.” A telephone filter and delayed overlap are applied through Web Audio. Ringing, glass and bile cues are locally synthesized. No paid voice service or real child's recording was used.
+
+
+## Atlas audio and continuous-room revision
+
+The user requested new Atlas-generated effects and music. `two-d/audio/atlas-manifest.json` records the original prompts, provider models and exact file IDs from project `aa77d2d6-967c-410d-828a-be646eefea19`. The Level 8 laugh and grunt are ElevenLabs SFX v2 files; Level 1 exploration music is Stable Audio 3. These are original generated audio, mixed through Web Audio/HTML audio with normalization, filtering and light echo; existing electrical and machinery cues remain synthesized. Workspace publication was explicitly approved by the user. Discarded drafts are not shipped.
+
+Room transitions now use a shared short fade and start automatically after their assets load, with the original introduction retained only at the beginning. Retry screens and in-game story interactions remain. The ending Cadillac is scaled to match the detective, with its boarding position and headlight placement adjusted.
+
+### Branching epilogue and maintenance-page iteration (2026-09-25)
+The new alley, bedroom and police/girl/clown animation PNGs were generated with built-in ImageGen and copied into `two-d/assets/`. Prompt specifications and asset mapping: `two-d/art-review/concepts/epilogue/prompts.md`. The lamp-free bedroom and shadow-clown revisions replace painted lighting and a rejected brighter character treatment. Police car, lamp, tape and cart use constructor-built Three.js geometry; no mesh downloads. Evidence icons and page/book drawings are original Canvas work. Room-specific atmosphere, detuned circus echo and boss-tension layers use original Web Audio synthesis over existing audio; they do not use the rejected upbeat Atlas draft. Optional evidence and required machine instructions have separate storage keys.
+
+
+### Epilogue seated lamp and officer warning refinement
+- `two-d/assets/characters/girl-seated-lamp-v2.png`: built-in ImageGen replacement, eight seated frames, corrected left-facing gaze; original generated file exec-8ceb36a0-6c89-4167-87ec-aec686029ef8.png.
+- `two-d/assets/characters/police-warning-v1.png`: built-in ImageGen, eight drawing/aiming/holstering frames matching our existing officer; original exec-dff768db-b9dc-48e8-8494-906a324606e2.png.
+- Prompts preserved in `two-d/art-review/concepts/epilogue/prompts.md`. Assets copied unmodified; runtime alpha bounds slice the equal cells.
+- `two-d/assets/three/patrol-sedan.js`: original constructor-built 3D black-and-white vintage sedan inspired by the supplied patrol-car reference; no copied insignia or external mesh.
+
+- `two-d/assets/characters/girl-seated-lamp-v3.png`: built-in ImageGen revision of our v2 sprite, rightward seated reach with lowered gaze, used on the mattress to the left of the lamp. Original exec-46387c01-7699-4298-bce1-4069f844cb32.png; prompt in the epilogue prompt log.
+
+- `two-d/assets/characters/police-escort-v2.png`: ImageGen paired reaction/downward escort frames using the existing officer and detective as reference. Final exec-919dc600-b4d5-4170-addd-c79bb6988183.png; RGBA gutters verified transparent.
+
+### Girl handheld orientation — v4
+- Built-in image generation edit of `two-d/assets/characters/girl-seated-lamp-v3.png`.
+- Output: `two-d/assets/characters/girl-seated-lamp-v4.png`. Preserves 1774×887 transparent 4×2 sheet; rear of handheld faces the viewer in all frames.
+- Source output: `exec-44e70681-0995-4ee0-8fdd-7cb1b5ab71a1.png`. Prompt saved in `two-d/art-review/concepts/epilogue/prompts.md`.
+
+### Bone gallery water — Atlas MCP
+`two-d/audio/atlas-water-drop.mp3`: ElevenLabs SFX v2 through Atlas project `aa77d2d6-967c-410d-828a-be646eefea19`, FID `6916b95c-6dc0-4d3c-ae19-c5dcc9516bfa`. Three-second water source, shaped into individual impacts in Web Audio. First click-like take discarded. Generation/refinement reported 37 credits total. Prompt and automated description recorded in the audio manifest; metadata is not listening verification.

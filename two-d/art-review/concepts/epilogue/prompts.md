@@ -1,0 +1,53 @@
+# Epilogue art — built-in ImageGen, 25 September 2026
+
+Project assets are copied unchanged from the built-in tool’s generated PNGs. Alpha is preserved. Sprite frames are extracted at runtime, without resampling the original files. The girl/clown sheet uses an authored row boundary at y=500 rather than assuming even rows.
+
+## Alley — `assets/park-alley-v1.png`
+Retro pixel-art horror-game environment, tall 1:3 elevated adventure-game perspective. Long walkable central path from a cart unloading platform at bottom to the park’s alternate exit at top. Abandoned carnival structures, autumn trees, wrought iron gates, dim lamps, cold mist and predawn sky. No characters or text. Approved by the user; runtime adds reactive leaves, dark-to-dawn lighting, 3D cart and tearing police tape.
+
+## Police — `assets/characters/police-arrest-v1.png`
+Transparent 4-column, 3-row sprite sheet matching the existing coarse-pixel investigator in fedora, ochre coat and maroon scarf. Row 1: four navy-uniformed policeman walking poses. Row 2: policeman handcuffing investigator, four sequential poses. Row 3: four paired escort poses toward the right. Keep equal cells, clear gutters, consistent proportions and baseline. No scenery or text.
+
+## Police car entry — `assets/characters/police-car-entry-v1.png`
+Transparent 4-column, 1-row animation of the same police officer guiding the handcuffed detective into a car to the right. Sequential bending, ducking head, stepping into the rear seat. Do not draw the car. Preserve natural height changes and coherent costume/anatomy. Coarse retro adventure-game pixels and dark outlines; clear cell gutters.
+
+## Bedroom — `assets/bedroom-dark-v1.png`
+Retro pixel-art bedroom, fixed elevated 4:3 adventure-game camera. Bed and bedside table left, cushion on rug, bookcase, large dark window upper-right. Empty room for separate girl and clown sprites. The final edit removed the painted bedside lamp and its orange light while preserving the exact composition and restoring dim neutral wall/table pixels, because the game renders a separate 3D lamp and warm light.
+
+## Girl and shadow clown — `assets/characters/girl-shadow-clown-v2.png`
+Transparent four-column, two-row sprite sheet. Top: same brown-haired girl, blue moon-pattern pyjamas, seated playing a gray Game Boy, four small animated variations. Bottom: four gradually emerging window-peeking clown poses. Revision: preserve girl exactly; make the clown an original gaunt shadowed jester silhouette, almost black/indigo with only dim eye catches and part of a crooked grin, not a bright red-haired clown. Preserve transparent background and safe margins.
+
+## Lamp reach — `assets/characters/girl-lamp-v1.png`
+Use case: stylized-concept. Production sprite sheet for retro pixel-art horror game Fright House. Reference image is identity/style reference only: SAME small brown-haired girl in blue moon-pattern pyjamas in its TOP row; do not include any clown. Generate 8 frames in perfectly equal 4 columns x 2 rows on actual transparent alpha background, wide gutters, no text. Fixed front/three-quarter camera, coarse crisp old adventure-game pixels, not higher-detail painting. Same character size, same ground baseline in each cell, allow poses to change height naturally. Row one chronological: seated holding gray Game Boy; sets it down beside her; uncrosses legs and kneels facing right; starts standing. Row two chronological: standing facing right, reaches right arm upward to bedside lamp switch located about shoulder height beyond right edge of pose; fully extends fingers to click switch; hand retracts; turns sleepily to left. Do NOT draw a lamp or background; it is a separate 3D object. Entire body in every cell, no neighbor overlap, consistent anatomy, warm muted sprite colors with dark pixel outlines.
+
+
+## Seated lamp refinement
+
+Use case: stylized-concept. Create a REPLACEMENT eight-frame sprite sheet, 4 equal columns x 2 equal rows, actual transparent background. Reference is character identity/style only: SAME young brown-haired girl in blue moon-print pyjamas, chunky low-resolution retro adventure-game pixels, consistent proportions. CRITICAL: she remains sitting cross-legged in ALL EIGHT FRAMES, never kneels or stands. Her face and eyes face LEFT or downward in every frame, NEVER RIGHT: an unseen scary clown is at far right of the scene and she must remain unaware of it. Consistent seated hip anchor and feet baseline in each equal cell, generous clear gutters. Row1: four subtle Game Boy playing poses facing down-left, gray handheld resting in lap. Row2 chronological: puts handheld down by crossed feet; reaches her left arm toward SCREEN LEFT at SHOULDER HEIGHT to a nearby small bedside lamp's base switch; presses the unseen switch at full extension to LEFT, keeping eyes lowered; withdraws arm and closes eyes sleepily still facing LEFT. No lamp drawn, no furniture, no ground shadow, no clown, no text, no standing frame. Keep scale and face exactly consistent across frames; enough transparent margin around reaching arm. Lamp is rendered separately as a 3D prop.
+
+Correction pass: Preserve every body and limb. Correct frames 2, 3, 4, 6 and 7 so the nose and pupils face screen left; keep other frames looking down or eyes closed. Keep original true-alpha sheet dimensions and equal grid.
+
+Output: `../../assets/characters/girl-seated-lamp-v2.png` (project asset: `two-d/assets/characters/girl-seated-lamp-v2.png`).
+
+## Officer warning animation
+
+Create a transparent-background pixel art sprite sheet for this game's policeman using the attached sheet as exact character and pixel-art style reference. SINGLE officer only, navy uniform cap brass badge black shoes, entire body. 4 equal columns by 2 equal rows with wide gutters, same scale and baseline, all facing screen RIGHT. 8 animation frames in reading order: 1 standing hand on holster; 2 draws small dark pistol kept lowered; 3 raises arms; 4 points pistol screen RIGHT in two-handed stance; 5 holds aimed pistol steady right; 6 lowers pistol; 7 returns pistol to holster; 8 steps forward right with empty hands ready to handcuff suspect. No shooting, no muzzle flash, no detective in this sheet, no lettering, no props/background/shadows. Match coarse retro sprite pixels of reference, not more detailed. True alpha transparency, all pixels within individual equal grid cells, preserve officer identity.
+
+Output: `two-d/assets/characters/police-warning-v1.png`. Generated with built-in ImageGen, matched to the existing police arrest sprite sheet.
+
+
+## Mattress placement and rightward seated lamp reach (v3)
+
+Create a revised eight-frame animation sprite sheet using attached girl sheet as character/style reference. Actual transparent alpha background, exact 4 equal columns x 2 equal rows. Same girl with brown hair, blue moon pyjamas and gray Game Boy; same coarse retro pixel-art style and seated scale. EVERY frame seated cross-legged, hip anchored at the horizontal center of its equal cell, equal baseline and head height, generous clear gutters. She sits on a bed LEFT of the lamp; all reaches must extend SCREEN RIGHT. Row 1 four subtly different playing poses: head tipped DOWN toward handheld in lap, three-quarter front view angled slightly right, pupils down, no sideways stare at a distant window. Row 2: frame5 puts Game Boy beside crossed feet; frame6 extends right arm halfway SCREEN RIGHT toward a nearby lamp base switch at shoulder height, eyes lowered toward hand; frame7 full rightward reach, index finger presses unseen switch roughly one body-width to screen right at shoulder height; frame8 arm withdrawn eyes closed sleepily. Keep hips in exactly same horizontal position across frames6/7, no sliding or standing. Do not draw lamp, furniture, bed, window, clown, text, grid or shadow. Entire body and extended arm must fit inside each cell. Preserve sprite character identity and low-resolution game style.
+
+Output: `two-d/assets/characters/girl-seated-lamp-v3.png`.
+
+
+## Police reaction and downward escort
+
+Create 8 animation sprites in 4 equal columns x 2 equal rows, true transparent alpha background, matching attached retro pixel-art officer and detective. Each frame contains BOTH full-body characters at same scale and baseline. Same adult policeman navy uniform cap brass badge, same adult detective brown fedora tan coat burgundy scarf gray trousers, detective handcuffed behind back. Coarse retro game pixels, no new realism. Row1 four reaction frames standing at arrest spot: 1 policeman notices belongings falling at their feet, head tilts down; 2 policeman visibly bends forward slightly looking down, one hand still holds detective arm; 3 policeman points toward the ground with free hand and looks shocked; 4 policeman straightens, looks sternly at detective and starts pivoting toward camera. Detective remains cuffed, head bowed, no smile. Row2 four consecutive escort walk-cycle frames, BOTH facing diagonally DOWN-RIGHT toward viewer, elevated three-quarter FRONT view, fronts of coats and faces visible, feet clearly step toward bottom-right of image, officer to left/slightly behind holds detective upper arm, detective hands behind back. This is walking from gate in distant background toward car in lower-right foreground: NOT flat side-facing sprites. No drawn floor, objects, text, car, evidence or scene; generous transparent gutters, each pair inside its own cell, fixed common scale and pair-center anchor. Maintain consistent character identities and clothes.
+
+Alpha cleanup pass: remove backdrop, preserve all sprites and poses exactly with transparent gutters. Final: `two-d/assets/characters/police-escort-v2.png`.
+
+### Girl handheld rear-facing edit — v4
+Use case: precise-object-edit. Edit target: attached transparent 4-column by 2-row sprite sheet. Change ONLY the little gray handheld Game Boy console in each of the eight frames so the BACK of its casing faces the viewer and the screen/buttons face toward the girl. Visible rear is a simple gray plastic shell with subtle battery-cover seam, tiny screws, small vent ribs; NO screen, NO directional pad, NO front buttons visible to viewer. Keep same console silhouette, scale, location and angle in each frame; preserve hands gripping it. Keep girl identity, pixel style, palette, poses, arms, face, all eight frame positions and spacing completely unchanged. Keep exact same canvas dimensions/aspect and 4x2 grid. Bottom row reaching hand positions must remain identical for lamp interaction. Genuine transparent alpha background, no checkerboard or background color. Do not add any objects or text.

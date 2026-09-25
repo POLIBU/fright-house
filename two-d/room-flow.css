@@ -1,0 +1,10 @@
+/* A short door-to-door fade replaces chapter title and completion screens. */
+#stage{position:relative;overflow:hidden}
+#room-curtain{position:absolute;inset:0;background:#030505;opacity:0;pointer-events:none;z-index:100;transition:opacity .24s ease}
+body[data-room-loading] #stage::after{content:'';position:absolute;inset:0;background:#030505;z-index:101;pointer-events:none}
+body[data-room-loading] #veil,body.room-leaving #veil{visibility:hidden}
+body[data-room-loading] #room-curtain,body.room-leaving #room-curtain{opacity:1}
+body.room-leaving #room-curtain{pointer-events:auto}
+body.room-leaving #story-overlay{visibility:hidden}
+body:not(.playtest) .test-return,body:not(.playtest) main>.note,body:not(.playtest) header>a{display:none}
+@media(prefers-reduced-motion:reduce){#room-curtain{transition:none}}

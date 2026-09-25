@@ -1,0 +1,11 @@
+import {chromium} from '/Users/poli/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs';
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+const b=await chromium.launch({headless:true,executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'});
+try{const p=await b.newPage();await p.goto('http://localhost:8089/two-d/index.html');await p.locator('#start:not([disabled])').click();
+const clips=await p.evaluate(async()=>{const ac=new AudioContext(),result=[];for(const name of ['atlas-clown-laugh','atlas-monster-grunt','atlas-eerie-mystery']){const r=await fetch(`./audio/${name}.mp3`);if(!r.ok)throw Error(name);const raw=await r.arrayBuffer(),bytes=raw.byteLength,b=await ac.decodeAudioData(raw);let peak=0,sum=0;for(const x of b.getChannelData(0)){peak=Math.max(peak,Math.abs(x));sum+=x*x;}result.push({name,bytes,duration:b.duration,peak,rms:Math.sqrt(sum/b.length)});}await ac.close();return result;});
+for(const clip of clips){assert.ok(clip.duration>1);assert.ok(clip.peak>.05);assert.ok(clip.rms>.001);}assert.ok(clips[2].duration>=29);
+await p.evaluate(async()=>{const {createWorkshopSound}=await import('./workshop-sound.js');window.testSound=createWorkshopSound();testSound.start();});await p.waitForFunction(()=>testSound.snapshot().laughterLoaded&&testSound.snapshot().gruntLoaded);
+const stats=await p.evaluate(async()=>{testSound.tick({boss:{mode:'awakening'},paused:false,phase:'fight',time:9,casingHits:0,shorts:0});const first=testSound.snapshot();await testSound.pause();const paused=testSound.snapshot();testSound.mute(true);await testSound.resume();const muted=testSound.snapshot();testSound.start();const retry=testSound.snapshot();return{first,paused,muted,retry};});
+assert.equal(stats.first.laughs,1);assert.equal(stats.first.grunts,1);assert.equal(stats.first.activeSources,2);assert.equal(stats.paused.context,'suspended');assert.equal(stats.muted.muted,true);assert.equal(stats.retry.laughs,0);assert.equal(stats.retry.grunts,0);
+await fs.mkdir('validation/atlas-audio',{recursive:true});await fs.writeFile('validation/atlas-audio/results.json',JSON.stringify({clips,stats},null,2));console.log({clips,stats});}finally{await b.close();}

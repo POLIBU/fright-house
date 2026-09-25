@@ -4,14 +4,16 @@ export default function generate(THREE){
  function mesh(g,m,x,y,z,parent=root){const o=new THREE.Mesh(g,m);o.position.set(x,y,z);parent.add(o);return o;}
  mesh(new THREE.CylinderGeometry(.195,.20,.062,48),red,0,.031,0);mesh(new THREE.CylinderGeometry(.19,.19,.018,48),blue,0,.067,0);
  for(const y of [.015,.054]){const rim=mesh(new THREE.TorusGeometry(.197,.005,8,48),red,0,y,0);rim.rotation.x=Math.PI/2;}
+ mesh(new THREE.BoxGeometry(.09,.002,.075),paper,0,.079,.055);
+ for(let i=0;i<4;i++)mesh(new THREE.BoxGeometry(.063,.0006,.003),black,0,.0805,.031+i*.012);
  const lid=new THREE.Group();lid.position.set(0,.082,-.15);root.add(lid);mesh(new THREE.CylinderGeometry(.19,.19,.014,48),yellow,0,0,.15,lid);
  const carousel=new THREE.Group();carousel.position.set(0,.008,.15);lid.add(carousel);const fragments=[];
  const column=new THREE.Group();carousel.add(column);mesh(new THREE.CylinderGeometry(.057,.06,.237,32),blue,0,.118,0,column);
  for(let i=0;i<12;i++){const a=i*Math.PI/6;const pipe=mesh(new THREE.CylinderGeometry(.003,.003,.085-(i%3)*.012,6),brass,Math.cos(a)*.059,.076,Math.sin(a)*.059,column);}
  fragments.push(column);
- const roof=new THREE.Group();carousel.add(roof);const profile=[[0,.335],[.045,.331],[.09,.317],[.14,.293],[.181,.26],[.205,.233],[.206,.222],[.20,.215],[0,.215]].map(([r,y])=>new THREE.Vector2(r,y));mesh(new THREE.LatheGeometry(profile,64),yellow,0,0,0,roof);
+ const roof=new THREE.Group();carousel.add(roof);const profile=[[0,.335],[.045,.331],[.09,.317],[.14,.293],[.181,.26],[.205,.233],[.206,.222],[.20,.215],[0,.215]].map(([r,y])=>new THREE.Vector2(r,y));mesh(new THREE.LatheGeometry([...profile].reverse(),64),yellow,0,0,0,roof);
  // Paint lies directly on the continuous canopy; it is not a collection of detached wedges.
- const paintProfile=profile.slice(0,6).map(v=>new THREE.Vector2(v.x+.0005,v.y+.0005));for(let i=0;i<12;i++)mesh(new THREE.LatheGeometry(paintProfile,8,i*Math.PI/6,Math.PI/6),i%3===0?red:i%3===1?blue:yellow,0,0,0,roof);
+ const paintProfile=profile.slice(0,6).map(v=>new THREE.Vector2(v.x+.0005,v.y+.0005));for(let i=0;i<12;i++)mesh(new THREE.LatheGeometry([...paintProfile].reverse(),8,i*Math.PI/6,Math.PI/6),i%3===0?red:i%3===1?blue:yellow,0,0,0,roof);
  for(const y of [.218,.231]){const rim=mesh(new THREE.TorusGeometry(.205,.006,8,64),red,0,y,0,roof);rim.rotation.x=Math.PI/2;}
  mesh(new THREE.CylinderGeometry(.017,.022,.01,20),black,0,.337,0,roof);fragments.push(roof);
  for(let i=0;i<6;i++){const a=i*Math.PI/3,x=Math.cos(a)*.131,z=Math.sin(a)*.131;const pole=mesh(new THREE.CylinderGeometry(.0035,.0035,.231,8),brass,x,.115,z,carousel);fragments.push(pole);

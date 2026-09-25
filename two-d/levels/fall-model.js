@@ -1,3 +1,4 @@
+export const FALL_CAMERA={feetY:200,followSpeed:6};
 export const ENTRY={startY:264,thresholdY:185,walkDuration:1.45,blackoutDuration:1};
 export function fallBlackout(s){if(s.phase==='blackout')return 1;if(s.phase==='walking')return Math.max(0,Math.min(1,(s.age-(ENTRY.walkDuration-.3))/.3));if(s.phase==='fall')return Math.max(0,1-s.age/.35);return 0;}
 export const SHAFT={left:116,right:364,landing:2860,height:3070};
@@ -10,11 +11,11 @@ function dustBurst(s){s.dustBurst++;s.dust=Array.from({length:90},(_,i)=>({x:s.x
 export function tickFall(s,input,dt){if(s.paused||s.phase==='caught')return;dt=Math.max(0,Math.min(.04,dt));s.time+=dt;s.age+=dt;s.noticeAge=Math.max(0,s.noticeAge-dt);s.invincible=Math.max(0,s.invincible-dt);s.snag=Math.max(0,s.snag-dt);const steer=Number(!!input.right)-Number(!!input.left);s.moving=false;
 if(s.phase==='opening'){s.door=Math.min(1,s.age/1.25);if(s.age>=1.25){s.phase='walking';s.age=0;s.notice='';s.noticeAge=0;}}
 else if(s.phase==='walking'){const progress=Math.min(1,s.age/ENTRY.walkDuration);s.y=ENTRY.startY+(ENTRY.thresholdY-ENTRY.startY)*progress;s.face='up';s.moving=true;s.walk+=dt*11;if(progress>=1){s.phase='blackout';s.age=0;s.moving=false;}}
-else if(s.phase==='blackout'){if(s.age>=ENTRY.blackoutDuration){s.phase='fall';s.age=0;s.vy=25;s.y=260;s.cameraY=130;}}
+else if(s.phase==='blackout'){if(s.age>=ENTRY.blackoutDuration){s.phase='fall';s.age=0;s.vy=25;s.y=260;s.cameraY=s.y-FALL_CAMERA.feetY;}}
 else if(s.phase==='fall'){tickStones(s,dt);if(s.phase==='caught')return;const steps=Math.ceil(dt/.008);for(let k=0;k<steps;k++){const step=dt/steps;s.vx+=(steer*(s.snag>0?65:132)-s.vx)*Math.min(1,step*9);s.vy=s.snag>0?Math.max(68,s.vy-120*step):Math.min(150,s.vy+42*step);s.x=Math.max(SHAFT.left+11,Math.min(SHAFT.right-11,s.x+s.vx*step));s.y+=s.vy*step;for(const o of FALL_OBSTACLES){const p=obstaclePose(o,s.time-dt+step*k);if(o.kind==='web'){if(!s.webHits.includes(o.id)&&collide(s,p)){s.webHits.push(o.id);s.snag=.85;}continue;}if(s.invincible===0&&collide(s,p)){s.health--;s.hits++;s.invincible=1.6;s.vx=(s.x<p.x?-1:1)*110;s.vy=Math.max(85,s.vy*.85);if(s.health<=0){s.phase='caught';return;}}}if(s.y>=SHAFT.landing){s.y=SHAFT.landing;s.phase='landing';s.age=0;s.landAge=0;s.vx=s.vy=0;dustBurst(s);break;}}s.moving=!!steer;s.face=steer<0?'left':steer>0?'right':'down';s.walk+=dt*9;}
 else if(s.phase==='landing'){s.landAge+=dt;if(s.landAge>3.8){s.phase='complete';s.age=0;s.notice='The bones settle. Somewhere above, the door swings shut.';s.noticeAge=5;}}
 for(const p of s.dust){p.age+=dt;p.x+=p.vx*dt;p.y+=p.vy*dt;p.vx*=Math.exp(-dt*.5);p.vy+=8*dt;}s.dust=s.dust.filter(p=>p.age<p.life);
-const target=['entry','opening','walking','blackout'].includes(s.phase)?0:Math.max(0,Math.min(SHAFT.height-360,s.y-130));s.cameraY+=(target-s.cameraY)*Math.min(1,dt*6);
+const target=['entry','opening','walking','blackout'].includes(s.phase)?0:Math.max(0,Math.min(SHAFT.height-360,s.y-FALL_CAMERA.feetY));s.cameraY+=(target-s.cameraY)*Math.min(1,dt*FALL_CAMERA.followSpeed);
 }
 
 function stoneRandom(s){s.stoneSeed=(Math.imul(s.stoneSeed,1664525)+1013904223)>>>0;return s.stoneSeed/4294967296;}

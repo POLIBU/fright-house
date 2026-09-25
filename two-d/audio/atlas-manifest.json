@@ -1,0 +1,42 @@
+{
+  "project": "aa77d2d6-967c-410d-828a-be646eefea19",
+  "created": "2026-09-24",
+  "assets": [
+    {
+      "file": "atlas-clown-laugh.mp3",
+      "fid": "7c7ab7e6-0503-4588-8856-efca2a4a9f4b",
+      "model": "ElevenLabs SFX v2",
+      "seconds": 4,
+      "use": "Level 8 periodic clown laughter",
+      "brief": "Sinister adult male hysterical clown laugh, chesty uneven chuckles building to manic breathy laughter, no words, music, or background sounds."
+    },
+    {
+      "file": "atlas-monster-grunt.mp3",
+      "fid": "79e78932-9833-42eb-bd28-8a3911147999",
+      "model": "ElevenLabs SFX v2",
+      "seconds": 2,
+      "use": "Level 8 awakening, lunges, damage and transformation",
+      "brief": "A large angry male humanoid monster gives a deep guttural attack grunt, harsh throat rasp and forceful growling exhalation, menacing physical effort, short intense GRR-UH, no spoken language, isolated sound effect, no music, no tired sigh."
+    },
+    {
+      "file": "atlas-eerie-mystery.mp3",
+      "fid": "212f10c2-80cb-4696-8e3a-cdf7277ccdd6",
+      "model": "Stable Audio 3",
+      "seconds": 30,
+      "use": "Level 1 quiet exploration music",
+      "brief": "Eerie mysterious horror score in a deserted haunted carnival at midnight. Unresolved minor-key music-box fragments over sinister bowed bass drones, dissonant string harmonics, sparse detuned piano, ominous suspense and dread, slow and quiet, disturbing and uncanny, no vocals or percussion, never bright, cheerful, peaceful, relaxing or sentimental. Loopable atmosphere.",
+      "atlas_description": "A slow, melancholic piano melody plays, creating a reflective and somber atmosphere."
+    },
+    {
+      "file": "atlas-water-drop.mp3",
+      "fid": "6916b95c-6dc0-4d3c-ae19-c5dcc9516bfa",
+      "model": "ElevenLabs SFX v2",
+      "seconds": 3,
+      "use": "Level 10 ceiling-drop impacts, panned and distance attenuated",
+      "brief": "WATER DROPLET SPLASH. A fat drop of liquid water falls into a small pool of water: a clear hollow bloop, tiny liquid splash and watery ripples, then the damp cellar reverberation trails away. Organic liquid bubbling/plopping sound, unmistakably WATER, close microphone. One main drop at the beginning, isolated and quiet afterward. No metal, no mechanical click, no latch, no percussion, no voices, no music.",
+      "atlas_description": "The sound of water being poured into a container.",
+      "runtime": "Leading silence trimmed on decode; short fade envelope on each visual impact."
+    }
+  ],
+  "notes": "Generated through Atlas MCP at the user's request. Workspace publication explicitly approved. No real person's voice identity was requested. Automated descriptions are not listening verification."
+}

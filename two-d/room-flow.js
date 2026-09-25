@@ -1,3 +1,4 @@
+import {whenAssetsReady,markRoomLoaded} from './runtime-telemetry.js';
 import {fadeRoomMusic} from './room-music.js';
 import {installTouchJoystick} from './touch-joystick.js';
 queueMicrotask(installTouchJoystick);
@@ -21,13 +22,14 @@ function rememberSound(){try{sessionStorage.setItem('fright-house-muted',String(
 soundButton?.addEventListener('click',()=>setTimeout(rememberSound,0));
 function restoreSound(){try{if(sessionStorage.getItem('fright-house-muted')==='true'&&!soundButton?.textContent.includes('OFF'))soundButton?.click();}catch{}}
 // Reveal a useful error rather than leaving the player behind a black loading screen.
-const loadTimer=body.hasAttribute('data-room-loading')?setTimeout(()=>{if(!entered){body.removeAttribute('data-room-loading');body.classList.add('room-load-error');}},20000):null;
+const loadTimer=body.hasAttribute('data-room-loading')?setTimeout(()=>{if(!body.classList.contains('room-ready')){body.removeAttribute('data-room-loading');body.classList.add('room-load-error');}},20000):null;
 export function enterRoom(start,resumeAudio=()=>{}){
- if(entered)return;entered=true;clearTimeout(loadTimer);start();restoreSound();
+ if(entered)return;entered=true;whenAssetsReady(()=>{clearTimeout(loadTimer);start();restoreSound();markRoomLoaded();
  requestAnimationFrame(()=>requestAnimationFrame(()=>{body.removeAttribute('data-room-loading');body.classList.add('room-ready');}));
  const unlock=()=>{resumeAudio();};
  // A direct room URL may not have browser audio permission until the first input.
  window.addEventListener('pointerdown',unlock,{once:true});window.addEventListener('keydown',unlock,{once:true});
+ });
 }
 export function leaveRoom(path){
  if(leaving)return;const url=new URL(path,location.href);if(url.origin!==location.origin)return;

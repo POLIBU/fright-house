@@ -29,6 +29,8 @@ The game combines illustrated backgrounds, sprite characters and procedural 3D p
 
 Model tests cover progression and collision mechanics. Browser checks cover instruction pickups, transitions, endings, audio loading and touch layouts. Touch checks are browser emulation, not a physical-device test.
 
+Runtime reporting, world scale, renderer accounting and verification commands are documented in [Runtime telemetry](docs/runtime-telemetry.md).
+
 ## Historical development notes
 
 The following entries describe earlier iterations and prototypes.

@@ -10,6 +10,9 @@ export function installTouchJoystick(){
  stick.innerHTML='<span class="joystick-track" aria-hidden="true"></span><span class="joystick-thumb" aria-hidden="true"></span>';
  const thumb=stick.lastElementChild,actions=document.createElement('div');actions.className='joystick-actions';
  const buttons=[...nav.querySelectorAll('button')].filter(b=>!directions.includes(b));
+ // Browsers do not synthesize clicks for a second finger while steering.
+ // Route that real touch through the normal action/pickup click handlers once.
+ for(const button of buttons)button.addEventListener('pointerdown',e=>{if(e.pointerType==='touch'&&!e.isPrimary&&!button.disabled){e.preventDefault();button.click();}});
  const slots=buttons.map(b=>({button:b,parent:b.parentNode,next:b.nextSibling}));
  let pointer=null,held=new Set();
  function setDirections(next){for(const dir of held)if(!next.has(dir))send('keyup',dir);for(const dir of next)if(!held.has(dir))send('keydown',dir);held=next;}

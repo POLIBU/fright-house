@@ -8,7 +8,7 @@ A pixel-art horror adventure through an abandoned funhouse, with animated sprite
 
 Use arrows or WASD to move, E to interact, and Escape to pause. Click or tap to walk and inspect objects. Individual challenges also show their jump, flashlight or attack controls. Sound can be muted. Reading collected instructions pauses the room.
 
-The public root opens the current game at `/two-d/`. The earlier first-person prototype remains at `/legacy.html`.
+The public game plays directly at [polibu.github.io/fright-house/](https://polibu.github.io/fright-house/). Room URLs also live at the root. Old `/two-d/` bookmarks redirect to the matching page and preserve their query parameters. The earlier first-person prototype remains at `/legacy.html`.
 
 ## Run locally
 

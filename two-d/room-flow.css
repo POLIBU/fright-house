@@ -32,3 +32,9 @@ body.has-pixel-dialogue #touch.has-joystick .joystick-actions button{font-size:1
  html,body,body *{-webkit-user-select:none!important;user-select:none!important;-webkit-touch-callout:none!important}
  body img{-webkit-user-drag:none}
 }
+
+/* A shared centre anchor keeps timed objectives and boss health between the corners. */
+#hud .hud-center{position:absolute;top:9px;left:50%;transform:translateX(-50%);margin:0;max-width:44%;text-align:center;white-space:nowrap;pointer-events:none}
+#hud .hud-center[hidden]{display:none}
+#hud #bolt{font-size:clamp(12px,1.7vw,17px);font-variant-numeric:tabular-nums;color:#fff}
+@media(max-width:650px){#hud .hud-center{top:7px}#hud #boss-label{font-size:11px}}

@@ -8,3 +8,11 @@ body.room-leaving #room-curtain{pointer-events:auto}
 body.room-leaving #story-overlay{visibility:hidden}
 body:not(.playtest) .test-return,body:not(.playtest) main>.note,body:not(.playtest) header>a{display:none}
 @media(prefers-reduced-motion:reduce){#room-curtain{transition:none}}
+
+/* Holding a control must never select its label or open the iOS copy menu. */
+button,button *,#touch,#touch *,#game{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+#touch{touch-action:none}
+
+/* Shared arrow targets; retain each room's existing grid, groups and order. */
+body #touch .dpad{grid-template-columns:repeat(3,56px)}
+body.has-pixel-dialogue #touch button:is([data-key],[data-input="left"],[data-input="right"],[data-input="up"],[data-input="down"]){width:56px;min-width:56px;max-width:56px;height:56px;min-height:56px;flex:0 0 56px;padding:0;font-size:28px;line-height:1}

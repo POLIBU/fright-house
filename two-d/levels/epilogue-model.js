@@ -5,7 +5,7 @@ export const BEDROOM={girlX:80,girlY:145,girlHeight:55,lampX:112,lampY:116,lampW
 export const ARREST={gateX:172,gateY:215,seatX:300,seatY:334};
 export function endingHint(branch){return branch==='arrest'?'Alternative bad ending available.':'To unlock the alternative police ending, collect all the items dropped by the children.';}
 export const GIRL_LINE='Hmmm, I don’t know if I liked this game. I’d better go to sleep now.';
-export const POLICE_LINE='Sir, you are under arrest for the murder of the children. You have the right to remain silent.';
+export const POLICE_LINE='You are the prime suspect in the disappearance of the children.';
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 export function newEpilogue(items=[],preview=''){const evidence=cleanEvidence(items);return {phase:preview==='bedroom'||preview==='lamp'?'bedroom':preview==='arrest'?'approach':preview==='escape'?'escape':'unload',age:preview==='lamp'?14:0,time:0,paused:false,x:240,y:1280,face:'up',walk:0,moving:false,spriteHeight:68,cameraY:1080,branch:preview==='arrest'?'arrest':preview==='escape'||preview==='bedroom'||preview==='lamp'?'escape':endingFor(evidence),evidence:preview==='arrest'?SECRETS.map(x=>x.id):evidence,preview:!!preview,dawn:0,tapeBroken:false,tapeAge:0,leaves:Array.from({length:100},(_,i)=>({x:180+(i*47)%125,y:130+(i*113)%1170,z:0,vx:0,vy:0,vz:0,angle:i*2.4,age:0})),leafFlights:0,spilled:[],spilledOnce:false,lampOn:true,notice:'',speaker:'DETECTIVE'};}
 function phase(s,next){s.phase=next;s.age=0;s.notice='';}
@@ -17,7 +17,7 @@ export function tickEpilogue(s,input,dt){if(s.paused||s.phase==='complete')retur
  s.cameraY=clamp(s.y-220,0,ALLEY.height-360);
  if(s.phase==='approach'){s.speaker='POLICEMAN';if(s.age>2)s.notice=POLICE_LINE;if(s.age>=12)phase(s,'cuff');}
  else if(s.phase==='cuff'){s.speaker='POLICEMAN';s.notice='';if(s.age>1.25&&!s.spilledOnce){s.spilledOnce=true;s.spilled=s.evidence.map((id,i)=>({id,x:ARREST.gateX,y:ARREST.gateY+3,z:30,vx:Math.cos(i*2.4)*(25+i*2),vy:Math.sin(i*2.4)*12,vz:30+i*2,angle:i}));}if(s.age>=2.2)phase(s,'reaction');}
- else if(s.phase==='reaction'){s.speaker='POLICEMAN';s.notice='Where did you get these?';if(s.age>=3.2)phase(s,'escort');}
+ else if(s.phase==='reaction'){s.speaker='POLICEMAN';s.notice='You… monster… You’re going down!';if(s.age>=3.2)phase(s,'escort');}
  else if(s.phase==='escort'&&s.age>=4)phase(s,'crouch');
  else if(s.phase==='crouch'&&s.age>=3.6)phase(s,'police-drive');
  else if(s.phase==='police-drive'&&s.age>=8)phase(s,'ending-hint');

@@ -1,3 +1,4 @@
+import {emphasizeItem} from './item-highlight.js';
 import {SHELF_AMBUSHES,LIBRARY_AISLE_SHELVES} from './levels/library-model.js';
 import {mergeGeometries} from '../vendor/addons/utils/BufferGeometryUtils.js';
 import * as THREE from '../vendor/three.module.js';
@@ -15,7 +16,7 @@ const ambushJars=SHELF_AMBUSHES.map(a=>{const source=shelfAsset(THREE),body=sour
 fit(doorAsset(THREE,{frame:false}),379,110,39,82,0,0);const door=fit(doorAsset(THREE,{frame:false}),1610,110,43,84,0,0);const hinge=door.body.getObjectByName('hinge');
 // Actual fragments fall from the same jar position used by the encounter.
 const shards=[];const material=new THREE.MeshStandardMaterial({color:0xc5d8af,metalness:.25,roughness:.22,transparent:true,opacity:.75});for(let i=0;i<14;i++){const body=new THREE.Mesh(new THREE.ConeGeometry(.8+i%3*.2,2+i%4,3),material);body.rotation.z=i*1.7;scene.add(body);shards.push(body);}let calls=0,tris=0,peakCalls=0,peakTris=0;
-return {drawRange(ctx,s,lo,hi){if(lo===-Infinity){calls=0;tris=0;}camera.position.x=s.cameraX;camera.updateMatrixWorld();const strength=.88+.06*Math.sin(s.time*1.7)+.025*Math.sin(s.time*4.3);glow.intensity=600*strength;key.intensity=1.65+Math.sin(s.time*.9)*.09;door.depth=s.exit>=.85?s.y-1:110;for(const o of all)o.g.visible=o.depth>=lo&&o.depth<hi;
+return {drawRange(ctx,s,lo,hi){if(lo===-Infinity){calls=0;tris=0;emphasizeItem(phone.body,!s.phoneAnswered,s.time);}camera.position.x=s.cameraX;camera.updateMatrixWorld();const strength=.88+.06*Math.sin(s.time*1.7)+.025*Math.sin(s.time*4.3);glow.intensity=600*strength;key.intensity=1.65+Math.sin(s.time*.9)*.09;door.depth=s.exit>=.85?s.y-1:110;for(const o of all)o.g.visible=o.depth>=lo&&o.depth<hi;
 phone.body.userData.setReceiver(s.receiver);phone.g.rotation.z=s.phase==='ringing'?Math.sin(s.time*44)*(s.time%3<1?.025:0):0;
 for(let i=0;i<ambushJars.length;i++){const o=ambushJars[i],a=s.ambushes[i],fall=a.phase==='fall'?Math.min(1,a.age/.7):0;o.depth=116+fall*29;o.g.visible=['sealed','rattle','fall'].includes(a.phase)&&o.depth>=lo&&o.depth<hi;o.g.position.y=180-116-fall*29;o.g.rotation.z=a.phase==='rattle'?Math.sin(a.age*39)*.13:fall*1.5;}
 hinge.rotation.y=-s.exit*1.55;jar.g.visible=jar.g.visible&&s.jar<1;jar.g.position.set(417-240-s.jar*7,180-162-s.jar*14,2);jar.g.rotation.z=-s.jar*1.3;

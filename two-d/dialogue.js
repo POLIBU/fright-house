@@ -12,7 +12,13 @@ if(stage){document.body.classList.add('has-pixel-dialogue');const legacy=$('#dia
  document.addEventListener('click',e=>{if(e.target.closest?.('#continue')&&legacy&&!legacy.hidden){if(writer.typing){e.preventDefault();e.stopImmediatePropagation();writer.finish();}else if(legacyPages.next()){e.preventDefault();e.stopImmediatePropagation();}}},true);
  function show(text,speaker='FIELD NOTES'){text=text.trim();if(!text||text===lastText)return;lastText=text;panel.querySelector('.story-text').textContent=text;panel.querySelector('.speaker').textContent=speaker;panel.hidden=false;clearTimeout(timer);panelPages.show(text);if(!panelPages.multiple)timer=setTimeout(()=>{panel.hidden=true;},Math.max(6500,Math.min(18000,text.length*78)));}
  window.addEventListener('fright-story',e=>{if(e.detail?.text)show(e.detail.text,e.detail.speaker||'FIELD NOTES');});
- document.addEventListener('keydown',e=>{if(e.key==='Enter'&&!panel.hidden&&!legacy?.matches(':not([hidden])')&&!document.querySelector('dialog[open]')){e.preventDefault();if(writer.typing)writer.finish();else if(!panelPages.next())dismiss();}},true);
+ window.addEventListener('keydown',e=>{
+  if(!['e','Enter'].includes(e.key.length===1?e.key.toLowerCase():e.key)||document.querySelector('dialog[open]')||e.target.closest?.('input,textarea,select,[contenteditable="true"]'))return;
+  const button=legacy&&!legacy.hidden?legacyAdvance:!panel.hidden?advance:null;
+  if(!button)return;
+  // A dialogue key press must never also open a door, collect an item or attack.
+  e.preventDefault();e.stopImmediatePropagation();if(!e.repeat)button.click();
+ },true);
  let scheduled=false;function refresh(){scheduled=false;const modal=document.querySelector('dialog[open]'),veil=$('#veil'),legacyOpen=legacy&&!legacy.hidden;
  if(modal){panel.hidden=true;const id=modal.id;if(id!==lastModal){lastModal=id;const text=[...modal.querySelectorAll('section p,blockquote')].map(n=>n.textContent.trim()).filter(Boolean).slice(0,2).join(' ');if(text)speak(text);}return;}lastModal='';
  if(legacyOpen){panel.hidden=true;const visible=$('#line').textContent,body=visible===legacyPages.current?legacyPages.source:visible;const text=[$('#speaker')?.textContent,$('#headline')?.hidden?'':$('#headline')?.textContent,body].filter(Boolean).join('\n');if(text!==lastLegacy){lastLegacy=text;lastText=text;legacyPages.show(body);}return;}if(lastLegacy){lastLegacy='';stop();}

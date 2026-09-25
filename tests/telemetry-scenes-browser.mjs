@@ -27,7 +27,7 @@ const cases=[
  [12,'epilogue','bedroom-ending',"s=newEpilogue([],'bedroom');s.phase='complete';"]
 ];
 const b=await chromium.launch({headless:true,executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'}),results=[];
-try{for(const mobile of [false,true])for(const [room,module,name,setup]of cases){const p=await b.newPage({viewport:mobile?{width:390,height:844}:{width:1100,height:1000},isMobile:mobile,hasTouch:mobile}),errors=[];p.on('pageerror',e=>errors.push(e.message));await p.addInitScript(observer);
+try{for(const mobile of [false,true])for(const [room,module,name,setup]of cases){const p=await b.newPage({viewport:mobile?{width:390,height:844}:{width:1100,height:1000},isMobile:mobile,hasTouch:mobile}),errors=[];p.on('pageerror',e=>errors.push(e.message));p.on('console',m=>{if(m.type()==='error')errors.push(m.text());});p.on('response',r=>{if(r.status()>=400)errors.push('HTTP '+r.status()+' '+r.url());});await p.addInitScript(observer);
  // Browser-only scene fixtures: no fixture hooks are shipped in the game.
  await p.route(new RegExp('/'+module+'\\.js(?:\\?.*)?$'),async r=>{const response=await r.fetch();await r.fulfill({response,body:await response.text()+`\nwindow.__prepareScene=()=>{${setup}resetTelemetryMotion();};`});});
  await p.goto(base+'/'+(room===1?'index.html':`level-${room}.html`));await p.waitForFunction(()=>__READY__);if(room===1){if(mobile)await p.locator('#start').tap();else await p.locator('#start').click();}

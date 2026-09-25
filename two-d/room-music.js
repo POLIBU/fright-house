@@ -15,7 +15,7 @@ export function createLoopBuffer(ac,source,seconds=1.8){
 export function createRoomMusic(level){
  let ac,master,buffer,loading,voice,offset=0,startedAt=0,volume=.14,muted=false,wanted=false,epoch=0,error=null;
  let rate=[1,.9,.86,.78,.87,.88,.8,.9,.96,.84,.9,1][level];
- const url=new URL(`./audio/atlas-score-${ROOM_SCORES[level]}.mp3`,import.meta.url);
+ const url=new URL(`./audio/atlas-score-${ROOM_SCORES[level]}.mp3`,import.meta.url);url.search=new URL(import.meta.url).search;
  function context(){if(!ac){ac=new AudioContext();master=ac.createGain();master.gain.value=muted?0:volume;master.connect(ac.destination);}return ac;}
  function levelGain(){if(!master)return;const p=master.gain;p.cancelAndHoldAtTime(ac.currentTime);p.linearRampToValueAtTime(muted?0:volume,ac.currentTime+.12);}
  async function load(){if(!loading)loading=fetch(url).then(r=>{if(!r.ok)throw Error(`Score ${r.status}`);return r.arrayBuffer();}).then(b=>ac.decodeAudioData(b)).then(b=>buffer=createLoopBuffer(ac,b)).catch(e=>{error={code:4,message:e.message};loading=null;throw e;});return loading;}

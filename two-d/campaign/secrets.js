@@ -11,10 +11,10 @@ export const SECRETS=[
  {level:8,id:'button',name:'Coat button',kind:'button',x:552,y:396,text:'A loose coat button. A little blue thread is still caught in the holes.'},
  {level:9,id:'bracelet',name:'Silver bracelet',kind:'bracelet',x:290,y:990,contact:true,text:'A small silver bracelet. The clasp is bent open.'},
  {level:10,id:'shoe',name:'Single small shoe',kind:'shoe',x:308,y:729,text:'A little shoe. Its laces are still tied.'},
- {level:11,id:'tag',name:'Faded luggage tag',kind:'tag',x:200,y:1240,contact:true,text:'A faded luggage tag. Whatever was written here has almost worn away.'}
+ {level:11,id:'tag',name:'Faded luggage tag',kind:'tag',x:240,y:13140,contact:true,text:'A faded luggage tag. Whatever was written here has almost worn away.'}
 ];
 export function cleanEvidence(value){return [...new Set(Array.isArray(value)?value:[])].filter(id=>SECRETS.some(s=>s.id===id));}
 export function readEvidence(storage=globalThis.localStorage){try{return cleanEvidence(JSON.parse(storage.getItem(SECRET_KEY)||'[]'));}catch{return [];}}
-export function collectEvidence(id,storage=globalThis.localStorage){const items=readEvidence(storage);if(!SECRETS.some(s=>s.id===id)||items.includes(id))return false;items.push(id);try{storage.setItem(SECRET_KEY,JSON.stringify(items));}catch{}return true;}
-export function resetEvidence(storage=globalThis.localStorage){try{storage.removeItem(SECRET_KEY);}catch{}}
+export function collectEvidence(id,storage=globalThis.localStorage){const items=readEvidence(storage);if(!SECRETS.some(s=>s.id===id)||items.includes(id))return false;items.push(id);try{storage.setItem(SECRET_KEY,JSON.stringify(items));}catch{}globalThis.window?.dispatchEvent(new Event('fright-evidence'));return true;}
+export function resetEvidence(storage=globalThis.localStorage){try{storage.removeItem(SECRET_KEY);}catch{}globalThis.window?.dispatchEvent(new Event('fright-evidence'));}
 export function endingFor(items){return cleanEvidence(items).length===SECRETS.length?'arrest':'escape';}

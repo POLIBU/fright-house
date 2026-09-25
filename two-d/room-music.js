@@ -1,3 +1,4 @@
+export const musicMenuActive=()=>!!document.querySelector('[data-keep-music]');
 // All room scores use a decoded, crossfaded loop and short playback envelopes.
 export const ROOM_SCORES=[null,'park','hall','circus','toys','library','factory','mezzanine','boss','fall','bones','cart'];
 const playing=new Map();
@@ -23,7 +24,7 @@ export function createRoomMusic(level){
  function stopVoice(seconds=.18){if(!voice)return;offset=position();const old=voice;voice=null;old.gain.gain.cancelAndHoldAtTime(ac.currentTime);old.gain.gain.linearRampToValueAtTime(0,ac.currentTime+seconds);old.source.stop(ac.currentTime+seconds+.01);}
  const audio={loop:true,preload:'none',preservesPitch:false,
   async play(){wanted=true;const token=epoch;context();const unlock=ac.resume();try{await Promise.all([unlock,load()]);}catch(e){if(token===epoch)wanted=false;throw e;}if(!wanted||token!==epoch||voice)return;error=null;const source=ac.createBufferSource(),gain=ac.createGain();source.buffer=buffer;source.loop=true;source.playbackRate.value=rate;gain.gain.setValueAtTime(0,ac.currentTime);gain.gain.linearRampToValueAtTime(1,ac.currentTime+.65);const nodes=[];if(level===1){const tone=ac.createBiquadFilter(),echo=ac.createDelay(2),feedback=ac.createGain(),wet=ac.createGain();tone.type='lowpass';tone.frequency.value=2800;echo.delayTime.value=.63;feedback.gain.value=.28;wet.gain.value=.22;source.connect(tone);tone.connect(gain);tone.connect(echo);echo.connect(feedback).connect(echo);echo.connect(wet).connect(gain);nodes.push(tone,echo,feedback,wet);}else source.connect(gain);gain.connect(master);startedAt=ac.currentTime;voice={source,gain};source.onended=()=>{source.disconnect();gain.disconnect();nodes.forEach(n=>n.disconnect());};source.start(0,offset%buffer.duration);},
-  pause(){wanted=false;epoch++;stopVoice();},
+  pause(force=false){if(!force&&musicMenuActive()&&!document.hidden)return;wanted=false;epoch++;stopVoice();},
   get paused(){return !wanted;},get readyState(){return buffer?4:0;},get error(){return error;},
   get currentTime(){return position();},set currentTime(value){const resume=wanted;stopVoice();offset=Math.max(0,Number(value)||0);if(resume)audio.play().catch(()=>{});},
   get volume(){return volume;},set volume(value){const v=Math.max(0,Math.min(1,Number(value)||0));if(v!==volume){volume=v;levelGain();}},
@@ -31,7 +32,7 @@ export function createRoomMusic(level){
   get playbackRate(){return rate;},set playbackRate(value){const time=position();rate=Math.max(.25,Math.min(4,Number(value)||1));offset=time;startedAt=ac?.currentTime||0;if(voice)voice.source.playbackRate.value=rate;},
   snapshot:()=>({loopDuration:buffer?.duration||0,crossfade:1.8,context:ac?.state||'locked',currentTime:position(),gain:master?.gain.value||0,audible:!!voice&&ac?.state==='running'&&!muted})
  };
- window.addEventListener('pagehide',()=>{audio.pause();ac?.close();},{once:true});playing.set(level,audio);return audio;
+ window.addEventListener('pagehide',()=>{audio.pause(true);ac?.close();},{once:true});playing.set(level,audio);return audio;
 }
-export function fadeRoomMusic(){for(const audio of playing.values())audio.pause();}
+export function fadeRoomMusic(){for(const audio of playing.values())audio.pause(true);}
 export function musicSnapshot(level){const audio=playing.get(level);return {score:ROOM_SCORES[level],loaded:!!audio&&audio.readyState>=2,playing:!!audio&&!audio.paused,volume:audio?.volume||0,muted:!!audio?.muted,...audio?.snapshot()};}

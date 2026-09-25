@@ -146,6 +146,46 @@
       "brief": "Frantic cart escape from a monster. Unsettling fast muted percussion and dark low strings, irregular accelerating ostinato, no heroic or triumphant melody, urgent horror chase.",
       "refinement": "Dark-v2: atonal horror ambient sound masses and acoustic instrumentation, no tonal resolution.",
       "atlas_description": "A low-frequency, rhythmic sound that resembles a heartbeat or a pulsing mechanical noise."
+    },
+    {
+      "file": "atlas-alley-leaf-whoosh.mp3",
+      "fid": "4e580c9b-b260-4070-b4ef-28e4784d2c98",
+      "model": "ElevenLabs SFX v2",
+      "seconds": 2,
+      "brief": "dry autumn leaves swept aside by a foot with a soft airy whoosh. No words, no music, no gunshots, no explosions.",
+      "use": "Level 12 leaves kicked up by the detective",
+      "runtime": "Short rustles triggered by leaf movement, with a cooldown to prevent a pile-up.",
+      "atlas_description": "The sound of a person walking on dry leaves."
+    },
+    {
+      "file": "atlas-alley-children-echo.mp3",
+      "fid": "2a9bdb63-64bc-4001-975f-6e7563492298",
+      "model": "ElevenLabs SFX v2",
+      "seconds": 7,
+      "brief": "Three young children giggling and laughing together, clear natural human child voices, light breathy ha ha ha and playful chuckles, several overlapping short laughs with quiet gaps, spacious echo after each laugh.",
+      "use": "Level 12 intermittent distant alley laughter",
+      "runtime": "Quiet low-pass filter, stereo placement and delayed echo; stops outside the alley.",
+      "atlas_description": "A young child is laughing and giggling."
+    },
+    {
+      "file": "atlas-alley-footstep.mp3",
+      "fid": "427e8024-a509-482c-a9f1-b5667e4defe0",
+      "model": "Sonilo Sound Effects",
+      "seconds": 3,
+      "brief": "natural footstep onto crunchy gravel",
+      "use": "Level 12 footsteps triggered by distance walked",
+      "runtime": "Leading silence trimmed; one 650 ms footfall with small pitch and stereo variation.",
+      "atlas_description": "The audio clip features the sound of someone walking on a gravel path."
+    },
+    {
+      "file": "atlas-alley-tape-rip.mp3",
+      "fid": "ef41e37e-58b1-479c-9155-df0f8fa89ee8",
+      "model": "Sonilo Sound Effects",
+      "seconds": 3,
+      "brief": "sustained plastic/paper ribbon tearing in half for 3 seconds",
+      "use": "Level 12 single crime-scene ribbon tear",
+      "runtime": "The generated snap is layered into original synthesized plastic/paper friction and flutter for a 1.25-second tearing cue.",
+      "atlas_description": "A short, sharp, and metallic sound effect, possibly a mechanical click or a metallic strike."
     }
   ],
   "notes": "Generated through Atlas MCP at the user's request. Workspace publication explicitly approved. No real person's voice identity was requested. Automated descriptions are not listening verification."

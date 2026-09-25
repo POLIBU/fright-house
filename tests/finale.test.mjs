@@ -15,3 +15,25 @@ test('gallery drips are frequent and clothing movement stays light without block
 
 test('spider fires aimed ink from behind once the chase starts',()=>{const s=newRide();startRide(s);s.rideAge=10;s.spiderActive=true;s.inkClock=0;s.cart.y-=1200;s.spider.y=s.cart.y+180;tickRide(s,{},.01);assert.equal(s.inkShots,1);assert.ok(s.ink[0].vy<0);});
 test('gallery mixes shirts with trousers, socks, belts and glasses; glasses stay grounded',()=>{const s=newGallery(),kinds=new Set(s.clothes.map(c=>c.kind));for(const kind of [4,5,6,7])assert.ok(kinds.has(kind));advance(s,1.7);const glasses=s.clothes.find(c=>c.kind===7);s.x=glasses.x;s.y=glasses.y+14;advance(s,.1,{up:true});advance(s,.5);assert.equal(glasses.z,0);});
+
+test('cart can jump again immediately on landing and buffers a late second press',()=>{
+ const s=newRide();startRide(s);assert.ok(jumpRide(s));advance(s,.5);
+ assert.ok(s.jumpZ>0);assert.equal(jumpRide(s),false);assert.ok(s.jumpBuffer>0);
+ advance(s,.16);assert.equal(s.jumps,2);assert.ok(s.jumpAge>0&&s.jumpAge<.05);
+ advance(s,.65);assert.equal(s.jumpAge,0);assert.equal(s.jumpCooldown,0);
+ assert.ok(jumpRide(s));assert.equal(s.jumps,3);
+ const early=newRide();startRide(early);jumpRide(early);advance(early,.1);jumpRide(early);advance(early,.6);
+ assert.equal(early.jumps,1);assert.equal(early.jumpAge,0);
+});
+
+test('capture closes over the actual cart lane, settles its jump and freezes on pause',()=>{
+ for(const lane of [-80,0,80]){
+  const s=newRide();startRide(s);s.cart.lane=lane;s.spiderActive=true;s.spider.x=240+lane+20;s.spider.y=s.cart.y+30;s.jumpAge=.2;s.jumpZ=30;
+  tickRide(s,{turn:lane<0?'left':lane>0?'right':null},1/60);assert.equal(s.phase,'caught');assert.equal(s.age,0);
+  const from={...s.spider},cart=cartPosition(s);advance(s,.2);
+  assert.ok(Math.abs(s.spider.x-cart.x)<Math.abs(from.x-cart.x));assert.ok(s.spider.y<from.y);
+  s.paused=true;const frozen=structuredClone(s);advance(s,.3);assert.deepEqual(s,frozen);s.paused=false;
+  advance(s,.25);assert.equal(s.spider.x,cart.x);assert.equal(s.spider.y,cart.y-6);assert.equal(s.jumpZ,0);assert.equal(s.moving,false);
+  assert.equal(jumpRide(s),false);
+ }
+});

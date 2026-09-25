@@ -3,7 +3,7 @@ export const ALLEY={height:1440,startY:1280,endY:89,tapeY:142,minX:176,maxX:308}
 // Coordinates on the authored 480×360 bedroom: mattress left of the nightstand.
 export const BEDROOM={girlX:80,girlY:145,girlHeight:55,lampX:112,lampY:116,lampWidth:22,lampHeight:35};
 export const ARREST={gateX:172,gateY:215,seatX:300,seatY:334};
-export function endingHint(branch){return branch==='arrest'?'Alternative bad ending available.':'To unlock the alternative police ending, collect all the items dropped by the children.';}
+export function endingHint(branch){return branch==='arrest'?'Try collecting fewer secret items for an alternative ending.':'To unlock the alternative police ending, collect all the items dropped by the children.';}
 export const GIRL_LINE='Hmmm, I don’t know if I liked this game. I’d better go to sleep now.';
 export const POLICE_LINE='You are the prime suspect in the disappearance of the children.';
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));

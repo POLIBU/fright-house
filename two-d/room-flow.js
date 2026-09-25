@@ -1,12 +1,14 @@
+import {installTouchJoystick} from './touch-joystick.js';
+queueMicrotask(installTouchJoystick);
 import {installInstructions} from './instructions-ui.js';
 queueMicrotask(installInstructions);
 import {installRoomSoundscape} from './room-soundscape.js';
 queueMicrotask(installRoomSoundscape);
 import {installSecrets} from './secrets-ui.js';
 queueMicrotask(installSecrets);
-// Keep long-press browser menus off controls while leaving story text selectable.
+// Mobile play never needs text selection or the long-press copy menu.
 for(const type of ['contextmenu','selectstart'])document.addEventListener(type,event=>{
- if(event.target instanceof Element&&event.target.closest('button,#touch,#game'))event.preventDefault();
+ if(matchMedia('(any-pointer: coarse), (max-width: 650px)').matches||event.target instanceof Element&&event.target.closest('button,#touch,#game'))event.preventDefault();
 });
 // Room files remain independently testable; normal play enters them without menus.
 const body=document.body,stage=document.querySelector('#stage');

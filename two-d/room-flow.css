@@ -16,3 +16,19 @@ button,button *,#touch,#touch *,#game{-webkit-user-select:none;user-select:none;
 /* Shared arrow targets; retain each room's existing grid, groups and order. */
 body #touch .dpad{grid-template-columns:repeat(3,56px)}
 body.has-pixel-dialogue #touch button:is([data-key],[data-input="left"],[data-input="right"],[data-input="up"],[data-input="down"]){width:56px;min-width:56px;max-width:56px;height:56px;min-height:56px;flex:0 0 56px;padding:0;font-size:28px;line-height:1}
+
+/* A fixed-size thumb pad and separate actions are shared by all mobile rooms. */
+body #touch.has-joystick{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:10px 6px;min-height:152px}
+body #touch.has-joystick>:not(#touch-joystick):not(.joystick-actions){display:none}
+#touch-joystick{position:relative;width:132px;height:132px;flex:0 0 132px;touch-action:none;cursor:grab}
+.joystick-track{position:absolute;inset:4px;border:3px solid #eee;background:#150b0ee8;border-radius:50%;box-shadow:inset 0 0 0 5px #6b192a,0 3px #000}
+.joystick-track::before,.joystick-track::after{content:'';position:absolute;background:#ffffff30;left:50%;top:12px;width:2px;height:94px}
+.joystick-track::after{transform:rotate(90deg)}
+.joystick-thumb{position:absolute;left:40px;top:40px;width:52px;height:52px;background:#a22139;border:3px solid #fff;border-radius:50%;box-shadow:inset 3px 3px #d55365,inset -3px -3px #5e1121,0 3px 0 #000;pointer-events:none}
+#touch-joystick:not(.held) .joystick-thumb{transition:transform .1s ease-out}
+body #touch.has-joystick .joystick-actions{display:flex;flex-wrap:wrap;align-content:center;justify-content:flex-end;gap:8px;min-width:0;max-width:210px}
+body.has-pixel-dialogue #touch.has-joystick .joystick-actions button{font-size:18px;min-height:48px;min-width:0;max-width:100%;padding:10px;white-space:normal}
+@media(any-pointer:coarse),(max-width:650px){
+ html,body,body *{-webkit-user-select:none!important;user-select:none!important;-webkit-touch-callout:none!important}
+ body img{-webkit-user-drag:none}
+}

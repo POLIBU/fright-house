@@ -1,6 +1,8 @@
 // Telegraphs and projectiles share the same state used by the 3D renderer.
 import {FLOOR_Y as floors} from './platform-layout.js';
-export function newAmbush(floor=0){return {archer:{phase:'rest',age:0,targetX:0,targetY:0,shots:0},arrows:[],balloons:[{id:'bomb-'+floor,x:[578,520,358,682][floor],y:floors[floor]-38,phase:'idle',age:0}],floor};}
+// A broad, slow rise creates a clear walking gap beneath each balloon.
+export function balloonY(floor,time){return floors[floor]-68+34*Math.cos(time*1.4+floor*1.1);}
+export function newAmbush(floor=0){return {archer:{phase:'rest',age:0,targetX:0,targetY:0,shots:0},arrows:[],balloons:[{id:'bomb-'+floor,x:[578,520,358,682][floor],y:balloonY(floor,0),phase:'idle',age:0}],floor};}
 export function archerOrigin(floor,clown){if(clown)return {x:clown.x,y:clown.y-48};return {x:floor%2?873:87,y:floors[Math.max(0,floor-1)]-23};}
 export function arrowPoint(a,t){
  // First rise through the open stairwell, then descend toward the locked aim point.
@@ -8,7 +10,9 @@ export function arrowPoint(a,t){
  return {x:q*q*a.startX+2*q*p*a.controlX+p*p*a.targetX,y:q*q*a.startY+2*q*p*a.controlY+p*p*a.targetY};
 }
 export function tickAmbush(s,dt){
- const m=s.ambush;if(!m||!s.power||s.stair)return;
+ const m=s.ambush;if(!m||s.stair)return;
+ for(const b of m.balloons)if(b.phase==='idle'||b.phase==='fuse')b.y=balloonY(s.floor,s.time);
+ if(!s.power)return;
  if(m.floor!==s.floor){s.ambush=newAmbush(s.floor);return;}
  const archer=m.archer;archer.age+=dt;
  if(s.floor>0&&!s.clown?.stair&&(!s.clown||s.clown.floor===s.floor-1)){
@@ -18,11 +22,11 @@ export function tickAmbush(s,dt){
  }
  for(const a of m.arrows){a.previousX=a.x;a.previousY=a.y;a.age+=dt;const p=arrowPoint(a,a.age/1.35);a.x=p.x;a.y=p.y;const next=arrowPoint(a,Math.min(1,a.age/1.35+.01));a.angle=Math.atan2(next.y-a.y,next.x-a.x);}
  m.arrows=m.arrows.filter(a=>a.age<1.5&&!a.spent);
- for(const b of m.balloons){b.age+=dt;b.y=floors[s.floor]-38+Math.sin(s.time*2+b.x)*5;if(b.phase==='idle'&&Math.abs(s.x-b.x)<87&&Math.abs(s.y-floors[s.floor])<90){b.phase='fuse';b.age=0;}else if(b.phase==='fuse'&&b.age>=.8){b.phase='blast';b.age=0;}else if(b.phase==='blast'&&b.age>=.3){b.phase='spent';b.age=0;}}
+ for(const b of m.balloons){b.age+=dt;if(b.phase==='idle'&&Math.abs(s.x-b.x)<64&&Math.abs(s.y-18-b.y)<40){b.phase='fuse';b.age=0;}else if(b.phase==='fuse'&&b.age>=.8){b.phase='blast';b.age=0;}else if(b.phase==='blast'&&b.age>=.3){b.phase='spent';b.age=0;}}
 }
 export function ambushHazards(s){const m=s.ambush;if(!m)return [];return [
  ...m.arrows.map(a=>({id:a.id,kind:'arrow',x:a.x,y:a.y,r:4,active:!a.spent,sweep:{x:a.previousX,y:a.previousY},source:a})),
- ...m.balloons.filter(b=>b.phase==='blast').map(b=>({id:b.id,kind:'balloon-bomb',x:b.x,y:floors[s.floor]-10,r:32,active:true}))
+ ...m.balloons.filter(b=>b.phase==='blast').map(b=>({id:b.id,kind:'balloon-bomb',x:b.x,y:b.y,r:32,active:true}))
  ];}
 export function arrowHits(h,s){
  // Swept segment vs the actor's expanded body box prevents fast-arrow tunnelling.

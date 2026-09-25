@@ -10,8 +10,8 @@ if(stage){document.body.classList.add('has-pixel-dialogue');const legacy=$('#dia
  const panelPages=createDialoguePages(panel,panel.querySelector('.story-text'),advance,writer),legacyPages=legacy?createDialoguePages(legacy,$('#line'),legacyAdvance,writer):null;
  function dismiss(){panel.hidden=true;clearTimeout(timer);stop();}advance.onclick=()=>{if(!panelPages.next())dismiss();};
  document.addEventListener('click',e=>{if(e.target.closest?.('#continue')&&legacy&&!legacy.hidden){if(writer.typing){e.preventDefault();e.stopImmediatePropagation();writer.finish();}else if(legacyPages.next()){e.preventDefault();e.stopImmediatePropagation();}}},true);
- function show(text,speaker='FIELD NOTES'){text=text.trim();if(!text||text===lastText)return;lastText=text;panel.querySelector('.story-text').textContent=text;panel.querySelector('.speaker').textContent=speaker;panel.hidden=false;clearTimeout(timer);panelPages.show(text);if(!panelPages.multiple)timer=setTimeout(()=>{panel.hidden=true;},Math.max(6500,Math.min(18000,text.length*78)));}
- window.addEventListener('fright-story',e=>{if(e.detail?.text)show(e.detail.text,e.detail.speaker||'FIELD NOTES');});
+ function show(text,speaker='FIELD NOTES',options={}){text=text.trim();if(!text||text===lastText)return;lastText=text;panel.dataset.kind=options.kind||'notice';panel.querySelector('.story-text').textContent=text;panel.querySelector('.speaker').textContent=speaker;panel.hidden=false;clearTimeout(timer);panelPages.show(text);if(!panelPages.multiple)timer=setTimeout(()=>{panel.hidden=true;},Math.max(options.durationMs||0,6500,Math.min(18000,text.length*78)));}
+ window.addEventListener('fright-story',e=>{if(e.detail?.text)show(e.detail.text,e.detail.speaker||'FIELD NOTES',e.detail);});
  window.addEventListener('keydown',e=>{
   if(!['e','Enter'].includes(e.key.length===1?e.key.toLowerCase():e.key)||document.querySelector('dialog[open]')||e.target.closest?.('input,textarea,select,[contenteditable="true"]'))return;
   const button=legacy&&!legacy.hidden?legacyAdvance:!panel.hidden?advance:null;
@@ -25,6 +25,7 @@ if(stage){document.body.classList.add('has-pixel-dialogue');const legacy=$('#dia
  if(veil&&!veil.hidden){panel.hidden=true;const text=$('#intro')?.textContent||'';if(text!==lastIntro){lastIntro=text;lastText=text;speak(text);}return;}
  if(document.body.dataset.dialogue==='opening-only'){if(!openingShown){openingShown=true;show('Four floors. Three missing fuses. Solve the wall riddle, then pull the red lever. Keep moving when the alarm sounds.','THE UPPER ATTRACTION');}return;}
  const notice=$('#notice')?.textContent.trim()||'',objective=$('#objective')?.textContent.trim()||'';
+ if(!panel.hidden&&panel.dataset.kind==='secret')return;
  if(document.body.hasAttribute('data-quiet-notices')){if(!panel.hidden)dismiss();lastNotice=notice;lastObjective=objective;return;}
  if(!panel.hidden&&panelPages.multiple)return;
  if(notice&&notice!==lastNotice){lastNotice=notice;lastObjective=objective;show(notice,'THE FUNHOUSE');}else if(objective&&objective!==lastObjective){lastObjective=objective;show(objective);}if(!notice)lastNotice='';

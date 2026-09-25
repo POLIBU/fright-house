@@ -8,9 +8,9 @@ export const LIBRARY_AISLE_SHELVES=[
  {id:'aisle-north-2',x:1139,y:199,w:107,h:68,baseDepth:18},
  {id:'aisle-south-2',x:1354,y:277,w:96,h:75,baseDepth:18}
 ];
-export const LIBRARY_SOLIDS=[{id:'desk',x:119,y:171,w:136,h:37},{id:'back-library',x:130,y:98,w:201,h:19},{id:'right-library-upper',x:431,y:144,w:31,h:18},{id:'right-library-lower',x:431,y:241,w:31,h:24},{id:'old-exit',x:355,y:98,w:50,h:17},{id:'display',x:315,y:242,w:94,h:23},{id:'cabinet',x:20,y:180,w:30,h:18},{id:'entry-left-post',x:61,y:266,w:8,h:10},{id:'entry-right-post',x:85,y:282,w:9,h:12}];
+export const LIBRARY_SOLIDS=[{id:'desk',x:119,y:171,w:136,h:37},{id:'back-library',x:130,y:98,w:201,h:19},{id:'right-library-upper',x:431,y:144,w:31,h:18},{id:'right-library-lower',x:431,y:241,w:31,h:24},{id:'old-exit',x:355,y:98,w:50,h:17},{id:'display',x:315,y:242,w:94,h:23},{id:'cabinet',x:20,y:180,w:30,h:18}];
 LIBRARY_SOLIDS.push(...[550,750,970,1190,1410,1530].map((x,i)=>({id:'long-shelf-'+i,x:x-51,y:101,w:102,h:21})),...LIBRARY_AISLE_SHELVES.map(o=>({id:o.id,x:o.x-o.w/2,y:o.y-o.baseDepth,w:o.w,h:o.baseDepth})));
-const floors=[[96,114,448,269],[18,122,101,199],[18,276,85,341],[431,197,492,239],[480,120,1667,278],[1586,84,1637,133]];
+const floors=[[96,114,448,269],[18,122,101,276],[18,276,85,341],[431,197,492,239],[480,120,1667,278],[1586,84,1637,133]];
 // The opening is a diagonal floor threshold, not the tall painted doorway surface.
 const entryPassage=[[65,274],[83,292],[112,263],[94,245]];
 function inEntry(x,y){let inside=false;for(let i=0,j=entryPassage.length-1;i<entryPassage.length;j=i++){const a=entryPassage[i],b=entryPassage[j];if((a[1]>y)!==(b[1]>y)&&x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0])inside=!inside;}return inside;}

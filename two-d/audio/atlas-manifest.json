@@ -39,13 +39,14 @@
     },
     {
       "file": "atlas-score-park.mp3",
-      "fid": "33b64a5e-cb5e-4db3-baee-c001971c0ccb",
+      "fid": "db8ee10d-10f9-47f6-b028-cb4807f9bbf4",
       "model": "Stable Audio 3",
-      "seconds": 30,
-      "use": "Distinct park room music",
-      "brief": "Abandoned carnival gates at midnight. Deep bowed strings, distant rusty fairground organ barely audible, long dissonant harmonics, no pleasant piano melody.",
+      "seconds": 40,
+      "use": "Revised opening park score",
+      "brief": "Instrumental horror film soundtrack. A creepy old music box plays a slow, memorable minor-key waltz melody. Low cello drones and a softly wheezing pipe organ accompany the music box. Haunted abandoned carnival at night. Rich cavernous echoes, gentle ominous swells, unsettling suspenseful harmony. Quiet exploration background music. No speech, vocals, drums, high-pitched siren or sci-fi effects. Continuous music with no final cadence.",
       "refinement": null,
-      "atlas_description": "This is a dramatic, orchestral piece featuring a prominent, mournful cello melody accompanied by a string section, creating a somber and reflective atmosphere."
+      "atlas_description": "A short, repetitive, and simple melody played on a piano.",
+      "runtime": "1.8-second equal-power loop crossfade; soft playback envelopes; opening-room low-pass echo over the room drone."
     },
     {
       "file": "atlas-score-hall.mp3",

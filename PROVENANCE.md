@@ -177,3 +177,9 @@ Eleven original 30-second scores generated through the already workspace-publish
 
 ## Post-ride alley sound effects (2026-09-25)
 Four Atlas-generated sources from the already workspace-published project `aa77d2d6-967c-410d-828a-be646eefea19`: Sonilo Sound Effects for gravel footsteps and the ribbon snap; ElevenLabs SFX v2 for autumn leaves and children's laughter. Exact FIDs, prompts, model names and automated descriptions are in `two-d/audio/atlas-manifest.json`. Earlier mismatched drafts and timed-out Stable Audio attempts are not shipped. Metadata descriptions are not listening verification. Footsteps and rustles are cut into movement-triggered cues, laughter is mixed quietly with low-pass filtering and a delayed echo, and the generated ribbon snap is layered with original procedural paper/plastic friction and flutter. All effects respect pause/mute and reset on replay.
+
+### Revised opening score and music playback (2026-09-25)
+
+`two-d/audio/atlas-score-park.mp3` was replaced with Atlas Stable Audio 3 output `db8ee10d-10f9-47f6-b028-cb4807f9bbf4`, a 40-second instrumental generated in the existing workspace-readable sound project. The brief requests a creepy minor-key music-box waltz with cello and organ; Atlas describes the result as a simple repeating piano melody. Runtime low-pass filtering, echo, and the existing low room drone provide the haunted-park treatment. The earlier electronic-tone draft was not shipped. Exact brief and metadata are in `two-d/audio/atlas-manifest.json`.
+
+All eleven gameplay scores use a 1.8-second equal-power blend between their ending and beginning, decoded into a continuous audio buffer. Playback fades in over 0.65 seconds and out over 0.18 seconds before room navigation. The composed sunrise ending already has its own closing fade.

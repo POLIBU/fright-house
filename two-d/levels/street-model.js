@@ -18,7 +18,7 @@ const floors=[
   [190,290,293,362], [95,256,331,297], [91,245,174,287], [104,237,124,258],
   [186,195,291,306], [144,151,362,201], [188,151,291,226], [223,127,254,161],
 ];
-export function newStreet(){return {x:239,y:342,face:'up',walk:0,time:0,light:true,gate:false,gateProgress:0,newspaper:false,notices:false,ticket:false,stall:false,toy:false,shutter:0,ravens:newRavens(),phase:'street'};}
+export function newStreet(){return {x:239,y:342,face:'up',walk:0,time:0,light:true,gate:false,gateProgress:0,newspaper:false,notices:false,ticket:false,stall:false,toy:false,toyExamined:false,shutter:0,ravens:newRavens(),phase:'street'};}
 export function blocked(x,y,s,r=4){
   if(![[-r,-r],[r,-r],[-r,r],[r,r]].every(([dx,dy])=>floors.some(([a,b,c,d])=>x+dx>=a&&x+dx<=c&&y+dy>=b&&y+dy<=d)))return true;
   if(s.gateProgress<1&&y-r<153)return true;
